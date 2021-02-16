@@ -1,4 +1,4 @@
-from view import user_db
+from database import user_db
 from flask_login import UserMixin
 
 MAX_EMAIL_LEN = 150

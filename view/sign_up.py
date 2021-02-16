@@ -1,7 +1,8 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for
-from view import user_db
 from database.User import User
 from werkzeug.security import generate_password_hash
+import database
+
 
 sign_up_bp = Blueprint("sign_up", __name__)
 
@@ -34,8 +35,7 @@ def sign_up():
             # Add the new user to the database
             encrypted_password = generate_password_hash(password1, method="sha256")
             new_user = User(email=email, first_name=first_name, password=encrypted_password)
-            user_db.session.add(new_user)
-            user_db.session.commit()
+            database.add(new_user)
 
             flash("Account has been successfully created!", category="Success")
 
