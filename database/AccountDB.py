@@ -4,7 +4,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 
 account_db = SQLAlchemy()    # database for user accounts
-__USER_DATABASE_PATH = "../database/account.db"
+__ACCOUNT_DB_PATH = "../database/account.db"
 
 
 def create(app):
@@ -13,10 +13,10 @@ def create(app):
     :param app: The app created by create_app()
     """
 
-    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + __USER_DATABASE_PATH
+    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + __ACCOUNT_DB_PATH
     account_db.init_app(app)
 
-    if not path.exists(__USER_DATABASE_PATH):  # Check if the user database doesn't exist
+    if not path.exists(__ACCOUNT_DB_PATH):  # Check if the user database doesn't exist
         account_db.create_all(app=app)
         print("Created user account database!")
 

@@ -1,5 +1,4 @@
 from flask_login import UserMixin
-import database.AccountDB
 from database.AccountDB import account_db
 
 MAX_EMAIL_LEN = 150
@@ -9,7 +8,7 @@ MAX_FIRST_NAME_LEN = 150
 
 class Account(account_db.Model, UserMixin):
     """
-    A user of the website
+    A user account of the website
     """
 
     id = account_db.Column(account_db.Integer, primary_key=True)
