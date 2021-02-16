@@ -1,12 +1,18 @@
 from yahoo_fin import stock_info as si
 import pandas_datareader as web
+import ValidTicker as validTicker
 
 class Stock:
     """
     The stock class represents a stock of a company.
     @param ticker is the ticker symbol of the Stock
+    @thrown RuntimeError if ticker is invalid
     """
     def __init__(self, ticker):
+        # if the ticker is not valid an exception is thrown
+        if not validTicker.valid_ticker(ticker):
+            raise RuntimeError
+
         # stock information
         self.ticker = ticker
         self._pricePerShare = 0
@@ -78,6 +84,7 @@ s1 = Stock("aapl")
 print(s1.stock_price())
 print(s1.marketCap())
 print(s1.stats())
+
 #
 # print(si.get_holders("aapl"))
 # print(si.get_analysts_info("aapl"))
