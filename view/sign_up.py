@@ -21,7 +21,7 @@ def sign_up():
 
         user = User.query.filter_by(email=email).first()
         if user:    # Check if the entered email already exists in the database
-            flash("The email already used. Please try another email.", category="Error")
+            flash("The email is already used. Please try another email.", category="Error")
         elif len(email) < MIN_EMAIL_LEN:
             flash("Email must be at least " + str(MIN_EMAIL_LEN) + " characters.", category="Error")
         elif len(first_name) < MIN_FIRST_NAME_LEN:
