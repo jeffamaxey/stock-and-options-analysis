@@ -1,6 +1,6 @@
 from os import path
 from flask_sqlalchemy import SQLAlchemy
-from werkzeug.security import generate_password_hash
+from werkzeug.security import generate_password_hash, check_password_hash
 
 
 account_db = SQLAlchemy()    # database for user accounts
@@ -27,7 +27,6 @@ def add(email, first_name, password):
     :param email: The email of the user
     :param first_name: The first name of the user
     :param password: The unencrypted password of the user
-    :return:
     """
     from model.Account import Account
 
@@ -37,13 +36,33 @@ def add(email, first_name, password):
     account_db.session.commit()
 
 
-def has(email):
+def get(email):
     """
-    Check if the email already exists in the account database
+    Find the account and return the account object
     :param email: The email address
-    :return: True if the email exists, False otherwise
+    :return: The account object
     """
     from model.Account import Account
 
-    account = Account.query.filter_by(email=email).first()
+    return Account.query.filter_by(email=email).first()
+
+
+def has(email):
+    """
+    Check if the email already exists in the account database
+    :param email: The email address of the user
+    :return: True if the email exists, False otherwise
+    """
+    account = get(email)
     return account is not None
+
+
+def check_password(email, password):
+    """
+    Check if the email and password match
+    :param email: The email address of the user
+    :param password: The unencrypted password of the user
+    :return: True if they match, False otherwise
+    """
+    account = get(email)
+    return check_password_hash(account.password, password)
