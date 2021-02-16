@@ -16,7 +16,7 @@ def login():
         if user:    # If found user in the database
             if check_password_hash(user.password, password):
                 flash("Logged in successfully!", category="Success")
-                return redirect(url_for("views.home"))  # redirect the user to the homepage
+                return redirect(url_for("home.home"))  # redirect the user to the homepage
             else:
                 flash("Incorrect password, please try again.", category="Error")
         else:

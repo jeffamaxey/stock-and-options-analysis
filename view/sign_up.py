@@ -39,6 +39,6 @@ def sign_up():
 
             flash("Account has been successfully created!", category="Success")
 
-            return redirect(url_for("views.home"))  # redirect the user to the homepage
+            return redirect(url_for("home.home"))  # redirect the user to the homepage
 
     return render_template("sign_up.html")
