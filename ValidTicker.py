@@ -1,4 +1,4 @@
-import yfinance as yf
+import requests
 
 def get_ticker_company(ticker):
     """
@@ -7,10 +7,15 @@ def get_ticker_company(ticker):
     @throws a ProcessLookupError exception if a company name of a ticker is not found
     @return a string of the company name
     """
+    # call the yahoo finance api and store the stock information as json into result list
+    ticker = ticker.upper()
+    url = "http://d.yimg.com/autoc.finance.yahoo.com/autoc?query={}&region=1&lang=en".format(ticker)
+    result = requests.get(url).json()
 
-    company_name = yf.Ticker(ticker).info['longName']
-    if company_name is not None:
-        return company_name
+    # go through the list and see if the ticker symbol is found and if so return the name of the company
+    for x in result['ResultSet']['Result']:
+        if x['symbol'] == ticker:
+            return x['name']
 
     # if the company name is not found then a ProcessLookupError exception is thrown
     raise ProcessLookupError('company name of stock not found')
@@ -27,13 +32,11 @@ def valid_ticker(ticker):
         # try to get the company name of the ticker and if an exception is not thrown then return true
         get_ticker_company(ticker)
         return True
-    except Exception as err:
+
+    except ProcessLookupError as err:
         # exception thrown so the ticker is invalid and we return false
         return False
 
-
-
-
-print(get_ticker_company("nio"))
-print(valid_ticker("asdfasdf"))
-print(valid_ticker("aapl"))
+# print(get_ticker_company("sklz"))
+# print(valid_ticker("nasdgfs"))
+# print(valid_ticker("stpk"))
