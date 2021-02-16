@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!-- the base templete for all of the pages -->
+<!-- the base template for all of the pages -->
 </html>
     <head>
         <meta charset="utf-8">
@@ -45,6 +45,33 @@
                 </div>
             </div>
         </nav>
+
+        <!-- shows the message from flash() function -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %} <!-- checks if the messages are not empty -->
+            {% for category, message in messages %}
+
+                <!-- shows error message -->
+                {% if category == "Error" %}
+                <div class="alert alert-danger alert-dismissable fade show", role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert">
+                        <span aria-hidden="true">&times;</span>>
+                    </button>
+                </div>
+
+                <!-- shows successful message -->
+                {% else %}
+                <div class="alert alert-success alert-dismissable fade show", role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert">
+                        <span aria-hidden="true">&times;</span>>
+                    </button>
+                </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        {% endwith %}
 
         <!-- this block will be overridden by child pages -->
         {% block content %} {% endblock %}
