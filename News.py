@@ -1,6 +1,7 @@
 # importing required modules
 from datetime import date, timedelta, datetime
 import requests
+import ValidTicker as validTicker
 
 # storing api key for FinHub
 api_key = "c0lb5ov48v6orbr11mgg"
@@ -11,6 +12,7 @@ class Article:
     The Article class represents a news article
     """
     def __init__(self, category, article_date, headline, image, source, summary, url):
+        # attributes of Article class
         self._category = category
         self._datetime = article_date
         self._headline = headline
@@ -18,7 +20,6 @@ class Article:
         self._source = source
         self._summary = summary
         self._url = url
-
 
     def get_category(self):
         """
@@ -80,11 +81,17 @@ class News:
     """
     The News class represents the latest news for a particular stock within a 3 day period
     @param ticker is the ticker symbol of the Stock to find news for
+    @thrown RuntimeError if ticker is invalid
     """
     def __init__(self, ticker):
+        # if the ticker is not valid an exception is thrown
+        if not validTicker.valid_ticker(ticker):
+            raise RuntimeError
+
+        # attributes of news class
         self._ticker = ticker
         self._articles = []
-        self._max_articles = 10
+        self._max_articles = 10 # maximum number of news articles we will store
 
     def get_news(self):
         """
@@ -119,7 +126,6 @@ class News:
             # store the created article into the list of news
             self._articles.append(article)
 
-
         # returning the list containing company news articles
         return self._articles
 
@@ -141,8 +147,8 @@ class News:
 
 
 
-
-n1 = News("AAPL")
-j = n1.get_news()
-
-print(n1.news_to_string())
+# # testing
+# n1 = News("AAPL")
+# j = n1.get_news()
+#
+# print(n1.news_to_string())
