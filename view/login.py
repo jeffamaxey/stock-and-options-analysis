@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for
 from werkzeug.security import check_password_hash
-from database.User import User
+from model.Account import Account
 
 login_bp = Blueprint("login", __name__)
 
@@ -12,7 +12,7 @@ def login():
         password = request.form.get("password")
 
         # Search the user in the database
-        user = User.query.filter_by(email=email).first()
+        user = Account.query.filter_by(email=email).first()
         if user:    # If found user in the database
             if check_password_hash(user.password, password):
                 flash("Logged in successfully!", category="Success")

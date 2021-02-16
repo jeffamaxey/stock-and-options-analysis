@@ -1,5 +1,5 @@
 from flask import Flask
-from database import create_user_database
+from database import AccountDB
 
 URL_PREFIX = "/"
 
@@ -25,6 +25,7 @@ def create_app():
     app.register_blueprint(login_bp, url_prefix=URL_PREFIX)
     app.register_blueprint(logout_bp, url_prefix=URL_PREFIX)
 
-    create_user_database(app)
+    # Create the user account database
+    AccountDB.create(app)
 
     return app

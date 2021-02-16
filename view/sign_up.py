@@ -1,7 +1,5 @@
 from flask import Blueprint, render_template, request, flash, redirect, url_for
-from database.User import User
-from werkzeug.security import generate_password_hash
-import database
+from database import AccountDB
 
 
 sign_up_bp = Blueprint("sign_up", __name__)
@@ -20,8 +18,7 @@ def sign_up():
         password1 = request.form.get("password1")
         password2 = request.form.get("password2")
 
-        user = User.query.filter_by(email=email).first()
-        if user:    # Check if the entered email already exists in the database
+        if AccountDB.has(email):
             flash("The email is already used. Please try another email.", category="Error")
         elif len(email) < MIN_EMAIL_LEN:
             flash("Email must be at least " + str(MIN_EMAIL_LEN) + " characters.", category="Error")
@@ -32,10 +29,8 @@ def sign_up():
         elif len(password1) < MIN_PASSWORD_LEN:
             flash("Password must be at least " + str(MIN_FIRST_NAME_LEN) + " characters.", category="Error")
         else:
-            # Add the new user to the database
-            encrypted_password = generate_password_hash(password1, method="sha256")
-            new_user = User(email=email, first_name=first_name, password=encrypted_password)
-            database.add(new_user)
+            # Add the new user account to the database
+            AccountDB.add(email, first_name, password1)
 
             flash("Account has been successfully created!", category="Success")
 
