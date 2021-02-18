@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 
 
-user_db = SQLAlchemy()    # database for user accounts
+user_db = SQLAlchemy()    # database for users
 __USER_DB_PATH = "../database/user.db"
 
 
@@ -18,7 +18,7 @@ def create(app):
 
     if not path.exists(__USER_DB_PATH):  # Check if the user database doesn't exist
         user_db.create_all(app=app)
-        print("Created user account database!")
+        print("Created user database!")
 
 
 def add(email, first_name, password):
@@ -43,7 +43,11 @@ def get(email):
     :return: The user object
     """
     from model.User import User
-    return User.query.filter_by(email=email).first()
+    user = User.query.filter_by(email=email).first()
+    if user is None:
+        raise LookupError("The user is not found in the user database to get.")
+
+    return user
 
 
 def get_by_id(id):
@@ -53,7 +57,11 @@ def get_by_id(id):
     :return: The user object
     """
     from model.User import User
-    return User.query.get(int(id))
+    user = User.query.get(int(id))
+    if user is None:
+        raise LookupError("The user is not found in the user database to get.")
+
+    return user
 
 
 def has(email):
@@ -62,7 +70,8 @@ def has(email):
     :param email: The email address of the user
     :return: True if the email exists, False otherwise
     """
-    user = get(email)
+    from model.User import User
+    user = User.query.filter_by(email=email).first()
     return user is not None
 
 
@@ -82,6 +91,9 @@ def delete(email):
     Delete the user from the user database
     :param email: The email address of the user
     """
+    if not has(email):
+        raise LookupError("The user is not found in the user database to delete.")
+
     user = get(email)
     user_db.session.delete(user)
     user_db.session.commit()
