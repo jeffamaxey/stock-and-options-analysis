@@ -37,6 +37,9 @@ def create_app():
 
     @login_manager.user_loader
     def load_user(id):
-        return UserDB.get_by_id(id)
+        try:
+            return UserDB.get_by_id(id)
+        except LookupError:
+            return None
 
     return app
