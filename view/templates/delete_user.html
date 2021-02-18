@@ -1,0 +1,23 @@
+<!-- extends the base.html template -->
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+<!-- overrides the base page -->
+{% block content %}
+<form method="POST"> <!-- Pass the inputs to Python -->
+  <h3 align="center">Enter password to delete account</h3>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      id="password"
+      name="password"
+      placeholder="Enter password"
+    />
+  </div>
+  <br />
+  <button type="delete" class="btn btn-primary">Delete</button>
+</form>
+{% endblock %}
