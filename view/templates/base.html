@@ -19,6 +19,13 @@
             crossorigin="anonymous"
         />
 
+        <!-- script for Chart.JS -->
+        <script
+                src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+                integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+                crossorigin="anonymous">
+        </script>
+
         <title>{% block title %}Home{% endblock %}</title>
     </head>
     <body>
@@ -82,7 +89,7 @@
         <!-- this block will be overridden by child pages -->
         {% block content %} {% endblock %}
 
-        <!-- another tags for Bootstrap CSS -->
+        <!-- script for Bootstrap -->
         <script
             src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
               integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"

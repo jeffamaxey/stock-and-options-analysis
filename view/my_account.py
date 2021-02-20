@@ -6,5 +6,5 @@ my_account_bp = Blueprint("my_account", __name__)
 
 @my_account_bp.route("/my-account")
 @login_required     # Make sure the user can't access their account page when not logged in
-def delete_user():
+def my_account():
     return render_template("my_account.html", user=current_user)
