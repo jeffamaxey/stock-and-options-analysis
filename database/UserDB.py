@@ -21,7 +21,7 @@ def create(app):
         print("Created user database!")
 
 
-def add(email, first_name, password):
+def add(email, password):
     """
     Add the user to the user database
     :param email: The email of the user
@@ -31,7 +31,7 @@ def add(email, first_name, password):
     from model.User import User
 
     encrypted_password = generate_password_hash(password, method="sha256")
-    new_user = User(email=email, first_name=first_name, password=encrypted_password)
+    new_user = User(email=email, password=encrypted_password)
     user_db.session.add(new_user)
     user_db.session.commit()
 

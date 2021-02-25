@@ -16,7 +16,6 @@ class User(user_db.Model, UserMixin):
     id = user_db.Column(user_db.Integer, primary_key=True)
     email = user_db.Column(user_db.String(MAX_EMAIL_LEN), unique=True)
     password = user_db.Column(user_db.String(MAX_PASSWORD_LEN))
-    first_name = user_db.Column(user_db.String(MAX_FIRST_NAME_LEN))
 
     def check_password(self, password):
         """

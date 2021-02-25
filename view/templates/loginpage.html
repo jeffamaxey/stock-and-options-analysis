@@ -1,0 +1,100 @@
+<!-- extends the base.html template -->
+{% extends "base.html" %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/loginpage.css') }}">
+{% endblock %}
+
+{% block title %}Login Page{% endblock %}
+
+<!-- overrides the base page -->
+{% block content %}
+
+<form method="POST">
+    <div data-layer="958293b1-545e-4d5d-831f-9a12c7cdd487" class="loginpage">
+
+        {% block alert %} {{ super() }} {% endblock %}
+
+        <div data-layer="cd649fe4-f0e3-4ae4-a0e9-e990d2ee4cd8" class="back">
+            <svg data-layer="a89911a5-e957-4dc1-a882-78185303425b" preserveAspectRatio="none" viewBox="160.0082244873047 88.08743286132812 7.30859375 12.783538818359375" class="iosArrowBack"><path d="M 162.2113647460938 94.4775390625 L 167.0482940673828 89.6444091796875 C 167.4060211181641 89.28668212890625 167.4060211181641 88.70823669433594 167.0482940673828 88.35430908203125 C 166.6905670166016 87.99658203125 166.1120910644531 88.00038146972656 165.75439453125 88.35430908203125 L 160.2743072509766 93.83058929443359 C 159.9280090332031 94.17689514160156 159.9203643798828 94.73251342773438 160.2476654052734 95.09024047851563 L 165.7505798339844 100.6045837402344 C 165.9294281005859 100.783447265625 166.1653747558594 100.870979309082 166.3975372314453 100.870979309082 C 166.6296691894531 100.870979309082 166.8656158447266 100.783447265625 167.0444793701172 100.6045837402344 C 167.4022216796875 100.2468490600586 167.4022216796875 99.66840362548828 167.0444793701172 99.31447601318359 L 162.2113647460938 94.4775390625 Z"  /></svg>
+        <div data-layer="a46706b5-fd65-48a6-a946-364574c6f1a5" class="backToHome">back to home</div>
+        </div>
+
+        <div data-layer="e474a84d-bc6a-4ffa-9223-0daf7d79b9d1" class="googleButton">
+            <div data-layer="b14287d3-b1a3-4cac-882a-e36f78145f38" class="rectangle44"></div>
+            <svg data-layer="2bc536ad-bd1a-4a58-850a-5a59b161a7ba" preserveAspectRatio="none" viewBox="0 8 30.5703125 31.07110595703125" class="google"> <path d="M 30.5699577331543 23.89888381958008 C 30.5699577331543 32.76291656494141 24.49981689453125 39.07110595703125 15.53555202484131 39.07110595703125 C 6.940884113311768 39.07110595703125 0 32.13022232055664 0 23.53555297851563 C 0 14.94088363647461 6.940884113311768 8 15.53555202484131 8 C 19.72012710571289 8 23.24068450927734 9.534762382507324 25.9531421661377 12.06555366516113 L 21.72471618652344 16.13110733032227 C 16.19330787658691 10.79389381408691 5.907268524169922 14.80306816101074 5.907268524169922 23.53555297851563 C 5.907268524169922 28.95420265197754 10.23592376708984 33.34550094604492 15.53555202484131 33.34550094604492 C 21.68712997436523 33.34550094604492 23.99240493774414 28.93541145324707 24.35573577880859 26.64892768859863 L 15.53555202484131 26.64892768859863 L 15.53555202484131 21.30545043945313 L 30.32564926147461 21.30545043945313 C 30.46972846984863 22.10102081298828 30.5699577331543 22.86526870727539 30.5699577331543 23.89888572692871 Z"  /></svg>
+        </div>
+
+        <div data-layer="18465297-643d-488f-a8b5-30f7c18f7cef" class="facebookButton">
+            <div data-layer="390f0871-6362-40d8-91e0-601816bbf288" class="rectangle43"></div>
+            <svg data-layer="d6deb702-5b97-46ea-adff-60dbc5b7097e" preserveAspectRatio="none" viewBox="22.89000129699707 0 16.6416015625 31.07110595703125" class="facebookF"><path d="M 38.44073104858398 17.47750091552734 L 39.30368423461914 11.85435771942139 L 33.90810775756836 11.85435771942139 L 33.90810775756836 8.205322265625 C 33.90810775756836 6.666937828063965 34.66182327270508 5.167392730712891 37.07833480834961 5.167392730712891 L 39.53125 5.167392730712891 L 39.53125 0.3798929154872894 C 39.53125 0.3798929154872894 37.3052978515625 0 35.17704391479492 0 C 30.7336368560791 0 27.82921600341797 2.693234443664551 27.82921600341797 7.568729400634766 L 27.82921600341797 11.85435771942139 L 22.89000129699707 11.85435771942139 L 22.89000129699707 17.47750091552734 L 27.82921600341797 17.47750091552734 L 27.82921600341797 31.07111358642578 L 33.90810775756836 31.07111358642578 L 33.90810775756836 17.47750091552734 L 38.44073104858398 17.47750091552734 Z"  /></svg>
+        </div>
+
+        <div data-layer="6044f569-973a-4586-92b7-007ff201c325" class="orac5e3dd1">
+            <div data-layer="01b0a1ee-7336-4a1d-aace-cd1fbc922282" class="or">or</div>
+            <svg data-layer="7db7e40a-b34e-48c7-abea-48d218f49b19" preserveAspectRatio="none" viewBox="0 -0.5 171 1" class="line12"><path d="M 0 0 L 171 0"  /></svg>
+            <svg data-layer="9f259ec9-7acc-4c21-8bc3-100e1bcebeec" preserveAspectRatio="none" viewBox="0 -0.5 171 1" class="line13"><path d="M 0 0 L 171 0"  /></svg>
+        </div>
+
+        <div data-layer="14e80529-98c1-4951-9354-cbef4ef6f1d8" class="forgotPassword19c08286">
+            <div data-layer="79f4ebb5-440f-47be-bde6-1b45c3e276d6" class="forgotPassword">forgot password? </div>
+        </div>
+
+        <div data-layer="50256906-f7f7-4299-b657-1389e54efc73" class="loginbutton">
+            <div data-layer="f53f823b-7d68-4722-b231-03ae0bee4d84" class="component9">
+                <div data-layer="f8389387-93ef-49de-85af-2c955f699cf3" class="rectangle2">
+                    <button type="submit" class="rectangle2"></button>
+                </div>
+            </div>
+            <div data-layer="3bf8a401-a831-4da3-89c8-082ec339e5e9" class="login44a898ea">login</div>
+        </div>
+
+        <div data-layer="32042750-265c-40de-b688-9548ea7619ef" class="inputPassword">
+            <div data-layer="7f88e428-b9a4-4a92-8bd0-06cb5e6850ba" class="rectangle2089127ce6">
+                <label for="password"></label>
+                <input
+                    type="password"
+                    class="rectangle2089127ce6"
+                    id="password"
+                    name="password"
+                    placeholder="Password"
+                />
+            </div>
+    <!--        <div data-layer="12a8c581-1235-49c4-900e-dddbe1400ef3" class="password">password</div>-->
+        </div>
+
+        <div data-layer="6437a38e-5188-4d96-b34a-5e04216c730f" class="inputEmail">
+            <div data-layer="88681c06-9764-4fc1-b916-91840c7cff7b" class="rectangle20">
+                <label for="email"></label>
+                <input
+                    type="email"
+                    class="rectangle20"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                />
+            </div>
+    <!--        <div data-layer="51c2cab7-86cc-4114-9e2f-374775445f43" class="email">Email </div>-->
+        </div>
+
+        <div data-layer="33671c2e-464d-4971-bfed-9f3ea1094650" class="tabInactive">
+            <div data-layer="82a95e32-1a30-4c19-be77-f5c1d12c04e1" class="rectangle46">
+            </div>
+            <div data-layer="5dcb9ab6-e0da-4f8c-a372-da20b94ccc7e" class="signUpb9d7b9fb">
+                <div data-layer="2deb5219-6774-412c-8acb-af439111c1d4" class="signUp">sign up
+                    <a href="/sign-up" class="rectangle46"></a>
+                </div>
+            </div>
+        </div>
+
+        <div data-layer="6a40e821-fe24-498a-b280-8dd3214cf958" class="tabActive">
+            <div data-layer="aa429ce1-57bd-4c04-95ba-a65a7c2ba453" class="rectangle45"></div>
+            <div data-layer="ddf36dea-66d5-4c65-be28-0be71fe58e28" class="login">login</div>
+            <div data-layer="46ad7b64-963a-4391-b46c-0a05f06d00a6" class="rectangle37"></div>
+        </div>
+
+        <div data-layer="352fe5b6-e0de-4c16-8e52-7750a585ba0b" class="ftopng"></div>
+    </div>
+</form>
+
+{% endblock %}

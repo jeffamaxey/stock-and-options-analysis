@@ -1,23 +1,84 @@
 <!DOCTYPE html>
 
 <!-- the base template for all of the pages -->
-</html>
+<html>
     <head>
+        <!-- classes that the pages can use -->
+        <style>
+            ::placeholder {
+                position: absolute;
+                box-sizing: content-box;
+                -ms-transform: rotate(0.00deg);
+                -webkit-transform: rotate(0.00deg);
+                transform: rotate(0.00deg);
+                -ms-transform-origin: center;
+                -webkit-transform-origin: center;
+                transform-origin: center;
+                opacity: 1;
+                cursor: default;
+                margin-top: 0.00px;
+                margin-right: 0.00px;
+                margin-bottom: 0.00px;
+                margin-left: 0.00px;
+                padding-top: 0.00px;
+                padding-right: 0.00px;
+                padding-bottom: 0.00px;
+                padding-left: 22.00px;
+                background-color: rgba(255, 255, 255, 0);
+                text-align: left;
+                letter-spacing: 0.50px;
+                color: rgba(49, 89, 112, 1);
+                -webkit-text-stroke: 1.00px rgba(0, 0, 0, 0);
+                font-size: 18.00px;
+                font-weight: 500;
+                font-style: normal;
+                font-family: Montserrat, Arial;
+                text-decoration: none;
+                box-shadow: none;
+                overflow-x: unset;
+                overflow-y: unset;
+                white-space: pre;
+                width: 52.00px;
+                height: 22.00px;
+                left: 24.00px;
+                top: 19.00px;
+            }
+
+            .alert {
+                  padding: 20px;
+                  background-color: #f44336;
+                  color: white;
+                  font-style: normal;
+                  font-family: Montserrat, Arial;
+                  opacity: 1;
+                  transition: opacity 0.6s;
+            }
+
+            .alert.success {background-color: #4CAF50;}
+            .alert.warning {background-color: #ff9800;}
+            .alert.info {background-color: #2196F3;}
+
+            .closebtn {
+                  margin-left: 15px;
+                  color: white;
+                  font-weight: bold;
+                  float: right;
+                  font-size: 22px;
+                  line-height: 20px;
+                  cursor: pointer;
+                  transition: 0.3s;
+            }
+
+            .closebtn:hover {
+                  color: black;
+}
+        </style>
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Bootstrap CSS -->
-        <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-            crossorigin="anonymous"
-        />
-        <link
-            rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-            crossorigin="anonymous"
-        />
+
+        {% block head %}
 
         <!-- script for Chart.JS -->
         <script
@@ -26,38 +87,20 @@
                 crossorigin="anonymous">
         </script>
 
+        {% endblock %}
+
+        <!-- the title of the page that is shown on the browser tab (overwrittens by child pages) -->
         <title>{% block title %}Home{% endblock %}</title>
+
     </head>
+
     <body>
-        <!-- adds the grey navigation bar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- this block will be overridden by child pages -->
+        {% block content %} {% endblock %}
+    </body>
 
-            <!-- adds the button for toggling navbar -->
-            <button class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbar"
-            >
-                <span class="navbar-toggle-icon">
-                </span>
-            </button>
-
-            <!-- collapsable navbar -->
-            <div class="collapse navbar-collapse" id="navbar">
-                <div class="navbar-nav">
-                    <!-- shows different buttons depending on the user logged in or not -->
-                    {% if user.is_authenticated %}
-                        <a class="nav-item nav-link" id="home" href="/">Home</a>
-                        <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
-                        <a class="nav-item nav-link" id="my_account" href="/my-account">My Account</a>
-
-                    {% else %}
-                        <a class="nav-item nav-link" id="login" href="/login">Login</a>
-                        <a class="nav-item nav-link" id="sign_up" href="/sign-up">SignUp</a>
-                    {% endif %}
-                </div>
-            </div>
-        </nav>
+    <!-- child templates can use this block -->
+    {% block alert %}
 
         <!-- shows the message from flash() function -->
         {% with messages = get_flashed_messages(with_categories=true) %}
@@ -66,46 +109,51 @@
 
                 <!-- shows error message -->
                 {% if category == "Error" %}
-                <div class="alert alert-danger alert-dismissable fade show", role="alert">
-                    {{ message }}
-                    <button type="button" class="close" data-dismiss="alert">
-                        <span aria-hidden="true">&times;</span>>
-                    </button>
+
+                <div class="alert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                        {{ message }}
                 </div>
 
                 <!-- shows successful message -->
+                {% elif category == "Success" %}
+                <div class="alert success">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                        {{ message }}
+                </div>
+
+                <!-- shows warning message -->
+                {% elif category == "Warning" %}
+                <div class="alert warning">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                        {{ message }}
+                </div>
+
+                <!-- shows info message -->
                 {% else %}
-                <div class="alert alert-success alert-dismissable fade show", role="alert">
-                    {{ message }}
-                    <button type="button" class="close" data-dismiss="alert">
-                        <span aria-hidden="true">&times;</span>>
-                    </button>
+                <div class="alert info">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                        {{ message }}
                 </div>
                 {% endif %}
+
+                <!-- javascript to fadeout message box when closed -->
+                <script>
+                    var close = document.getElementsByClassName("closebtn");
+                    var i;
+
+                    for (i = 0; i < close.length; i++) {
+                      close[i].onclick = function(){
+                        var div = this.parentElement;
+                        div.style.opacity = "0";
+                        setTimeout(function(){ div.style.display = "none"; }, 600);
+                      }
+                    }
+                </script>
             {% endfor %}
         {% endif %}
         {% endwith %}
 
-        <!-- this block will be overridden by child pages -->
-        {% block content %} {% endblock %}
-
-        <!-- script for Bootstrap -->
-        <script
-            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-              integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-              crossorigin="anonymous"
-        ></script>
-        <script
-              src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-              integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-              crossorigin="anonymous"
-        ></script>
-        <script
-              src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-              integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-              crossorigin="anonymous"
-        ></script>
-
-    </body>
+    {% endblock %}
 
 </html>
