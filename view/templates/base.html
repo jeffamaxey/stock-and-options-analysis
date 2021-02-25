@@ -77,19 +77,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <!-- this block will be overwritten by child pages -->
+        {% block head %} {% endblock %}
 
-        {% block head %}
-
-        <!-- script for Chart.JS -->
-        <script
-                src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
-                integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
-                crossorigin="anonymous">
-        </script>
-
-        {% endblock %}
-
-        <!-- the title of the page that is shown on the browser tab (overwrittens by child pages) -->
+        <!-- the title of the page that is shown on the browser tab (overwritten by child pages) -->
         <title>{% block title %}Home{% endblock %}</title>
 
     </head>
@@ -99,7 +90,7 @@
         {% block content %} {% endblock %}
     </body>
 
-    <!-- child templates can use this block -->
+    <!-- child templates can use this block to flash messages -->
     {% block alert %}
 
         <!-- shows the message from flash() function -->

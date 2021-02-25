@@ -83,7 +83,7 @@ def check_password(email, password):
     :return: True if they match, False otherwise
     """
     user = get(email)
-    return user.check_password(password)
+    return check_password_hash(user.password, password)
 
 
 def delete(email):

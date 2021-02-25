@@ -1,7 +1,6 @@
-from flask import Blueprint, render_template, request, flash, redirect, url_for, jsonify
+from flask import Blueprint, render_template, request, flash, redirect, url_for
 from database import UserDB
 from flask_login import login_user, current_user
-import json
 
 login_bp = Blueprint("login", __name__)
 
