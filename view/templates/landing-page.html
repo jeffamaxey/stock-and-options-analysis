@@ -1,0 +1,1246 @@
+<!-- extends the base.html template -->
+{% extends "base.html" %}
+
+{% block title %} Home {% endblock %}
+
+  {% block head %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="../static/css/landing-page.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://animaapp.s3.amazonaws.com/launchpad-static/launchpad.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Montserrat:700,400,500,600,500italic");
+
+      .component-wrapper a,
+      .screen a {
+        text-decoration: none;
+        display: contents;
+      }
+
+      .full-width-a {
+        width: 100%;
+      }
+
+      .full-height-a {
+        height: 100%;
+      }
+
+      .screen textarea:focus,
+      .screen input:focus {
+        outline: none;
+      }
+
+      .screen *,
+      .component-wrapper * {
+        box-sizing: border-box;
+      }
+
+      .screen div {
+        -webkit-text-size-adjust: none;
+      }
+
+      .container-center-vertical,
+      .container-center-horizontal {
+        pointer-events: none;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+      }
+
+      .container-center-vertical {
+        align-items: center;
+        height: 100%;
+      }
+
+      .container-center-horizontal {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .container-center-vertical > *,
+      .container-center-horizontal > * {
+        pointer-events: auto;
+        flex-shrink: 0;
+      }
+
+      .component-wrapper,
+      .screen {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+        word-break: break-word;
+      }
+
+      .auto-animated div {
+        opacity: 0;
+        position: absolute;
+        --z-index: -1;
+      }
+
+      .auto-animated .container-center-vertical,
+      .auto-animated .container-center-horizontal {
+        opacity: 1;
+      }
+
+      .overlay {
+        position: absolute;
+        opacity: 0;
+        display: none;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+      }
+
+      .animate-appear {
+        opacity: 0;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 normal forwards;
+      }
+
+      .animate-disappear {
+        opacity: 1;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 reverse forwards;
+      }
+
+      .animate-nodelay {
+        animation-delay: 0s;
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .align-self-flex-start {
+        align-self: flex-start;
+      }
+      .align-self-flex-end {
+        align-self: flex-end;
+      }
+      .align-self-flex-center {
+        align-self: center;
+      }
+      .valign-text-middle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .valign-text-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      input:focus {
+        outline: none;
+      }
+      .component-wrapper,
+      .component-wrapper * {
+        pointer-events: none;
+      }
+
+      .component-wrapper a *,
+      .component-wrapper a,
+      .component-wrapper input,
+      .component-wrapper video,
+      .component-wrapper iframe,
+      .listeners-active,
+      .listeners-active * {
+        pointer-events: auto;
+      }
+
+      .hidden,
+      .hidden * {
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .smart-layers-pointers,
+      .smart-layers-pointers * {
+        pointer-events: auto;
+        visibility: visible;
+      }
+
+      .component-wrapper.not-ready,
+      .component-wrapper.not-ready * {
+        visibility: hidden !important;
+      }
+
+      .listeners-active-click,
+      .listeners-active-click * {
+        cursor: pointer;
+      }
+    </style>
+    <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+  </head>
+  {% endblock %}
+
+  {% block content %}
+  <body style="margin: 0; background: rgba(255, 255, 255, 1)">
+    <input type="hidden" id="anPageName" name="page" value="landing-page" />
+    <div class="container-center-horizontal">
+      <form class="landing-page screen" name="form1" action="form1" method="post">
+        <div class="bg-bottom-C61RwL"></div>
+        <div class="bg-top-C61RwL" id="bg-top"></div>
+        <div class="x-the-automation-h-basic-financi-C61RwL">
+          *The automation and algorithmic analysis on this website is merely offered as insight into the markets that is
+          to be interpreted by the user. These methods of analysis are imperfect and still require the rightful judgment
+          of a human user with basic financial knowledge. This is not financial advice, all gains and losses made from
+          the insight received from this website are those of the users alone.
+        </div>
+        <div class="deluxe-plan-C61RwL smart-layers-pointers">
+          <div class="solid-button-3JUt34 smart-layers-pointers"><div class="subscribe-QyALBP">SUBSCRIBE</div></div>
+          <img class="line-20-3JUt34" src="../static/img/line-17@1x.png" />
+          <div class="specs-3JUt34">
+            <div class="get-access-to-o-l-product-suite-jZph0H">Get access to our full product suite</div>
+            <div class="for-a-discounted-8999-month-jZph0H">for a discounted $89.99 / month</div>
+            <div class="our-features-ar-imally-designed-jZph0H">Our features are optimally designed</div>
+            <div class="to-work-togethe-d-save-you-time-jZph0H">to work together and save you time</div>
+            <div class="by-automating-m-sks-in-analysis-jZph0H">by automating multiple tasks in analysis</div>
+          </div>
+          <img class="line-19-3JUt34" src="../static/img/line-17@1x.png" />
+          <div class="x8999-3JUt34">$89.99</div>
+          <div class="deluxe-3JUt34">DELUXE</div>
+        </div>
+        <div class="basic-plan-C61RwL smart-layers-pointers">
+          <div class="solid-button-d6iMyr smart-layers-pointers"><div class="subscribe-duCmXd">SUBSCRIBE</div></div>
+          <img class="line-20-d6iMyr" src="../static/img/line-17@1x.png" />
+          <div class="specs-d6iMyr">
+            <div class="choose-any-1-fe-a-subscription-DIvSEb">Choose any 1 feature for a subscription</div>
+            <div class="of-only-2999-month-DIvSEb">of only $29.99 / month</div>
+            <div class="these-features-ned-to-automate-DIvSEb">These features are designed to automate</div>
+            <div class="your-derivative-ysis-so-you-can-DIvSEb">your derivatives analysis so you can</div>
+            <div class="compete-with-fi-ancial-veterans-DIvSEb">compete with financial veterans</div>
+          </div>
+          <img class="line-19-d6iMyr" src="../static/img/line-17@1x.png" />
+          <div class="x2999-d6iMyr">$29.99</div>
+          <div class="basic-d6iMyr">BASIC</div>
+        </div>
+        <a href="payment-processing-page.html">
+          <div class="bundled-plan-C61RwL smart-layers-pointers">
+            <div class="solid-button-5Fq7lF smart-layers-pointers">
+              <div class="subscribe-TfhIUF montserrat-semi-bold-heath-20px">SUBSCRIBE</div>
+            </div>
+            <img class="line-18-5Fq7lF" src="../static/img/line-17@1x.png" />
+            <div class="specs-5Fq7lF">
+              <div class="choose-any-2-fe-a-subscription-6JgdCv">Choose any 2 features for a subscription</div>
+              <div class="of-only-4999-month-6JgdCv">of only $49.99 / month</div>
+              <div class="gain-an-edge-by-ring-two-of-our-6JgdCv">Gain an edge by pairing two of our</div>
+              <div class="features-togeth-e-yourself-more-6JgdCv">features together to give yourself more</div>
+              <div class="actionable-insi-our-investments-6JgdCv">actionable insights into your investments</div>
+            </div>
+            <img class="line-17-5Fq7lF" src="../static/img/line-17@1x.png" />
+            <div class="x4999-5Fq7lF">$49.99</div>
+            <div class="bundled-5Fq7lF">BUNDLED</div>
+          </div></a
+        >
+        <div class="choose-your-plan-C61RwL">CHOOSE YOUR PLAN</div>
+        <img class="rectangle-steps-C61RwL" src="../static/img/rectanglesteps@1x.png" />
+        <div class="step-3-C61RwL border-10px-heath smart-layers-pointers">
+          <div class="type-in-the-sto-onable-insights-rbTKxD">
+            Type in the stock ticker you&#39;re interested in and basic information like the data source / brokerage and
+            our algorithms will conduct analysis to give you actionable insights.
+          </div>
+          <div class="step-3-rbTKxD">Step 3</div>
+          <img class="line-5-rbTKxD" src="../static/img/line-5@1x.png" />
+          <div class="stock-symbol-rbTKxD"></div>
+        </div>
+        <div class="step-2-C61RwL border-10px-heath smart-layers-pointers">
+          <div class="subscribe-to-on-e-to-understand-xRkmWf">
+            Subscribe to one of our plans to gain access to advanced financial analysis that makes it easy for even a
+            novice to understand.
+          </div>
+          <div class="step-2-xRkmWf">Step 2</div>
+          <img class="line-5-xRkmWf" src="../static/img/line-5@1x.png" />
+          <div class="click-money-symbol-xRkmWf"></div>
+        </div>
+        <div class="step-1-C61RwL border-10px-heath smart-layers-pointers">
+          <div class="determine-your-ite-of-products-0ushuB">
+            Determine your needs for financial analysis and choose one of our subscription plans,<br />1-feature,
+            2-features or our full suite of products.
+          </div>
+          <div class="step-1-0ushuB">Step 1</div>
+          <img class="line-5-0ushuB" src="../static/img/line-5@1x.png" />
+          <div class="thinking-symbol-0ushuB">
+            <img class="x20387846431580217324-128-xEZf1M" src="../static/img/20387846431580217324-128@1x.png" />
+          </div>
+        </div>
+        <div class="how-it-works-C61RwL">how it works?</div>
+        <div class="we-have-various-we-have-featur-C61RwL">
+          We have various analysis products that will automate common tasks that professionals do before making an
+          investment. We&#39;re helping you become a better investor without you even needing to understand the complex
+          math involved in the analysis. We have features that allow you to export the automated math to excel or pdf to
+          see a breakdown of the math that is used.
+        </div>
+        <div class="why-choose-us-C61RwL">WHY CHOOSE US</div>
+        <div class="landing-right-box-C61RwL smart-layers-pointers">
+          <div class="register-buttton-yjACxR smart-layers-pointers">
+            <a href="javascript:SubmitForm('form1')"> <div class="rectangle-59-HOxaGp"></div></a>
+            <div class="register-HOxaGp montserrat-semi-bold-heath-20px">REGISTER</div>
+          </div>
+          <div class="product-yjACxR border-1px-dove-gray">
+            <img class="md-arrow-dropdown-VzCElo" src="../static/img/md-arrow-dropdown@1x.png" />
+            <input class="product-VzCElo" name="product21" placeholder="Product" required />
+          </div>
+          <div class="password-yjACxR border-1px-dove-gray">
+            <input class="password-i3NNCP" name="password1" placeholder="Password" type="password" required />
+          </div>
+          <div class="email-box-yjACxR border-1px-dove-gray">
+            <input class="email-ytcpIH" name="email1" placeholder="Email" type="email" required />
+          </div>
+          <div class="try-it-now-yjACxR">TRY IT NOW</div>
+        </div>
+        <div class="landing-content-C61RwL">
+          <div class="beginner-friend-onable-insights-iR1gF7">Beginner Friendly<br />Actionable Insights</div>
+          <div class="automated-and-e-ancial-analysis-iR1gF7">Automated and easy to understand financial analysis.</div>
+          <div class="component7-iR1gF7 smart-layers-pointers">
+            <div class="watch-how-it-works-gbbylO">watch how it works</div>
+            <img class="ios-play-circle-gbbylO" src="../static/img/ios-play-circle@1x.png" />
+          </div>
+        </div>
+        <div class="navbar-C61RwL">
+          <div class="menu-center-8MJZIW">
+            <a href="signup-page.html">
+              <div class="sign-up-component-Z6zpbm border-1px-dove-gray smart-layers-pointers">
+                <div class="sign-up-C4Ldyd montserrat-semi-bold-heath-20px">Sign Up</div>
+              </div></a
+            >
+            <a href="login-page.html">
+              <div class="login-component-Z6zpbm border-1px-dove-gray smart-layers-pointers">
+                <div class="login-bvKRUK montserrat-semi-bold-heath-20px">Login</div>
+              </div></a
+            >
+            <a href="contact-page.html">
+              <div class="contact-component-Z6zpbm smart-layers-pointers">
+                <div class="contact-POQGFP montserrat-semi-bold-heath-20px">Contact</div>
+              </div></a
+            >
+            <a href="fundamental-analysis-page.html">
+              <div class="fundamental-component-Z6zpbm smart-layers-pointers">
+                <div class="fundamental-6EvOoV montserrat-semi-bold-heath-20px">Fundamental</div>
+              </div></a
+            >
+            <a href="technical-analysis-page.html">
+              <div class="technical-component-Z6zpbm smart-layers-pointers">
+                <div class="technical-lY8Sqq montserrat-semi-bold-heath-20px">Technical</div>
+              </div></a
+            >
+            <a href="strategies-page.html">
+              <div class="strategies-component-Z6zpbm smart-layers-pointers">
+                <div class="strategy-q8CpeS montserrat-semi-bold-heath-20px">Strategy</div>
+              </div></a
+            >
+            <a href="pricing-and-valuation-page.html">
+              <div class="valuation-component-Z6zpbm smart-layers-pointers">
+                <div class="valuation-5dtgbd montserrat-semi-bold-heath-20px">Valuation</div>
+              </div></a
+            >
+          </div>
+        </div>
+        <a href="#bg-top">
+          <div class="back-to-top-button-C61RwL smart-layers-pointers">
+            <div class="ellipse-1-hhcVia border-1px-dove-gray"></div>
+            <div class="icon-feather-arrow-up-circle-hhcVia">
+              <img class="path-83-NV3h6C" src="../static/img/path-83@1x.png" />
+              <img class="path-84-NV3h6C" src="../static/img/path-84@1x.png" />
+              <img class="path-85-NV3h6C" src="../static/img/path-85@1x.png" />
+            </div></div
+        ></a>
+        <a href="profile-page.html"
+          ><img class="icon-profile-C61RwL smart-layers-pointers" src="../static/img/icon-profile@1x.png"
+        /></a>
+        <div class="feature4-C61RwL bp1-animate-enter" show-on-scroll>
+          <div class="circle-eEK7uI smart-layers-pointers">
+            <a href="fundamental-analysis-page.html">
+              <div class="twist-star-5ZzEAj">
+                <div class="ellipse4-Cjf8MP border-4px-heath"></div>
+                <div class="starsymbol4-Cjf8MP">
+                  <img class="x19584466131536572525-128-c13MtF" src="../static/img/19584466131536572525-128@1x.png" />
+                </div></div
+            ></a>
+          </div>
+          <div class="fundamental-analysis-eEK7uI">FUNDAMENTAL ANALYSIS</div>
+          <div class="our-fundamental-g-opportunities-eEK7uI">
+            Our fundamental analysis automatically provides you with interesting metrics, relevant news and highlights
+            of the financial statements to give you information that is useful to identify buying opportunities.
+          </div>
+        </div>
+        <div class="feature3-C61RwL bp1-animate-enter1" show-on-scroll>
+          <div class="circle-NLoDnr smart-layers-pointers">
+            <a href="technical-analysis-page.html">
+              <div class="twist-star-6FEqA3">
+                <div class="ellipse3-xd0jjN border-4px-heath"></div>
+                <div class="starsymbol3-xd0jjN">
+                  <img class="x19584466131536572525-128-d8kZXE" src="../static/img/19584466131536572525-128-1@1x.png" />
+                </div></div
+            ></a>
+          </div>
+          <div class="technical-analysis-NLoDnr">TECHNICAL ANALYSIS</div>
+          <div class="the-technical-c-to-be-aware-of-NLoDnr">
+            The technical charts that we provide automatically analyze the chart for common patterns and opportunities.
+            The Technical indicators are analyzed to give you actionable insights and showcase different opportunities
+            to be aware of.
+          </div>
+        </div>
+        <div class="feature2-C61RwL bp1-animate-enter2" show-on-scroll>
+          <a href="strategies-page.html">
+            <div class="circle-unHWOl smart-layers-pointers">
+              <div class="twist-star-50RMqu">
+                <div class="ellipse2-gp4DaD border-4px-heath"></div>
+                <div class="starsymbol2-gp4DaD">
+                  <img class="x19584466131536572525-128-ToZaAW" src="../static/img/19584466131536572525-128-1@1x.png" />
+                </div>
+              </div></div
+          ></a>
+          <div class="derivatives-strategies-unHWOl">DERIVATIVES STRATEGIES</div>
+          <div class="shows-you-recom-in-this-feature-unHWOl">
+            Shows you recommended strategies based on the type of derivatives you&#39;re interested in. A series of
+            strategies are explained and broken down. Hedging strategies for risk management purposes are included in
+            this feature.
+          </div>
+        </div>
+        <div class="feature1-C61RwL bp1-animate-enter3" show-on-scroll>
+          <div class="circle-fhxHYD smart-layers-pointers">
+            <a href="pricing-and-valuation-page.html">
+              <div class="twist-star-iRdTjK">
+                <div class="ellipse1-2YEszl border-4px-heath"></div>
+                <div class="starsymbol1-2YEszl">
+                  <img class="x19584466131536572525-128-7eCZ6A" src="../static/img/19584466131536572525-128@1x.png" />
+                </div></div
+            ></a>
+          </div>
+          <div class="derivatives-valuation-fhxHYD">DERIVATIVES VALUATION</div>
+          <div class="gives-you-acces-itative-methods-fhxHYD">
+            Gives you access to complex financial mathematics that are automated to give you information about the
+            characteristics of a derivative and it&#39;s fair value using numerous quantitative methods.
+          </div>
+        </div>
+        <img class="logo-black166x145-C61RwL smart-layers-pointers" src="../static/img/logoblack166x145@1x.png" />
+        <img class="logo166x145-C61RwL smart-layers-pointers" src="../static/img/logo166x145@1x.png" />
+      </form>
+    </div>
+    <div class="container-center-horizontal">
+      <form class="x1280-landing-page screen" name="form22" action="form22" method="post">
+        <div class="bg-top1-C61RwL" id="bg-top1"></div>
+        <div class="bg-bottom-C61RwL"></div>
+        <a href="#bg-top1">
+          <div class="back-to-top-button-C61RwL smart-layers-pointers">
+            <div class="ellipse-1-hhcVia border-1px-dove-gray"></div>
+            <div class="icon-feather-arrow-up-circle-hhcVia">
+              <img class="path-83-NV3h6C" src="../static/img/path-83-1@1x.png" />
+              <img class="path-84-NV3h6C" src="../static/img/path-84@1x.png" />
+              <img class="path-85-NV3h6C" src="../static/img/path-85@1x.png" />
+            </div></div
+        ></a>
+        <div class="x-the-automation-h-basic-financi-C61RwL">
+          *The automation and algorithmic analysis on this website is merely offered as insight into the markets that is
+          to be interpreted by the user. These methods of analysis are imperfect and still require the rightful judgment
+          of a human user with basic financial knowledge. This is not financial advice, all gains and losses made from
+          the insight received from this website are those of the users alone.
+        </div>
+        <div class="deluxe-plan-C61RwL smart-layers-pointers">
+          <a href="payment-processing-page.html">
+            <div class="solid-button-3JUt34 smart-layers-pointers">
+              <div class="subscribe-QyALBP">SUBSCRIBE</div>
+            </div></a
+          >
+          <img class="line-20-3JUt34" src="../static/img/line-17-1@1x.png" />
+          <div class="specs-3JUt34">
+            <div class="get-access-to-o-l-product-suite-jZph0H">Get access to our full product suite</div>
+            <div class="for-a-discounted-8999-month-jZph0H">for a discounted $89.99 / month</div>
+            <div class="our-features-ar-imally-designed-jZph0H">Our features are optimally designed</div>
+            <div class="to-work-togethe-d-save-you-time-jZph0H">to work together and save you time</div>
+            <div class="by-automating-m-sks-in-analysis-jZph0H">by automating multiple tasks in analysis</div>
+          </div>
+          <img class="line-19-3JUt34" src="../static/img/line-17-1@1x.png" />
+          <div class="x8999-3JUt34">$89.99</div>
+          <div class="deluxe-3JUt34">DELUXE</div>
+        </div>
+        <div class="bundled-plan-C61RwL smart-layers-pointers">
+          <a href="payment-processing-page.html">
+            <div class="solid-button-5Fq7lF smart-layers-pointers">
+              <div class="subscribe-TfhIUF montserrat-semi-bold-heath-20px">SUBSCRIBE</div>
+            </div></a
+          >
+          <img class="line-18-5Fq7lF" src="../static/img/line-17-1@1x.png" />
+          <div class="specs-5Fq7lF">
+            <div class="choose-any-2-fe-a-subscription-6JgdCv">Choose any 2 features for a subscription</div>
+            <div class="of-only-4999-month-6JgdCv">of only $49.99 / month</div>
+            <div class="gain-an-edge-by-ring-two-of-our-6JgdCv">Gain an edge by pairing two of our</div>
+            <div class="features-togeth-e-yourself-more-6JgdCv">features together to give yourself more</div>
+            <div class="actionable-insi-our-investments-6JgdCv">actionable insights into your investments</div>
+          </div>
+          <img class="line-17-5Fq7lF" src="../static/img/line-17-1@1x.png" />
+          <div class="x4999-5Fq7lF">$49.99</div>
+          <div class="bundled-5Fq7lF">BUNDLED</div>
+        </div>
+        <div class="basic-plan-C61RwL smart-layers-pointers">
+          <a href="payment-processing-page.html">
+            <div class="solid-button-d6iMyr smart-layers-pointers">
+              <div class="subscribe-duCmXd">SUBSCRIBE</div>
+            </div></a
+          >
+          <img class="line-20-d6iMyr" src="../static/img/line-17-1@1x.png" />
+          <div class="specs-d6iMyr">
+            <div class="choose-any-1-fe-a-subscription-DIvSEb">Choose any 1 feature for a subscription</div>
+            <div class="of-only-2999-month-DIvSEb">of only $29.99 / month</div>
+            <div class="these-features-ned-to-automate-DIvSEb">These features are designed to automate</div>
+            <div class="your-derivative-ysis-so-you-can-DIvSEb">your derivatives analysis so you can</div>
+            <div class="compete-with-fi-ancial-veterans-DIvSEb">compete with financial veterans</div>
+          </div>
+          <img class="line-19-d6iMyr" src="../static/img/line-17-1@1x.png" />
+          <div class="x2999-d6iMyr">$29.99</div>
+          <div class="basic-d6iMyr">BASIC</div>
+        </div>
+        <div class="choose-your-plan-C61RwL">CHOOSE YOUR PLAN</div>
+        <img class="rectangle-steps-C61RwL" src="../static/img/rectanglesteps-1@1x.png" />
+        <div class="step-3-C61RwL border-10px-heath smart-layers-pointers">
+          <div class="type-in-the-sto-onable-insights-rbTKxD">
+            Type in the stock ticker you&#39;re interested in and basic information like the data source / brokerage and
+            our algorithms will conduct analysis to give you actionable insights.
+          </div>
+          <div class="step-3-rbTKxD">Step 3</div>
+          <img class="line-5-rbTKxD" src="../static/img/line-5@1x.png" />
+          <div class="stock-symbol-rbTKxD"></div>
+        </div>
+        <div class="step-2-C61RwL smart-layers-pointers">
+          <div class="subscribe-to-on-e-to-understand-xRkmWf">
+            Subscribe to one of our plans to gain access to advanced financial analysis that makes it easy for even a
+            novice to understand.
+          </div>
+          <div class="step-2-xRkmWf">Step 2</div>
+          <img class="line-5-xRkmWf" src="../static/img/line-5@1x.png" />
+          <div class="click-money-symbol-xRkmWf">
+            <img class="x11537953651537184109-128-U1dwcp" src="../static/img/11537953651537184109-128-1@1x.png" />
+          </div>
+        </div>
+        <div class="step-1-C61RwL border-10px-heath smart-layers-pointers">
+          <div class="determine-your-ite-of-products-0ushuB">
+            Determine your needs for financial analysis and choose one of our subscription plans,<br />1-feature,
+            2-features or our full suite of products.
+          </div>
+          <div class="step-1-0ushuB">Step 1</div>
+          <img class="line-5-0ushuB" src="../static/img/line-5@1x.png" />
+          <div class="thinking-symbol-0ushuB">
+            <img class="x20387846431580217324-128-xEZf1M" src="../static/img/20387846431580217324-128@1x.png" />
+          </div>
+        </div>
+        <div class="how-it-works-C61RwL">how it works?</div>
+        <div class="we-have-various-we-have-featur-C61RwL">
+          We have various analysis products that will automate common tasks that professionals do before making an
+          investment. We&#39;re helping you become a better investor without you even needing to understand the complex
+          math involved in the analysis. We have features that allow you to export the automated math to excel or pdf to
+          see a breakdown of the math that is used.
+        </div>
+        <div class="feature4-C61RwL bp2-animate-enter" show-on-scroll>
+          <div class="circle-eEK7uI smart-layers-pointers">
+            <a href="fundamental-analysis-page.html">
+              <div class="twist-star-5ZzEAj">
+                <div class="ellipse4-Cjf8MP border-4px-heath"></div>
+                <div class="starsymbol4-Cjf8MP">
+                  <img class="x19584466131536572525-128-c13MtF" src="../static/img/19584466131536572525-128@1x.png" />
+                </div></div
+            ></a>
+          </div>
+          <div class="fundamental-analysis-eEK7uI">FUNDAMENTAL ANALYSIS</div>
+          <div class="our-fundamental-g-opportunities-eEK7uI">
+            Our fundamental analysis automatically provides you with interesting metrics, relevant news and highlights
+            of the financial statements to give you information that is useful to identify buying opportunities.
+          </div>
+        </div>
+        <div class="feature3-C61RwL bp2-animate-enter1" show-on-scroll>
+          <div class="circle-NLoDnr smart-layers-pointers">
+            <a href="technical-analysis-page.html">
+              <div class="twist-star-6FEqA3">
+                <div class="ellipse3-xd0jjN border-4px-heath"></div>
+                <div class="starsymbol3-xd0jjN">
+                  <img class="x19584466131536572525-128-d8kZXE" src="../static/img/19584466131536572525-128-1@1x.png" />
+                </div></div
+            ></a>
+          </div>
+          <div class="technical-analysis-NLoDnr">TECHNICAL ANALYSIS</div>
+          <div class="the-technical-c-to-be-aware-of-NLoDnr">
+            The technical charts that we provide automatically analyze the chart for common patterns and opportunities.
+            The Technical indicators are analyzed to give you actionable insights and showcase different opportunities
+            to be aware of.
+          </div>
+        </div>
+        <div class="feature2-C61RwL bp2-animate-enter2" show-on-scroll>
+          <a href="strategies-page.html">
+            <div class="circle-unHWOl smart-layers-pointers">
+              <div class="twist-star-50RMqu">
+                <div class="ellipse2-gp4DaD border-4px-heath"></div>
+                <div class="starsymbol2-gp4DaD">
+                  <img class="x19584466131536572525-128-ToZaAW" src="../static/img/19584466131536572525-128-1@1x.png" />
+                </div>
+              </div></div
+          ></a>
+          <div class="derivatives-strategies-unHWOl">DERIVATIVES STRATEGIES</div>
+          <div class="shows-you-recom-in-this-feature-unHWOl">
+            Shows you recommended strategies based on the type of derivatives you&#39;re interested in. A series of
+            strategies are explained and broken down. Hedging strategies for risk management purposes are included in
+            this feature.
+          </div>
+        </div>
+        <div class="feature1-C61RwL bp2-animate-enter3" show-on-scroll>
+          <div class="circle-fhxHYD smart-layers-pointers">
+            <a href="pricing-and-valuation-page.html">
+              <div class="twist-star-iRdTjK">
+                <div class="ellipse1-2YEszl border-4px-heath"></div>
+                <div class="starsymbol1-2YEszl">
+                  <img class="x19584466131536572525-128-7eCZ6A" src="../static/img/19584466131536572525-128@1x.png" />
+                </div></div
+            ></a>
+          </div>
+          <div class="derivatives-valuation-fhxHYD">DERIVATIVES VALUATION</div>
+          <div class="gives-you-acces-itative-methods-fhxHYD">
+            Gives you access to complex financial mathematics that are automated to give you information about the
+            characteristics of a derivative and it&#39;s fair value using numerous quantitative methods.
+          </div>
+        </div>
+        <div class="why-choose-us-C61RwL">WHY CHOOSE US</div>
+        <div class="landing-right-box-C61RwL smart-layers-pointers">
+          <div class="register-buttton-yjACxR smart-layers-pointers">
+            <a href="javascript:SubmitForm('form22')"> <div class="rectangle-59-HOxaGp"></div></a>
+            <div class="register-HOxaGp">REGISTER</div>
+          </div>
+          <div class="product-yjACxR border-1px-dove-gray smart-layers-pointers">
+            <img class="md-arrow-dropdown-VzCElo" src="../static/img/md-arrow-dropdown@1x.png" />
+            <input class="product-VzCElo" name="product23" placeholder="Product" required />
+          </div>
+          <div class="password-yjACxR border-1px-dove-gray smart-layers-pointers">
+            <input class="password-i3NNCP" name="password15" placeholder="Password" type="password" required />
+          </div>
+          <div class="email-box-yjACxR border-1px-dove-gray smart-layers-pointers">
+            <input class="email-ytcpIH" name="email17" placeholder="Email" type="email" required />
+          </div>
+          <div class="try-it-now-yjACxR">TRY IT NOW</div>
+        </div>
+        <div class="landing-content-C61RwL">
+          <div class="beginner-friend-onable-insights-iR1gF7">Beginner Friendly<br />Actionable Insights</div>
+          <div class="automated-and-e-ancial-analysis-iR1gF7">Automated and easy to understand financial analysis.</div>
+          <a href="video-player-page2.html">
+            <div class="component7-iR1gF7 smart-layers-pointers">
+              <div class="watch-how-it-works-gbbylO">watch how it works</div>
+              <img class="ios-play-circle-gbbylO" src="../static/img/ios-play-circle-3@1x.png" /></div
+          ></a>
+        </div>
+        <div class="navbar-C61RwL">
+          <div class="menu-center-8MJZIW">
+            <a href="signup-page.html">
+              <div class="signup-component-Z6zpbm border-1px-dove-gray smart-layers-pointers">
+                <div class="sign-up-9Rxxny">Sign Up</div>
+              </div></a
+            >
+            <a href="login-page.html">
+              <div class="login-component-Z6zpbm border-1px-dove-gray smart-layers-pointers">
+                <div class="login-bvKRUK">Login</div>
+              </div></a
+            >
+            <a href="contact-page.html">
+              <div class="contact-component-Z6zpbm smart-layers-pointers">
+                <div class="contact-POQGFP">Contact</div>
+              </div></a
+            >
+            <a href="fundamental-analysis-page.html">
+              <div class="fundamental-component-Z6zpbm smart-layers-pointers">
+                <div class="fundamental-6EvOoV">Fundamental</div>
+              </div></a
+            >
+            <a href="technical-analysis-page.html">
+              <div class="technical-component-Z6zpbm smart-layers-pointers">
+                <div class="technical-lY8Sqq">Technical</div>
+              </div></a
+            >
+            <a href="strategies-page.html">
+              <div class="strategy-component-Z6zpbm smart-layers-pointers">
+                <div class="strategy-He3YyY">Strategy</div>
+              </div></a
+            >
+            <a href="pricing-and-valuation-page.html">
+              <div class="valuation-component-Z6zpbm smart-layers-pointers">
+                <div class="valuation-5dtgbd">Valuation</div>
+              </div></a
+            >
+          </div>
+        </div>
+        <a href="profile-page.html"
+          ><img class="icon-profile-C61RwL smart-layers-pointers" src="../static/img/icon-profile-1@1x.png"
+        /></a>
+        <img class="logo-black166x145-C61RwL smart-layers-pointers" src="../static/img/logoblack166x145@1x.png" />
+        <img class="logo166x145-C61RwL smart-layers-pointers" src="../static/img/logo166x145@1x.png" />
+      </form>
+    </div>
+    <div class="container-center-horizontal">
+      <form class="x768-landing-page screen" name="form42" action="form42" method="post">
+        <div class="bg-top2-C61RwL" id="bg-top2"></div>
+        <img class="rectangle-steps-C61RwL" src="../static/img/rectanglesteps-2@1x.png" />
+        <div class="step-2-C61RwL border-10px-heath smart-layers-pointers">
+          <div class="subscribe-to-on-e-to-understand-xRkmWf">
+            Subscribe to one of our plans to gain access to advanced financial analysis that makes it easy for even a
+            novice to understand.
+          </div>
+          <div class="step-2-xRkmWf">Step 2</div>
+          <img class="line-5-xRkmWf" src="../static/img/line-5@1x.png" />
+          <div class="click-money-symbol-xRkmWf"></div>
+        </div>
+        <div class="step-1-C61RwL border-10px-heath smart-layers-pointers">
+          <div class="determine-your-ite-of-products-0ushuB">
+            Determine your needs for financial analysis and choose one of our subscription plans,<br />1-feature,
+            2-features or our full suite of products.
+          </div>
+          <div class="step-1-0ushuB">Step 1</div>
+          <img class="line-5-0ushuB" src="../static/img/line-5@1x.png" />
+          <div class="thinking-symbol-0ushuB"></div>
+        </div>
+        <div class="how-it-works-C61RwL">how it works?</div>
+        <div class="we-have-various-we-have-featur-C61RwL">
+          We have various analysis products that will automate common tasks that professionals do before making an
+          investment. We&#39;re helping you become a better investor without you even needing to understand the complex
+          math involved in the analysis. We have features that allow you to export the automated math to excel or pdf to
+          see a breakdown of the math that is used.
+        </div>
+        <div class="why-choose-us-C61RwL">WHY CHOOSE US</div>
+        <div class="landing-content-C61RwL">
+          <div class="beginner-friend-onable-insights-iR1gF7">Beginner Friendly<br />Actionable Insights</div>
+          <div class="automated-and-e-ancial-analysis-iR1gF7">Automated and easy to understand financial analysis.</div>
+          <a href="video-player-page2.html">
+            <div class="component7-iR1gF7 smart-layers-pointers">
+              <div class="watch-how-it-works-gbbylO">watch how it works</div>
+              <img class="ios-play-circle-gbbylO" src="../static/img/ios-play-circle-4@1x.png" /></div
+          ></a>
+        </div>
+        <div class="navbar-C61RwL">
+          <div class="menu-center-8MJZIW">
+            <a href="signup-page.html">
+              <div class="signup-component-Z6zpbm border-1px-dove-gray smart-layers-pointers">
+                <div class="sign-up-9Rxxny">Sign Up</div>
+              </div></a
+            >
+            <a href="login-page.html">
+              <div class="login-component-Z6zpbm smart-layers-pointers">
+                <a href="login-page.html" onclick="window.event.stopPropagation()">
+                  <div class="login-rectangle-bvKRUK border-1px-dove-gray"></div
+                ></a>
+                <div class="login-bvKRUK">Login</div>
+              </div></a
+            >
+            <a href="contact-page.html">
+              <div class="contact-component-Z6zpbm smart-layers-pointers">
+                <div class="contact-POQGFP">Contact</div>
+              </div></a
+            >
+            <a href="fundamental-analysis-page.html">
+              <div class="fundamental-component-Z6zpbm smart-layers-pointers">
+                <a href="fundamental-analysis-page.html" onclick="window.event.stopPropagation()">
+                  <div class="fundamental-rectangle-6EvOoV"></div
+                ></a>
+                <div class="fundamental-6EvOoV">Fundamental</div>
+              </div></a
+            >
+            <a href="technical-analysis-page.html">
+              <div class="technical-component-Z6zpbm smart-layers-pointers">
+                <div class="technical-lY8Sqq">Technical</div>
+              </div></a
+            >
+            <a href="strategies-page.html">
+              <div class="strategy-component-Z6zpbm smart-layers-pointers">
+                <div class="strategy-He3YyY">Strategy</div>
+              </div></a
+            >
+            <a href="pricing-and-valuation-page.html">
+              <div class="valuation-component-Z6zpbm smart-layers-pointers">
+                <div class="valuation-5dtgbd">Valuation</div>
+              </div></a
+            >
+          </div>
+          <img class="logo-black138x120-8MJZIW smart-layers-pointers" src="../static/img/logoblack138x120@1x.png" />
+          <img class="logo138x120-8MJZIW smart-layers-pointers" src="../static/img/logo138x120@1x.png" />
+        </div>
+        <div class="landing-right-box-C61RwL smart-layers-pointers">
+          <div class="register-buttton-yjACxR smart-layers-pointers">
+            <a href="javascript:SubmitForm('form42')"> <div class="rectangle-59-HOxaGp"></div></a>
+            <div class="register-HOxaGp">REGISTER</div>
+          </div>
+          <div class="product-yjACxR border-1px-dove-gray smart-layers-pointers">
+            <img class="md-arrow-dropdown-VzCElo" src="../static/img/md-arrow-dropdown@1x.png" />
+            <input class="product-VzCElo" name="product25" placeholder="Product" required />
+          </div>
+          <div class="password-yjACxR border-1px-dove-gray smart-layers-pointers">
+            <input class="password-i3NNCP" name="password18" placeholder="Password" type="password" required />
+          </div>
+          <div class="email-box-yjACxR border-1px-dove-gray smart-layers-pointers">
+            <input class="email-ytcpIH" name="email112" placeholder="Email" type="email" required />
+          </div>
+          <div class="try-it-now-yjACxR">TRY IT NOW</div>
+        </div>
+        <div class="bg-bottom-C61RwL"></div>
+        <div class="x-the-automation-h-basic-financi-C61RwL">
+          *The automation and algorithmic analysis on this website is merely offered as insight into the markets that is
+          to be interpreted by the user. These methods of analysis are imperfect and still require the rightful judgment
+          of a human user with basic financial knowledge. This is not financial advice, all gains and losses made from
+          the insight received from this website are those of the users alone.
+        </div>
+        <div class="choose-your-plan-C61RwL">CHOOSE YOUR PLAN</div>
+        <div class="step-3-C61RwL border-10px-heath smart-layers-pointers">
+          <div class="type-in-the-sto-onable-insights-rbTKxD">
+            Type in the stock ticker you&#39;re interested in and basic information like the data source / brokerage and
+            our algorithms will conduct analysis to give you actionable insights.
+          </div>
+          <div class="step-3-rbTKxD">Step 3</div>
+          <img class="line-5-rbTKxD" src="../static/img/line-5@1x.png" />
+          <div class="stock-symbol-rbTKxD"></div>
+        </div>
+        <a href="#bg-top2">
+          <div class="back-to-top-button-C61RwL smart-layers-pointers">
+            <div class="ellipse-1-hhcVia border-1px-dove-gray"></div>
+            <div class="icon-feather-arrow-up-circle-hhcVia">
+              <img class="path-83-NV3h6C" src="../static/img/path-83-1@1x.png" />
+              <img class="path-84-NV3h6C" src="../static/img/path-84@1x.png" />
+              <img class="path-85-NV3h6C" src="../static/img/path-85@1x.png" />
+            </div></div
+        ></a>
+        <div class="group-52-C61RwL">
+          <div class="deluxe-plan-odKgLo smart-layers-pointers">
+            <a href="payment-processing-page.html">
+              <div class="solid-button-TDe8Vo smart-layers-pointers">
+                <div class="subscribe-Uzhe6N">SUBSCRIBE</div>
+              </div></a
+            >
+            <img class="line-20-TDe8Vo" src="../static/img/line-17-2@1x.png" />
+            <img class="line-19-TDe8Vo" src="../static/img/line-17-2@1x.png" />
+            <div class="x8999-TDe8Vo">$89.99</div>
+            <div class="deluxe-TDe8Vo">DELUXE</div>
+          </div>
+          <div class="basic-plan-odKgLo smart-layers-pointers">
+            <a href="payment-processing-page.html">
+              <div class="solid-button-kko8j4 smart-layers-pointers">
+                <div class="subscribe-8RZTeS">SUBSCRIBE</div>
+              </div></a
+            >
+            <img class="line-20-kko8j4" src="../static/img/line-17-2@1x.png" />
+            <img class="line-19-kko8j4" src="../static/img/line-17-2@1x.png" />
+            <div class="x2999-kko8j4">$29.99</div>
+            <div class="basic-kko8j4">BASIC</div>
+          </div>
+          <div class="bundled-plan-odKgLo smart-layers-pointers">
+            <a href="payment-processing-page.html">
+              <div class="solid-button-Ugb5r3 smart-layers-pointers">
+                <div class="subscribe-G6CJsr montserrat-semi-bold-heath-20px">SUBSCRIBE</div>
+              </div></a
+            >
+            <img class="line-18-Ugb5r3" src="../static/img/line-17-2@1x.png" />
+            <img class="line-17-Ugb5r3" src="../static/img/line-17-2@1x.png" />
+            <div class="x4999-Ugb5r3">$49.99</div>
+            <div class="bundled-Ugb5r3">BUNDLED</div>
+          </div>
+        </div>
+        <a href="profile-page.html"
+          ><img class="icon-profile-C61RwL smart-layers-pointers" src="../static/img/icon-profile-2@1x.png"
+        /></a>
+        <div class="feature4-C61RwL bp3-animate-enter" show-on-scroll>
+          <div class="circle-eEK7uI smart-layers-pointers">
+            <a href="fundamental-analysis-page.html">
+              <div class="twist-star-5ZzEAj">
+                <div class="ellipse4-Cjf8MP border-4px-heath"></div>
+                <div class="starsymbol4-Cjf8MP">
+                  <img class="x19584466131536572525-128-c13MtF" src="../static/img/19584466131536572525-128@1x.png" />
+                </div></div
+            ></a>
+          </div>
+          <div class="fundamental-analysis-eEK7uI">FUNDAMENTAL ANALYSIS</div>
+          <div class="our-fundamental-g-opportunities-eEK7uI montserrat-normal-black-10px">
+            Our fundamental analysis automatically provides you with interesting metrics, relevant news and highlights
+            of the financial statements to give you information that is useful to identify buying opportunities.
+          </div>
+        </div>
+        <div class="feature3-C61RwL bp3-animate-enter1" show-on-scroll>
+          <div class="circle-NLoDnr smart-layers-pointers">
+            <a href="technical-analysis-page.html">
+              <div class="twist-star-6FEqA3">
+                <div class="ellipse3-xd0jjN border-4px-heath"></div>
+                <div class="starsymbol3-xd0jjN">
+                  <img class="x19584466131536572525-128-d8kZXE" src="../static/img/19584466131536572525-128-1@1x.png" />
+                </div></div
+            ></a>
+          </div>
+          <div class="technical-analysis-NLoDnr">TECHNICAL ANALYSIS</div>
+          <div class="the-technical-c-to-be-aware-of-NLoDnr montserrat-normal-black-10px">
+            The technical charts that we provide automatically analyze the chart for common patterns and opportunities.
+            The Technical indicators are analyzed to give you actionable insights and showcase different opportunities
+            to be aware of.
+          </div>
+        </div>
+        <div class="feature2-C61RwL bp3-animate-enter2" show-on-scroll>
+          <a href="strategies-page.html">
+            <div class="circle-unHWOl smart-layers-pointers">
+              <div class="twist-star-50RMqu">
+                <div class="ellipse2-gp4DaD border-4px-heath"></div>
+                <div class="starsymbol2-gp4DaD">
+                  <img class="x19584466131536572525-128-ToZaAW" src="../static/img/19584466131536572525-128-1@1x.png" />
+                </div>
+              </div></div
+          ></a>
+          <div class="derivatives-strategies-unHWOl">DERIVATIVES STRATEGIES</div>
+          <div class="shows-you-recom-in-this-feature-unHWOl montserrat-normal-black-10px">
+            Shows you recommended strategies based on the type of derivatives you&#39;re interested in. A series of
+            strategies are explained and broken down. Hedging strategies for risk management purposes are included in
+            this feature.
+          </div>
+        </div>
+        <div class="feature1-C61RwL bp3-animate-enter3" show-on-scroll>
+          <div class="circle-fhxHYD smart-layers-pointers">
+            <a href="pricing-and-valuation-page.html">
+              <div class="twist-star-iRdTjK">
+                <div class="ellipse1-2YEszl border-4px-heath"></div>
+                <div class="starsymbol1-2YEszl">
+                  <img class="x19584466131536572525-128-7eCZ6A" src="../static/img/19584466131536572525-128@1x.png" />
+                </div></div
+            ></a>
+          </div>
+          <div class="derivatives-valuation-fhxHYD">DERIVATIVES VALUATION</div>
+          <div class="gives-you-acces-itative-methods-fhxHYD montserrat-normal-black-10px">
+            Gives you access to complex financial mathematics that are automated to give you information about the
+            characteristics of a derivative and it&#39;s fair value using numerous quantitative methods.
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="container-center-horizontal">
+      <form class="x375-landing-page screen" name="form63" action="form63" method="post">
+        <div class="bg-top3-C61RwL" id="bg-top3"></div>
+        <img class="rectangle-steps-C61RwL" src="../static/img/rectanglesteps-3@1x.png" />
+        <div class="we-have-various-we-have-featur-C61RwL">
+          We have various analysis products that will automate common tasks that professionals do before making an
+          investment. We&#39;re helping you become a better investor without you even needing to understand the complex
+          math involved in the analysis. We have features that allow you to export the automated math to excel or pdf to
+          see a breakdown of the math that is used.
+        </div>
+        <div class="why-choose-us-C61RwL">WHY CHOOSE US</div>
+        <div class="landing-content-C61RwL">
+          <div class="beginner-friend-onable-insights-iR1gF7">Beginner Friendly<br />Actionable Insights</div>
+          <div class="automated-and-e-ancial-analysis-iR1gF7">Automated and easy to understand financial analysis.</div>
+          <a href="video-player-page2.html">
+            <div class="component7-iR1gF7 smart-layers-pointers">
+              <div class="watch-how-it-works-gbbylO">watch how it works</div>
+              <img class="ios-play-circle-gbbylO" src="../static/img/ios-play-circle-4@1x.png" /></div
+          ></a>
+        </div>
+        <div class="navbar-C61RwL">
+          <div class="menu-center-8MJZIW">
+            <a href="signup-page.html">
+              <div class="signup-component-Z6zpbm border-1px-dove-gray smart-layers-pointers">
+                <div class="sign-up-9Rxxny">Sign Up</div>
+              </div></a
+            >
+            <a href="login-page.html">
+              <div class="login-component-Z6zpbm border-1px-dove-gray smart-layers-pointers">
+                <div class="login-bvKRUK">Login</div>
+              </div></a
+            >
+            <a href="contact-page.html">
+              <div class="contact-component-Z6zpbm smart-layers-pointers">
+                <div class="contact-POQGFP">Contact</div>
+              </div></a
+            >
+            <a href="technical-analysis-page.html">
+              <div class="technical-component-Z6zpbm smart-layers-pointers">
+                <div class="technical-lY8Sqq">Technical</div>
+              </div></a
+            >
+            <a href="strategies-page.html">
+              <div class="strategy-component-Z6zpbm smart-layers-pointers">
+                <div class="strategy-He3YyY">Strategy</div>
+              </div></a
+            >
+            <a href="pricing-and-valuation-page.html">
+              <div class="valuation-component-Z6zpbm smart-layers-pointers">
+                <div class="valuation-5dtgbd">Valuation</div>
+              </div></a
+            >
+            <a href="fundamental-analysis-page.html">
+              <div class="fundamental-component-Z6zpbm smart-layers-pointers">
+                <div class="fundamental-rectangle-6EvOoV"></div>
+                <div class="fundamental-6EvOoV">Fundamental</div>
+              </div></a
+            >
+          </div>
+        </div>
+        <div class="landing-right-box-C61RwL smart-layers-pointers">
+          <div class="register-buttton-yjACxR smart-layers-pointers">
+            <a href="javascript:SubmitForm('form63')"> <div class="rectangle-59-HOxaGp"></div></a>
+            <div class="register-HOxaGp">REGISTER</div>
+          </div>
+          <div class="product-yjACxR border-1px-dove-gray smart-layers-pointers">
+            <img class="md-arrow-dropdown-VzCElo" src="../static/img/md-arrow-dropdown@1x.png" />
+            <input class="product-VzCElo" name="product27" placeholder="Product" required />
+          </div>
+          <div class="password-yjACxR border-1px-dove-gray smart-layers-pointers">
+            <input class="password-i3NNCP" name="password111" placeholder="Password" type="password" required />
+          </div>
+          <div class="email-box-yjACxR border-1px-dove-gray smart-layers-pointers">
+            <input class="email-ytcpIH" name="email117" placeholder="Email" type="email" required />
+          </div>
+          <div class="try-it-now-yjACxR">TRY IT NOW</div>
+        </div>
+        <div class="bg-bottom-C61RwL"></div>
+        <div class="x-the-automation-h-basic-financi-C61RwL">
+          *The automation and algorithmic analysis on this website is merely offered as insight into the markets that is
+          to be interpreted by the user. These methods of analysis are imperfect and still require the rightful judgment
+          of a human user with basic financial knowledge. This is not financial advice, all gains and losses made from
+          the insight received from this website are those of the users alone.
+        </div>
+        <div class="choose-your-plan-C61RwL">CHOOSE YOUR PLAN</div>
+        <div class="group-52-C61RwL">
+          <div class="deluxe-plan-odKgLo smart-layers-pointers">
+            <a href="payment-processing-page.html">
+              <div class="solid-button-TDe8Vo smart-layers-pointers">
+                <div class="subscribe-Uzhe6N">SUBSCRIBE</div>
+              </div></a
+            >
+            <img class="line-20-TDe8Vo" src="../static/img/line-17-2@1x.png" />
+            <img class="line-19-TDe8Vo" src="../static/img/line-17-2@1x.png" />
+            <div class="x8999-TDe8Vo">$89.99</div>
+            <div class="deluxe-TDe8Vo">DELUXE</div>
+          </div>
+          <div class="basic-plan-odKgLo smart-layers-pointers">
+            <a href="payment-processing-page.html">
+              <div class="solid-button-kko8j4 smart-layers-pointers">
+                <div class="subscribe-8RZTeS">SUBSCRIBE</div>
+              </div></a
+            >
+            <img class="line-20-kko8j4" src="../static/img/line-17-2@1x.png" />
+            <img class="line-19-kko8j4" src="../static/img/line-17-2@1x.png" />
+            <div class="x2999-kko8j4">$29.99</div>
+            <div class="basic-kko8j4">BASIC</div>
+          </div>
+          <div class="bundled-plan-odKgLo smart-layers-pointers">
+            <a href="payment-processing-page.html">
+              <div class="solid-button-Ugb5r3 smart-layers-pointers">
+                <div class="subscribe-G6CJsr montserrat-semi-bold-heath-20px">SUBSCRIBE</div>
+              </div></a
+            >
+            <img class="line-18-Ugb5r3" src="../static/img/line-17-2@1x.png" />
+            <img class="line-17-Ugb5r3" src="../static/img/line-17-2@1x.png" />
+            <div class="x4999-Ugb5r3">$49.99</div>
+            <div class="bundled-Ugb5r3">BUNDLED</div>
+          </div>
+        </div>
+        <a href="#bg-top3">
+          <div class="back-to-top-button-C61RwL smart-layers-pointers">
+            <div class="ellipse-1-hhcVia border-1px-dove-gray"></div>
+            <div class="icon-feather-arrow-up-circle-hhcVia">
+              <img class="path-83-NV3h6C" src="../static/img/path-83-1@1x.png" />
+              <img class="path-84-NV3h6C" src="../static/img/path-84@1x.png" />
+              <img class="path-85-NV3h6C" src="../static/img/path-85@1x.png" />
+            </div></div
+        ></a>
+        <a href="profile-page.html"
+          ><img class="icon-profile-C61RwL smart-layers-pointers" src="../static/img/icon-profile-3@1x.png"
+        /></a>
+        <div class="feature4-C61RwL bp4-animate-enter" show-on-scroll>
+          <a href="fundamental-analysis-page.html">
+            <div class="circle-eEK7uI smart-layers-pointers">
+              <div class="twist-star-5ZzEAj">
+                <div class="ellipse4-Cjf8MP border-4px-heath"></div>
+                <div class="starsymbol4-Cjf8MP">
+                  <img class="x19584466131536572525-128-c13MtF" src="../static/img/19584466131536572525-128@1x.png" />
+                </div>
+              </div></div
+          ></a>
+          <div class="fundamental-analysis-eEK7uI">FUNDAMENTAL ANALYSIS</div>
+          <div class="our-fundamental-g-opportunities-eEK7uI montserrat-normal-black-10px">
+            Our fundamental analysis automatically provides you with interesting metrics, relevant news and highlights
+            of the financial statements to give you information that is useful to identify buying opportunities.
+          </div>
+        </div>
+        <div class="feature3-C61RwL bp4-animate-enter1" show-on-scroll>
+          <div class="circle-NLoDnr smart-layers-pointers">
+            <a href="technical-analysis-page.html">
+              <div class="twist-star-6FEqA3">
+                <div class="ellipse3-xd0jjN border-4px-heath"></div>
+                <div class="starsymbol3-xd0jjN">
+                  <img class="x19584466131536572525-128-d8kZXE" src="../static/img/19584466131536572525-128-1@1x.png" />
+                </div></div
+            ></a>
+          </div>
+          <div class="technical-analysis-NLoDnr">TECHNICAL ANALYSIS</div>
+          <div class="the-technical-c-to-be-aware-of-NLoDnr montserrat-normal-black-10px">
+            The technical charts that we provide automatically analyze the chart for common patterns and opportunities.
+            The Technical indicators are analyzed to give you actionable insights and showcase different opportunities
+            to be aware of.
+          </div>
+        </div>
+        <div class="feature2-C61RwL bp4-animate-enter2" show-on-scroll>
+          <a href="strategies-page.html">
+            <div class="circle-unHWOl smart-layers-pointers">
+              <div class="twist-star-50RMqu">
+                <div class="ellipse2-gp4DaD border-4px-heath"></div>
+                <div class="starsymbol2-gp4DaD">
+                  <img class="x19584466131536572525-128-ToZaAW" src="../static/img/19584466131536572525-128-1@1x.png" />
+                </div>
+              </div></div
+          ></a>
+          <div class="derivatives-strategies-unHWOl">DERIVATIVES STRATEGIES</div>
+          <div class="shows-you-recom-in-this-feature-unHWOl montserrat-normal-black-10px">
+            Shows you recommended strategies based on the type of derivatives you&#39;re interested in. A series of
+            strategies are explained and broken down. Hedging strategies for risk management purposes are included in
+            this feature.
+          </div>
+        </div>
+        <div class="feature1-C61RwL bp4-animate-enter3" show-on-scroll>
+          <div class="circle-fhxHYD smart-layers-pointers">
+            <a href="pricing-and-valuation-page.html">
+              <div class="twist-star-iRdTjK">
+                <div class="ellipse1-2YEszl border-4px-heath"></div>
+                <div class="starsymbol1-2YEszl">
+                  <img class="x19584466131536572525-128-7eCZ6A" src="../static/img/19584466131536572525-128@1x.png" />
+                </div></div
+            ></a>
+          </div>
+          <div class="derivatives-valuation-fhxHYD">DERIVATIVES VALUATION</div>
+          <div class="gives-you-acces-itative-methods-fhxHYD montserrat-normal-black-10px">
+            Gives you access to complex financial mathematics that are automated to give you information about the
+            characteristics of a derivative and it&#39;s fair value using numerous quantitative methods.
+          </div>
+        </div>
+        <img class="logo-black58x51-C61RwL smart-layers-pointers" src="../static/img/logoblack58x51@1x.png" />
+        <img class="logo58x51-C61RwL smart-layers-pointers" src="../static/img/logo58x51@1x.png" />
+      </form>
+    </div>
+    <script>
+      function ShowOnScroll() {
+        this.toShow = [];
+        this.nextEventY = undefined;
+      }
+
+      ShowOnScroll.prototype.show = function (e) {
+        e.style.display = "";
+      };
+
+      ShowOnScroll.prototype.hide = function (e) {
+        e.style.display = "none";
+      };
+
+      ShowOnScroll.prototype.getTop = function (e) {
+        if (e.Top != undefined && e.Top != 0) {
+          return e.Top;
+        }
+        var top = 0;
+        var iter = e;
+        do {
+          top += iter.offsetTop || 0;
+          iter = iter.offsetParent;
+        } while (iter);
+        e.Top = top;
+        return top;
+      };
+
+      ShowOnScroll.prototype.onScroll = function () {
+        var screenBottom = window.pageYOffset + window.innerHeight;
+        if (this.nextEventY == undefined || this.nextEventY > screenBottom) {
+          return;
+        }
+        this.nextEventY = undefined;
+        for (var i = 0; i < this.toShow.length; i++) {
+          var e = this.toShow[i];
+          var top = this.getTop(e);
+          if (top < screenBottom) {
+            this.show(e);
+            this.toShow.shift();
+            i--;
+          } else {
+            this.nextEventY = top;
+            break;
+          }
+        }
+      };
+
+      ShowOnScroll.prototype.resetScrolling = function () {
+        // Clear state
+        var screenBottom = window.pageYOffset + window.innerHeight;
+        for (var i = 0; i < this.toShow.length; i++) {
+          var e = this.toShow[i];
+          this.show(e);
+        }
+        this.toShow = [];
+        this.nextEventY == undefined;
+
+        // Collect items
+        var itemsToShowOnScroll = Array.prototype.slice.call(document.getElementsByTagName("*"));
+        itemsToShowOnScroll = itemsToShowOnScroll.filter(function (e) {
+          return e.getAttribute("show-on-scroll") != undefined;
+        });
+        var getTop = this.getTop;
+        itemsToShowOnScroll.sort(function (a, b) {
+          return getTop(a) - getTop(b);
+        });
+        for (var i = 0; i < itemsToShowOnScroll.length; i++) {
+          var e = itemsToShowOnScroll[i];
+          var top = this.getTop(e);
+          if (top < screenBottom) {
+            continue;
+          }
+          this.toShow.push(e);
+          this.hide(e);
+          this.nextEventY = this.nextEventY != undefined ? this.nextEventY : top;
+        }
+      };
+
+      ShowOnScroll.prototype.handleEvent = function (e) {
+        switch (e.type) {
+          case "scroll":
+            this.onScroll();
+            break;
+          case "resize":
+            this.resetScrolling();
+            break;
+        }
+      };
+
+      ShowOnScroll.prototype.init = function () {
+        this.resetScrolling();
+        window.addEventListener("scroll", this);
+        window.addEventListener("resize", this);
+      };
+
+      // After anima-src
+      setTimeout(function () {
+        var instShowOnScroll = new ShowOnScroll();
+        instShowOnScroll.init();
+      }, 250);
+    </script>
+    <script>
+      /* Copyright (c) 2016 Tobias Buschor https://goo.gl/gl0mbf | MIT License https://goo.gl/HgajeK */
+
+      if (!HTMLFormElement.prototype.reportValidity) {
+        HTMLFormElement.prototype.reportValidity = function () {
+          if (this.checkValidity()) return true;
+          var btn = document.createElement("button");
+          this.appendChild(btn);
+          btn.click();
+          this.removeChild(btn);
+          return false;
+        };
+      }
+
+      function SubmitForm(form_name) {
+        var form = document.getElementsByName(form_name)[0];
+        if (form.reportValidity()) {
+          form.submit();
+          if (window.submitted) window.submitted();
+        }
+      }
+    </script>
+  </body>
+  {% endblock %}

@@ -1,0 +1,272 @@
+<!-- extends the base.html template -->
+{% extends "base.html" %}
+
+{% block title %} Long Put {% endblock %}
+
+  {% block head %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="../static/css/375-strategies-breakdown2.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Montserrat:700,400,500,600,500italic");
+
+      .component-wrapper a,
+      .screen a {
+        text-decoration: none;
+        display: contents;
+      }
+
+      .full-width-a {
+        width: 100%;
+      }
+
+      .full-height-a {
+        height: 100%;
+      }
+
+      .screen textarea:focus,
+      .screen input:focus {
+        outline: none;
+      }
+
+      .screen *,
+      .component-wrapper * {
+        box-sizing: border-box;
+      }
+
+      .screen div {
+        -webkit-text-size-adjust: none;
+      }
+
+      .container-center-vertical,
+      .container-center-horizontal {
+        pointer-events: none;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+      }
+
+      .container-center-vertical {
+        align-items: center;
+        height: 100%;
+      }
+
+      .container-center-horizontal {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .container-center-vertical > *,
+      .container-center-horizontal > * {
+        pointer-events: auto;
+        flex-shrink: 0;
+      }
+
+      .component-wrapper,
+      .screen {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+        word-break: break-word;
+      }
+
+      .auto-animated div {
+        opacity: 0;
+        position: absolute;
+        --z-index: -1;
+      }
+
+      .auto-animated .container-center-vertical,
+      .auto-animated .container-center-horizontal {
+        opacity: 1;
+      }
+
+      .overlay {
+        position: absolute;
+        opacity: 0;
+        display: none;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+      }
+
+      .animate-appear {
+        opacity: 0;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 normal forwards;
+      }
+
+      .animate-disappear {
+        opacity: 1;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 reverse forwards;
+      }
+
+      .animate-nodelay {
+        animation-delay: 0s;
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .align-self-flex-start {
+        align-self: flex-start;
+      }
+      .align-self-flex-end {
+        align-self: flex-end;
+      }
+      .align-self-flex-center {
+        align-self: center;
+      }
+      .valign-text-middle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .valign-text-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      input:focus {
+        outline: none;
+      }
+      .component-wrapper,
+      .component-wrapper * {
+        pointer-events: none;
+      }
+
+      .component-wrapper a *,
+      .component-wrapper a,
+      .component-wrapper input,
+      .component-wrapper video,
+      .component-wrapper iframe,
+      .listeners-active,
+      .listeners-active * {
+        pointer-events: auto;
+      }
+
+      .hidden,
+      .hidden * {
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .smart-layers-pointers,
+      .smart-layers-pointers * {
+        pointer-events: auto;
+        visibility: visible;
+      }
+
+      .component-wrapper.not-ready,
+      .component-wrapper.not-ready * {
+        visibility: hidden !important;
+      }
+
+      .listeners-active-click,
+      .listeners-active-click * {
+        cursor: pointer;
+      }
+    </style>
+    <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+  {% endblock %}
+
+  {% block content%}
+  <body style="margin: 0; background: rgba(84, 22, 23, 1)">
+    <input type="hidden" id="anPageName" name="page" value="375-strategies-breakdown2" />
+    <div class="container-center-horizontal">
+      <div class="strategies-breakdown-longput screen">
+        <div class="secondary-background-C61RwL"></div>
+        <div class="bearish-strategy-C61RwL montserrat-normal-black-42px">Bearish Strategy</div>
+        <div class="long-put-buy-a-put-option-C61RwL">Long Put<br />(Buy a Put Option)</div>
+        <div class="a-long-put-may-tential-since-a-C61RwL">
+          A long put may be a favorable strategy for bearish investors, rather than shorting shares. A short stock
+          position theoretically has unlimited risk since the stock price has no capped upside. A short stock position
+          also has limited profit potential, since a stock cannot fall below $0 per share. A long put option is similar
+          to a short stock position because the profit potentials are limited. A put option will only increase in value
+          up to the underlying stock reaching zero. The benefit of the put option is that risk is limited to the premium
+          paid for the option.<br /><br />The drawback to the put option is that the price of the underlying must fall
+          before the expiration date of the option, otherwise, the amount paid for the option is lost.<br /><br />A long
+          put option could also be used to hedge against unfavorable moves in a long stock position. This hedging
+          strategy is known as a protective put or married put.
+        </div>
+        <div class="payoff-diagram-C61RwL montserrat-normal-black-42px">Payoff Diagram</div>
+        <img class="image-3-C61RwL" src="../static/img/image-3@1x.png" />
+        <a href="strategies-page2.html">
+          <div class="back-strat-C61RwL">
+            <img class="ios-arrow-back-B7kBwR" src="../static/img/ios-arrow-back-3@1x.png" />
+            <div class="back-to-strategies-B7kBwR">Back To Strategies</div>
+          </div></a
+        >
+      </div>
+    </div>
+    <div class="container-center-horizontal">
+      <div class="x1280-strategies-breakdown-2 screen">
+        <div class="secondary-background-C61RwL"></div>
+        <div class="bullish-bearish-eutral-strategy-C61RwL">Bullish Bearish Neutral Strategy</div>
+        <div class="strategy-name-how-to-buy-C61RwL">Strategy Name<br />(How To Buy)</div>
+        <div class="text-descriptio-aph-example-etc-C61RwL">
+          Text description describing how to execute this trade with the assets you&#39;ve entered. <br />Paragraph
+          Example Etc,<br />
+        </div>
+        <div class="payoff-diagram-C61RwL">Payoff Diagram</div>
+        <img class="image-2-C61RwL" src="../static/img/image-2-1@1x.png" />
+        <a href="strategies-page2.html">
+          <div class="back-C61RwL smart-layers-pointers">
+            <img class="ios-arrow-back-7WGuVo" src="../static/img/ios-arrow-back-10@1x.png" />
+            <div class="back-to-strategies-7WGuVo">Back To Strategies</div>
+          </div></a
+        >
+      </div>
+    </div>
+    <div class="container-center-horizontal">
+      <div class="x768-strategies-breakdown-2 screen">
+        <div class="secondary-background-C61RwL"></div>
+        <div class="bullish-bearish-eutral-strategy-C61RwL">Bullish Bearish Neutral Strategy</div>
+        <div class="strategy-name-how-to-buy-C61RwL">Strategy Name<br />(How To Buy)</div>
+        <div class="text-descriptio-aph-example-etc-C61RwL">
+          Text description describing how to execute this trade with the assets you&#39;ve entered. <br />Paragraph
+          Example Etc,<br />
+        </div>
+        <div class="payoff-diagram-C61RwL">Payoff Diagram</div>
+        <img class="image-2-C61RwL" src="../static/img/image-2-10@1x.png" />
+        <a href="strategies-page2.html">
+          <div class="back-C61RwL smart-layers-pointers">
+            <img class="ios-arrow-back-7WGuVo" src="../static/img/ios-arrow-back-11@1x.png" />
+            <div class="back-to-strategies-7WGuVo">Back To Strategies</div>
+          </div></a
+        >
+      </div>
+    </div>
+    <div class="container-center-horizontal">
+      <div class="x375-strategies-breakdown2 screen">
+        <div class="secondary-background-C61RwL"></div>
+        <div class="bullish-bearish-eutral-strategy-C61RwL montserrat-normal-black-12px">
+          Bullish Bearish Neutral Strategy
+        </div>
+        <div class="strategy-name-h-do-the-strategy-C61RwL">Strategy Name<br />(How to do the Strategy)</div>
+        <div class="talk-about-how-and-an-example-C61RwL">
+          Talk about how to exactly do the strategy and the payoffs and an <br />example.
+        </div>
+        <div class="payoff-diagram-C61RwL montserrat-normal-black-12px">Payoff Diagram</div>
+        <img class="image-2-C61RwL" src="../static/img/image-2-17@1x.png" />
+        <a href="strategies-page2.html">
+          <div class="back-C61RwL smart-layers-pointers">
+            <img class="ios-arrow-back-7WGuVo" src="../static/img/ios-arrow-back-11@1x.png" />
+            <div class="back-to-strategies-7WGuVo">Back To Strategies</div>
+          </div></a
+        >
+      </div>
+    </div>
+  </body>
+  {% endblock %}

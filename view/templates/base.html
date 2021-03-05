@@ -5,45 +5,6 @@
     <head>
         <!-- classes that the pages can use -->
         <style>
-            ::placeholder {
-                position: absolute;
-                box-sizing: content-box;
-                -ms-transform: rotate(0.00deg);
-                -webkit-transform: rotate(0.00deg);
-                transform: rotate(0.00deg);
-                -ms-transform-origin: center;
-                -webkit-transform-origin: center;
-                transform-origin: center;
-                opacity: 1;
-                cursor: default;
-                margin-top: 0.00px;
-                margin-right: 0.00px;
-                margin-bottom: 0.00px;
-                margin-left: 0.00px;
-                padding-top: 0.00px;
-                padding-right: 0.00px;
-                padding-bottom: 0.00px;
-                padding-left: 22.00px;
-                background-color: rgba(255, 255, 255, 0);
-                text-align: left;
-                letter-spacing: 0.50px;
-                color: rgba(49, 89, 112, 1);
-                -webkit-text-stroke: 1.00px rgba(0, 0, 0, 0);
-                font-size: 18.00px;
-                font-weight: 500;
-                font-style: normal;
-                font-family: Montserrat, Arial;
-                text-decoration: none;
-                box-shadow: none;
-                overflow-x: unset;
-                overflow-y: unset;
-                white-space: pre;
-                width: 52.00px;
-                height: 22.00px;
-                left: 24.00px;
-                top: 19.00px;
-            }
-
             .alert {
                   padding: 20px;
                   background-color: #f44336;
@@ -86,13 +47,6 @@
     </head>
 
     <body>
-        <!-- this block will be overridden by child pages -->
-        {% block content %} {% endblock %}
-    </body>
-
-    <!-- child templates can use this block to flash messages -->
-    {% block alert %}
-
         <!-- shows the message from flash() function -->
         {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %} <!-- checks if the messages are not empty -->
@@ -100,7 +54,6 @@
 
                 <!-- shows error message -->
                 {% if category == "Error" %}
-
                 <div class="alert">
                     <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                         {{ message }}
@@ -145,6 +98,7 @@
         {% endif %}
         {% endwith %}
 
-    {% endblock %}
-
+        <!-- this block will be overridden by child pages -->
+        {% block content %} {% endblock %}
+    </body>
 </html>

@@ -1,0 +1,578 @@
+<!-- extends the base.html template -->
+{% extends "base.html" %}
+
+{% block title %} Profile {% endblock %}
+
+  {% block head %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="../static/css/profile-page.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Montserrat:700,400,500,600,500italic");
+
+      .component-wrapper a,
+      .screen a {
+        text-decoration: none;
+        display: contents;
+      }
+
+      .full-width-a {
+        width: 100%;
+      }
+
+      .full-height-a {
+        height: 100%;
+      }
+
+      .screen textarea:focus,
+      .screen input:focus {
+        outline: none;
+      }
+
+      .screen *,
+      .component-wrapper * {
+        box-sizing: border-box;
+      }
+
+      .screen div {
+        -webkit-text-size-adjust: none;
+      }
+
+      .container-center-vertical,
+      .container-center-horizontal {
+        pointer-events: none;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+      }
+
+      .container-center-vertical {
+        align-items: center;
+        height: 100%;
+      }
+
+      .container-center-horizontal {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .container-center-vertical > *,
+      .container-center-horizontal > * {
+        pointer-events: auto;
+        flex-shrink: 0;
+      }
+
+      .component-wrapper,
+      .screen {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+        word-break: break-word;
+      }
+
+      .auto-animated div {
+        opacity: 0;
+        position: absolute;
+        --z-index: -1;
+      }
+
+      .auto-animated .container-center-vertical,
+      .auto-animated .container-center-horizontal {
+        opacity: 1;
+      }
+
+      .overlay {
+        position: absolute;
+        opacity: 0;
+        display: none;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+      }
+
+      .animate-appear {
+        opacity: 0;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 normal forwards;
+      }
+
+      .animate-disappear {
+        opacity: 1;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 reverse forwards;
+      }
+
+      .animate-nodelay {
+        animation-delay: 0s;
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .align-self-flex-start {
+        align-self: flex-start;
+      }
+      .align-self-flex-end {
+        align-self: flex-end;
+      }
+      .align-self-flex-center {
+        align-self: center;
+      }
+      .valign-text-middle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .valign-text-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      input:focus {
+        outline: none;
+      }
+      .component-wrapper,
+      .component-wrapper * {
+        pointer-events: none;
+      }
+
+      .component-wrapper a *,
+      .component-wrapper a,
+      .component-wrapper input,
+      .component-wrapper video,
+      .component-wrapper iframe,
+      .listeners-active,
+      .listeners-active * {
+        pointer-events: auto;
+      }
+
+      .hidden,
+      .hidden * {
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .smart-layers-pointers,
+      .smart-layers-pointers * {
+        pointer-events: auto;
+        visibility: visible;
+      }
+
+      .component-wrapper.not-ready,
+      .component-wrapper.not-ready * {
+        visibility: hidden !important;
+      }
+
+      .listeners-active-click,
+      .listeners-active-click * {
+        cursor: pointer;
+      }
+    </style>
+    <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+  </head>
+  {% endblock %}
+
+  {% block content %}
+  <body style="margin: 0; background: rgba(201, 201, 201, 1)">
+    <input type="hidden" id="anPageName" name="page" value="profile-page" />
+    <div class="container-center-horizontal">
+      <form class="profile-page screen" name="form6" action="form6" method="post">
+        <div class="analysis-input-C61RwL"><div class="profile-DAnbUD montserrat-normal-black-42px">PROFILE</div></div>
+        <a href="javascript:SubmitForm('form6')">
+          <div class="change-pay-info-button-C61RwL smart-layers-pointers">
+            <div class="change-payment-info-Ycxfvr">CHANGE PAYMENT INFO</div>
+          </div></a
+        >
+        <div class="update-subscription-button-C61RwL">
+          <div class="change-subscription-KnMtrd">UPGRADE&nbsp;&nbsp;SUBSCRIPTION</div>
+        </div>
+        <a href="javascript:SubmitForm('form6')">
+          <div class="change-password-button-C61RwL smart-layers-pointers">
+            <div class="change-password-bQaxVx">CHANGE PASSWORD</div>
+          </div></a
+        >
+        <div class="username-box-C61RwL"><div class="name-61EFYN">USERNAME</div></div>
+        <div class="navbar-C61RwL">
+          <div class="menu-center-8MJZIW">
+            <a href="signup-page.html">
+              <div class="sign-up-component-Z6zpbm border-1px-dove-gray smart-layers-pointers">
+                <div class="sign-up-C4Ldyd montserrat-semi-bold-heath-20px">Sign Up</div>
+              </div></a
+            >
+            <a href="login-page.html">
+              <div class="login-component-Z6zpbm border-1px-dove-gray smart-layers-pointers">
+                <div class="login-bvKRUK montserrat-semi-bold-heath-20px">Login</div>
+              </div></a
+            >
+            <a href="contact-page.html">
+              <div class="contact-component-Z6zpbm smart-layers-pointers">
+                <div class="contact-POQGFP montserrat-semi-bold-heath-20px">Contact</div>
+              </div></a
+            >
+            <a href="fundamental-analysis-page.html">
+              <div class="fundamental-component-Z6zpbm smart-layers-pointers">
+                <div class="fundamental-6EvOoV montserrat-semi-bold-heath-20px">Fundamental</div>
+              </div></a
+            >
+            <a href="technical-analysis-page.html">
+              <div class="technical-component-Z6zpbm smart-layers-pointers">
+                <div class="technical-lY8Sqq montserrat-semi-bold-heath-20px">Technical</div>
+              </div></a
+            >
+            <a href="strategies-page.html">
+              <div class="strategies-component-Z6zpbm smart-layers-pointers">
+                <div class="strategy-q8CpeS montserrat-semi-bold-heath-20px">Strategy</div>
+              </div></a
+            >
+            <a href="pricing-and-valuation-page.html">
+              <div class="valuation-component-Z6zpbm smart-layers-pointers">
+                <div class="valuation-5dtgbd montserrat-semi-bold-heath-20px">Valuation</div>
+              </div></a
+            >
+          </div>
+          <a href="landing-page.html"
+            ><img class="logo166x145-8MJZIW smart-layers-pointers" src="../static/img/logo166x145@1x.png"
+          /></a>
+        </div>
+        <div class="component-148-1-C61RwL"><input class="name-PMR2ex" name="name11" placeholder="OLD PASSWORD" /></div>
+        <div class="component-148-2-C61RwL">
+          <input class="name-lX79p2" name="name12" placeholder="NEW  PASSWORD" />
+        </div>
+        <a href="javascript:SubmitForm('form6')">
+          <div class="component-148-3-C61RwL smart-layers-pointers"><div class="name-5u5m2L">DELUXE</div></div></a
+        >
+        <a href="javascript:SubmitForm('form6')">
+          <div class="component-148-4-C61RwL smart-layers-pointers"><div class="name-e1lqJR">BUNDLED</div></div></a
+        >
+        <a href="javascript:SubmitForm('form6')">
+          <div class="component-148-5-C61RwL smart-layers-pointers"><div class="name-97oaj7">BASIC</div></div></a
+        >
+        <div class="component-148-6-C61RwL">
+          <input class="name-s8lgwV" name="name16" placeholder="NEW CREDIT CARD NUMBER" />
+        </div>
+        <div class="component-148-7-C61RwL"><input class="name-Xhxjxf" name="name17" placeholder="NEW EXPIRY" /></div>
+        <div class="component-148-8-C61RwL"><input class="name-DRyF0m" name="name18" placeholder="NEW CVC" /></div>
+      </form>
+    </div>
+    <div class="container-center-horizontal">
+      <form class="x1280-profile-page screen" name="form27" action="form27" method="post">
+        <div class="analysis-input-C61RwL"><div class="profile-DAnbUD montserrat-normal-black-42px">PROFILE</div></div>
+        <div class="username-box-C61RwL"><div class="name-61EFYN montserrat-semi-bold-black-12px">USERNAME</div></div>
+        <div class="navbar-C61RwL">
+          <div class="menu-center-8MJZIW">
+            <a href="signup-page.html">
+              <div class="signup-component-Z6zpbm border-1px-dove-gray smart-layers-pointers">
+                <div class="sign-up-9Rxxny">Sign Up</div>
+              </div></a
+            >
+            <a href="login-page.html">
+              <div class="login-component-Z6zpbm border-1px-dove-gray smart-layers-pointers">
+                <div class="login-bvKRUK">Login</div>
+              </div></a
+            >
+            <a href="contact-page.html">
+              <div class="contact-component-Z6zpbm smart-layers-pointers">
+                <div class="contact-POQGFP">Contact</div>
+              </div></a
+            >
+            <a href="fundamental-analysis-page.html">
+              <div class="fundamental-component-Z6zpbm smart-layers-pointers">
+                <div class="fundamental-6EvOoV">Fundamental</div>
+              </div></a
+            >
+            <a href="technical-analysis-page.html">
+              <div class="technical-component-Z6zpbm smart-layers-pointers">
+                <div class="technical-lY8Sqq">Technical</div>
+              </div></a
+            >
+            <a href="strategies-page.html">
+              <div class="strategy-component-Z6zpbm smart-layers-pointers">
+                <div class="strategy-He3YyY">Strategy</div>
+              </div></a
+            >
+            <a href="pricing-and-valuation-page.html">
+              <div class="valuation-component-Z6zpbm smart-layers-pointers">
+                <div class="valuation-5dtgbd">Valuation</div>
+              </div></a
+            >
+          </div>
+        </div>
+        <div class="group-53-C61RwL">
+          <a href="javascript:SubmitForm('form27')">
+            <div class="change-pay-info-button-VAhwTv smart-layers-pointers">
+              <div class="change-payment-info-twzqxM montserrat-semi-bold-white-12px">CHANGE PAYMENT INFO</div>
+            </div></a
+          >
+          <div class="update-subscription-button-VAhwTv">
+            <div class="change-subscription-lPFJxA montserrat-semi-bold-white-12px">
+              UPGRADE&nbsp;&nbsp;SUBSCRIPTION
+            </div>
+          </div>
+          <a href="javascript:SubmitForm('form27')">
+            <div class="change-password-button-VAhwTv smart-layers-pointers">
+              <div class="change-password-7VLkRi montserrat-semi-bold-white-12px">CHANGE PASSWORD</div>
+            </div></a
+          >
+          <div class="component-148-9-VAhwTv">
+            <input class="name-vPDX79 montserrat-semi-bold-black-12px" name="name110" placeholder="OLD PASSWORD" />
+          </div>
+          <div class="component-148-10-VAhwTv">
+            <input class="name-EXAOqt montserrat-semi-bold-black-12px" name="name111" placeholder="NEW  PASSWORD" />
+          </div>
+          <a href="javascript:SubmitForm('form27')">
+            <div class="component-148-11-VAhwTv smart-layers-pointers">
+              <div class="name-NJZVvx montserrat-semi-bold-white-12px">DELUXE</div>
+            </div></a
+          >
+          <a href="javascript:SubmitForm('form27')">
+            <div class="component-148-12-VAhwTv smart-layers-pointers">
+              <div class="name-npwKx4 montserrat-semi-bold-white-12px">BUNDLED</div>
+            </div></a
+          >
+          <a href="javascript:SubmitForm('form27')">
+            <div class="component-148-13-VAhwTv smart-layers-pointers">
+              <div class="name-FYJpMf montserrat-semi-bold-white-12px">BASIC</div>
+            </div></a
+          >
+          <div class="component-148-14-VAhwTv">
+            <input
+              class="name-SIUmJS montserrat-semi-bold-black-12px"
+              name="name115"
+              placeholder="NEW CREDIT CARD NUMBER"
+            />
+          </div>
+          <div class="component-148-15-VAhwTv">
+            <input class="name-4YEmGh montserrat-semi-bold-black-12px" name="name116" placeholder="NEW EXPIRY" />
+          </div>
+          <div class="component-148-16-VAhwTv">
+            <input class="name-qc2Cti montserrat-semi-bold-black-12px" name="name117" placeholder="NEW CVC" />
+          </div>
+        </div>
+        <a href="landing-page.html"
+          ><img class="logo166x145-C61RwL smart-layers-pointers" src="../static/img/logo166x145@1x.png"
+        /></a>
+      </form>
+    </div>
+    <div class="container-center-horizontal">
+      <form class="x768-profile-page screen" name="form47" action="form47" method="post">
+        <div class="analysis-input-C61RwL"><div class="profile-DAnbUD montserrat-normal-black-18px">PROFILE</div></div>
+        <div class="navbar-C61RwL">
+          <div class="menu-center-8MJZIW">
+            <a href="signup-page.html">
+              <div class="signup-component-Z6zpbm border-1px-dove-gray smart-layers-pointers">
+                <div class="sign-up-9Rxxny">Sign Up</div>
+              </div></a
+            >
+            <a href="login-page.html">
+              <div class="login-component-Z6zpbm smart-layers-pointers">
+                <a href="login-page.html" onclick="window.event.stopPropagation()">
+                  <div class="login-rectangle-bvKRUK border-1px-dove-gray"></div
+                ></a>
+                <div class="login-bvKRUK">Login</div>
+              </div></a
+            >
+            <a href="contact-page.html">
+              <div class="contact-component-Z6zpbm smart-layers-pointers">
+                <div class="contact-POQGFP">Contact</div>
+              </div></a
+            >
+            <a href="fundamental-analysis-page.html">
+              <div class="fundamental-component-Z6zpbm smart-layers-pointers">
+                <a href="fundamental-analysis-page.html" onclick="window.event.stopPropagation()">
+                  <div class="fundamental-rectangle-6EvOoV"></div
+                ></a>
+                <div class="fundamental-6EvOoV">Fundamental</div>
+              </div></a
+            >
+            <a href="technical-analysis-page.html">
+              <div class="technical-component-Z6zpbm smart-layers-pointers">
+                <div class="technical-lY8Sqq">Technical</div>
+              </div></a
+            >
+            <a href="strategies-page.html">
+              <div class="strategy-component-Z6zpbm smart-layers-pointers">
+                <div class="strategy-He3YyY">Strategy</div>
+              </div></a
+            >
+            <a href="pricing-and-valuation-page.html">
+              <div class="valuation-component-Z6zpbm smart-layers-pointers">
+                <div class="valuation-5dtgbd">Valuation</div>
+              </div></a
+            >
+          </div>
+          <a href="landing-page.html"
+            ><img class="logo80x70-8MJZIW smart-layers-pointers" src="../static/img/logo80x70@1x.png"
+          /></a>
+        </div>
+        <div class="username-box-C61RwL"><div class="name-61EFYN montserrat-semi-bold-black-12px">USERNAME</div></div>
+        <div class="group-54-C61RwL">
+          <a href="javascript:SubmitForm('form47')">
+            <div class="change-pay-info-button-HdSTrm smart-layers-pointers">
+              <div class="change-payment-info-6Zl8d8">CHANGE PAYMENT INFO</div>
+            </div></a
+          >
+          <div class="update-subscription-button-HdSTrm">
+            <div class="change-subscription-xs7LEQ">UPGRADE&nbsp;&nbsp;SUBSCRIPTION</div>
+          </div>
+          <a href="javascript:SubmitForm('form47')">
+            <div class="change-password-button-HdSTrm smart-layers-pointers">
+              <div class="change-password-2fiLLU montserrat-semi-bold-white-12px">CHANGE PASSWORD</div>
+            </div></a
+          >
+          <div class="component-148-33-HdSTrm">
+            <input class="name-DnY3FN montserrat-semi-bold-black-12px" name="name119" placeholder="OLD PASSWORD" />
+          </div>
+          <div class="component-148-34-HdSTrm">
+            <input class="name-DDx6EK montserrat-semi-bold-black-12px" name="name120" placeholder="NEW  PASSWORD" />
+          </div>
+          <a href="javascript:SubmitForm('form47')">
+            <div class="component-148-35-HdSTrm smart-layers-pointers">
+              <div class="name-XviaPF montserrat-semi-bold-white-12px">DELUXE</div>
+            </div></a
+          >
+          <a href="javascript:SubmitForm('form47')">
+            <div class="component-148-36-HdSTrm smart-layers-pointers">
+              <div class="name-LC04WP montserrat-semi-bold-white-12px">BUNDLED</div>
+            </div></a
+          >
+          <a href="javascript:SubmitForm('form47')">
+            <div class="component-148-37-HdSTrm smart-layers-pointers">
+              <div class="name-4UrX2w montserrat-semi-bold-white-12px">BASIC</div>
+            </div></a
+          >
+          <div class="component-148-38-HdSTrm">
+            <input
+              class="name-vGO1lr montserrat-semi-bold-black-12px"
+              name="name124"
+              placeholder="NEW CREDIT CARD NUMBER"
+            />
+          </div>
+          <div class="component-148-39-HdSTrm">
+            <input class="name-8Ptx6f montserrat-semi-bold-black-12px" name="name125" placeholder="NEW EXPIRY" />
+          </div>
+          <div class="component-148-40-HdSTrm">
+            <input class="name-JaXzi9 montserrat-semi-bold-black-12px" name="name126" placeholder="NEW CVC" />
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="container-center-horizontal">
+      <form class="x375-profile-page screen" name="form68" action="form68" method="post">
+        <div class="analysis-input-C61RwL"><div class="profile-DAnbUD montserrat-normal-black-10px">PROFILE</div></div>
+        <div class="username-box-C61RwL"><div class="name-61EFYN">USERNAME</div></div>
+        <div class="navbar-C61RwL">
+          <div class="menu-center-8MJZIW">
+            <a href="signup-page.html">
+              <div class="signup-component-Z6zpbm border-1px-dove-gray smart-layers-pointers">
+                <div class="sign-up-9Rxxny">Sign Up</div>
+              </div></a
+            >
+            <a href="login-page.html">
+              <div class="login-component-Z6zpbm border-1px-dove-gray smart-layers-pointers">
+                <div class="login-bvKRUK">Login</div>
+              </div></a
+            >
+            <a href="contact-page.html">
+              <div class="contact-component-Z6zpbm smart-layers-pointers">
+                <div class="contact-POQGFP">Contact</div>
+              </div></a
+            >
+            <a href="technical-analysis-page.html">
+              <div class="technical-component-Z6zpbm smart-layers-pointers">
+                <div class="technical-lY8Sqq">Technical</div>
+              </div></a
+            >
+            <a href="strategies-page.html">
+              <div class="strategy-component-Z6zpbm smart-layers-pointers">
+                <div class="strategy-He3YyY">Strategy</div>
+              </div></a
+            >
+            <a href="pricing-and-valuation-page.html">
+              <div class="valuation-component-Z6zpbm smart-layers-pointers">
+                <div class="valuation-5dtgbd">Valuation</div>
+              </div></a
+            >
+            <a href="fundamental-analysis-page.html">
+              <div class="fundamental-component-Z6zpbm smart-layers-pointers">
+                <div class="fundamental-6EvOoV">Fundamental</div>
+              </div></a
+            >
+          </div>
+          <a href="landing-page.html"
+            ><img class="logo50x44-8MJZIW smart-layers-pointers" src="../static/img/logo50x44@1x.png"
+          /></a>
+        </div>
+        <div class="group-53-C61RwL">
+          <a href="javascript:SubmitForm('form68')">
+            <div class="change-pay-info-button-VAhwTv smart-layers-pointers">
+              <div class="change-payment-info-twzqxM">CHANGE PAYMENT INFO</div>
+            </div></a
+          >
+          <div class="update-subscription-button-VAhwTv">
+            <div class="change-subscription-lPFJxA">UPGRADE&nbsp;&nbsp;SUBSCRIPTION</div>
+          </div>
+          <a href="javascript:SubmitForm('form68')">
+            <div class="change-password-button-VAhwTv smart-layers-pointers">
+              <div class="change-password-7VLkRi">CHANGE PASSWORD</div>
+            </div></a
+          >
+          <div class="component-148-25-VAhwTv">
+            <input class="name-FxAxsA" name="name128" placeholder="OLD PASSWORD" />
+          </div>
+          <div class="component-148-26-VAhwTv">
+            <input class="name-Gr1oDb" name="name129" placeholder="NEW  PASSWORD" />
+          </div>
+          <a href="javascript:SubmitForm('form68')">
+            <div class="component-148-27-VAhwTv smart-layers-pointers"><div class="name-WDblCu">DELUXE</div></div></a
+          >
+          <a href="javascript:SubmitForm('form68')">
+            <div class="component-148-28-VAhwTv smart-layers-pointers"><div class="name-xQsZsx">BUNDLED</div></div></a
+          >
+          <a href="javascript:SubmitForm('form68')">
+            <div class="component-148-29-VAhwTv smart-layers-pointers"><div class="name-hErNTA">BASIC</div></div></a
+          >
+          <div class="component-148-30-VAhwTv">
+            <input class="name-JpKfEx" name="name133" placeholder="NEW CREDIT CARD NUMBER" />
+          </div>
+          <div class="component-148-31-VAhwTv">
+            <input class="name-K9xsBx" name="name134" placeholder="NEW EXPIRY" />
+          </div>
+          <div class="component-148-32-VAhwTv"><input class="name-mXBpJQ" name="name135" placeholder="NEW CVC" /></div>
+        </div>
+      </form>
+    </div>
+    <script>
+      /* Copyright (c) 2016 Tobias Buschor https://goo.gl/gl0mbf | MIT License https://goo.gl/HgajeK */
+
+      if (!HTMLFormElement.prototype.reportValidity) {
+        HTMLFormElement.prototype.reportValidity = function () {
+          if (this.checkValidity()) return true;
+          var btn = document.createElement("button");
+          this.appendChild(btn);
+          btn.click();
+          this.removeChild(btn);
+          return false;
+        };
+      }
+
+      function SubmitForm(form_name) {
+        var form = document.getElementsByName(form_name)[0];
+        if (form.reportValidity()) {
+          form.submit();
+          if (window.submitted) window.submitted();
+        }
+      }
+    </script>
+  </body>
+  {% endblock %}

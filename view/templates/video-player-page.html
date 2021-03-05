@@ -1,0 +1,242 @@
+<!-- extends the base.html template -->
+{% extends "base.html" %}
+
+{% block title %} Video Player {% endblock %}
+
+  {% block head %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="../static/css/video-player-page.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Montserrat:700,400,500,600,500italic");
+
+      .component-wrapper a,
+      .screen a {
+        text-decoration: none;
+        display: contents;
+      }
+
+      .full-width-a {
+        width: 100%;
+      }
+
+      .full-height-a {
+        height: 100%;
+      }
+
+      .screen textarea:focus,
+      .screen input:focus {
+        outline: none;
+      }
+
+      .screen *,
+      .component-wrapper * {
+        box-sizing: border-box;
+      }
+
+      .screen div {
+        -webkit-text-size-adjust: none;
+      }
+
+      .container-center-vertical,
+      .container-center-horizontal {
+        pointer-events: none;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+      }
+
+      .container-center-vertical {
+        align-items: center;
+        height: 100%;
+      }
+
+      .container-center-horizontal {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .container-center-vertical > *,
+      .container-center-horizontal > * {
+        pointer-events: auto;
+        flex-shrink: 0;
+      }
+
+      .component-wrapper,
+      .screen {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+        word-break: break-word;
+      }
+
+      .auto-animated div {
+        opacity: 0;
+        position: absolute;
+        --z-index: -1;
+      }
+
+      .auto-animated .container-center-vertical,
+      .auto-animated .container-center-horizontal {
+        opacity: 1;
+      }
+
+      .overlay {
+        position: absolute;
+        opacity: 0;
+        display: none;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+      }
+
+      .animate-appear {
+        opacity: 0;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 normal forwards;
+      }
+
+      .animate-disappear {
+        opacity: 1;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 reverse forwards;
+      }
+
+      .animate-nodelay {
+        animation-delay: 0s;
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .align-self-flex-start {
+        align-self: flex-start;
+      }
+      .align-self-flex-end {
+        align-self: flex-end;
+      }
+      .align-self-flex-center {
+        align-self: center;
+      }
+      .valign-text-middle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .valign-text-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      input:focus {
+        outline: none;
+      }
+      .component-wrapper,
+      .component-wrapper * {
+        pointer-events: none;
+      }
+
+      .component-wrapper a *,
+      .component-wrapper a,
+      .component-wrapper input,
+      .component-wrapper video,
+      .component-wrapper iframe,
+      .listeners-active,
+      .listeners-active * {
+        pointer-events: auto;
+      }
+
+      .hidden,
+      .hidden * {
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .smart-layers-pointers,
+      .smart-layers-pointers * {
+        pointer-events: auto;
+        visibility: visible;
+      }
+
+      .component-wrapper.not-ready,
+      .component-wrapper.not-ready * {
+        visibility: hidden !important;
+      }
+
+      .listeners-active-click,
+      .listeners-active-click * {
+        cursor: pointer;
+      }
+    </style>
+    <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+  </head>
+  {% endblock %}
+
+  {% block content %}
+  <body style="margin: 0; background: rgba(255, 255, 255, 1)">
+    <input type="hidden" id="anPageName" name="page" value="video-player-page" />
+    <div class="container-center-horizontal">
+      <div class="video-player-page screen">
+        <div class="bg-top-C61RwL"></div>
+        <div class="navbar-C61RwL">
+          <div class="menu-center-8MJZIW">
+            <a href="signup-page.html">
+              <div class="sign-up-component-Z6zpbm border-1px-dove-gray">
+                <div class="sign-up-C4Ldyd montserrat-semi-bold-heath-20px">Sign Up</div>
+              </div></a
+            >
+            <a href="login-page.html">
+              <div class="login-component-Z6zpbm border-1px-dove-gray">
+                <div class="login-bvKRUK montserrat-semi-bold-heath-20px">Login</div>
+              </div></a
+            >
+            <a href="pricing-and-valuation-page.html">
+              <div class="contact-component-Z6zpbm">
+                <div class="contact-POQGFP montserrat-semi-bold-heath-20px">Contact</div>
+              </div></a
+            >
+            <a href="pricing-and-valuation-page.html">
+              <div class="fundamental-component-Z6zpbm">
+                <div class="fundamental-6EvOoV montserrat-semi-bold-heath-20px">Fundamental</div>
+              </div></a
+            >
+            <a href="pricing-and-valuation-page.html">
+              <div class="technical-component-Z6zpbm">
+                <div class="technical-lY8Sqq montserrat-semi-bold-heath-20px">Technical</div>
+              </div></a
+            >
+            <a href="pricing-and-valuation-page.html">
+              <div class="strategies-component-Z6zpbm">
+                <div class="strategy-q8CpeS montserrat-semi-bold-heath-20px">Strategy</div>
+              </div></a
+            >
+            <a href="pricing-and-valuation-page.html">
+              <div class="valuation-component-Z6zpbm">
+                <div class="valuation-5dtgbd montserrat-semi-bold-heath-20px">Valuation</div>
+              </div></a
+            >
+          </div>
+          <img class="logo166x145-8MJZIW smart-layers-pointers" src="../static/img/logo166x145@1x.png" />
+        </div>
+        <a href="landing-page.html"> <div class="bg-top-VMr6Om"></div></a>
+        <div class="fake-vid-screen-C61RwL border-1px-dove-gray">
+          <div class="rectangle-play-CtxUPu border-1px-dove-gray"></div>
+          <img class="line-play-CtxUPu" src="../static/img/lineplay@1x.png" />
+          <img class="polygon-big-play-button-CtxUPu" src="../static/img/polygonbigplaybutton@1x.png" />
+          <img class="polygon-small-play-button-CtxUPu" src="../static/img/polygonsmallplaybutton@1x.png" />
+        </div>
+      </div>
+    </div>
+  </body>
+  {% endblock %}

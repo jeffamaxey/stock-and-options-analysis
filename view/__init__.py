@@ -11,19 +11,22 @@ def create_app():
     :return: The runnable app object
     """
 
-    app = Flask(__name__)  # the name of the file name
+    app = Flask(__name__)
     app.config["SECRET_KEY"] = "yK#b0Yj38&@7ubv"
 
     # Import Blueprint objects
-    from view.home import home_bp
-    from view.sign_up import sign_up_bp
-    from view.login import login_bp
-    from view.logout import logout_bp
-    from view.delete_user import delete_user_bp
-    from view.my_account import my_account_bp
+    from view.general import general_bp
+    from view.auth import auth_bp
+    from view.strategies import strategies_bp
+    from view.fundamental import fundamental_analysis_bp
+    from view.technical import technical_analysis_bp
+    from view.pricing_valuation import pricing_valuation_bp
+    from view.payment import payment_bp
 
     # Register pages
-    blueprints = [home_bp, sign_up_bp, login_bp, logout_bp, delete_user_bp, my_account_bp]
+    blueprints = [general_bp, auth_bp, strategies_bp, fundamental_analysis_bp, technical_analysis_bp,
+                  pricing_valuation_bp, payment_bp]
+
     for blueprint in blueprints:
         app.register_blueprint(blueprint, url_prefix=URL_PREFIX)
 
@@ -32,7 +35,7 @@ def create_app():
 
     # Manages the login feature
     login_manager = LoginManager()
-    login_manager.login_view = "login.login"  # redirect to the page when the user is not logged in
+    login_manager.login_view = "auth.login"  # redirect to the page when the user is not logged in
     login_manager.init_app(app)
 
     @login_manager.user_loader
