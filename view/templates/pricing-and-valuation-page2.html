@@ -1,0 +1,1079 @@
+<!-- extends the base.html template -->
+{% extends "base.html" %}
+
+{% block title %} Pricing and Valuation {% endblock %}
+
+  {% block head %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="../static/css/pricing-and-valuation-page2.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Montserrat:700,400,500,600,500italic");
+
+      .component-wrapper a,
+      .screen a {
+        text-decoration: none;
+        display: contents;
+      }
+
+      .full-width-a {
+        width: 100%;
+      }
+
+      .full-height-a {
+        height: 100%;
+      }
+
+      .screen textarea:focus,
+      .screen input:focus {
+        outline: none;
+      }
+
+      .screen *,
+      .component-wrapper * {
+        box-sizing: border-box;
+      }
+
+      .screen div {
+        -webkit-text-size-adjust: none;
+      }
+
+      .container-center-vertical,
+      .container-center-horizontal {
+        pointer-events: none;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+      }
+
+      .container-center-vertical {
+        align-items: center;
+        height: 100%;
+      }
+
+      .container-center-horizontal {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .container-center-vertical > *,
+      .container-center-horizontal > * {
+        pointer-events: auto;
+        flex-shrink: 0;
+      }
+
+      .component-wrapper,
+      .screen {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+        word-break: break-word;
+      }
+
+      .auto-animated div {
+        opacity: 0;
+        position: absolute;
+        --z-index: -1;
+      }
+
+      .auto-animated .container-center-vertical,
+      .auto-animated .container-center-horizontal {
+        opacity: 1;
+      }
+
+      .overlay {
+        position: absolute;
+        opacity: 0;
+        display: none;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+      }
+
+      .animate-appear {
+        opacity: 0;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 normal forwards;
+      }
+
+      .animate-disappear {
+        opacity: 1;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 reverse forwards;
+      }
+
+      .animate-nodelay {
+        animation-delay: 0s;
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .align-self-flex-start {
+        align-self: flex-start;
+      }
+      .align-self-flex-end {
+        align-self: flex-end;
+      }
+      .align-self-flex-center {
+        align-self: center;
+      }
+      .valign-text-middle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .valign-text-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      input:focus {
+        outline: none;
+      }
+      .component-wrapper,
+      .component-wrapper * {
+        pointer-events: none;
+      }
+
+      .component-wrapper a *,
+      .component-wrapper a,
+      .component-wrapper input,
+      .component-wrapper video,
+      .component-wrapper iframe,
+      .listeners-active,
+      .listeners-active * {
+        pointer-events: auto;
+      }
+
+      .hidden,
+      .hidden * {
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .smart-layers-pointers,
+      .smart-layers-pointers * {
+        pointer-events: auto;
+        visibility: visible;
+      }
+
+      .component-wrapper.not-ready,
+      .component-wrapper.not-ready * {
+        visibility: hidden !important;
+      }
+
+      .listeners-active-click,
+      .listeners-active-click * {
+        cursor: pointer;
+      }
+    </style>
+    <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+  </head>
+  {% endblock %}
+
+  {% block content %}
+  <body style="margin: 0; background: rgba(201, 201, 201, 1)">
+    <input type="hidden" id="anPageName" name="page" value="pricing-and-valuation-page2" />
+    <div class="container-center-horizontal">
+      <form class="pricing-and-valuation-page2 screen" name="form18" action="form18" method="post">
+        <div class="analysis-output-C61RwL">
+          <img class="bg-blue-sPEAV6" src="../static/img/bg-blue@1x.png" />
+          <img class="bg-blue-7xqaxI" src="../static/img/bg-blue@1x.png" />
+          <div class="rho-number-sPEAV6 border-1px-dove-gray">
+            <div class="x0043-xJP627 montserrat-semi-bold-white-19px">0.043</div>
+          </div>
+          <div class="rho-text-sPEAV6 border-1px-dove-gray">
+            <div class="rho-R9q6EL montserrat-semi-bold-black-19px">RHO</div>
+          </div>
+          <div class="vega-number-sPEAV6 border-1px-dove-gray">
+            <div class="x0054-hNmdz9 montserrat-semi-bold-white-19px">0.054</div>
+          </div>
+          <div class="vega-text-sPEAV6 border-1px-dove-gray">
+            <div class="vega-z3gJm3 montserrat-semi-bold-black-19px">VEGA</div>
+          </div>
+          <div class="theta-number-sPEAV6 border-1px-dove-gray">
+            <div class="x0173-pkxQUl montserrat-semi-bold-white-19px">0.173</div>
+          </div>
+          <div class="theta-text-sPEAV6 border-1px-dove-gray">
+            <div class="theta-5eQv9x montserrat-semi-bold-black-19px">THETA</div>
+          </div>
+          <div class="gamma-number-sPEAV6 border-1px-dove-gray">
+            <div class="x0055-75L8x8 montserrat-semi-bold-white-19px">0.055</div>
+          </div>
+          <div class="gamma-text-sPEAV6 border-1px-dove-gray">
+            <div class="gamma-9k21gN montserrat-semi-bold-black-19px">GAMMA</div>
+          </div>
+          <div class="delta-number-sPEAV6 border-1px-dove-gray">
+            <div class="x0534-wYmJKm montserrat-semi-bold-white-19px">0.534</div>
+          </div>
+          <div class="delta-text-sPEAV6 border-1px-dove-gray">
+            <div class="delta-2N6NOR montserrat-semi-bold-black-19px">DELTA</div>
+          </div>
+          <div class="implied-volatility-number-sPEAV6 border-1px-dove-gray">
+            <div class="x817-7Pv8mj montserrat-semi-bold-white-19px">8.17%</div>
+          </div>
+          <div class="implied-vol-text-sPEAV6 border-1px-dove-gray">
+            <div class="implied-volatility-FOhYHi montserrat-semi-bold-black-19px">IMPLIED VOLATILITY</div>
+          </div>
+          <div class="market-price-number-sPEAV6 border-1px-dove-gray">
+            <div class="x9501-pBTbHd montserrat-semi-bold-white-19px">$95.01</div>
+          </div>
+          <div class="market-price-text-sPEAV6 border-1px-dove-gray">
+            <div class="market-price-gWWVVQ montserrat-semi-bold-black-19px">MARKET PRICE</div>
+          </div>
+          <div class="avg-price-number-sPEAV6 border-1px-dove-gray">
+            <div class="x9892-kRAu4x montserrat-semi-bold-white-19px">$98.92</div>
+          </div>
+          <div class="avg-price-text-sPEAV6 border-1px-dove-gray">
+            <div class="average-price-pxL0PO montserrat-semi-bold-black-19px">AVERAGE PRICE</div>
+          </div>
+          <div class="binomial-price-number-sPEAV6 border-1px-dove-gray">
+            <div class="x8942-4urhF3 montserrat-semi-bold-white-19px">$89.42</div>
+          </div>
+          <div class="binomial-price-sPEAV6 border-1px-dove-gray">
+            <div class="binomial-price-A6JQAW montserrat-semi-bold-black-19px">BINOMIAL PRICE</div>
+          </div>
+          <div class="black-scholes-price-number-sPEAV6 border-1px-dove-gray">
+            <div class="x10743-pPKeqN montserrat-semi-bold-white-19px">$107.43</div>
+          </div>
+          <div class="black-scholes-price-text-sPEAV6 border-1px-dove-gray">
+            <div class="black-scholes-price-6ChAPe montserrat-semi-bold-black-19px">BLACK SCHOLES PRICE</div>
+          </div>
+          <div class="formula-variables-sPEAV6">
+            <div class="nd2-xGOR6F border-1px-dove-gray">
+              <div class="x00967-iDnxWV montserrat-semi-bold-white-19px">0.0967</div>
+            </div>
+            <div class="nd1-xGOR6F border-1px-dove-gray">
+              <div class="x01232-Q7Pkey montserrat-semi-bold-white-19px">0.1232</div>
+            </div>
+            <div class="d2-xGOR6F border-1px-dove-gray">
+              <div class="x00967-4wkroD montserrat-semi-bold-white-19px">0.0967</div>
+            </div>
+            <div class="d1-xGOR6F border-1px-dove-gray">
+              <div class="x01232-HBQX2m montserrat-semi-bold-white-19px">0.1232</div>
+            </div>
+            <div class="pvx-xGOR6F border-1px-dove-gray">
+              <div class="x4323-LQoj7Y montserrat-semi-bold-white-19px">43.23</div>
+            </div>
+            <div class="pvst-xGOR6F border-1px-dove-gray">
+              <div class="x4034-7RBbGW montserrat-semi-bold-white-19px">40.34</div>
+            </div>
+            <div class="b-xGOR6F border-1px-dove-gray">
+              <div class="x0043-EUEm0H montserrat-semi-bold-white-19px">0.043</div>
+            </div>
+            <div class="r-xGOR6F border-1px-dove-gray">
+              <div class="x005-pTNEef montserrat-semi-bold-white-19px">0.05</div>
+            </div>
+            <div class="stnd-dev-xGOR6F border-1px-dove-gray">
+              <div class="x02-3WQ1jw montserrat-semi-bold-white-19px">0.2</div>
+            </div>
+            <div class="t-xGOR6F border-1px-dove-gray">
+              <div class="x025-i5if0C montserrat-semi-bold-white-19px">0.25</div>
+            </div>
+            <div class="x-xGOR6F border-1px-dove-gray">
+              <div class="x9501-cXBAFW montserrat-semi-bold-white-19px">95.01</div>
+            </div>
+            <div class="s-xGOR6F border-1px-dove-gray">
+              <div class="x14523-prbHlX montserrat-semi-bold-white-19px">145.23</div>
+            </div>
+            <div class="p-xGOR6F border-1px-dove-gray">
+              <div class="x9464-h4qzDl montserrat-semi-bold-white-19px">94.64</div>
+            </div>
+            <div class="c-xGOR6F border-1px-dove-gray">
+              <div class="x9534-waIBB1 montserrat-semi-bold-white-19px">95.34</div>
+            </div>
+            <div class="nd2text-xGOR6F border-1px-dove-gray">
+              <div class="nd2-lEsVBb montserrat-semi-bold-black-19px">N(D2)</div>
+            </div>
+            <div class="nd1text-xGOR6F border-1px-dove-gray">
+              <div class="nd1-f9B0bp montserrat-semi-bold-black-19px">N(D1)</div>
+            </div>
+            <div class="d2text-xGOR6F border-1px-dove-gray">
+              <div class="d2-pHd8w9 montserrat-semi-bold-black-19px">D2</div>
+            </div>
+            <div class="d1text-xGOR6F border-1px-dove-gray">
+              <div class="d1-f0Kxl3 montserrat-semi-bold-black-19px">D1</div>
+            </div>
+            <div class="pvxtext-xGOR6F border-1px-dove-gray">
+              <div class="pvx-0ZE0f2 montserrat-semi-bold-black-19px">PV[X]</div>
+            </div>
+            <div class="pvsttext-xGOR6F border-1px-dove-gray">
+              <div class="pvst-sfacxH montserrat-semi-bold-black-19px">PV[ST]</div>
+            </div>
+            <div class="cost-of-carry-xGOR6F border-1px-dove-gray">
+              <div class="cost-of-carry-b-1wB4SW montserrat-semi-bold-black-19px">COST OF CARRY (B)</div>
+            </div>
+            <div class="riskfree-rate-xGOR6F border-1px-dove-gray">
+              <div class="risk-free-rate-r-YWltJx montserrat-semi-bold-black-19px">RISK-FREE RATE (R)</div>
+            </div>
+            <div class="return-volatility-xGOR6F border-1px-dove-gray">
+              <div class="return-volatility-6nz1eA montserrat-semi-bold-black-19px">RETURN&nbsp;&nbsp;VOLATILITY</div>
+            </div>
+            <div class="time-to-maturity-xGOR6F border-1px-dove-gray">
+              <div class="time-to-maturity-t-sxtgsu montserrat-semi-bold-black-19px">TIME TO MATURITY (T)</div>
+            </div>
+            <div class="strike-price-xGOR6F border-1px-dove-gray">
+              <div class="strike-x-po0oJv montserrat-semi-bold-black-19px">STRIKE (X)</div>
+            </div>
+            <div class="underlying-price-xGOR6F border-1px-dove-gray">
+              <div class="underlying-s-YP3gHJ montserrat-semi-bold-black-19px">UNDERLYING (S)</div>
+            </div>
+            <div class="put-price-xGOR6F border-1px-dove-gray">
+              <div class="put-p-MuxzWC montserrat-semi-bold-black-19px">PUT (P)</div>
+            </div>
+            <div class="call-price-xGOR6F border-1px-dove-gray">
+              <div class="call-c-6xvY2a montserrat-semi-bold-black-19px">CALL (C)</div>
+            </div>
+          </div>
+        </div>
+        <a href="javascript:SubmitForm('form18')">
+          <div class="export-button-C61RwL smart-layers-pointers">
+            <div class="outline-button-PiBNS4 border-2px-heath">
+              <img class="export-fKSPGk" src="../static/img/export@1x.png" />
+            </div></div
+        ></a>
+        <a href="javascript:SubmitForm('form18')">
+          <div class="analyze-button-C61RwL smart-layers-pointers"><div class="analyze-xWQ1KJ">ANALYZE</div></div></a
+        >
+        <div class="analysis-input-C61RwL">
+          <div class="select-data-source-DAnbUD">
+            <input
+              class="data-source-rf4nxM montserrat-normal-black-18px"
+              name="data-source17"
+              placeholder="Data Source"
+              required
+            />
+            <img class="md-arrow-dropdown-rf4nxM" src="../static/img/md-arrow-dropdown-1@1x.png" />
+          </div>
+          <div class="select-data-source-WCqau1">
+            <input
+              class="itm-atm-otm-SRpD7E montserrat-normal-black-18px"
+              name="itm-atm-otm15"
+              placeholder="ITM / ATM / OTM"
+              required
+            />
+            <img class="md-arrow-dropdown-SRpD7E" src="../static/img/md-arrow-dropdown-4@1x.png" />
+          </div>
+          <div class="select-option-style-DAnbUD">
+            <input
+              class="option-style-ZAx7Lv montserrat-normal-black-18px"
+              name="option-style15"
+              placeholder="Option Style"
+              required
+            />
+            <img class="md-arrow-dropdown-ZAx7Lv" src="../static/img/md-arrow-dropdown-1@1x.png" />
+          </div>
+          <div class="select-option-type-DAnbUD">
+            <input
+              class="option-type-Isr8ZD montserrat-normal-black-18px"
+              name="option-type15"
+              placeholder="Option Type"
+              required
+            />
+            <img class="md-arrow-dropdown-Isr8ZD" src="../static/img/md-arrow-dropdown-1@1x.png" />
+          </div>
+          <div class="select-expiration-DAnbUD">
+            <input
+              class="expiration-date-AghIG5 montserrat-normal-black-18px"
+              name="expiration-date15"
+              placeholder="Expiration Date"
+              required
+            />
+            <img class="md-arrow-dropdown-AghIG5" src="../static/img/md-arrow-dropdown-1@1x.png" />
+          </div>
+          <div class="input-ticker-DAnbUD">
+            <input
+              class="ticker-of-the-underlying-Nti9XO montserrat-normal-black-18px"
+              name="ticker-of-the-underlying-17"
+              placeholder="Ticker of the Underlying"
+              required
+            />
+            <img class="icon-search-Nti9XO" src="../static/img/icon-search-7@1x.png" />
+          </div>
+          <div class="option-pricing-valuation-DAnbUD montserrat-normal-black-42px">OPTION PRICING &amp; VALUATION</div>
+        </div>
+        <div class="navbar-C61RwL">
+          <div class="menu-center-8MJZIW">
+            <a href="fundamental-analysis-page.html">
+              <div class="fundamental-component-Z6zpbm smart-layers-pointers">
+                <div class="fundamental-6EvOoV montserrat-semi-bold-heath-20px">Fundamental</div>
+              </div></a
+            >
+            <a href="technical-analysis-page.html">
+              <div class="technical-component-Z6zpbm smart-layers-pointers">
+                <div class="technical-lY8Sqq montserrat-semi-bold-heath-20px">Technical</div>
+              </div></a
+            >
+            <a href="strategies-page.html">
+              <div class="strategies-component-Z6zpbm smart-layers-pointers">
+                <div class="strategy-q8CpeS montserrat-semi-bold-heath-20px">Strategy</div>
+              </div></a
+            >
+            <a href="pricing-and-valuation-page.html">
+              <div class="valuation-component-Z6zpbm border-1px-dove-gray">
+                <div class="valuation-5dtgbd">Valuation</div>
+              </div></a
+            >
+          </div>
+          <a href="landing-page.html"
+            ><img class="logo166x145-8MJZIW smart-layers-pointers" src="../static/img/logo166x145@1x.png"
+          /></a>
+        </div>
+      </form>
+    </div>
+    <div class="container-center-horizontal">
+      <form class="x1280-pricing-and-valuation-page2 screen" name="form38" action="form38" method="post">
+        <div class="export-button-C61RwL smart-layers-pointers">
+          <div class="outline-button-PiBNS4 border-2px-heath">
+            <img class="export-fKSPGk" src="../static/img/export-4@1x.png" />
+          </div>
+        </div>
+        <div class="pricing-greeks-output-C61RwL">
+          <img class="bg-blue-wSc5g0" src="../static/img/bg-blue-15@1x.png" />
+          <img class="bg-blue-uLbsQt" src="../static/img/bg-blue-15@1x.png" />
+          <div class="x1-year-number-wSc5g0 border-1px-dove-gray">
+            <div class="x0043-vUELif montserrat-semi-bold-white-12px">0.043</div>
+          </div>
+          <div class="x1-year-text-wSc5g0 border-1px-dove-gray">
+            <div class="rho-iTm0TT montserrat-semi-bold-black-12px">RHO</div>
+          </div>
+          <div class="x52-high-number-wSc5g0 border-1px-dove-gray">
+            <div class="x0054-A1vT6n montserrat-semi-bold-white-12px">0.054</div>
+          </div>
+          <div class="x52-high-text-wSc5g0 border-1px-dove-gray">
+            <div class="vega-E5UdDS montserrat-semi-bold-black-12px">VEGA</div>
+          </div>
+          <div class="x52-low-number-wSc5g0 border-1px-dove-gray">
+            <div class="x0173-wwViCw montserrat-semi-bold-white-12px">0.173</div>
+          </div>
+          <div class="x52-low-text-wSc5g0 border-1px-dove-gray">
+            <div class="theta-xLclwb montserrat-semi-bold-black-12px">THETA</div>
+          </div>
+          <div class="x24-high-number-wSc5g0 border-1px-dove-gray">
+            <div class="x0055-HCEmBt montserrat-semi-bold-white-12px">0.055</div>
+          </div>
+          <div class="x24-high-text-wSc5g0 border-1px-dove-gray">
+            <div class="gamma-qwXBwa montserrat-semi-bold-black-12px">GAMMA</div>
+          </div>
+          <div class="x24-low-number-wSc5g0 border-1px-dove-gray">
+            <div class="x0534-beoU2c montserrat-semi-bold-white-12px">0.534</div>
+          </div>
+          <div class="x24low-text-wSc5g0 border-1px-dove-gray">
+            <div class="delta-aJCu9z montserrat-semi-bold-black-12px">DELTA</div>
+          </div>
+          <div class="earnings-date-number-wSc5g0 border-1px-dove-gray">
+            <div class="x05-07-2021-78kOx3 montserrat-semi-bold-white-12px">05 / 07 / 2021</div>
+          </div>
+          <img class="earnings-date-text-wSc5g0 border-1px-dove-gray" src="../static/img/earningsdatetext@1x.png" />
+          <div class="ask-price-number-wSc5g0 border-1px-dove-gray">
+            <div class="x9501-EmovK7 montserrat-semi-bold-white-12px">$95.01</div>
+          </div>
+          <div class="ask-price-text-wSc5g0 border-1px-dove-gray">
+            <div class="market-price-ahZp1f montserrat-semi-bold-black-12px">MARKET PRICE</div>
+          </div>
+          <div class="bid-price-number-wSc5g0 border-1px-dove-gray">
+            <div class="x9892-nQic3J montserrat-semi-bold-white-12px">$98.92</div>
+          </div>
+          <div class="bid-text-wSc5g0 border-1px-dove-gray">
+            <div class="average-price-N5tHGw montserrat-semi-bold-black-12px">AVERAGE PRICE</div>
+          </div>
+          <div class="close-price-number-wSc5g0 border-1px-dove-gray">
+            <div class="x8942-JyNa0z montserrat-semi-bold-white-12px">$89.42</div>
+          </div>
+          <div class="close-price-wSc5g0 border-1px-dove-gray">
+            <div class="binomial-price-k4ifAk montserrat-semi-bold-black-12px">BINOMIAL PRICE</div>
+          </div>
+          <div class="open-price-number-wSc5g0 border-1px-dove-gray">
+            <div class="x10743-KMzKxA montserrat-semi-bold-white-12px">$107.43</div>
+          </div>
+          <div class="open-price-text-wSc5g0 border-1px-dove-gray">
+            <div class="black-scholes-price-Gh9szH montserrat-semi-bold-black-12px">BLACK SCHOLES PRICE</div>
+          </div>
+        </div>
+        <a href="javascript:SubmitForm('form38')">
+          <div class="analyze-button-C61RwL smart-layers-pointers"><div class="analyze-xWQ1KJ">ANALYZE</div></div></a
+        >
+        <div class="analysis-input-C61RwL">
+          <div class="select-data-source-DAnbUD">
+            <input
+              class="data-source-rf4nxM montserrat-normal-black-12px"
+              name="data-source117"
+              placeholder="Data Source"
+              required
+            />
+            <img class="md-arrow-dropdown-rf4nxM" src="../static/img/md-arrow-dropdown-1@1x.png" />
+          </div>
+          <div class="select-data-source-WCqau1">
+            <input
+              class="itm-atm-otm-SRpD7E montserrat-normal-black-12px"
+              name="itm-atm-otm111"
+              placeholder="ITM / ATM / OTM"
+              required
+            />
+            <img class="md-arrow-dropdown-SRpD7E" src="../static/img/md-arrow-dropdown-1@1x.png" />
+          </div>
+          <div class="select-option-style-DAnbUD">
+            <input
+              class="option-style-ZAx7Lv montserrat-normal-black-12px"
+              name="option-style111"
+              placeholder="Option Style"
+              required
+            />
+            <img class="md-arrow-dropdown-ZAx7Lv" src="../static/img/md-arrow-dropdown-1@1x.png" />
+          </div>
+          <div class="select-option-type-DAnbUD">
+            <input
+              class="option-type-Isr8ZD montserrat-normal-black-12px"
+              name="option-type111"
+              placeholder="Option Type"
+              required
+            />
+            <img class="md-arrow-dropdown-Isr8ZD" src="../static/img/md-arrow-dropdown-1@1x.png" />
+          </div>
+          <div class="select-expiration-DAnbUD">
+            <input
+              class="expiration-date-AghIG5 montserrat-normal-black-12px"
+              name="expiration-date111"
+              placeholder="Expiration Date"
+              required
+            />
+            <img class="md-arrow-dropdown-AghIG5" src="../static/img/md-arrow-dropdown-1@1x.png" />
+          </div>
+          <div class="input-ticker-DAnbUD">
+            <input
+              class="ticker-of-the-underlying-Nti9XO montserrat-normal-black-12px"
+              name="ticker-of-the-underlying-117"
+              placeholder="Ticker of the Underlying"
+              required
+            />
+            <img class="icon-search-Nti9XO" src="../static/img/icon-search-6@1x.png" />
+          </div>
+          <div class="option-pricing-valuation-DAnbUD montserrat-normal-black-42px">OPTION PRICING &amp; VALUATION</div>
+        </div>
+        <div class="navbar-C61RwL">
+          <div class="menu-center-8MJZIW">
+            <a href="technical-analysis-page.html">
+              <div class="technical-component-Z6zpbm smart-layers-pointers">
+                <div class="technical-lY8Sqq">Technical</div>
+              </div></a
+            >
+            <a href="strategies-page.html">
+              <div class="strategy-component-Z6zpbm smart-layers-pointers">
+                <div class="strategy-He3YyY">Strategy</div>
+              </div></a
+            >
+            <div class="valuation-component-Z6zpbm border-1px-dove-gray">
+              <div class="valuation-5dtgbd">Valuation</div>
+            </div>
+            <a href="fundamental-analysis-page.html">
+              <div class="fundamental-component-Z6zpbm smart-layers-pointers">
+                <div class="fundamental-6EvOoV">Fundamental</div>
+              </div></a
+            >
+          </div>
+          <a href="landing-page.html"
+            ><img class="logo166x145-8MJZIW smart-layers-pointers" src="../static/img/logo166x145@1x.png"
+          /></a>
+        </div>
+        <div class="analysis-output-C61RwL">
+          <div class="formula-variables-sPEAV6">
+            <div class="nd2-xGOR6F border-1px-dove-gray"><div class="x00967-iDnxWV">0.0967</div></div>
+            <div class="nd1-xGOR6F border-1px-dove-gray"><div class="x01232-Q7Pkey">0.1232</div></div>
+            <div class="d2-xGOR6F border-1px-dove-gray"><div class="x00967-4wkroD">0.0967</div></div>
+            <div class="d1-xGOR6F border-1px-dove-gray"><div class="x01232-HBQX2m">0.1232</div></div>
+            <div class="pvx-xGOR6F border-1px-dove-gray"><div class="x4323-LQoj7Y">43.23</div></div>
+            <div class="pvst-xGOR6F border-1px-dove-gray"><div class="x4034-7RBbGW">40.34</div></div>
+            <div class="b-xGOR6F border-1px-dove-gray"><div class="x0043-EUEm0H">0.043</div></div>
+            <div class="r-xGOR6F border-1px-dove-gray"><div class="x005-pTNEef">0.05</div></div>
+            <div class="stnd-dev-xGOR6F border-1px-dove-gray"><div class="x02-3WQ1jw">0.2</div></div>
+            <div class="t-xGOR6F border-1px-dove-gray"><div class="x025-i5if0C">0.25</div></div>
+            <div class="x-xGOR6F border-1px-dove-gray"><div class="x9501-cXBAFW">95.01</div></div>
+            <div class="s-xGOR6F border-1px-dove-gray"><div class="x14523-prbHlX">145.23</div></div>
+            <div class="p-xGOR6F border-1px-dove-gray"><div class="x9464-h4qzDl">94.64</div></div>
+            <div class="c-xGOR6F border-1px-dove-gray">
+              <div class="x9534-waIBB1 montserrat-semi-bold-white-12px">95.34</div>
+            </div>
+            <div class="nd2text-xGOR6F border-1px-dove-gray">
+              <div class="nd2-lEsVBb montserrat-semi-bold-black-10px">N(D2)</div>
+            </div>
+            <div class="nd1text-xGOR6F border-1px-dove-gray">
+              <div class="nd1-f9B0bp montserrat-semi-bold-black-10px">N(D1)</div>
+            </div>
+            <div class="d2text-xGOR6F border-1px-dove-gray">
+              <div class="d2-pHd8w9 montserrat-semi-bold-black-10px">D2</div>
+            </div>
+            <div class="d1text-xGOR6F border-1px-dove-gray">
+              <div class="d1-f0Kxl3 montserrat-semi-bold-black-10px">D1</div>
+            </div>
+            <div class="pvxtext-xGOR6F border-1px-dove-gray">
+              <div class="pvx-0ZE0f2 montserrat-semi-bold-black-10px">PV[X]</div>
+            </div>
+            <div class="pvsttext-xGOR6F border-1px-dove-gray">
+              <div class="pvst-sfacxH montserrat-semi-bold-black-10px">PV[ST]</div>
+            </div>
+            <div class="cost-of-carry-xGOR6F border-1px-dove-gray">
+              <div class="cost-of-carry-b-1wB4SW montserrat-semi-bold-black-10px">COST OF CARRY (B)</div>
+            </div>
+            <div class="riskfree-rate-xGOR6F border-1px-dove-gray">
+              <div class="risk-free-rate-r-YWltJx montserrat-semi-bold-black-10px">RISK-FREE RATE (R)</div>
+            </div>
+            <div class="return-volatility-xGOR6F border-1px-dove-gray">
+              <div class="return-volatility-6nz1eA montserrat-semi-bold-black-10px">RETURN&nbsp;&nbsp;VOLATILITY</div>
+            </div>
+            <div class="time-to-maturity-xGOR6F border-1px-dove-gray">
+              <div class="time-to-maturity-t-sxtgsu montserrat-semi-bold-black-10px">TIME TO MATURITY (T)</div>
+            </div>
+            <div class="strike-price-xGOR6F border-1px-dove-gray">
+              <div class="strike-x-po0oJv montserrat-semi-bold-black-10px">STRIKE (X)</div>
+            </div>
+            <div class="underlying-price-xGOR6F border-1px-dove-gray">
+              <div class="underlying-s-YP3gHJ montserrat-semi-bold-black-10px">UNDERLYING (S)</div>
+            </div>
+            <div class="put-price-xGOR6F border-1px-dove-gray">
+              <div class="put-p-MuxzWC montserrat-semi-bold-black-10px">PUT (P)</div>
+            </div>
+            <div class="call-price-xGOR6F border-1px-dove-gray">
+              <div class="call-c-6xvY2a montserrat-semi-bold-black-10px">CALL (C)</div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="container-center-horizontal">
+      <form class="x768-pricing-and-valuation-page2 screen" name="form59" action="form59" method="post">
+        <div class="analysis-output-C61RwL">
+          <div class="formula-variables-sPEAV6">
+            <div class="nd2-xGOR6F border-1px-dove-gray"><div class="x00967-iDnxWV">0.0967</div></div>
+            <div class="nd1-xGOR6F border-1px-dove-gray"><div class="x01232-Q7Pkey">0.1232</div></div>
+            <div class="d2-xGOR6F border-1px-dove-gray"><div class="x00967-4wkroD">0.0967</div></div>
+            <div class="d1-xGOR6F border-1px-dove-gray"><div class="x01232-HBQX2m">0.1232</div></div>
+            <div class="pvx-xGOR6F border-1px-dove-gray"><div class="x4323-LQoj7Y">43.23</div></div>
+            <div class="pvst-xGOR6F border-1px-dove-gray"><div class="x4034-7RBbGW">40.34</div></div>
+            <div class="b-xGOR6F border-1px-dove-gray"><div class="x0043-EUEm0H">0.043</div></div>
+            <div class="r-xGOR6F border-1px-dove-gray"><div class="x005-pTNEef">0.05</div></div>
+            <div class="stnd-dev-xGOR6F border-1px-dove-gray"><div class="x02-3WQ1jw">0.2</div></div>
+            <div class="t-xGOR6F border-1px-dove-gray"><div class="x025-i5if0C">0.25</div></div>
+            <div class="x-xGOR6F border-1px-dove-gray"><div class="x9501-cXBAFW">95.01</div></div>
+            <div class="s-xGOR6F border-1px-dove-gray"><div class="x14523-prbHlX">145.23</div></div>
+            <div class="p-xGOR6F border-1px-dove-gray"><div class="x9464-h4qzDl">94.64</div></div>
+            <div class="c-xGOR6F border-1px-dove-gray">
+              <div class="x9534-waIBB1 montserrat-semi-bold-white-12px">95.34</div>
+            </div>
+            <div class="nd2text-xGOR6F border-1px-dove-gray">
+              <div class="nd2-lEsVBb montserrat-semi-bold-black-10px">N(D2)</div>
+            </div>
+            <div class="nd1text-xGOR6F border-1px-dove-gray">
+              <div class="nd1-f9B0bp montserrat-semi-bold-black-10px">N(D1)</div>
+            </div>
+            <div class="d2text-xGOR6F border-1px-dove-gray">
+              <div class="d2-pHd8w9 montserrat-semi-bold-black-10px">D2</div>
+            </div>
+            <div class="d1text-xGOR6F border-1px-dove-gray">
+              <div class="d1-f0Kxl3 montserrat-semi-bold-black-10px">D1</div>
+            </div>
+            <div class="pvxtext-xGOR6F border-1px-dove-gray">
+              <div class="pvx-0ZE0f2 montserrat-semi-bold-black-10px">PV[X]</div>
+            </div>
+            <div class="pvsttext-xGOR6F border-1px-dove-gray">
+              <div class="pvst-sfacxH montserrat-semi-bold-black-10px">PV[ST]</div>
+            </div>
+            <div class="cost-of-carry-xGOR6F border-1px-dove-gray">
+              <div class="cost-of-carry-b-1wB4SW montserrat-semi-bold-black-10px">COST OF CARRY (B)</div>
+            </div>
+            <div class="riskfree-rate-xGOR6F border-1px-dove-gray">
+              <div class="risk-free-rate-r-YWltJx montserrat-semi-bold-black-10px">RISK-FREE RATE (R)</div>
+            </div>
+            <div class="return-volatility-xGOR6F border-1px-dove-gray">
+              <div class="return-volatility-6nz1eA montserrat-semi-bold-black-10px">RETURN&nbsp;&nbsp;VOLATILITY</div>
+            </div>
+            <div class="time-to-maturity-xGOR6F border-1px-dove-gray">
+              <div class="time-to-maturity-t-sxtgsu montserrat-semi-bold-black-10px">TIME TO MATURITY (T)</div>
+            </div>
+            <div class="strike-price-xGOR6F border-1px-dove-gray">
+              <div class="strike-x-po0oJv montserrat-semi-bold-black-10px">STRIKE (X)</div>
+            </div>
+            <div class="underlying-price-xGOR6F border-1px-dove-gray">
+              <div class="underlying-s-YP3gHJ montserrat-semi-bold-black-10px">UNDERLYING (S)</div>
+            </div>
+            <div class="put-price-xGOR6F border-1px-dove-gray">
+              <div class="put-p-MuxzWC montserrat-semi-bold-black-10px">PUT (P)</div>
+            </div>
+            <div class="call-price-xGOR6F border-1px-dove-gray">
+              <div class="call-c-6xvY2a montserrat-semi-bold-black-10px">CALL (C)</div>
+            </div>
+          </div>
+        </div>
+        <div class="export-button-C61RwL smart-layers-pointers">
+          <div class="outline-button-PiBNS4 border-2px-heath">
+            <img class="export-fKSPGk" src="../static/img/export-8@1x.png" />
+          </div>
+        </div>
+        <div class="pricing-greeks-output-C61RwL">
+          <div class="x1-year-number-wSc5g0 border-1px-dove-gray">
+            <div class="x0043-vUELif montserrat-semi-bold-white-12px">0.043</div>
+          </div>
+          <div class="x1-year-text-wSc5g0 border-1px-dove-gray">
+            <div class="rho-iTm0TT montserrat-semi-bold-black-10px">RHO</div>
+          </div>
+          <div class="x52-high-number-wSc5g0 border-1px-dove-gray">
+            <div class="x0054-A1vT6n montserrat-semi-bold-white-12px">0.054</div>
+          </div>
+          <div class="x52-high-text-wSc5g0 border-1px-dove-gray">
+            <div class="vega-E5UdDS montserrat-semi-bold-black-10px">VEGA</div>
+          </div>
+          <div class="x52-low-number-wSc5g0 border-1px-dove-gray">
+            <div class="x0173-wwViCw montserrat-semi-bold-white-12px">0.173</div>
+          </div>
+          <div class="x52-low-text-wSc5g0 border-1px-dove-gray">
+            <div class="theta-xLclwb montserrat-semi-bold-black-10px">THETA</div>
+          </div>
+          <div class="x24-high-number-wSc5g0 border-1px-dove-gray">
+            <div class="x0055-HCEmBt montserrat-semi-bold-white-12px">0.055</div>
+          </div>
+          <div class="x24-high-text-wSc5g0 border-1px-dove-gray">
+            <div class="gamma-qwXBwa montserrat-semi-bold-black-10px">GAMMA</div>
+          </div>
+          <div class="x24-low-number-wSc5g0 border-1px-dove-gray">
+            <div class="x0534-beoU2c montserrat-semi-bold-white-12px">0.534</div>
+          </div>
+          <div class="x24low-text-wSc5g0 border-1px-dove-gray">
+            <div class="delta-aJCu9z montserrat-semi-bold-black-10px">DELTA</div>
+          </div>
+          <div class="earnings-date-number-wSc5g0 border-1px-dove-gray">
+            <div class="x05-07-2021-78kOx3 montserrat-semi-bold-white-12px">05 / 07 / 2021</div>
+          </div>
+          <img class="earnings-date-text-wSc5g0 border-1px-dove-gray" src="../static/img/earningsdatetext-6@1x.png" />
+          <div class="ask-price-number-wSc5g0 border-1px-dove-gray">
+            <div class="x9501-EmovK7 montserrat-semi-bold-white-12px">$95.01</div>
+          </div>
+          <div class="ask-price-text-wSc5g0 border-1px-dove-gray">
+            <div class="market-price-ahZp1f montserrat-semi-bold-black-10px">MARKET PRICE</div>
+          </div>
+          <div class="bid-price-number-wSc5g0 border-1px-dove-gray">
+            <div class="x9892-nQic3J montserrat-semi-bold-white-12px">$98.92</div>
+          </div>
+          <div class="bid-text-wSc5g0 border-1px-dove-gray">
+            <div class="average-price-N5tHGw montserrat-semi-bold-black-10px">AVERAGE PRICE</div>
+          </div>
+          <div class="close-price-number-wSc5g0 border-1px-dove-gray">
+            <div class="x8942-JyNa0z montserrat-semi-bold-white-12px">$89.42</div>
+          </div>
+          <div class="close-price-wSc5g0 border-1px-dove-gray">
+            <div class="binomial-price-k4ifAk montserrat-semi-bold-black-10px">BINOMIAL PRICE</div>
+          </div>
+          <div class="open-price-number-wSc5g0 border-1px-dove-gray">
+            <div class="x10743-KMzKxA montserrat-semi-bold-white-12px">$107.43</div>
+          </div>
+          <div class="open-price-text-wSc5g0 border-1px-dove-gray">
+            <div class="black-scholes-price-Gh9szH montserrat-semi-bold-black-10px">BLACK SCHOLES PRICE</div>
+          </div>
+        </div>
+        <div class="navbar-C61RwL">
+          <div class="menu-center-8MJZIW">
+            <a href="fundamental-analysis-page.html">
+              <div class="fundamental-component-Z6zpbm smart-layers-pointers">
+                <div class="fundamental-6EvOoV">Fundamental</div>
+              </div></a
+            >
+            <a href="technical-analysis-page.html">
+              <div class="technical-component-Z6zpbm smart-layers-pointers">
+                <div class="technical-lY8Sqq">Technical</div>
+              </div></a
+            >
+            <a href="strategies-page.html">
+              <div class="strategy-component-Z6zpbm smart-layers-pointers">
+                <div class="strategy-He3YyY">Strategy</div>
+              </div></a
+            >
+            <div class="valuation-component-Z6zpbm border-1px-dove-gray">
+              <div class="valuation-5dtgbd">Valuation</div>
+            </div>
+          </div>
+          <a href="landing-page.html"
+            ><img class="logo80x70-8MJZIW smart-layers-pointers" src="../static/img/logo80x70@1x.png"
+          /></a>
+        </div>
+        <div class="analysis-input-C61RwL">
+          <div class="select-expiration-DAnbUD">
+            <input
+              class="expiration-date-AghIG5 montserrat-normal-black-10px"
+              name="expiration-date117"
+              placeholder="Expiration Date"
+              required
+            />
+            <img class="md-arrow-dropdown-AghIG5" src="../static/img/md-arrow-dropdown-84@1x.png" />
+          </div>
+          <div class="select-option-style-DAnbUD">
+            <input
+              class="option-style-ZAx7Lv montserrat-normal-black-10px"
+              name="option-style131"
+              placeholder="Option Style"
+              required
+            />
+            <img class="md-arrow-dropdown-ZAx7Lv" src="../static/img/md-arrow-dropdown-84@1x.png" />
+          </div>
+          <div class="select-option-type-DAnbUD">
+            <input
+              class="option-style-Isr8ZD montserrat-normal-black-10px"
+              name="option-style132"
+              placeholder="Option Type"
+              required
+            />
+            <img class="md-arrow-dropdown-Isr8ZD" src="../static/img/md-arrow-dropdown-84@1x.png" />
+          </div>
+          <div class="select-data-source-DAnbUD">
+            <input
+              class="option-style-rf4nxM montserrat-normal-black-10px"
+              name="option-style133"
+              placeholder="Data Source"
+              required
+            />
+            <img class="md-arrow-dropdown-rf4nxM" src="../static/img/md-arrow-dropdown-84@1x.png" />
+          </div>
+          <div class="select-itmatmotm-DAnbUD">
+            <input
+              class="option-style-kB46EP montserrat-normal-black-10px"
+              name="option-style134"
+              placeholder="ITM / ATM / OTM"
+              required
+            />
+            <img class="md-arrow-dropdown-kB46EP" src="../static/img/md-arrow-dropdown-84@1x.png" />
+          </div>
+          <div class="input-ticker-DAnbUD">
+            <input
+              class="ticker-of-the-underlying-Nti9XO montserrat-normal-black-10px"
+              name="ticker-of-the-underlying-127"
+              placeholder="Ticker of the Underlying"
+              required
+            />
+            <img class="icon-search-Nti9XO" src="../static/img/icon-search-21@1x.png" />
+          </div>
+          <div class="option-pricing-valuation-DAnbUD">OPTION PRICING &amp; VALUATION</div>
+        </div>
+        <a href="javascript:SubmitForm('form59')">
+          <div class="analyze-button-C61RwL smart-layers-pointers">
+            <div class="analyze-xWQ1KJ montserrat-semi-bold-white-12px">ANALYZE</div>
+          </div></a
+        >
+      </form>
+    </div>
+    <div class="container-center-horizontal">
+      <form class="x375-pricing-and-valuation-page2 screen" name="form79" action="form79" method="post">
+        <div class="analysis-output-C61RwL">
+          <img class="bg-blue-sPEAV6" src="../static/img/bg-blue-34@1x.png" />
+          <div class="rho-number-sPEAV6 border-1px-dove-gray">
+            <div class="x0043-xJP627 montserrat-semi-bold-white-12px">0.043</div>
+          </div>
+          <div class="rho-text-sPEAV6 border-1px-dove-gray">
+            <div class="rho-R9q6EL montserrat-semi-bold-black-12px">RHO</div>
+          </div>
+          <div class="vega-number-sPEAV6 border-1px-dove-gray">
+            <div class="x0054-hNmdz9 montserrat-semi-bold-white-12px">0.054</div>
+          </div>
+          <div class="vega-text-sPEAV6 border-1px-dove-gray">
+            <div class="vega-z3gJm3 montserrat-semi-bold-black-12px">VEGA</div>
+          </div>
+          <div class="theta-number-sPEAV6 border-1px-dove-gray">
+            <div class="x0173-pkxQUl montserrat-semi-bold-white-12px">0.173</div>
+          </div>
+          <div class="theta-text-sPEAV6 border-1px-dove-gray">
+            <div class="theta-5eQv9x montserrat-semi-bold-black-12px">THETA</div>
+          </div>
+          <div class="gamma-number-sPEAV6 border-1px-dove-gray">
+            <div class="x0055-75L8x8 montserrat-semi-bold-white-12px">0.055</div>
+          </div>
+          <div class="gamma-text-sPEAV6 border-1px-dove-gray">
+            <div class="gamma-9k21gN montserrat-semi-bold-black-12px">GAMMA</div>
+          </div>
+          <div class="delta-number-sPEAV6 border-1px-dove-gray">
+            <div class="x0534-wYmJKm montserrat-semi-bold-white-12px">0.534</div>
+          </div>
+          <div class="delta-text-sPEAV6 border-1px-dove-gray">
+            <div class="delta-2N6NOR montserrat-semi-bold-black-12px">DELTA</div>
+          </div>
+          <div class="implied-volatility-number-sPEAV6 border-1px-dove-gray"><div class="x817-7Pv8mj">8.17%</div></div>
+          <div class="implied-vol-text-sPEAV6 border-1px-dove-gray">
+            <div class="implied-volatility-FOhYHi montserrat-semi-bold-black-10px">IMPLIED VOLATILITY</div>
+          </div>
+          <div class="market-price-number-sPEAV6 border-1px-dove-gray"><div class="x9501-pBTbHd">$95.01</div></div>
+          <div class="market-price-text-sPEAV6 border-1px-dove-gray">
+            <div class="market-price-gWWVVQ montserrat-semi-bold-black-10px">MARKET PRICE</div>
+          </div>
+          <div class="avg-price-number-sPEAV6 border-1px-dove-gray"><div class="x9892-kRAu4x">$98.92</div></div>
+          <div class="avg-price-text-sPEAV6 border-1px-dove-gray">
+            <div class="average-price-pxL0PO montserrat-semi-bold-black-10px">AVERAGE PRICE</div>
+          </div>
+          <div class="binomial-price-number-sPEAV6 border-1px-dove-gray"><div class="x8942-4urhF3">$89.42</div></div>
+          <div class="binomial-price-sPEAV6 border-1px-dove-gray">
+            <div class="binomial-price-A6JQAW montserrat-semi-bold-black-10px">BINOMIAL PRICE</div>
+          </div>
+          <div class="black-scholes-price-number-sPEAV6 border-1px-dove-gray">
+            <div class="x10743-pPKeqN">$107.43</div>
+          </div>
+          <div class="black-scholes-price-text-sPEAV6 border-1px-dove-gray">
+            <div class="black-scholes-price-6ChAPe montserrat-semi-bold-black-10px">BLACK SCHOLES PRICE</div>
+          </div>
+          <div class="formula-variables-sPEAV6">
+            <div class="nd2-xGOR6F border-1px-dove-gray"><div class="x00967-iDnxWV">0.0967</div></div>
+            <div class="nd1-xGOR6F border-1px-dove-gray"><div class="x01232-Q7Pkey">0.1232</div></div>
+            <div class="d2-xGOR6F border-1px-dove-gray"><div class="x00967-4wkroD">0.0967</div></div>
+            <div class="d1-xGOR6F border-1px-dove-gray"><div class="x01232-HBQX2m">0.1232</div></div>
+            <div class="pvx-xGOR6F border-1px-dove-gray"><div class="x4323-LQoj7Y">43.23</div></div>
+            <div class="pvst-xGOR6F border-1px-dove-gray"><div class="x4034-7RBbGW">40.34</div></div>
+            <div class="b-xGOR6F border-1px-dove-gray"><div class="x0043-EUEm0H">0.043</div></div>
+            <div class="r-xGOR6F border-1px-dove-gray"><div class="x005-pTNEef">0.05</div></div>
+            <div class="stnd-dev-xGOR6F border-1px-dove-gray"><div class="x02-3WQ1jw">0.2</div></div>
+            <div class="t-xGOR6F border-1px-dove-gray"><div class="x025-i5if0C">0.25</div></div>
+            <div class="x-xGOR6F border-1px-dove-gray"><div class="x9501-cXBAFW">95.01</div></div>
+            <div class="s-xGOR6F border-1px-dove-gray"><div class="x14523-prbHlX">145.23</div></div>
+            <div class="p-xGOR6F border-1px-dove-gray"><div class="x9464-h4qzDl">94.64</div></div>
+            <div class="c-xGOR6F border-1px-dove-gray">
+              <div class="x9534-waIBB1 montserrat-semi-bold-white-12px">95.34</div>
+            </div>
+            <div class="nd2text-xGOR6F border-1px-dove-gray">
+              <div class="nd2-lEsVBb montserrat-semi-bold-black-10px">N(D2)</div>
+            </div>
+            <div class="nd1text-xGOR6F border-1px-dove-gray">
+              <div class="nd1-f9B0bp montserrat-semi-bold-black-10px">N(D1)</div>
+            </div>
+            <div class="d2text-xGOR6F border-1px-dove-gray">
+              <div class="d2-pHd8w9 montserrat-semi-bold-black-10px">D2</div>
+            </div>
+            <div class="d1text-xGOR6F border-1px-dove-gray">
+              <div class="d1-f0Kxl3 montserrat-semi-bold-black-10px">D1</div>
+            </div>
+            <div class="pvxtext-xGOR6F border-1px-dove-gray">
+              <div class="pvx-0ZE0f2 montserrat-semi-bold-black-10px">PV[X]</div>
+            </div>
+            <div class="pvsttext-xGOR6F border-1px-dove-gray">
+              <div class="pvst-sfacxH montserrat-semi-bold-black-10px">PV[ST]</div>
+            </div>
+            <div class="cost-of-carry-xGOR6F border-1px-dove-gray">
+              <div class="cost-of-carry-b-1wB4SW montserrat-semi-bold-black-10px">COST OF CARRY (B)</div>
+            </div>
+            <div class="riskfree-rate-xGOR6F border-1px-dove-gray">
+              <div class="risk-free-rate-r-YWltJx montserrat-semi-bold-black-10px">RISK-FREE RATE (R)</div>
+            </div>
+            <div class="return-volatility-xGOR6F border-1px-dove-gray">
+              <div class="return-volatility-6nz1eA montserrat-semi-bold-black-10px">RETURN&nbsp;&nbsp;VOLATILITY</div>
+            </div>
+            <div class="time-to-maturity-xGOR6F border-1px-dove-gray">
+              <div class="time-to-maturity-t-sxtgsu montserrat-semi-bold-black-10px">TIME TO MATURITY (T)</div>
+            </div>
+            <div class="strike-price-xGOR6F border-1px-dove-gray">
+              <div class="strike-x-po0oJv montserrat-semi-bold-black-10px">STRIKE (X)</div>
+            </div>
+            <div class="underlying-price-xGOR6F border-1px-dove-gray">
+              <div class="underlying-s-YP3gHJ montserrat-semi-bold-black-10px">UNDERLYING (S)</div>
+            </div>
+            <div class="put-price-xGOR6F border-1px-dove-gray">
+              <div class="put-p-MuxzWC montserrat-semi-bold-black-10px">PUT (P)</div>
+            </div>
+            <div class="call-price-xGOR6F border-1px-dove-gray">
+              <div class="call-c-6xvY2a montserrat-semi-bold-black-10px">CALL (C)</div>
+            </div>
+          </div>
+        </div>
+        <div class="export-button-C61RwL smart-layers-pointers">
+          <div class="outline-button-PiBNS4 border-2px-heath">
+            <img class="export-fKSPGk" src="../static/img/export-12@1x.png" />
+          </div>
+        </div>
+        <div class="navbar-C61RwL">
+          <div class="menu-center-8MJZIW">
+            <a href="technical-analysis-page.html">
+              <div class="technical-component-Z6zpbm smart-layers-pointers">
+                <div class="technical-lY8Sqq">Technical</div>
+              </div></a
+            >
+            <a href="strategies-page.html">
+              <div class="strategy-component-Z6zpbm smart-layers-pointers">
+                <div class="strategy-He3YyY">Strategy</div>
+              </div></a
+            >
+            <div class="valuation-component-Z6zpbm border-1px-dove-gray">
+              <div class="valuation-5dtgbd">Valuation</div>
+            </div>
+            <a href="fundamental-analysis-page.html">
+              <div class="fundamental-component-Z6zpbm smart-layers-pointers">
+                <div class="fundamental-rectangle-6EvOoV"></div>
+                <div class="fundamental-6EvOoV">Fundamental</div>
+              </div></a
+            >
+          </div>
+          <a href="landing-page.html"
+            ><img class="logo50x44-8MJZIW smart-layers-pointers" src="../static/img/logo50x44@1x.png"
+          /></a>
+        </div>
+        <div class="component-150-3-C61RwL">
+          <div class="analysis-input-7x4dAY">
+            <div class="select-expiration-UuXn8C">
+              <input class="expiration-date-N5MdiK" name="expiration-date123" placeholder="Expiration Date" required />
+            </div>
+            <div class="select-data-source-UuXn8C">
+              <input class="data-source-oY6dyy" name="data-source127" placeholder="Data Source" required />
+            </div>
+            <div class="select-option-style-UuXn8C">
+              <input class="option-style-S3BWxQ" name="option-style145" placeholder="Option Style" required />
+            </div>
+            <div class="select-option-type-UuXn8C">
+              <input class="option-type-PtZQkg" name="option-type117" placeholder="Option Type" required />
+            </div>
+            <div class="select-itmatmotm-UuXn8C">
+              <input class="itm-atm-otm-qEWPUz" name="itm-atm-otm117" placeholder="ITM / ATM / OTM" required />
+            </div>
+            <div class="input-ticker-UuXn8C">
+              <input
+                class="ticker-of-the-underlying-4pyx8v"
+                name="ticker-of-the-underlying-137"
+                placeholder="Ticker of the Underlying"
+                required
+              />
+              <img class="icon-search-4pyx8v" src="../static/img/icon-search-31@1x.png" />
+            </div>
+            <div class="option-pricing-valuation-UuXn8C montserrat-normal-black-10px">
+              OPTION PRICING &amp; VALUATION
+            </div>
+          </div>
+        </div>
+        <a href="javascript:SubmitForm('form79')">
+          <div class="analyze-button-C61RwL smart-layers-pointers"><div class="analyze-xWQ1KJ">ANALYZE</div></div></a
+        >
+      </form>
+    </div>
+    <script>
+      /* Copyright (c) 2016 Tobias Buschor https://goo.gl/gl0mbf | MIT License https://goo.gl/HgajeK */
+
+      if (!HTMLFormElement.prototype.reportValidity) {
+        HTMLFormElement.prototype.reportValidity = function () {
+          if (this.checkValidity()) return true;
+          var btn = document.createElement("button");
+          this.appendChild(btn);
+          btn.click();
+          this.removeChild(btn);
+          return false;
+        };
+      }
+
+      function SubmitForm(form_name) {
+        var form = document.getElementsByName(form_name)[0];
+        if (form.reportValidity()) {
+          form.submit();
+          if (window.submitted) window.submitted();
+        }
+      }
+    </script>
+  </body>
+  {% endblock %}

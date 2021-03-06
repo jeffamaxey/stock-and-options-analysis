@@ -1,0 +1,2532 @@
+/* screen - 1280-payment-processing-page */
+
+.border-10px-heath {
+  border: 10px solid var(--heath);
+}
+.border-1px-casal {
+  border: 1px solid var(--casal);
+}
+.border-1px-dove-gray {
+  border: 1px solid var(--dove-gray);
+}
+.border-2px-heath {
+  border: 2px solid var(--heath);
+}
+.border-4px-heath {
+  border: 4px solid var(--heath);
+}
+.border-class-1 {
+  border: 1px solid rgba(227,232,240,1.0);
+}
+.montserrat-normal-black-10px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-12px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-18px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-42px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-semi-bold-black-10px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-black-12px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-black-19px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-heath-20px {
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-white-12px {
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-white-19px {
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+}
+.x1280-payment-processing-page {
+  background-color: var(--heath);
+  height: 720px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1280px;
+}
+.x1280-payment-processing-page .address-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 43px;
+  left: 258px;
+  pointer-events: auto;
+  position: absolute;
+  top: 407px;
+  transition: all 0.2s ease;
+  width: 211px;
+}
+.x1280-payment-processing-page .address-box-C61RwL:hover {
+
+filter: grayscale(100%);
+}
+.x1280-payment-processing-page .billing-details-C61RwL {
+  background-color: transparent;
+  height: 29px;
+  left: 262px;
+  position: absolute;
+  top: 142px;
+  width: 211px;
+}
+.x1280-payment-processing-page .billing-details-QegPJa {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.x1280-payment-processing-page .continue-to-payment-s3Kria {
+  background-color: transparent;
+  bottom: calc(27.78% - 7px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  height: 24px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  right: calc(48.88% - 112px);
+  text-align: center;
+  white-space: nowrap;
+  width: 230px;
+}
+.x1280-payment-processing-page .country-Sn2kQv {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  border: 0;
+  bottom: calc(35.75% - 9px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: 24px;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 76px;
+}
+.x1280-payment-processing-page .country-Sn2kQv::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.x1280-payment-processing-page .country-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 44px;
+  left: 258px;
+  pointer-events: auto;
+  position: absolute;
+  top: 269px;
+  transition: all 0.2s ease;
+  width: 439px;
+}
+.x1280-payment-processing-page .country-box-C61RwL:hover {
+
+filter: grayscale(100%);
+}
+.x1280-payment-processing-page .deluxe-subscription-10999-sPJIs5 {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.x1280-payment-processing-page .email-address-YKjPez {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  border: 0;
+  bottom: calc(34.71% - 8px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: 24px;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 133px;
+}
+.x1280-payment-processing-page .email-address-YKjPez::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.x1280-payment-processing-page .email-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 44px;
+  left: 258px;
+  pointer-events: auto;
+  position: absolute;
+  top: 476px;
+  transition: all 0.2s ease;
+  width: 211px;
+}
+.x1280-payment-processing-page .email-box-C61RwL:hover {
+
+filter: grayscale(100%);
+}
+.x1280-payment-processing-page .first-name-6qOvSS {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  border: 0;
+  bottom: calc(34.71% - 8px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: 24px;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 102px;
+}
+.x1280-payment-processing-page .first-name-6qOvSS::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.x1280-payment-processing-page .last-name-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 44px;
+  left: 486px;
+  pointer-events: auto;
+  position: absolute;
+  top: 200px;
+  transition: all 0.2s ease;
+  width: 211px;
+}
+.x1280-payment-processing-page .last-name-box-C61RwL:hover {
+
+filter: grayscale(100%);
+}
+.x1280-payment-processing-page .last-name-pMRVcN {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  border: 0;
+  bottom: calc(34.71% - 8px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: 24px;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 100px;
+}
+.x1280-payment-processing-page .last-name-pMRVcN::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.x1280-payment-processing-page .logo125x109-C61RwL {
+  background-color: transparent;
+  height: 109px;
+  left: 64px;
+  pointer-events: auto;
+  position: absolute;
+  top: 65px;
+  transition: all 0.2s ease;
+  width: 125px;
+}
+.x1280-payment-processing-page .logo125x109-C61RwL:hover {
+
+transform: scale(1.1);
+}
+.x1280-payment-processing-page .md-arrow-dropdown-ENxzu2 {
+  background-color: transparent;
+  bottom: calc(41.64% - 4px);
+  height: 9px;
+  position: absolute;
+  right: 19px;
+  width: 17px;
+}
+.x1280-payment-processing-page .md-arrow-dropdown-Sn2kQv {
+  background-color: transparent;
+  height: 9px;
+  position: absolute;
+  right: 19px;
+  top: calc(48.80% - 4px);
+  width: 17px;
+}
+.x1280-payment-processing-page .name-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 44px;
+  left: 258px;
+  pointer-events: auto;
+  position: absolute;
+  top: 200px;
+  transition: all 0.2s ease;
+  width: 211px;
+}
+.x1280-payment-processing-page .name-box-C61RwL:hover {
+
+filter: grayscale(100%);
+}
+.x1280-payment-processing-page .pay-with-pay-pal-Pqx0eZ {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.x1280-payment-processing-page .paypal-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 785px;
+  position: absolute;
+  top: 400px;
+  width: 161px;
+}
+.x1280-payment-processing-page .postal-code-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 43px;
+  left: 486px;
+  pointer-events: auto;
+  position: absolute;
+  top: 407px;
+  transition: all 0.2s ease;
+  width: 211px;
+}
+.x1280-payment-processing-page .postal-code-box-C61RwL:hover {
+
+filter: grayscale(100%);
+}
+.x1280-payment-processing-page .postal-code-zip-mTWy8V {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  border: 0;
+  bottom: calc(34.51% - 8px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: 24px;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 157px;
+}
+.x1280-payment-processing-page .postal-code-zip-mTWy8V::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.x1280-payment-processing-page .product-type-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 786px;
+  position: absolute;
+  top: 227px;
+  width: 272px;
+}
+.x1280-payment-processing-page .province-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 44px;
+  left: 258px;
+  pointer-events: auto;
+  position: absolute;
+  top: 338px;
+  transition: all 0.2s ease;
+  width: 439px;
+}
+.x1280-payment-processing-page .province-box-C61RwL:hover {
+
+filter: grayscale(100%);
+}
+.x1280-payment-processing-page .province-state-ENxzu2 {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  border: 0;
+  bottom: calc(34.71% - 8px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: 24px;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 145px;
+}
+.x1280-payment-processing-page .province-state-ENxzu2::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.x1280-payment-processing-page .secondary-background-C61RwL {
+  background-color: transparent;
+  background-image: url(../img/path-81-10@1x.png);
+  background-size: 100% 100%;
+  height: 640px;
+  left: 40px;
+  position: absolute;
+  top: 40px;
+  width: 1200px;
+}
+.x1280-payment-processing-page .solid-button-C61RwL {
+  background-color: var(--heath);
+  border-radius: 25px;
+  height: 42px;
+  left: 769px;
+  pointer-events: auto;
+  position: absolute;
+  top: 465px;
+  transition: all 0.2s ease;
+  width: 319px;
+}
+.x1280-payment-processing-page .solid-button-C61RwL:hover {
+
+transform: scale(1.1);
+}
+.x1280-payment-processing-page .street-address-RMS0JO {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  border: 0;
+  bottom: calc(34.51% - 8px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: 24px;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 136px;
+}
+.x1280-payment-processing-page .street-address-RMS0JO::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.x1280-payment-processing-page .subtotal-10999-vxlRXx {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.x1280-payment-processing-page .subtotal-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 787px;
+  position: absolute;
+  top: 265px;
+  width: 272px;
+}
+.x1280-payment-processing-page .tax-0-55j5vf {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.x1280-payment-processing-page .tax-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 785px;
+  position: absolute;
+  top: 303px;
+  width: 274px;
+}
+.x1280-payment-processing-page .total-10999-2seHeV {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.x1280-payment-processing-page .total-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 786px;
+  position: absolute;
+  top: 341px;
+  width: 273px;
+}
+.x1280-payment-processing-page .your-subscription-3w32wz {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.x1280-payment-processing-page .your-subscription-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 840px;
+  position: absolute;
+  top: 162px;
+  width: 164px;
+}
+:root {
+  --alto: rgba(217,217,217,1.0);
+  --black: rgba(0,0,0,1.0);
+  --casal: rgba(49,89,112,1.0);
+  --cedar: rgba(66,18,19,1.0);
+  --dove-gray: rgba(112,112,112,1.0);
+  --heath: rgba(84,22,23,1.0);
+  --pumice: rgba(201,201,201,1.0);
+  --quick-silver: rgba(167,167,167,1.0);
+  --san-juan: rgba(44,74,103,1.0);
+  --white: rgba(255,255,255,1.0);
+}
+/* screen - 375-payment-processing-page */
+
+.border-10px-heath {
+  border: 10px solid var(--heath);
+}
+.border-1px-casal {
+  border: 1px solid var(--casal);
+}
+.border-1px-dove-gray {
+  border: 1px solid var(--dove-gray);
+}
+.border-2px-heath {
+  border: 2px solid var(--heath);
+}
+.border-4px-heath {
+  border: 4px solid var(--heath);
+}
+.border-class-1 {
+  border: 1px solid rgba(227,232,240,1.0);
+}
+.montserrat-normal-black-10px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-12px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-18px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-42px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-semi-bold-black-10px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-black-12px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-black-19px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-heath-20px {
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-white-12px {
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-white-19px {
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+}
+.x375-payment-processing-page {
+  background-color: var(--heath);
+  height: 210.94px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 375px;
+}
+.x375-payment-processing-page .address-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 16px;
+  left: 73px;
+  pointer-events: auto;
+  position: absolute;
+  top: 119px;
+  transition: all 0.2s ease;
+  width: 75px;
+}
+.x375-payment-processing-page .address-box-C61RwL:hover {
+
+filter: grayscale(100%);
+}
+.x375-payment-processing-page .billing-details-C61RwL {
+  background-color: transparent;
+  height: 13px;
+  left: 73px;
+  position: absolute;
+  top: 47px;
+  width: 89px;
+}
+.x375-payment-processing-page .billing-details-QegPJa {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.x375-payment-processing-page .continue-to-payment-s3Kria {
+  background-color: transparent;
+  bottom: calc(10.00% - 1px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 600;
+  height: 10px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  position: absolute;
+  right: calc(45.45% - 35px);
+  text-align: center;
+  white-space: nowrap;
+  width: 78px;
+}
+.x375-payment-processing-page .country-Sn2kQv {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(13.20% - 1px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 500;
+  height: 10px;
+  left: 8px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 27px;
+}
+.x375-payment-processing-page .country-Sn2kQv::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.x375-payment-processing-page .country-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 16px;
+  left: 73px;
+  pointer-events: auto;
+  position: absolute;
+  top: 83px;
+  transition: all 0.2s ease;
+  width: 160px;
+}
+.x375-payment-processing-page .country-box-C61RwL:hover {
+
+filter: grayscale(100%);
+}
+.x375-payment-processing-page .deluxe-subscription-10999-sPJIs5 {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  position: absolute;
+  text-align: left;
+  top: 1px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.x375-payment-processing-page .email-address-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 16px;
+  left: 73px;
+  pointer-events: auto;
+  position: absolute;
+  top: 138px;
+  transition: all 0.2s ease;
+  width: 75px;
+}
+.x375-payment-processing-page .email-address-box-C61RwL:hover {
+
+filter: grayscale(100%);
+}
+.x375-payment-processing-page .email-address-nK3xRq {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(16.68% - 2px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 500;
+  height: 10px;
+  left: 7px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 46px;
+}
+.x375-payment-processing-page .email-address-nK3xRq::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.x375-payment-processing-page .first-name-6qOvSS {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(16.68% - 2px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 500;
+  height: 10px;
+  left: 7px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 35px;
+}
+.x375-payment-processing-page .first-name-6qOvSS::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.x375-payment-processing-page .l-ast-name-pMRVcN {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(16.67% - 2px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 500;
+  height: 10px;
+  left: 7px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 35px;
+}
+.x375-payment-processing-page .l-ast-name-pMRVcN::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.x375-payment-processing-page .last-name-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 16px;
+  left: 159px;
+  pointer-events: auto;
+  position: absolute;
+  top: 64px;
+  transition: all 0.2s ease;
+  width: 75px;
+}
+.x375-payment-processing-page .last-name-box-C61RwL:hover {
+
+filter: grayscale(100%);
+}
+.x375-payment-processing-page .logo50x44-C61RwL {
+  background-color: transparent;
+  height: 44px;
+  left: 17px;
+  pointer-events: auto;
+  position: absolute;
+  top: 16px;
+  transition: all 0.2s ease;
+  width: 50px;
+}
+.x375-payment-processing-page .logo50x44-C61RwL:hover {
+
+transform: scale(1.1);
+}
+.x375-payment-processing-page .md-arrow-dropdown-0Yc1Uv {
+  background-color: transparent;
+  bottom: calc(41.52% - 3px);
+  height: 7px;
+  position: absolute;
+  right: 8px;
+  width: 12px;
+}
+.x375-payment-processing-page .md-arrow-dropdown-Sn2kQv {
+  background-color: transparent;
+  bottom: calc(41.52% - 3px);
+  height: 7px;
+  position: absolute;
+  right: 8px;
+  width: 12px;
+}
+.x375-payment-processing-page .name-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 16px;
+  left: 73px;
+  pointer-events: auto;
+  position: absolute;
+  top: 64px;
+  transition: all 0.2s ease;
+  width: 75px;
+}
+.x375-payment-processing-page .name-box-C61RwL:hover {
+
+filter: grayscale(100%);
+}
+.x375-payment-processing-page .pay-with-pay-pal-Pqx0eZ {
+  background-color: transparent;
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  position: absolute;
+  text-align: left;
+  top: 1px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.x375-payment-processing-page .paypal-C61RwL {
+  background-color: transparent;
+  height: 8px;
+  left: 278px;
+  position: absolute;
+  top: 119px;
+  width: 55px;
+}
+.x375-payment-processing-page .postal-code-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 16px;
+  left: 159px;
+  pointer-events: auto;
+  position: absolute;
+  top: 119px;
+  transition: all 0.2s ease;
+  width: 75px;
+}
+.x375-payment-processing-page .postal-code-box-C61RwL:hover {
+
+filter: grayscale(100%);
+}
+.x375-payment-processing-page .postal-code-zip-mTWy8V {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(16.65% - 2px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 500;
+  height: 10px;
+  left: 7px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 54px;
+}
+.x375-payment-processing-page .postal-code-zip-mTWy8V::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.x375-payment-processing-page .product-type-C61RwL {
+  background-color: transparent;
+  height: 8px;
+  left: 258px;
+  position: absolute;
+  top: 72px;
+  width: 92px;
+}
+.x375-payment-processing-page .province-state-0Yc1Uv {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(16.68% - 2px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 500;
+  height: 10px;
+  left: 7px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 50px;
+}
+.x375-payment-processing-page .province-state-0Yc1Uv::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.x375-payment-processing-page .province-state-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 16px;
+  left: 73px;
+  pointer-events: auto;
+  position: absolute;
+  top: 101px;
+  transition: all 0.2s ease;
+  width: 160px;
+}
+.x375-payment-processing-page .province-state-box-C61RwL:hover {
+
+filter: grayscale(100%);
+}
+.x375-payment-processing-page .secondary-background-C61RwL {
+  background-color: transparent;
+  background-image: url(../img/path-81-30@1x.png);
+  background-size: 100% 100%;
+  height: 192px;
+  left: 10px;
+  position: absolute;
+  top: 9px;
+  width: 356px;
+}
+.x375-payment-processing-page .solid-button-C61RwL {
+  background-color: var(--heath);
+  border-radius: 25px;
+  height: 15px;
+  left: 255px;
+  pointer-events: auto;
+  position: absolute;
+  top: 139px;
+  transition: all 0.2s ease;
+  width: 100px;
+}
+.x375-payment-processing-page .solid-button-C61RwL:hover {
+
+transform: scale(1.1);
+}
+.x375-payment-processing-page .street-address-RMS0JO {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(16.68% - 2px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 500;
+  height: 10px;
+  left: 7px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 47px;
+}
+.x375-payment-processing-page .street-address-RMS0JO::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.x375-payment-processing-page .subtotal-10999-vxlRXx {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  position: absolute;
+  text-align: left;
+  top: 1px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.x375-payment-processing-page .subtotal-C61RwL {
+  background-color: transparent;
+  height: 8px;
+  left: 259px;
+  position: absolute;
+  top: 82px;
+  width: 92px;
+}
+.x375-payment-processing-page .tax-0-55j5vf {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  position: absolute;
+  text-align: left;
+  top: 1px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.x375-payment-processing-page .tax-C61RwL {
+  background-color: transparent;
+  height: 8px;
+  left: 257px;
+  position: absolute;
+  top: 93px;
+  width: 93px;
+}
+.x375-payment-processing-page .total-10999-2seHeV {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  position: absolute;
+  text-align: left;
+  top: 1px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.x375-payment-processing-page .total-C61RwL {
+  background-color: transparent;
+  height: 8px;
+  left: 258px;
+  position: absolute;
+  top: 103px;
+  width: 92px;
+}
+.x375-payment-processing-page .your-subscription-3w32wz {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  position: absolute;
+  text-align: left;
+  top: 1px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.x375-payment-processing-page .your-subscription-C61RwL {
+  background-color: transparent;
+  height: 8px;
+  left: 276px;
+  position: absolute;
+  top: 51px;
+  width: 56px;
+}
+:root {
+  --alto: rgba(217,217,217,1.0);
+  --black: rgba(0,0,0,1.0);
+  --casal: rgba(49,89,112,1.0);
+  --cedar: rgba(66,18,19,1.0);
+  --dove-gray: rgba(112,112,112,1.0);
+  --heath: rgba(84,22,23,1.0);
+  --pumice: rgba(201,201,201,1.0);
+  --quick-silver: rgba(167,167,167,1.0);
+  --san-juan: rgba(44,74,103,1.0);
+  --white: rgba(255,255,255,1.0);
+}
+/* screen - 768-payment-processing-page */
+
+.border-10px-heath {
+  border: 10px solid var(--heath);
+}
+.border-1px-casal {
+  border: 1px solid var(--casal);
+}
+.border-1px-dove-gray {
+  border: 1px solid var(--dove-gray);
+}
+.border-2px-heath {
+  border: 2px solid var(--heath);
+}
+.border-4px-heath {
+  border: 4px solid var(--heath);
+}
+.border-class-1 {
+  border: 1px solid rgba(227,232,240,1.0);
+}
+.montserrat-normal-black-10px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-12px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-18px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-42px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-semi-bold-black-10px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-black-12px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-black-19px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-heath-20px {
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-white-12px {
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-white-19px {
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+}
+.x768-payment-processing-page {
+  background-color: var(--heath);
+  height: 432px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 768px;
+}
+.x768-payment-processing-page .address-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 30px;
+  left: 132px;
+  pointer-events: auto;
+  position: absolute;
+  top: 233px;
+  transition: all 0.2s ease;
+  width: 140px;
+}
+.x768-payment-processing-page .address-box-C61RwL:hover {
+
+filter: grayscale(100%);
+}
+.x768-payment-processing-page .billing-details-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 132px;
+  position: absolute;
+  top: 84px;
+  width: 159px;
+}
+.x768-payment-processing-page .billing-details-QegPJa {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.x768-payment-processing-page .continue-to-payment-s3Kria {
+  background-color: transparent;
+  bottom: calc(30.77% - 5px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(47.83% - 74px);
+  text-align: center;
+  white-space: nowrap;
+  width: 154px;
+}
+.x768-payment-processing-page .country-Sn2kQv {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  border: 0;
+  bottom: calc(32.45% - 6px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  height: 17px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 51px;
+}
+.x768-payment-processing-page .country-Sn2kQv::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.x768-payment-processing-page .country-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 30px;
+  left: 132px;
+  pointer-events: auto;
+  position: absolute;
+  top: 153px;
+  transition: all 0.2s ease;
+  width: 300px;
+}
+.x768-payment-processing-page .country-box-C61RwL:hover {
+
+filter: grayscale(100%);
+}
+.x768-payment-processing-page .deluxe-subscription-10999-sPJIs5 {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.x768-payment-processing-page .email-address-YKjPez {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  border: 0;
+  bottom: calc(32.45% - 6px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  height: 17px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 89px;
+}
+.x768-payment-processing-page .email-address-YKjPez::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.x768-payment-processing-page .email-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 30px;
+  left: 132px;
+  pointer-events: auto;
+  position: absolute;
+  top: 273px;
+  transition: all 0.2s ease;
+  width: 140px;
+}
+.x768-payment-processing-page .email-box-C61RwL:hover {
+
+filter: grayscale(100%);
+}
+.x768-payment-processing-page .first-name-6qOvSS {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  border: 0;
+  bottom: calc(32.46% - 6px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  height: 17px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 69px;
+}
+.x768-payment-processing-page .first-name-6qOvSS::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.x768-payment-processing-page .last-name-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 30px;
+  left: 292px;
+  pointer-events: auto;
+  position: absolute;
+  top: 113px;
+  transition: all 0.2s ease;
+  width: 140px;
+}
+.x768-payment-processing-page .last-name-box-C61RwL:hover {
+
+filter: grayscale(100%);
+}
+.x768-payment-processing-page .last-name-pMRVcN {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  border: 0;
+  bottom: calc(32.44% - 6px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  height: 17px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 68px;
+}
+.x768-payment-processing-page .last-name-pMRVcN::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.x768-payment-processing-page .logo80x70-C61RwL {
+  background-color: transparent;
+  height: 70px;
+  left: 36px;
+  pointer-events: auto;
+  position: absolute;
+  top: 36px;
+  transition: all 0.2s ease;
+  width: 80px;
+}
+.x768-payment-processing-page .logo80x70-C61RwL:hover {
+
+transform: scale(1.1);
+}
+.x768-payment-processing-page .md-arrow-dropdown-ENxzu2 {
+  background-color: transparent;
+  bottom: calc(41.64% - 4px);
+  height: 9px;
+  position: absolute;
+  right: 19px;
+  width: 17px;
+}
+.x768-payment-processing-page .md-arrow-dropdown-Sn2kQv {
+  background-color: transparent;
+  height: 9px;
+  position: absolute;
+  right: 19px;
+  top: calc(48.80% - 4px);
+  width: 17px;
+}
+.x768-payment-processing-page .name-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 30px;
+  left: 132px;
+  pointer-events: auto;
+  position: absolute;
+  top: 113px;
+  transition: all 0.2s ease;
+  width: 140px;
+}
+.x768-payment-processing-page .name-box-C61RwL:hover {
+
+filter: grayscale(100%);
+}
+.x768-payment-processing-page .pay-with-pay-pal-Pqx0eZ {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.x768-payment-processing-page .paypal-C61RwL {
+  background-color: transparent;
+  height: 15px;
+  left: 538px;
+  position: absolute;
+  top: 250px;
+  width: 108px;
+}
+.x768-payment-processing-page .postal-code-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 30px;
+  left: 292px;
+  pointer-events: auto;
+  position: absolute;
+  top: 233px;
+  transition: all 0.2s ease;
+  width: 140px;
+}
+.x768-payment-processing-page .postal-code-box-C61RwL:hover {
+
+filter: grayscale(100%);
+}
+.x768-payment-processing-page .postal-code-zip-mTWy8V {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  border: 0;
+  bottom: calc(32.45% - 6px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  height: 17px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 105px;
+}
+.x768-payment-processing-page .postal-code-zip-mTWy8V::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.x768-payment-processing-page .product-type-C61RwL {
+  background-color: transparent;
+  height: 15px;
+  left: 499px;
+  position: absolute;
+  top: 148px;
+  width: 182px;
+}
+.x768-payment-processing-page .province-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 30px;
+  left: 132px;
+  pointer-events: auto;
+  position: absolute;
+  top: 193px;
+  transition: all 0.2s ease;
+  width: 300px;
+}
+.x768-payment-processing-page .province-box-C61RwL:hover {
+
+filter: grayscale(100%);
+}
+.x768-payment-processing-page .province-state-ENxzu2 {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  border: 0;
+  bottom: calc(32.45% - 6px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  height: 17px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 97px;
+}
+.x768-payment-processing-page .province-state-ENxzu2::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.x768-payment-processing-page .secondary-background-C61RwL {
+  background-color: transparent;
+  background-image: url(../img/path-81-20@1x.png);
+  background-size: 100% 100%;
+  height: 390px;
+  left: 21px;
+  position: absolute;
+  top: 21px;
+  width: 726px;
+}
+.x768-payment-processing-page .solid-button-C61RwL {
+  background-color: var(--heath);
+  border-radius: 25px;
+  height: 30px;
+  left: 488px;
+  pointer-events: auto;
+  position: absolute;
+  top: 291px;
+  transition: all 0.2s ease;
+  width: 200px;
+}
+.x768-payment-processing-page .solid-button-C61RwL:hover {
+
+transform: scale(1.1);
+}
+.x768-payment-processing-page .street-address-RMS0JO {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  border: 0;
+  bottom: calc(32.46% - 6px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  height: 17px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 91px;
+}
+.x768-payment-processing-page .street-address-RMS0JO::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.x768-payment-processing-page .subtotal-10999-vxlRXx {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.x768-payment-processing-page .subtotal-C61RwL {
+  background-color: transparent;
+  height: 15px;
+  left: 499px;
+  position: absolute;
+  top: 171px;
+  width: 182px;
+}
+.x768-payment-processing-page .tax-0-55j5vf {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.x768-payment-processing-page .tax-C61RwL {
+  background-color: transparent;
+  height: 15px;
+  left: 497px;
+  position: absolute;
+  top: 193px;
+  width: 183px;
+}
+.x768-payment-processing-page .total-10999-2seHeV {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.x768-payment-processing-page .total-C61RwL {
+  background-color: transparent;
+  height: 15px;
+  left: 498px;
+  position: absolute;
+  top: 216px;
+  width: 183px;
+}
+.x768-payment-processing-page .your-subscription-3w32wz {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.x768-payment-processing-page .your-subscription-C61RwL {
+  background-color: transparent;
+  height: 15px;
+  left: 534px;
+  position: absolute;
+  top: 107px;
+  width: 110px;
+}
+:root {
+  --alto: rgba(217,217,217,1.0);
+  --black: rgba(0,0,0,1.0);
+  --casal: rgba(49,89,112,1.0);
+  --cedar: rgba(66,18,19,1.0);
+  --dove-gray: rgba(112,112,112,1.0);
+  --heath: rgba(84,22,23,1.0);
+  --pumice: rgba(201,201,201,1.0);
+  --quick-silver: rgba(167,167,167,1.0);
+  --san-juan: rgba(44,74,103,1.0);
+  --white: rgba(255,255,255,1.0);
+}
+/* screen - payment-processing-page */
+
+.border-10px-heath {
+  border: 10px solid var(--heath);
+}
+.border-1px-casal {
+  border: 1px solid var(--casal);
+}
+.border-1px-dove-gray {
+  border: 1px solid var(--dove-gray);
+}
+.border-2px-heath {
+  border: 2px solid var(--heath);
+}
+.border-4px-heath {
+  border: 4px solid var(--heath);
+}
+.border-class-1 {
+  border: 1px solid rgba(227,232,240,1.0);
+}
+.montserrat-normal-black-10px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-12px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-18px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-42px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-semi-bold-black-10px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-black-12px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-black-19px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-heath-20px {
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-white-12px {
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-white-19px {
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+}
+.payment-processing-page {
+  background-color: var(--heath);
+  height: 1080px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1920px;
+}
+.payment-processing-page .address-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 60px;
+  left: 416px;
+  position: absolute;
+  top: 489px;
+  width: 400px;
+}
+.payment-processing-page .billing-details-C61RwL {
+  background-color: transparent;
+  height: 29px;
+  left: 416px;
+  position: absolute;
+  top: 174px;
+  width: 211px;
+}
+.payment-processing-page .billing-details-QegPJa {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.payment-processing-page .continue-to-payment-s3Kria {
+  background-color: transparent;
+  bottom: calc(41.18% - 11px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  height: 26px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  right: calc(49.60% - 126px);
+  text-align: center;
+  white-space: nowrap;
+  width: 254px;
+}
+.payment-processing-page .country-Sn2kQv {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  border: 0;
+  bottom: calc(41.67% - 10px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: 24px;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 76px;
+}
+.payment-processing-page .country-Sn2kQv::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.payment-processing-page .country-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 60px;
+  left: 416px;
+  position: absolute;
+  top: 315px;
+  width: 827px;
+}
+.payment-processing-page .deluxe-subscription-10999-sPJIs5 {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.payment-processing-page .email-address-YKjPez {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  border: 0;
+  bottom: calc(41.67% - 10px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: 24px;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 133px;
+}
+.payment-processing-page .email-address-YKjPez::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.payment-processing-page .email-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 60px;
+  left: 416px;
+  position: absolute;
+  top: 578px;
+  width: 400px;
+}
+.payment-processing-page .first-name-6qOvSS {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  border: 0;
+  bottom: calc(41.67% - 10px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: 24px;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 102px;
+}
+.payment-processing-page .first-name-6qOvSS::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.payment-processing-page .last-name-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 60px;
+  left: 843px;
+  position: absolute;
+  top: 228px;
+  width: 400px;
+}
+.payment-processing-page .last-name-pMRVcN {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  border: 0;
+  bottom: calc(41.67% - 10px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: 24px;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 100px;
+}
+.payment-processing-page .last-name-pMRVcN::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.payment-processing-page .logo200x175-C61RwL {
+  background-color: transparent;
+  height: 175px;
+  left: 89px;
+  pointer-events: auto;
+  position: absolute;
+  top: 86px;
+  transition: all 0.2s ease;
+  width: 200px;
+}
+.payment-processing-page .logo200x175-C61RwL:hover {
+
+transform: scale(1.1);
+}
+.payment-processing-page .md-arrow-dropdown-ENxzu2 {
+  background-color: transparent;
+  bottom: calc(41.64% - 4px);
+  height: 9px;
+  position: absolute;
+  right: 19px;
+  width: 17px;
+}
+.payment-processing-page .md-arrow-dropdown-Sn2kQv {
+  background-color: transparent;
+  height: 9px;
+  position: absolute;
+  right: 19px;
+  top: calc(48.80% - 4px);
+  width: 17px;
+}
+.payment-processing-page .name-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 60px;
+  left: 416px;
+  position: absolute;
+  top: 229px;
+  width: 400px;
+}
+.payment-processing-page .pay-with-pay-pal-Pqx0eZ {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.payment-processing-page .paypal-C61RwL {
+  background-color: transparent;
+  height: 29px;
+  left: 1432px;
+  position: absolute;
+  top: 515px;
+  width: 215px;
+}
+.payment-processing-page .postal-code-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 60px;
+  left: 843px;
+  position: absolute;
+  top: 489px;
+  width: 400px;
+}
+.payment-processing-page .postal-code-zip-mTWy8V {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  border: 0;
+  bottom: calc(41.67% - 10px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: 24px;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 157px;
+}
+.payment-processing-page .postal-code-zip-mTWy8V::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.payment-processing-page .product-type-C61RwL {
+  background-color: transparent;
+  height: 29px;
+  left: 1358px;
+  position: absolute;
+  top: 256px;
+  width: 363px;
+}
+.payment-processing-page .province-box-C61RwL {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 60px;
+  left: 416px;
+  position: absolute;
+  top: 402px;
+  width: 827px;
+}
+.payment-processing-page .province-state-ENxzu2 {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  border: 0;
+  bottom: calc(41.67% - 10px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: 24px;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 145px;
+}
+.payment-processing-page .province-state-ENxzu2::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.payment-processing-page .secondary-background-C61RwL {
+  background-color: transparent;
+  background-image: url(../img/path-81@1x.png);
+  background-size: 100% 100%;
+  height: 1000px;
+  left: 40px;
+  position: absolute;
+  top: 40px;
+  width: 1840px;
+}
+.payment-processing-page .solid-button-C61RwL {
+  background-color: var(--heath);
+  border-radius: 25px;
+  height: 60px;
+  left: 1289px;
+  pointer-events: auto;
+  position: absolute;
+  top: 638px;
+  transition: all 0.2s ease;
+  width: 502px;
+}
+.payment-processing-page .solid-button-C61RwL:hover {
+
+transform: scale(1.1);
+}
+.payment-processing-page .street-address-RMS0JO {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  border: 0;
+  bottom: calc(41.67% - 10px);
+  color: var(--casal);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: 24px;
+  left: 24px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 136px;
+}
+.payment-processing-page .street-address-RMS0JO::placeholder {
+  color: rgba(49,89,112,0.6);
+}
+.payment-processing-page .subtotal-10999-vxlRXx {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.payment-processing-page .subtotal-C61RwL {
+  background-color: transparent;
+  height: 29px;
+  left: 1358px;
+  position: absolute;
+  top: 314px;
+  width: 362px;
+}
+.payment-processing-page .tax-0-55j5vf {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.payment-processing-page .tax-C61RwL {
+  background-color: transparent;
+  height: 29px;
+  left: 1358px;
+  position: absolute;
+  top: 372px;
+  width: 364px;
+}
+.payment-processing-page .total-10999-2seHeV {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.payment-processing-page .total-C61RwL {
+  background-color: transparent;
+  height: 29px;
+  left: 1358px;
+  position: absolute;
+  top: 430px;
+  width: 363px;
+}
+.payment-processing-page .your-subscription-3w32wz {
+  -webkit-text-stroke: 1px var(--dove-gray);
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: left;
+  top: 2px;
+  white-space: nowrap;
+  width: calc(100.00% + 2px);
+}
+.payment-processing-page .your-subscription-C61RwL {
+  background-color: transparent;
+  height: 29px;
+  left: 1429px;
+  position: absolute;
+  top: 171px;
+  width: 218px;
+}
+:root {
+  --alto: rgba(217,217,217,1.0);
+  --black: rgba(0,0,0,1.0);
+  --casal: rgba(49,89,112,1.0);
+  --cedar: rgba(66,18,19,1.0);
+  --dove-gray: rgba(112,112,112,1.0);
+  --heath: rgba(84,22,23,1.0);
+  --pumice: rgba(201,201,201,1.0);
+  --quick-silver: rgba(167,167,167,1.0);
+  --san-juan: rgba(44,74,103,1.0);
+  --white: rgba(255,255,255,1.0);
+}
+@media screen and (max-width: 767px) {
+  .payment-processing-page { 
+    display: none;
+   }
+  .x1280-payment-processing-page { 
+    display: none;
+   }
+  .x768-payment-processing-page { 
+    display: none;
+   }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .payment-processing-page { 
+    display: none;
+   }
+  .x1280-payment-processing-page { 
+    display: none;
+   }
+  .x375-payment-processing-page { 
+    display: none;
+   }
+}
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+  .payment-processing-page { 
+    display: none;
+   }
+  .x768-payment-processing-page { 
+    display: none;
+   }
+  .x375-payment-processing-page { 
+    display: none;
+   }
+}
+@media screen and (min-width: 1920px) {
+  .x1280-payment-processing-page { 
+    display: none;
+   }
+  .x768-payment-processing-page { 
+    display: none;
+   }
+  .x375-payment-processing-page { 
+    display: none;
+   }
+}

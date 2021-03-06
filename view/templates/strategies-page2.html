@@ -1,0 +1,1435 @@
+<!-- extends the base.html template -->
+{% extends "base.html" %}
+
+{% block title %} Strategies {% endblock %}
+
+  {% block head %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="../static/css/strategies-page2.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/1280-infobox1.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/375-infobox1.css" />
+    <link rel="stylesheet" type="text/css" href="../static/css/768-infobox1.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Montserrat:700,400,500,600,500italic");
+
+      .component-wrapper a,
+      .screen a {
+        text-decoration: none;
+        display: contents;
+      }
+
+      .full-width-a {
+        width: 100%;
+      }
+
+      .full-height-a {
+        height: 100%;
+      }
+
+      .screen textarea:focus,
+      .screen input:focus {
+        outline: none;
+      }
+
+      .screen *,
+      .component-wrapper * {
+        box-sizing: border-box;
+      }
+
+      .screen div {
+        -webkit-text-size-adjust: none;
+      }
+
+      .container-center-vertical,
+      .container-center-horizontal {
+        pointer-events: none;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+      }
+
+      .container-center-vertical {
+        align-items: center;
+        height: 100%;
+      }
+
+      .container-center-horizontal {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .container-center-vertical > *,
+      .container-center-horizontal > * {
+        pointer-events: auto;
+        flex-shrink: 0;
+      }
+
+      .component-wrapper,
+      .screen {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+        word-break: break-word;
+      }
+
+      .auto-animated div {
+        opacity: 0;
+        position: absolute;
+        --z-index: -1;
+      }
+
+      .auto-animated .container-center-vertical,
+      .auto-animated .container-center-horizontal {
+        opacity: 1;
+      }
+
+      .overlay {
+        position: absolute;
+        opacity: 0;
+        display: none;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+      }
+
+      .animate-appear {
+        opacity: 0;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 normal forwards;
+      }
+
+      .animate-disappear {
+        opacity: 1;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 reverse forwards;
+      }
+
+      .animate-nodelay {
+        animation-delay: 0s;
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .align-self-flex-start {
+        align-self: flex-start;
+      }
+      .align-self-flex-end {
+        align-self: flex-end;
+      }
+      .align-self-flex-center {
+        align-self: center;
+      }
+      .valign-text-middle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .valign-text-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      input:focus {
+        outline: none;
+      }
+      .component-wrapper,
+      .component-wrapper * {
+        pointer-events: none;
+      }
+
+      .component-wrapper a *,
+      .component-wrapper a,
+      .component-wrapper input,
+      .component-wrapper video,
+      .component-wrapper iframe,
+      .listeners-active,
+      .listeners-active * {
+        pointer-events: auto;
+      }
+
+      .hidden,
+      .hidden * {
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .smart-layers-pointers,
+      .smart-layers-pointers * {
+        pointer-events: auto;
+        visibility: visible;
+      }
+
+      .component-wrapper.not-ready,
+      .component-wrapper.not-ready * {
+        visibility: hidden !important;
+      }
+
+      .listeners-active-click,
+      .listeners-active-click * {
+        cursor: pointer;
+      }
+    </style>
+    <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+  </head>
+  {% endblock %}
+
+  {% block content %}
+  <body style="margin: 0; background: rgba(201, 201, 201, 1)">
+    <input type="hidden" id="anPageName" name="page" value="strategies-page2" />
+    <div class="container-center-horizontal">
+      <form class="strategies-page2 screen" name="form19" action="form19" method="post">
+        <div class="anlaysis-output-C61RwL">
+          <div class="gamma-hedging-tab-LyTcvt">
+            <div class="butterfly-spread-LMlWjx montserrat-semi-bold-black-19px">DELTA-GAMMA HEDGE</div>
+            <div class="icon-feather-info-LMlWjx">
+              <img class="path-89-j3W3xZ" src="../static/img/path-89@1x.png" />
+              <img class="path-90-j3W3xZ" src="../static/img/path-90@1x.png" />
+              <img class="path-91-j3W3xZ" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="delta-hedging-tab-LyTcvt">
+            <div class="delta-hedge-JesuZj montserrat-semi-bold-black-19px">DELTA HEDGE</div>
+            <div class="icon-feather-info-JesuZj">
+              <img class="path-89-Zzf0gr" src="../static/img/path-89@1x.png" />
+              <img class="path-90-Zzf0gr" src="../static/img/path-90@1x.png" />
+              <img class="path-91-Zzf0gr" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="christmas-tree-puts-tab-LyTcvt">
+            <div class="s-christmas-tree-put-xOTM27 montserrat-semi-bold-black-19px">S CHRISTMAS TREE PUT</div>
+            <div class="icon-feather-info-xOTM27">
+              <img class="path-89-BO7X7T" src="../static/img/path-89@1x.png" />
+              <img class="path-90-BO7X7T" src="../static/img/path-90@1x.png" />
+              <img class="path-91-BO7X7T" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="christmas-tree-calls-tab-LyTcvt">
+            <div class="s-christmas-tree-call-BeZVYc montserrat-semi-bold-black-19px">S CHRISTMAS TREE CALL</div>
+            <img class="icon-feather-info-BeZVYc" src="../static/img/icon-feather-info@1x.png" />
+          </div>
+          <div class="christmas-tree-puts-tab-OR7C9L">
+            <div class="l-christmas-tree-put-MrVtNl montserrat-semi-bold-black-19px">L CHRISTMAS TREE PUT</div>
+            <div class="icon-feather-info-MrVtNl">
+              <img class="path-89-WJSahJ" src="../static/img/path-89@1x.png" />
+              <img class="path-90-WJSahJ" src="../static/img/path-90@1x.png" />
+              <img class="path-91-WJSahJ" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="christmas-tree-calls-tab-OR7C9L">
+            <div class="l-christmas-tree-call-tizRC8 montserrat-semi-bold-black-19px">L CHRISTMAS TREE CALL</div>
+            <img class="icon-feather-info-tizRC8" src="../static/img/icon-feather-info@1x.png" />
+          </div>
+          <div class="diagonal-spread-puts-tab-LyTcvt">
+            <div class="short-diagonal-put-P0xYSx montserrat-semi-bold-black-19px">SHORT DIAGONAL PUT</div>
+            <div class="icon-feather-info-P0xYSx">
+              <img class="path-89-CZtvCE" src="../static/img/path-89@1x.png" />
+              <img class="path-90-CZtvCE" src="../static/img/path-90@1x.png" />
+              <img class="path-91-CZtvCE" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="diagonal-spread-calls-tab-LyTcvt">
+            <div class="short-diagonal-call-WqmxiW montserrat-semi-bold-black-19px">SHORT DIAGONAL CALL</div>
+            <div class="icon-feather-info-WqmxiW">
+              <img class="path-89-gZWj5q" src="../static/img/path-89@1x.png" />
+              <img class="path-90-gZWj5q" src="../static/img/path-90@1x.png" />
+              <img class="path-91-gZWj5q" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="diagonal-spread-puts-tab-OR7C9L">
+            <div class="long-diagonal-put-xIyQoH montserrat-semi-bold-black-19px">LONG DIAGONAL PUT</div>
+            <div class="icon-feather-info-xIyQoH">
+              <img class="path-89-8ntsV3" src="../static/img/path-89@1x.png" />
+              <img class="path-90-8ntsV3" src="../static/img/path-90@1x.png" />
+              <img class="path-91-8ntsV3" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="diagonal-spread-calls-tab-OR7C9L">
+            <div class="long-diagonal-call-IEHkbO montserrat-semi-bold-black-19px">LONG DIAGONAL CALL</div>
+            <div class="icon-feather-info-IEHkbO">
+              <img class="path-89-dmcH7e" src="../static/img/path-89@1x.png" />
+              <img class="path-90-dmcH7e" src="../static/img/path-90@1x.png" />
+              <img class="path-91-dmcH7e" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="risk-reversal-tab-LyTcvt">
+            <div class="risk-reversal-kgt13X montserrat-semi-bold-black-19px">RISK REVERSAL</div>
+            <div class="icon-feather-info-kgt13X">
+              <img class="path-89-roV4Cg" src="../static/img/path-89@1x.png" />
+              <img class="path-90-roV4Cg" src="../static/img/path-90@1x.png" />
+              <img class="path-91-roV4Cg" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="synthetic-short-tab-LyTcvt">
+            <div class="synthetic-short-bp5MJ3 montserrat-semi-bold-black-19px">SYNTHETIC SHORT</div>
+            <div class="icon-feather-info-bp5MJ3">
+              <img class="path-89-540xxN" src="../static/img/path-89@1x.png" />
+              <img class="path-90-540xxN" src="../static/img/path-90@1x.png" />
+              <img class="path-91-540xxN" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="call-backspread-tab-LyTcvt">
+            <div class="call-back-spread-uSFd0I montserrat-semi-bold-black-19px">CALL BACKSPREAD</div>
+            <div class="icon-feather-info-uSFd0I">
+              <img class="path-89-NxQpXq" src="../static/img/path-89@1x.png" />
+              <img class="path-90-NxQpXq" src="../static/img/path-90@1x.png" />
+              <img class="path-91-NxQpXq" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="short-strangle-tab-LyTcvt">
+            <div class="short-strangle-o68cwp montserrat-semi-bold-black-19px">SHORT STRANGLE</div>
+            <div class="icon-feather-info-o68cwp">
+              <img class="path-89-f72wi1" src="../static/img/path-89@1x.png" />
+              <img class="path-90-f72wi1" src="../static/img/path-90@1x.png" />
+              <img class="path-91-f72wi1" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="short-straddle-tab-LyTcvt">
+            <div class="short-straddle-iDzGtL montserrat-semi-bold-black-19px">SHORT STRADDLE</div>
+            <div class="icon-feather-info-iDzGtL">
+              <img class="path-89-FrEdzF" src="../static/img/path-89@1x.png" />
+              <img class="path-90-FrEdzF" src="../static/img/path-90@1x.png" />
+              <img class="path-91-FrEdzF" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="long-strangle-tab-LyTcvt">
+            <div class="long-strangle-PUi4c5 montserrat-semi-bold-black-19px">LONG STRANGLE</div>
+            <div class="icon-feather-info-PUi4c5">
+              <img class="path-89-n2pS4y" src="../static/img/path-89@1x.png" />
+              <img class="path-90-n2pS4y" src="../static/img/path-90@1x.png" />
+              <img class="path-91-n2pS4y" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="long-straddle-tab-LyTcvt">
+            <div class="long-straddle-4zFsTS montserrat-semi-bold-black-19px">LONG STRADDLE</div>
+            <div class="icon-feather-info-4zFsTS">
+              <img class="path-89-OHfS8q" src="../static/img/path-89@1x.png" />
+              <img class="path-90-OHfS8q" src="../static/img/path-90@1x.png" />
+              <img class="path-91-OHfS8q" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="iron-butterfly-tab-LyTcvt">
+            <div class="iron-butterfly-A7t4gh montserrat-semi-bold-black-19px">IRON BUTTERFLY</div>
+            <div class="icon-feather-info-A7t4gh">
+              <img class="path-89-Twwvsp" src="../static/img/path-89@1x.png" />
+              <img class="path-90-Twwvsp" src="../static/img/path-90@1x.png" />
+              <img class="path-91-Twwvsp" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="iron-condor-tab-LyTcvt">
+            <div class="iron-condor-KbgkOL montserrat-semi-bold-black-19px">IRON CONDOR</div>
+            <div class="icon-feather-info-KbgkOL">
+              <img class="path-89-WTMtLR" src="../static/img/path-89@1x.png" />
+              <img class="path-90-WTMtLR" src="../static/img/path-90@1x.png" />
+              <img class="path-91-WTMtLR" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="butterfly-spread-tab-LyTcvt">
+            <div class="butterfly-spread-RkiDu0 montserrat-semi-bold-black-19px">BUTTERFLY SPREAD</div>
+            <div class="icon-feather-info-RkiDu0">
+              <img class="path-89-ASngyb" src="../static/img/path-89@1x.png" />
+              <img class="path-90-ASngyb" src="../static/img/path-90@1x.png" />
+              <img class="path-91-ASngyb" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="calendar-spread-calls-tab-LyTcvt">
+            <div class="calendar-spread-KwRCuy montserrat-semi-bold-black-19px">CALENDAR SPREAD</div>
+            <div class="icon-feather-info-KwRCuy">
+              <img class="path-89-fmuIFK" src="../static/img/path-89@1x.png" />
+              <img class="path-90-fmuIFK" src="../static/img/path-90@1x.png" />
+              <img class="path-91-fmuIFK" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="protective-collar-tab-LyTcvt">
+            <div class="protective-collar-ffIhcm montserrat-semi-bold-black-19px">PROTECTIVE COLLAR</div>
+            <div class="icon-feather-info-ffIhcm">
+              <img class="path-89-epIJTJ" src="../static/img/path-89@1x.png" />
+              <img class="path-90-epIJTJ" src="../static/img/path-90@1x.png" />
+              <img class="path-91-epIJTJ" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="bear-put-spread-tab-LyTcvt">
+            <div class="bear-put-spread-Q88NvJ montserrat-semi-bold-black-19px">BEAR PUT SPREAD</div>
+            <div class="icon-feather-info-Q88NvJ">
+              <img class="path-89-klnlKc" src="../static/img/path-89@1x.png" />
+              <img class="path-90-klnlKc" src="../static/img/path-90@1x.png" />
+              <img class="path-91-klnlKc" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="bull-call-spread-tab-LyTcvt">
+            <div class="bull-call-spread-9hKTe8 montserrat-semi-bold-black-19px">BULL CALL SPREAD</div>
+            <div class="icon-feather-info-9hKTe8">
+              <img class="path-89-qgCUjb" src="../static/img/path-89@1x.png" />
+              <img class="path-90-qgCUjb" src="../static/img/path-90@1x.png" />
+              <img class="path-91-qgCUjb" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="married-put-tab-LyTcvt">
+            <div class="married-put-ZFmR2G montserrat-semi-bold-black-19px">MARRIED PUT</div>
+            <div class="icon-feather-info-ZFmR2G">
+              <img class="path-89-5lCkEs" src="../static/img/path-89@1x.png" />
+              <img class="path-90-5lCkEs" src="../static/img/path-90@1x.png" />
+              <img class="path-91-5lCkEs" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="covered-call-tab-LyTcvt">
+            <div class="covered-call-LyjO0q montserrat-semi-bold-black-19px">COVERED CALL</div>
+            <div class="icon-feather-info-LyjO0q">
+              <img class="path-89-vNWAOx" src="../static/img/path-89@1x.png" />
+              <img class="path-90-vNWAOx" src="../static/img/path-90@1x.png" />
+              <img class="path-91-vNWAOx" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="short-put-tab-LyTcvt">
+            <div class="short-put-YarODi montserrat-semi-bold-black-19px">SHORT PUT</div>
+            <div class="icon-feather-info-YarODi">
+              <img class="path-89-CXAkvq" src="../static/img/path-89@1x.png" />
+              <img class="path-90-CXAkvq" src="../static/img/path-90@1x.png" />
+              <img class="path-91-CXAkvq" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="short-call-tab-LyTcvt">
+            <div class="short-call-ii7gmo montserrat-semi-bold-black-19px">SHORT CALL</div>
+            <div class="icon-feather-info-ii7gmo">
+              <img class="path-89-CUxWaN" src="../static/img/path-89@1x.png" />
+              <img class="path-90-CUxWaN" src="../static/img/path-90@1x.png" />
+              <img class="path-91-CUxWaN" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="long-put-tab-LyTcvt">
+            <div class="long-put-vEvzFE montserrat-semi-bold-black-19px">LONG PUT</div>
+            <div class="icon-feather-info-vEvzFE">
+              <img class="path-89-t8H7Dm" src="../static/img/path-89@1x.png" />
+              <img class="path-90-t8H7Dm" src="../static/img/path-90@1x.png" />
+              <img class="path-91-t8H7Dm" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="long-call-tab-LyTcvt smart-layers-pointers">
+            <div class="long-call-SsQx4y montserrat-semi-bold-black-19px">LONG CALL</div>
+            <div class="icon-feather-info-SsQx4y">
+              <img class="path-89-OKugXI" src="../static/img/path-89@1x.png" />
+              <img class="path-90-OKugXI" src="../static/img/path-90@1x.png" />
+              <img class="path-91-OKugXI" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="breakdown-button30-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-EWtWNi montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button29-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-3Qsx0x montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button28-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-JNONTx montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button27-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-AVun7P montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button26-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-Obju08 montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button25-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-x8Sxjx montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button24-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-xc2PZp montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button23-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-lHufH0 montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button22-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-wxdFjA montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button21-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-AYYJsd montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button20-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-szW7fK montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button19-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-lqxkde montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button18-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-NhxBOZ montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button17-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-hEoNUt montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button16-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-cqrOcs montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button15-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-h0665z montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button14-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-FEIPqQ montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button13-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-j5xnqo montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button12-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-8dDwuR montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button11-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-Z7T46l montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button10-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-1zr0FI montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button9-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-PWaAiH montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button8-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-JYGVb5 montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button7-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-JmBOlD montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button6-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-0MqDVo montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button5-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-TnFhL3 montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button4-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-ego89Y montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button3-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-A1DcBV montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <div class="breakdown-button2-LyTcvt border-1px-dove-gray smart-layers-pointers">
+            <div class="show-breakdown-x9ewTP montserrat-semi-bold-white-19px">Show Breakdown</div>
+          </div>
+          <a href="strategies-breakdown-longcall.html">
+            <div class="breakdown-button1-LyTcvt border-1px-dove-gray smart-layers-pointers">
+              <div class="show-breakdown-z1nRUo montserrat-semi-bold-white-19px">Show Breakdown</div>
+            </div></a
+          >
+        </div>
+        <a href="strategies-page.html">
+          <div class="back-strat-C61RwL"><div class="hide-strategies-B7kBwR">Hide Strategies</div></div></a
+        >
+        <div class="minus-circle-C61RwL">
+          <img class="path-92-v2Jqhw" src="../static/img/path-92@1x.png" />
+          <img class="path-93-v2Jqhw" src="../static/img/path-93@1x.png" />
+        </div>
+        <div class="plus-circle-add-C61RwL">
+          <img class="path-86-9zV78v" src="../static/img/path-86@1x.png" />
+          <img class="path-87-9zV78v" src="../static/img/path-87@1x.png" />
+          <img class="path-88-9zV78v" src="../static/img/path-88@1x.png" />
+        </div>
+        <a href="javascript:SubmitForm('form19')">
+          <div class="analyze-button-C61RwL smart-layers-pointers"><div class="analyze-xWQ1KJ">ANALYZE</div></div></a
+        >
+        <div class="analysis-input-C61RwL">
+          <div class="select-data-source-DAnbUD">
+            <input
+              class="data-source-rf4nxM montserrat-normal-black-18px"
+              name="data-source18"
+              placeholder="Data Source"
+              required
+            />
+            <img class="md-arrow-dropdown-rf4nxM" src="../static/img/md-arrow-dropdown-1@1x.png" />
+          </div>
+          <div class="select-data-source-WCqau1">
+            <input
+              class="itm-atm-otm-SRpD7E montserrat-normal-black-18px"
+              name="itm-atm-otm16"
+              placeholder="ITM / ATM / OTM"
+              required
+            />
+            <img class="md-arrow-dropdown-SRpD7E" src="../static/img/md-arrow-dropdown-1@1x.png" />
+          </div>
+          <div class="select-option-style-DAnbUD">
+            <input
+              class="option-style-ZAx7Lv montserrat-normal-black-18px"
+              name="option-style16"
+              placeholder="Option Style"
+              required
+            />
+            <img class="md-arrow-dropdown-ZAx7Lv" src="../static/img/md-arrow-dropdown-1@1x.png" />
+          </div>
+          <div class="select-option-type-DAnbUD">
+            <input
+              class="option-type-Isr8ZD montserrat-normal-black-18px"
+              name="option-type16"
+              placeholder="Option Type"
+              required
+            />
+            <img class="md-arrow-dropdown-Isr8ZD" src="../static/img/md-arrow-dropdown-1@1x.png" />
+          </div>
+          <div class="select-expiration-DAnbUD">
+            <input
+              class="expiration-date-AghIG5 montserrat-normal-black-18px"
+              name="expiration-date16"
+              placeholder="Expiration Date"
+              required
+            />
+            <img class="md-arrow-dropdown-AghIG5" src="../static/img/md-arrow-dropdown-1@1x.png" />
+          </div>
+          <div class="input-ticker-DAnbUD">
+            <input
+              class="ticker-of-the-underlying-Nti9XO montserrat-normal-black-18px"
+              name="ticker-of-the-underlying-18"
+              placeholder="Ticker of the Underlying"
+              required
+            />
+            <img class="icon-search-Nti9XO" src="../static/img/icon-search-8@1x.png" />
+          </div>
+          <div class="strategies-DAnbUD montserrat-normal-black-42px">STRATEGIES</div>
+        </div>
+        <div class="export-button-C61RwL smart-layers-pointers">
+          <div class="outline-button-PiBNS4 border-2px-heath">
+            <img class="export-fKSPGk" src="../static/img/export@1x.png" />
+          </div>
+        </div>
+        <div class="navbar-C61RwL">
+          <div class="menu-center-8MJZIW">
+            <a href="fundamental-analysis-page.html">
+              <div class="fundamental-component-Z6zpbm smart-layers-pointers">
+                <div class="fundamental-6EvOoV montserrat-semi-bold-heath-20px">Fundamental</div>
+              </div></a
+            >
+            <a href="technical-analysis-page.html">
+              <div class="technical-component-Z6zpbm smart-layers-pointers">
+                <div class="technical-lY8Sqq montserrat-semi-bold-heath-20px">Technical</div>
+              </div></a
+            >
+            <div class="strategies-component-Z6zpbm border-1px-dove-gray">
+              <div class="strategy-q8CpeS">Strategy</div>
+            </div>
+            <a href="pricing-and-valuation-page.html">
+              <div class="valuation-component-Z6zpbm smart-layers-pointers">
+                <div class="valuation-5dtgbd montserrat-semi-bold-heath-20px">Valuation</div>
+              </div></a
+            >
+          </div>
+          <a href="landing-page.html"
+            ><img class="logo166x145-8MJZIW smart-layers-pointers" src="../static/img/logo166x145@1x.png"
+          /></a>
+        </div>
+      </form>
+    </div>
+    <div class="container-center-horizontal">
+      <form class="x1280-strategies-page2 screen" name="form39" action="form39" method="post">
+        <div class="analysis-output-C61RwL">
+          <div class="short-strangle-tab-sPEAV6 smart-layers-pointers">
+            <div class="short-strangle-xYjaNN montserrat-semi-bold-black-19px">SHORT STRANGLE</div>
+            <div class="icon-feather-info-xYjaNN">
+              <img class="path-89-PZQR7o" src="../static/img/path-89@1x.png" />
+              <img class="path-90-PZQR7o" src="../static/img/path-90@1x.png" />
+              <img class="path-91-PZQR7o" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="short-straddle-tab-sPEAV6 smart-layers-pointers">
+            <div class="short-straddle-zx3XHj montserrat-semi-bold-black-19px">SHORT STRADDLE</div>
+            <div class="icon-feather-info-zx3XHj">
+              <img class="path-89-LJ4iEe" src="../static/img/path-89@1x.png" />
+              <img class="path-90-LJ4iEe" src="../static/img/path-90@1x.png" />
+              <img class="path-91-LJ4iEe" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="long-strangle-tab-sPEAV6 smart-layers-pointers">
+            <div class="long-strangle-CIRRoI montserrat-semi-bold-black-19px">LONG STRANGLE</div>
+            <div class="icon-feather-info-CIRRoI">
+              <img class="path-89-2BqOJx" src="../static/img/path-89@1x.png" />
+              <img class="path-90-2BqOJx" src="../static/img/path-90@1x.png" />
+              <img class="path-91-2BqOJx" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="long-straddle-tab-sPEAV6 smart-layers-pointers">
+            <div class="long-straddle-8WxdqL montserrat-semi-bold-black-19px">LONG STRADDLE</div>
+            <div class="icon-feather-info-8WxdqL">
+              <img class="path-89-Gk6Rjt" src="../static/img/path-89@1x.png" />
+              <img class="path-90-Gk6Rjt" src="../static/img/path-90@1x.png" />
+              <img class="path-91-Gk6Rjt" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <div class="short-put-tab-sPEAV6 smart-layers-pointers">
+            <div class="short-put-1aCZgX montserrat-semi-bold-black-19px">SHORT PUT</div>
+            <div class="icon-feather-info-1aCZgX">
+              <img class="path-89-w1PtyQ" src="../static/img/path-89@1x.png" />
+              <img class="path-90-w1PtyQ" src="../static/img/path-90@1x.png" />
+              <img class="path-91-w1PtyQ" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <img class="short-call-tab-sPEAV6 smart-layers-pointers" src="../static/img/shortcalltab@1x.png" />
+          <div class="long-put-tab-sPEAV6 smart-layers-pointers">
+            <div class="long-put-1pOwqx montserrat-semi-bold-black-19px">LONG PUT</div>
+            <div class="icon-feather-info-1pOwqx">
+              <img class="path-89-U3T9fH" src="../static/img/path-89@1x.png" />
+              <img class="path-90-U3T9fH" src="../static/img/path-90@1x.png" />
+              <img class="path-91-U3T9fH" src="../static/img/path-91@1x.png" />
+            </div>
+          </div>
+          <a href="javascript:ShowOverlay('infobox1', 'animate-appear');">
+            <div class="long-call-tab-sPEAV6">
+              <div class="long-call-8JAbhB montserrat-semi-bold-black-19px">LONG CALL</div>
+              <div class="icon-feather-info-8JAbhB">
+                <img class="path-89-Y9nzsE" src="../static/img/path-89@1x.png" />
+                <img class="path-90-Y9nzsE" src="../static/img/path-90@1x.png" />
+                <img class="path-91-Y9nzsE" src="../static/img/path-91@1x.png" />
+              </div></div
+          ></a>
+          <a href="768-strategies-breakdown-8.html">
+            <div class="breakdown-button8-sPEAV6 border-1px-dove-gray smart-layers-pointers">
+              <div class="show-breakdown-oSPzAc montserrat-semi-bold-white-19px">Show Breakdown</div>
+            </div></a
+          >
+          <a href="768-strategies-breakdown-7.html">
+            <div class="breakdown-button7-sPEAV6 border-1px-dove-gray smart-layers-pointers">
+              <div class="show-breakdown-lQiixu montserrat-semi-bold-white-19px">Show Breakdown</div>
+            </div></a
+          >
+          <a href="768-strategies-breakdown-6.html">
+            <div class="breakdown-button6-sPEAV6 border-1px-dove-gray smart-layers-pointers">
+              <div class="show-breakdown-qxXoES montserrat-semi-bold-white-19px">Show Breakdown</div>
+            </div></a
+          >
+          <a href="768-strategies-breakdown-5.html">
+            <div class="breakdown-button5-sPEAV6 border-1px-dove-gray smart-layers-pointers">
+              <div class="show-breakdown-p6IgnC montserrat-semi-bold-white-19px">Show Breakdown</div>
+            </div></a
+          >
+          <a href="375-strategies-breakdown4.html">
+            <div class="breakdown-button4-sPEAV6 border-1px-dove-gray smart-layers-pointers">
+              <div class="show-breakdown-3ugbfd montserrat-semi-bold-white-19px">Show Breakdown</div>
+            </div></a
+          >
+          <a href="375-strategies-breakdown3.html">
+            <div class="breakdown-button3-sPEAV6 border-1px-dove-gray smart-layers-pointers">
+              <div class="show-breakdown-2J4ba1 montserrat-semi-bold-white-19px">Show Breakdown</div>
+            </div></a
+          >
+          <a href="375-strategies-breakdown2.html">
+            <div class="breakdown-button2-sPEAV6 border-1px-dove-gray smart-layers-pointers">
+              <div class="show-breakdown-JH62Jc montserrat-semi-bold-white-19px">Show Breakdown</div>
+            </div></a
+          >
+          <a href="strategies-breakdown-longcall.html">
+            <div class="breakdown-button1-sPEAV6 border-1px-dove-gray smart-layers-pointers">
+              <div class="show-breakdown-znL9Jf montserrat-semi-bold-white-19px">Show Breakdown</div>
+            </div></a
+          >
+        </div>
+        <a href="strategies-page.html">
+          <div class="back-strat-C61RwL smart-layers-pointers">
+            <div class="hide-strategies-B7kBwR">Hide Strategies</div>
+          </div></a
+        >
+        <a href="strategies-page.html">
+          <div class="minus-circle-C61RwL smart-layers-pointers">
+            <img class="path-92-v2Jqhw" src="../static/img/path-92@1x.png" />
+            <img class="path-93-v2Jqhw" src="../static/img/path-93@1x.png" /></div
+        ></a>
+        <a href="strategies-page-addasset.html">
+          <div class="plus-circle-add-C61RwL smart-layers-pointers">
+            <img class="path-86-9zV78v" src="../static/img/path-86@1x.png" />
+            <img class="path-87-9zV78v" src="../static/img/path-87@1x.png" />
+            <img class="path-88-9zV78v" src="../static/img/path-88@1x.png" /></div
+        ></a>
+        <a href="javascript:SubmitForm('form39')">
+          <div class="analyze-button-C61RwL smart-layers-pointers"><div class="analyze-xWQ1KJ">ANALYZE</div></div></a
+        >
+        <div class="analysis-input-C61RwL">
+          <div class="select-data-source-DAnbUD">
+            <input
+              class="data-source-rf4nxM montserrat-normal-black-12px"
+              name="data-source118"
+              placeholder="Data Source"
+              required
+            />
+            <img class="md-arrow-dropdown-rf4nxM" src="../static/img/md-arrow-dropdown-1@1x.png" />
+          </div>
+          <div class="select-data-source-WCqau1">
+            <input
+              class="itm-atm-otm-SRpD7E montserrat-normal-black-12px"
+              name="itm-atm-otm112"
+              placeholder="ITM / ATM / OTM"
+              required
+            />
+            <img class="md-arrow-dropdown-SRpD7E" src="../static/img/md-arrow-dropdown-1@1x.png" />
+          </div>
+          <div class="select-option-style-DAnbUD">
+            <input
+              class="option-style-ZAx7Lv montserrat-normal-black-12px"
+              name="option-style112"
+              placeholder="Option Style"
+              required
+            />
+            <img class="md-arrow-dropdown-ZAx7Lv" src="../static/img/md-arrow-dropdown-1@1x.png" />
+          </div>
+          <div class="select-option-type-DAnbUD">
+            <input
+              class="option-type-Isr8ZD montserrat-normal-black-12px"
+              name="option-type112"
+              placeholder="Option Type"
+              required
+            />
+            <img class="md-arrow-dropdown-Isr8ZD" src="../static/img/md-arrow-dropdown-1@1x.png" />
+          </div>
+          <div class="select-expiration-DAnbUD">
+            <input
+              class="expiration-date-AghIG5 montserrat-normal-black-12px"
+              name="expiration-date112"
+              placeholder="Expiration Date"
+              required
+            />
+            <img class="md-arrow-dropdown-AghIG5" src="../static/img/md-arrow-dropdown-1@1x.png" />
+          </div>
+          <div class="input-ticker-DAnbUD">
+            <input
+              class="ticker-of-the-underlying-Nti9XO montserrat-normal-black-12px"
+              name="ticker-of-the-underlying-118"
+              placeholder="Ticker of the Underlying"
+              required
+            />
+            <img class="icon-search-Nti9XO" src="../static/img/icon-search-6@1x.png" />
+          </div>
+          <div class="strategies-DAnbUD montserrat-normal-black-42px">STRATEGIES</div>
+        </div>
+        <div class="export-button-C61RwL smart-layers-pointers">
+          <div class="outline-button-PiBNS4 border-2px-heath">
+            <img class="export-fKSPGk" src="../static/img/export-4@1x.png" />
+          </div>
+        </div>
+        <div class="navbar-C61RwL">
+          <div class="menu-center-8MJZIW">
+            <a href="technical-analysis-page.html">
+              <div class="technical-component-Z6zpbm smart-layers-pointers">
+                <div class="technical-lY8Sqq">Technical</div>
+              </div></a
+            >
+            <div class="strategy-component-Z6zpbm border-1px-dove-gray">
+              <div class="strategy-He3YyY">Strategy</div>
+            </div>
+            <a href="pricing-and-valuation-page.html">
+              <div class="valuation-component-Z6zpbm smart-layers-pointers">
+                <div class="valuation-5dtgbd">Valuation</div>
+              </div></a
+            >
+            <a href="fundamental-analysis-page.html">
+              <div class="fundamental-component-Z6zpbm smart-layers-pointers">
+                <div class="fundamental-6EvOoV">Fundamental</div>
+              </div></a
+            >
+          </div>
+          <a href="landing-page.html"
+            ><img class="logo166x145-8MJZIW smart-layers-pointers" src="../static/img/logo166x145@1x.png"
+          /></a>
+        </div>
+        <div class="hover-box-C61RwL">
+          <img class="chat-bubble-icon-IhZ8l0" src="../static/img/chatbubbleicon@1x.png" />
+          <div class="x-on-hoverex-2-c-ifferent-expiry-IhZ8l0 montserrat-semi-bold-black-19px">
+            (On Hover)<br />ex: 2-calls, 1 OTM put<br />with different expiry
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id="overlay-infobox1" class="overlay" style="min-height: 1835px">
+      <div class="container-center-horizontal">
+        <div class="x1280-infobox1 screen" onclick="window.open('strategies-page2.html', '_self');">
+          <img class="chat-bubble-icon-C61RwL" src="../static/img/chatbubbleicon@1x.png" />
+          <div class="x-on-hoverex-2-c-ifferent-expiry-C61RwL montserrat-semi-bold-black-19px">
+            (On Hover)<br />ex: 2-calls, 1 OTM put<br />with different expiry
+          </div>
+        </div>
+      </div>
+      <div class="container-center-horizontal">
+        <div class="infobox1 screen" onclick="window.open('strategies-page2.html', '_self');">
+          <img class="chat-bubble-icon-C61RwL" src="../static/img/chatbubbleicon@1x.png" />
+          <div class="x-on-hoverex-2-c-ifferent-expiry-C61RwL montserrat-semi-bold-black-19px">
+            (On Hover)<br />ex: 2-calls, 1 OTM put<br />with different expiry
+          </div>
+        </div>
+      </div>
+      <div class="container-center-horizontal">
+        <div class="x768-infobox1 screen" onclick="window.open('strategies-page2.html', '_self');">
+          <img class="chat-bubble-icon-C61RwL" src="../static/img/chatbubbleicon-3@1x.png" />
+          <div class="x-on-hoverex-2-c-ifferent-expiry-C61RwL montserrat-semi-bold-black-12px">
+            (On Hover)<br />ex: 2-calls, 1 OTM put<br />with different expiry
+          </div>
+        </div>
+      </div>
+      <div class="container-center-horizontal">
+        <div class="x375-infobox1 screen" onclick="window.open('javascript:history.back()', '_self');">
+          <a href="strategies-page2.html" onclick="window.event.stopPropagation()"
+            ><img class="chat-bubble-icon-C61RwL" src="../static/img/chatbubbleicon-3@1x.png"
+          /></a>
+          <div class="x-on-hoverex-2-c-ifferent-expiry-C61RwL montserrat-semi-bold-black-12px">
+            (On Hover)<br />ex: 2-calls, 1 OTM put<br />with different expiry
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var overlay_id = "overlay-infobox1";
+      document.getElementById(overlay_id).addEventListener(
+        "click",
+        function (event) {
+          var e = event || window.event;
+          var overlayElement = document.getElementById(overlay_id);
+          var clickedDiv = e.toElement || e.target;
+          if (overlayElement.contains(clickedDiv)) {
+            HideOverlay("infobox1", "animate-disappear");
+          }
+        },
+        false
+      );
+    </script>
+    <div class="container-center-horizontal">
+      <form class="x768-strategies-page2 screen" name="form60" action="form60" method="post">
+        <div class="anlaysis-output-C61RwL">
+          <div class="repeat-grid-5-LyTcvt">
+            <div class="group-36-cKTgNj">
+              <a href="javascript:ShowOverlay('infobox1', 'animate-appear');">
+                <div class="long-call-tab-V5jngz smart-layers-pointers">
+                  <div class="strategy-GCn5e4 montserrat-semi-bold-black-12px">STRATEGY</div>
+                  <div class="icon-feather-info-GCn5e4">
+                    <img class="path-89-G9UCRD" src="../static/img/path-89@1x.png" />
+                    <img class="path-90-G9UCRD" src="../static/img/path-90@1x.png" />
+                    <img class="path-91-G9UCRD" src="../static/img/path-91@1x.png" />
+                  </div></div
+              ></a>
+              <a href="strategies-breakdown-longcall.html">
+                <div class="breakdown-button1-V5jngz border-1px-dove-gray smart-layers-pointers">
+                  <div class="show-breakdown-G1E8Ev montserrat-semi-bold-white-12px">Show Breakdown</div>
+                </div></a
+              >
+            </div>
+            <div class="group-36-Db6PoK">
+              <div class="long-call-tab-kpO0XA smart-layers-pointers">
+                <div class="strategy-dPu1Hu montserrat-semi-bold-black-12px">STRATEGY</div>
+                <div class="icon-feather-info-dPu1Hu">
+                  <img class="path-89-lzRvhJ" src="../static/img/path-89@1x.png" />
+                  <img class="path-90-lzRvhJ" src="../static/img/path-90@1x.png" />
+                  <img class="path-91-lzRvhJ" src="../static/img/path-91@1x.png" />
+                </div>
+              </div>
+              <a href="768-strategies-breakdown-5.html">
+                <div class="breakdown-button1-kpO0XA border-1px-dove-gray smart-layers-pointers">
+                  <div class="show-breakdown-fP8xrk montserrat-semi-bold-white-12px">Show Breakdown</div>
+                </div></a
+              >
+            </div>
+            <div class="group-36-P45Boj">
+              <div class="long-call-tab-L7krXl smart-layers-pointers">
+                <div class="strategy-TTT6k3 montserrat-semi-bold-black-12px">STRATEGY</div>
+                <div class="icon-feather-info-TTT6k3">
+                  <img class="path-89-3qdixb" src="../static/img/path-89@1x.png" />
+                  <img class="path-90-3qdixb" src="../static/img/path-90@1x.png" />
+                  <img class="path-91-3qdixb" src="../static/img/path-91@1x.png" />
+                </div>
+              </div>
+              <a href="375-strategies-breakdown2.html">
+                <div class="breakdown-button1-L7krXl border-1px-dove-gray smart-layers-pointers">
+                  <div class="show-breakdown-1S6MHb montserrat-semi-bold-white-12px">Show Breakdown</div>
+                </div></a
+              >
+            </div>
+            <div class="group-36-ra2gGR">
+              <div class="long-call-tab-vx4nGL smart-layers-pointers">
+                <div class="strategy-6qf12g montserrat-semi-bold-black-12px">STRATEGY</div>
+                <div class="icon-feather-info-6qf12g">
+                  <img class="path-89-xlRAoS" src="../static/img/path-89@1x.png" />
+                  <img class="path-90-xlRAoS" src="../static/img/path-90@1x.png" />
+                  <img class="path-91-xlRAoS" src="../static/img/path-91@1x.png" />
+                </div>
+              </div>
+              <a href="768-strategies-breakdown-6.html">
+                <div class="breakdown-button1-vx4nGL border-1px-dove-gray smart-layers-pointers">
+                  <div class="show-breakdown-pZSIFV montserrat-semi-bold-white-12px">Show Breakdown</div>
+                </div></a
+              >
+            </div>
+            <div class="group-36-aREv3d">
+              <div class="long-call-tab-zVGEmZ smart-layers-pointers">
+                <div class="strategy-UALebf montserrat-semi-bold-black-12px">STRATEGY</div>
+                <div class="icon-feather-info-UALebf">
+                  <img class="path-89-asoqp9" src="../static/img/path-89@1x.png" />
+                  <img class="path-90-asoqp9" src="../static/img/path-90@1x.png" />
+                  <img class="path-91-asoqp9" src="../static/img/path-91@1x.png" />
+                </div>
+              </div>
+              <a href="375-strategies-breakdown3.html">
+                <div class="breakdown-button1-zVGEmZ border-1px-dove-gray smart-layers-pointers">
+                  <div class="show-breakdown-TYamcx montserrat-semi-bold-white-12px">Show Breakdown</div>
+                </div></a
+              >
+            </div>
+            <div class="group-36-MeMDzY">
+              <div class="long-call-tab-b8ie3m smart-layers-pointers">
+                <div class="strategy-GNRDu3 montserrat-semi-bold-black-12px">STRATEGY</div>
+                <div class="icon-feather-info-GNRDu3">
+                  <img class="path-89-89uxxa" src="../static/img/path-89@1x.png" />
+                  <img class="path-90-89uxxa" src="../static/img/path-90@1x.png" />
+                  <img class="path-91-89uxxa" src="../static/img/path-91@1x.png" />
+                </div>
+              </div>
+              <a href="768-strategies-breakdown-7.html">
+                <div class="breakdown-button1-b8ie3m border-1px-dove-gray smart-layers-pointers">
+                  <div class="show-breakdown-ybSvd2 montserrat-semi-bold-white-12px">Show Breakdown</div>
+                </div></a
+              >
+            </div>
+            <div class="group-36-o8pFI3">
+              <div class="long-call-tab-OohGma smart-layers-pointers">
+                <div class="strategy-FIsLzR montserrat-semi-bold-black-12px">STRATEGY</div>
+                <div class="icon-feather-info-FIsLzR">
+                  <img class="path-89-T2H1tk" src="../static/img/path-89@1x.png" />
+                  <img class="path-90-T2H1tk" src="../static/img/path-90@1x.png" />
+                  <img class="path-91-T2H1tk" src="../static/img/path-91@1x.png" />
+                </div>
+              </div>
+              <a href="375-strategies-breakdown4.html">
+                <div class="breakdown-button1-OohGma border-1px-dove-gray smart-layers-pointers">
+                  <div class="show-breakdown-lxGN5S montserrat-semi-bold-white-12px">Show Breakdown</div>
+                </div></a
+              >
+            </div>
+            <div class="group-36-FNNCCx">
+              <div class="long-call-tab-uSFeZM smart-layers-pointers">
+                <div class="strategy-CJYYvp montserrat-semi-bold-black-12px">STRATEGY</div>
+                <div class="icon-feather-info-CJYYvp">
+                  <img class="path-89-y9JI0L" src="../static/img/path-89@1x.png" />
+                  <img class="path-90-y9JI0L" src="../static/img/path-90@1x.png" />
+                  <img class="path-91-y9JI0L" src="../static/img/path-91@1x.png" />
+                </div>
+              </div>
+              <a href="768-strategies-breakdown-8.html">
+                <div class="breakdown-button1-uSFeZM border-1px-dove-gray smart-layers-pointers">
+                  <div class="show-breakdown-whT0Ox montserrat-semi-bold-white-12px">Show Breakdown</div>
+                </div></a
+              >
+            </div>
+          </div>
+        </div>
+        <a href="strategies-page-addasset.html">
+          <div class="plus-circle-add-C61RwL smart-layers-pointers">
+            <img class="path-86-9zV78v" src="../static/img/path-86@1x.png" />
+            <img class="path-87-9zV78v" src="../static/img/path-87@1x.png" />
+            <img class="path-88-9zV78v" src="../static/img/path-88@1x.png" /></div
+        ></a>
+        <a href="strategies-page.html">
+          <div class="show-strat-C61RwL smart-layers-pointers">
+            <div class="hide-strategies-xBLoUL">Hide Strategies</div>
+          </div></a
+        >
+        <a href="strategies-page.html">
+          <div class="plus-circle-show-strategies-C61RwL smart-layers-pointers">
+            <a href="strategies-page.html" onclick="window.event.stopPropagation()"
+              ><img class="path-86-ZvpmtD" src="../static/img/path-86@1x.png"
+            /></a>
+            <img class="path-88-ZvpmtD" src="../static/img/path-88@1x.png" /></div
+        ></a>
+        <a href="javascript:SubmitForm('form60')">
+          <div class="analyze-button-C61RwL smart-layers-pointers">
+            <div class="analyze-xWQ1KJ montserrat-semi-bold-white-12px">ANALYZE</div>
+          </div></a
+        >
+        <div class="export-button-C61RwL smart-layers-pointers">
+          <div class="outline-button-PiBNS4 border-2px-heath">
+            <img class="export-fKSPGk" src="../static/img/export-8@1x.png" />
+          </div>
+        </div>
+        <div class="navbar-C61RwL">
+          <div class="menu-center-8MJZIW">
+            <a href="fundamental-analysis-page.html">
+              <div class="fundamental-component-Z6zpbm smart-layers-pointers">
+                <div class="fundamental-6EvOoV">Fundamental</div>
+              </div></a
+            >
+            <a href="technical-analysis-page.html">
+              <div class="technical-component-Z6zpbm smart-layers-pointers">
+                <div class="technical-lY8Sqq">Technical</div>
+              </div></a
+            >
+            <div class="strategy-component-Z6zpbm border-1px-dove-gray">
+              <div class="strategy-He3YyY">Strategy</div>
+            </div>
+            <a href="pricing-and-valuation-page.html">
+              <div class="valuation-component-Z6zpbm smart-layers-pointers">
+                <div class="valuation-5dtgbd">Valuation</div>
+              </div></a
+            >
+          </div>
+          <a href="landing-page.html"
+            ><img class="logo80x70-8MJZIW smart-layers-pointers" src="../static/img/logo80x70@1x.png"
+          /></a>
+        </div>
+        <div class="analysis-input-C61RwL">
+          <div class="select-expiration-DAnbUD">
+            <input
+              class="expiration-date-AghIG5 montserrat-normal-black-10px"
+              name="expiration-date118"
+              placeholder="Expiration Date"
+              required
+            />
+            <img class="md-arrow-dropdown-AghIG5" src="../static/img/md-arrow-dropdown-84@1x.png" />
+          </div>
+          <div class="select-option-style-DAnbUD">
+            <input
+              class="option-style-ZAx7Lv montserrat-normal-black-10px"
+              name="option-style135"
+              placeholder="Option Style"
+              required
+            />
+            <img class="md-arrow-dropdown-ZAx7Lv" src="../static/img/md-arrow-dropdown-84@1x.png" />
+          </div>
+          <div class="select-option-type-DAnbUD">
+            <input
+              class="option-style-Isr8ZD montserrat-normal-black-10px"
+              name="option-style136"
+              placeholder="Option Type"
+              required
+            />
+            <img class="md-arrow-dropdown-Isr8ZD" src="../static/img/md-arrow-dropdown-84@1x.png" />
+          </div>
+          <div class="select-data-source-DAnbUD">
+            <input
+              class="option-style-rf4nxM montserrat-normal-black-10px"
+              name="option-style137"
+              placeholder="Data Source"
+              required
+            />
+            <img class="md-arrow-dropdown-rf4nxM" src="../static/img/md-arrow-dropdown-84@1x.png" />
+          </div>
+          <div class="select-itmatmotm-DAnbUD">
+            <input
+              class="option-style-kB46EP montserrat-normal-black-10px"
+              name="option-style138"
+              placeholder="ITM / ATM / OTM"
+              required
+            />
+            <img class="md-arrow-dropdown-kB46EP" src="../static/img/md-arrow-dropdown-84@1x.png" />
+          </div>
+          <div class="input-ticker-DAnbUD">
+            <input
+              class="ticker-of-the-underlying-Nti9XO montserrat-normal-black-10px"
+              name="ticker-of-the-underlying-128"
+              placeholder="Ticker of the Underlying"
+              required
+            />
+            <img class="icon-search-Nti9XO" src="../static/img/icon-search-21@1x.png" />
+          </div>
+          <div class="strategies-DAnbUD">STRATEGIES</div>
+        </div>
+      </form>
+    </div>
+    <div id="overlay-infobox1" class="overlay" style="min-height: 1835px">
+      <div class="container-center-horizontal">
+        <div class="x1280-infobox1 screen" onclick="window.open('strategies-page2.html', '_self');">
+          <img class="chat-bubble-icon-C61RwL" src="../static/img/chatbubbleicon@1x.png" />
+          <div class="x-on-hoverex-2-c-ifferent-expiry-C61RwL montserrat-semi-bold-black-19px">
+            (On Hover)<br />ex: 2-calls, 1 OTM put<br />with different expiry
+          </div>
+        </div>
+      </div>
+      <div class="container-center-horizontal">
+        <div class="infobox1 screen" onclick="window.open('strategies-page2.html', '_self');">
+          <img class="chat-bubble-icon-C61RwL" src="../static/img/chatbubbleicon@1x.png" />
+          <div class="x-on-hoverex-2-c-ifferent-expiry-C61RwL montserrat-semi-bold-black-19px">
+            (On Hover)<br />ex: 2-calls, 1 OTM put<br />with different expiry
+          </div>
+        </div>
+      </div>
+      <div class="container-center-horizontal">
+        <div class="x768-infobox1 screen" onclick="window.open('strategies-page2.html', '_self');">
+          <img class="chat-bubble-icon-C61RwL" src="../static/img/chatbubbleicon-3@1x.png" />
+          <div class="x-on-hoverex-2-c-ifferent-expiry-C61RwL montserrat-semi-bold-black-12px">
+            (On Hover)<br />ex: 2-calls, 1 OTM put<br />with different expiry
+          </div>
+        </div>
+      </div>
+      <div class="container-center-horizontal">
+        <div class="x375-infobox1 screen" onclick="window.open('javascript:history.back()', '_self');">
+          <a href="strategies-page2.html" onclick="window.event.stopPropagation()"
+            ><img class="chat-bubble-icon-C61RwL" src="../static/img/chatbubbleicon-3@1x.png"
+          /></a>
+          <div class="x-on-hoverex-2-c-ifferent-expiry-C61RwL montserrat-semi-bold-black-12px">
+            (On Hover)<br />ex: 2-calls, 1 OTM put<br />with different expiry
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var overlay_id = "overlay-infobox1";
+      document.getElementById(overlay_id).addEventListener(
+        "click",
+        function (event) {
+          var e = event || window.event;
+          var overlayElement = document.getElementById(overlay_id);
+          var clickedDiv = e.toElement || e.target;
+          if (overlayElement.contains(clickedDiv)) {
+            HideOverlay("infobox1", "animate-disappear");
+          }
+        },
+        false
+      );
+    </script>
+    <div class="container-center-horizontal">
+      <form class="x375-strategies-page2 screen" name="form80" action="form80" method="post">
+        <div class="analysis-output-C61RwL">
+          <div class="repeat-grid-5-sPEAV6">
+            <div class="group-36-5eQ3iE">
+              <a href="javascript:ShowOverlay('infobox1', 'animate-appear');">
+                <div class="long-call-tab-TrvLhE smart-layers-pointers">
+                  <div class="strategy-NHw5ix montserrat-semi-bold-black-12px">STRATEGY</div>
+                  <div class="icon-feather-info-NHw5ix">
+                    <img class="path-89-AE5kDl" src="../static/img/path-89@1x.png" />
+                    <img class="path-90-AE5kDl" src="../static/img/path-90@1x.png" />
+                    <img class="path-91-AE5kDl" src="../static/img/path-91@1x.png" />
+                  </div></div
+              ></a>
+              <a href="strategies-breakdown-longcall.html">
+                <div class="breakdown-button1-TrvLhE border-1px-dove-gray smart-layers-pointers">
+                  <div class="show-breakdown-KsAQ28 montserrat-semi-bold-white-12px">Show Breakdown</div>
+                </div></a
+              >
+            </div>
+            <div class="group-36-V8xTKg">
+              <div class="long-call-tab-ebYWxM smart-layers-pointers">
+                <div class="strategy-mslRfG montserrat-semi-bold-black-12px">STRATEGY</div>
+                <div class="icon-feather-info-mslRfG">
+                  <img class="path-89-hoOj3I" src="../static/img/path-89@1x.png" />
+                  <img class="path-90-hoOj3I" src="../static/img/path-90@1x.png" />
+                  <img class="path-91-hoOj3I" src="../static/img/path-91@1x.png" />
+                </div>
+              </div>
+              <a href="375-strategies-breakdown2.html">
+                <div class="breakdown-button1-ebYWxM border-1px-dove-gray smart-layers-pointers">
+                  <div class="show-breakdown-IpUT0w montserrat-semi-bold-white-12px">Show Breakdown</div>
+                </div></a
+              >
+            </div>
+            <div class="group-36-RnGxmz">
+              <div class="long-call-tab-rhj1AA smart-layers-pointers">
+                <div class="strategy-hae5mq montserrat-semi-bold-black-12px">STRATEGY</div>
+                <div class="icon-feather-info-hae5mq">
+                  <img class="path-89-UozFjS" src="../static/img/path-89@1x.png" />
+                  <img class="path-90-UozFjS" src="../static/img/path-90@1x.png" />
+                  <img class="path-91-UozFjS" src="../static/img/path-91@1x.png" />
+                </div>
+              </div>
+              <a href="375-strategies-breakdown3.html">
+                <div class="breakdown-button1-rhj1AA border-1px-dove-gray smart-layers-pointers">
+                  <div class="show-breakdown-VrPciG montserrat-semi-bold-white-12px">Show Breakdown</div>
+                </div></a
+              >
+            </div>
+            <div class="group-36-doGYQH">
+              <div class="long-call-tab-pwDYY3 smart-layers-pointers">
+                <div class="strategy-KUW6S0 montserrat-semi-bold-black-12px">STRATEGY</div>
+                <div class="icon-feather-info-KUW6S0">
+                  <img class="path-89-JaE9Fh" src="../static/img/path-89@1x.png" />
+                  <img class="path-90-JaE9Fh" src="../static/img/path-90@1x.png" />
+                  <img class="path-91-JaE9Fh" src="../static/img/path-91@1x.png" />
+                </div>
+              </div>
+              <a href="375-strategies-breakdown4.html">
+                <div class="breakdown-button1-pwDYY3 border-1px-dove-gray smart-layers-pointers">
+                  <div class="show-breakdown-KmhHBq montserrat-semi-bold-white-12px">Show Breakdown</div>
+                </div></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="plus-circle-add-C61RwL smart-layers-pointers">
+          <img class="path-86-9zV78v" src="../static/img/path-86-16@1x.png" />
+          <img class="path-87-9zV78v" src="../static/img/path-87@1x.png" />
+          <img class="path-88-9zV78v" src="../static/img/path-88@1x.png" />
+        </div>
+        <a href="strategies-page.html">
+          <div class="show-strat-C61RwL smart-layers-pointers">
+            <div class="hide-strategies-xBLoUL">Hide Strategies</div>
+          </div></a
+        >
+        <div class="plus-circle-add-VMr6Om smart-layers-pointers">
+          <img class="path-86-vuj8Vq" src="../static/img/path-86-16@1x.png" />
+          <img class="path-88-vuj8Vq" src="../static/img/path-88@1x.png" />
+        </div>
+        <div class="export-button-C61RwL smart-layers-pointers">
+          <div class="outline-button-PiBNS4 border-2px-heath">
+            <img class="export-fKSPGk" src="../static/img/export-12@1x.png" />
+          </div>
+        </div>
+        <a href="javascript:SubmitForm('form80')">
+          <div class="analyze-button-C61RwL smart-layers-pointers"><div class="analyze-xWQ1KJ">ANALYZE</div></div></a
+        >
+        <div class="navbar-C61RwL">
+          <div class="menu-center-8MJZIW">
+            <a href="technical-analysis-page.html">
+              <div class="technical-component-Z6zpbm smart-layers-pointers">
+                <div class="technical-lY8Sqq">Technical</div>
+              </div></a
+            >
+            <div class="strategy-component-Z6zpbm border-1px-dove-gray">
+              <div class="strategy-He3YyY">Strategy</div>
+            </div>
+            <a href="pricing-and-valuation-page.html">
+              <div class="valuation-component-Z6zpbm smart-layers-pointers">
+                <div class="valuation-5dtgbd">Valuation</div>
+              </div></a
+            >
+            <a href="fundamental-analysis-page.html">
+              <div class="fundamental-component-Z6zpbm smart-layers-pointers">
+                <div class="fundamental-rectangle-6EvOoV"></div>
+                <div class="fundamental-6EvOoV">Fundamental</div>
+              </div></a
+            >
+          </div>
+          <a href="landing-page.html"
+            ><img class="logo50x44-8MJZIW smart-layers-pointers" src="../static/img/logo50x44@1x.png"
+          /></a>
+        </div>
+        <div class="analysis-input-C61RwL">
+          <div class="select-expiration-DAnbUD">
+            <input class="expiration-date-AghIG5" name="expiration-date124" placeholder="Expiration Date" required />
+          </div>
+          <div class="select-data-source-DAnbUD">
+            <input class="data-source-rf4nxM" name="data-source128" placeholder="Data Source" required />
+          </div>
+          <div class="select-option-style-DAnbUD">
+            <input class="option-style-ZAx7Lv" name="option-style146" placeholder="Option Style" required />
+          </div>
+          <div class="select-option-type-DAnbUD">
+            <input class="option-type-Isr8ZD" name="option-type118" placeholder="Option Type" required />
+          </div>
+          <div class="select-itmatmotm-DAnbUD">
+            <input class="itm-atm-otm-kB46EP" name="itm-atm-otm118" placeholder="ITM / ATM / OTM" required />
+          </div>
+          <div class="input-ticker-DAnbUD">
+            <input
+              class="ticker-of-the-underlying-Nti9XO"
+              name="ticker-of-the-underlying-138"
+              placeholder="Ticker of the Underlying"
+              required
+            />
+            <img class="icon-search-Nti9XO" src="../static/img/icon-search-31@1x.png" />
+          </div>
+          <div class="strategies-DAnbUD montserrat-normal-black-10px">STRATEGIES</div>
+        </div>
+      </form>
+    </div>
+    <div id="overlay-infobox1" class="overlay" style="min-height: 1835px">
+      <div class="container-center-horizontal">
+        <div class="x1280-infobox1 screen" onclick="window.open('strategies-page2.html', '_self');">
+          <img class="chat-bubble-icon-C61RwL" src="../static/img/chatbubbleicon@1x.png" />
+          <div class="x-on-hoverex-2-c-ifferent-expiry-C61RwL montserrat-semi-bold-black-19px">
+            (On Hover)<br />ex: 2-calls, 1 OTM put<br />with different expiry
+          </div>
+        </div>
+      </div>
+      <div class="container-center-horizontal">
+        <div class="infobox1 screen" onclick="window.open('strategies-page2.html', '_self');">
+          <img class="chat-bubble-icon-C61RwL" src="../static/img/chatbubbleicon@1x.png" />
+          <div class="x-on-hoverex-2-c-ifferent-expiry-C61RwL montserrat-semi-bold-black-19px">
+            (On Hover)<br />ex: 2-calls, 1 OTM put<br />with different expiry
+          </div>
+        </div>
+      </div>
+      <div class="container-center-horizontal">
+        <div class="x768-infobox1 screen" onclick="window.open('strategies-page2.html', '_self');">
+          <img class="chat-bubble-icon-C61RwL" src="../static/img/chatbubbleicon-3@1x.png" />
+          <div class="x-on-hoverex-2-c-ifferent-expiry-C61RwL montserrat-semi-bold-black-12px">
+            (On Hover)<br />ex: 2-calls, 1 OTM put<br />with different expiry
+          </div>
+        </div>
+      </div>
+      <div class="container-center-horizontal">
+        <div class="x375-infobox1 screen" onclick="window.open('javascript:history.back()', '_self');">
+          <a href="strategies-page2.html" onclick="window.event.stopPropagation()"
+            ><img class="chat-bubble-icon-C61RwL" src="../static/img/chatbubbleicon-3@1x.png"
+          /></a>
+          <div class="x-on-hoverex-2-c-ifferent-expiry-C61RwL montserrat-semi-bold-black-12px">
+            (On Hover)<br />ex: 2-calls, 1 OTM put<br />with different expiry
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var overlay_id = "overlay-infobox1";
+      document.getElementById(overlay_id).addEventListener(
+        "click",
+        function (event) {
+          var e = event || window.event;
+          var overlayElement = document.getElementById(overlay_id);
+          var clickedDiv = e.toElement || e.target;
+          if (overlayElement.contains(clickedDiv)) {
+            HideOverlay("infobox1", "animate-disappear");
+          }
+        },
+        false
+      );
+    </script>
+    <script>
+      ShowOverlay = function (overlayName, animationName) {
+        overlayName = "overlay-" + overlayName;
+        var cssClasses = document.getElementById(overlayName).className.split(" ");
+        var last = cssClasses.slice(-1)[0];
+        if (last.lastIndexOf("animate") == -1) {
+          document.getElementById(overlayName).className =
+            document.getElementById(overlayName).className + " " + animationName;
+        }
+        if (window.loadAsyncSrc != undefined) {
+          loadAsyncSrc();
+        }
+      };
+      HideOverlay = function (overlayName, animationName) {
+        overlayName = "overlay-" + overlayName;
+        var cssClasses = document.getElementById(overlayName).className.split(" ");
+        var last = cssClasses.slice(-1)[0];
+        if (last.lastIndexOf("animate") != -1) {
+          cssClasses.splice(-1);
+          cssClasses.push(animationName);
+          document.getElementById(overlayName).className = cssClasses.join(" ");
+
+          cssClasses.splice(-1);
+          setTimeout(function () {
+            document.getElementById(overlayName).className = cssClasses.join(" ");
+          }, 1100);
+        }
+        var vids = document.getElementsByTagName("video");
+        if (vids) {
+          for (var i = 0; i < vids.length; i++) {
+            var video = vids.item(i);
+            video.pause();
+          }
+        }
+      };
+    </script>
+    <script>
+      /* Copyright (c) 2016 Tobias Buschor https://goo.gl/gl0mbf | MIT License https://goo.gl/HgajeK */
+
+      if (!HTMLFormElement.prototype.reportValidity) {
+        HTMLFormElement.prototype.reportValidity = function () {
+          if (this.checkValidity()) return true;
+          var btn = document.createElement("button");
+          this.appendChild(btn);
+          btn.click();
+          this.removeChild(btn);
+          return false;
+        };
+      }
+
+      function SubmitForm(form_name) {
+        var form = document.getElementsByName(form_name)[0];
+        if (form.reportValidity()) {
+          form.submit();
+          if (window.submitted) window.submitted();
+        }
+      }
+    </script>
+  </body>
+  {% endblock %}

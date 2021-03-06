@@ -1,0 +1,711 @@
+/* screen - 1280-strategies-breakdown-8 */
+
+.border-10px-heath {
+  border: 10px solid var(--heath);
+}
+.border-1px-casal {
+  border: 1px solid var(--casal);
+}
+.border-1px-dove-gray {
+  border: 1px solid var(--dove-gray);
+}
+.border-2px-heath {
+  border: 2px solid var(--heath);
+}
+.border-4px-heath {
+  border: 4px solid var(--heath);
+}
+.border-class-1 {
+  border: 1px solid rgba(227,232,240,1.0);
+}
+.montserrat-normal-black-10px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-12px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-18px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-42px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-semi-bold-black-10px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-black-12px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-black-19px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-heath-20px {
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-white-12px {
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-white-19px {
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+}
+.x1280-strategies-breakdown-8 {
+  background-color: var(--heath);
+  height: 720px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1280px;
+}
+.x1280-strategies-breakdown-8 .back-C61RwL {
+  background-color: transparent;
+  height: 18px;
+  left: 64px;
+  pointer-events: auto;
+  position: absolute;
+  top: 55px;
+  transition: all 0.2s ease;
+  width: 149px;
+}
+.x1280-strategies-breakdown-8 .back-C61RwL:hover {
+
+transform: scale(1.1);
+}
+.x1280-strategies-breakdown-8 .back-to-strategies-7WGuVo {
+  background-color: transparent;
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 54px;
+  position: absolute;
+  text-align: left;
+  top: -18px;
+  white-space: nowrap;
+  width: calc(100.00% - 14px);
+}
+.x1280-strategies-breakdown-8 .bullish-bearish-eutral-strategy-C61RwL {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 96px;
+  letter-spacing: 0.00px;
+  line-height: 36px;
+  position: absolute;
+  text-align: center;
+  top: 198px;
+  white-space: nowrap;
+  width: auto;
+}
+.x1280-strategies-breakdown-8 .image-2-C61RwL {
+  background-color: transparent;
+  height: 338px;
+  left: 757px;
+  position: absolute;
+  top: 216px;
+  width: 420px;
+}
+.x1280-strategies-breakdown-8 .ios-arrow-back-7WGuVo {
+  background-color: transparent;
+  height: calc(100.00% - 5px);
+  left: 1px;
+  position: absolute;
+  top: 1px;
+  width: 7px;
+}
+.x1280-strategies-breakdown-8 .payoff-diagram-C61RwL {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 827px;
+  letter-spacing: 0.00px;
+  line-height: 36px;
+  position: absolute;
+  text-align: center;
+  top: 143px;
+  white-space: nowrap;
+  width: auto;
+}
+.x1280-strategies-breakdown-8 .secondary-background-C61RwL {
+  background-color: transparent;
+  background-image: url(../img/path-81-11@1x.png);
+  background-size: 100% 100%;
+  height: 640px;
+  left: 40px;
+  position: absolute;
+  top: 40px;
+  width: 1200px;
+}
+.x1280-strategies-breakdown-8 .strategy-name-how-to-buy-C61RwL {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 99px;
+  letter-spacing: 0.00px;
+  line-height: 36px;
+  position: absolute;
+  text-align: left;
+  top: 92px;
+  white-space: nowrap;
+  width: auto;
+}
+.x1280-strategies-breakdown-8 .text-descriptio-aph-example-etc-C61RwL {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  height: 401px;
+  left: 99px;
+  letter-spacing: 0.00px;
+  line-height: 36px;
+  position: absolute;
+  text-align: left;
+  top: 249px;
+  width: 607px;
+}
+:root {
+  --alto: rgba(217,217,217,1.0);
+  --black: rgba(0,0,0,1.0);
+  --casal: rgba(49,89,112,1.0);
+  --cedar: rgba(66,18,19,1.0);
+  --dove-gray: rgba(112,112,112,1.0);
+  --heath: rgba(84,22,23,1.0);
+  --pumice: rgba(201,201,201,1.0);
+  --quick-silver: rgba(167,167,167,1.0);
+  --san-juan: rgba(44,74,103,1.0);
+  --white: rgba(255,255,255,1.0);
+}
+/* screen - 768-strategies-breakdown-8 */
+
+.border-10px-heath {
+  border: 10px solid var(--heath);
+}
+.border-1px-casal {
+  border: 1px solid var(--casal);
+}
+.border-1px-dove-gray {
+  border: 1px solid var(--dove-gray);
+}
+.border-2px-heath {
+  border: 2px solid var(--heath);
+}
+.border-4px-heath {
+  border: 4px solid var(--heath);
+}
+.border-class-1 {
+  border: 1px solid rgba(227,232,240,1.0);
+}
+.montserrat-normal-black-10px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-12px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-18px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-42px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-semi-bold-black-10px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-black-12px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-black-19px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-heath-20px {
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-white-12px {
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-white-19px {
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+}
+.x768-strategies-breakdown-8 {
+  background-color: var(--heath);
+  height: 432px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 768px;
+}
+.x768-strategies-breakdown-8 .back-C61RwL {
+  background-color: transparent;
+  height: 18px;
+  left: 64px;
+  pointer-events: auto;
+  position: absolute;
+  top: 54px;
+  transition: all 0.2s ease;
+  width: 149px;
+}
+.x768-strategies-breakdown-8 .back-C61RwL:hover {
+
+transform: scale(1.1);
+}
+.x768-strategies-breakdown-8 .back-to-strategies-7WGuVo {
+  background-color: transparent;
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 54px;
+  position: absolute;
+  text-align: left;
+  top: -18px;
+  white-space: nowrap;
+  width: calc(100.00% - 14px);
+}
+.x768-strategies-breakdown-8 .bullish-bearish-eutral-strategy-C61RwL {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 94px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: center;
+  top: 176px;
+  white-space: nowrap;
+  width: auto;
+}
+.x768-strategies-breakdown-8 .image-2-C61RwL {
+  background-color: transparent;
+  height: 138px;
+  left: 508px;
+  position: absolute;
+  top: 187px;
+  width: 172px;
+}
+.x768-strategies-breakdown-8 .ios-arrow-back-7WGuVo {
+  background-color: transparent;
+  height: calc(100.00% - 5px);
+  left: 1px;
+  position: absolute;
+  top: 1px;
+  width: 7px;
+}
+.x768-strategies-breakdown-8 .payoff-diagram-C61RwL {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 508px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: center;
+  top: 132px;
+  white-space: nowrap;
+  width: auto;
+}
+.x768-strategies-breakdown-8 .secondary-background-C61RwL {
+  background-color: transparent;
+  background-image: url(../img/path-81-22@1x.png);
+  background-size: 100% 100%;
+  height: 352px;
+  left: 40px;
+  position: absolute;
+  top: 40px;
+  width: 688px;
+}
+.x768-strategies-breakdown-8 .strategy-name-how-to-buy-C61RwL {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 96px;
+  letter-spacing: 0.00px;
+  line-height: 22px;
+  position: absolute;
+  text-align: left;
+  top: 108px;
+  white-space: nowrap;
+  width: auto;
+}
+.x768-strategies-breakdown-8 .text-descriptio-aph-example-etc-C61RwL {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 500;
+  height: 103px;
+  left: 96px;
+  letter-spacing: 0.00px;
+  line-height: 36px;
+  overflow: hidden;
+  position: absolute;
+  text-align: left;
+  top: 218px;
+  width: 252px;
+}
+:root {
+  --alto: rgba(217,217,217,1.0);
+  --black: rgba(0,0,0,1.0);
+  --casal: rgba(49,89,112,1.0);
+  --cedar: rgba(66,18,19,1.0);
+  --dove-gray: rgba(112,112,112,1.0);
+  --heath: rgba(84,22,23,1.0);
+  --pumice: rgba(201,201,201,1.0);
+  --quick-silver: rgba(167,167,167,1.0);
+  --san-juan: rgba(44,74,103,1.0);
+  --white: rgba(255,255,255,1.0);
+}
+/* screen - strategies-breakdown-bearputspread-page */
+
+.border-10px-heath {
+  border: 10px solid var(--heath);
+}
+.border-1px-casal {
+  border: 1px solid var(--casal);
+}
+.border-1px-dove-gray {
+  border: 1px solid var(--dove-gray);
+}
+.border-2px-heath {
+  border: 2px solid var(--heath);
+}
+.border-4px-heath {
+  border: 4px solid var(--heath);
+}
+.border-class-1 {
+  border: 1px solid rgba(227,232,240,1.0);
+}
+.montserrat-normal-black-10px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-12px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-18px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-42px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-semi-bold-black-10px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-black-12px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-black-19px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-heath-20px {
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-white-12px {
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-white-19px {
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+}
+.strategies-breakdown-bearputspread-page {
+  background-color: var(--heath);
+  height: 1080px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1920px;
+}
+.strategies-breakdown-bearputspread-page .back-strat-C61RwL {
+  background-color: transparent;
+  height: 22px;
+  left: 124px;
+  position: absolute;
+  top: 72px;
+  width: 187px;
+}
+.strategies-breakdown-bearputspread-page .back-to-strategies-B7kBwR {
+  background-color: transparent;
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  height: calc(100.00% + 2px);
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 54px;
+  position: absolute;
+  text-align: left;
+  top: -16px;
+  white-space: nowrap;
+  width: calc(100.00% - 14px);
+}
+.strategies-breakdown-bearputspread-page .bear-put-spread-a-lower-strike-C61RwL {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  height: auto;
+  left: 140px;
+  letter-spacing: 0.00px;
+  line-height: 42px;
+  position: absolute;
+  text-align: left;
+  top: 156px;
+  white-space: nowrap;
+  width: auto;
+}
+.strategies-breakdown-bearputspread-page .bear-put-spread-payoff-diagram-C61RwL {
+  background-color: transparent;
+  height: 419px;
+  left: 1090px;
+  position: absolute;
+  top: 331px;
+  width: 661px;
+}
+.strategies-breakdown-bearputspread-page .bearish-strategy-C61RwL {
+  background-color: transparent;
+  height: auto;
+  left: 140px;
+  letter-spacing: 0.00px;
+  line-height: 42px;
+  position: absolute;
+  text-align: center;
+  top: 284px;
+  white-space: nowrap;
+  width: auto;
+}
+.strategies-breakdown-bearputspread-page .in-this-strateg-ation-date-this-C61RwL {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  height: 513px;
+  left: 140px;
+  letter-spacing: 0.00px;
+  line-height: 36px;
+  position: absolute;
+  text-align: left;
+  top: 354px;
+  width: 822px;
+}
+.strategies-breakdown-bearputspread-page .ios-arrow-back-B7kBwR {
+  background-color: transparent;
+  height: calc(100.00% - 9px);
+  left: 1px;
+  position: absolute;
+  top: 4px;
+  width: 7px;
+}
+.strategies-breakdown-bearputspread-page .payoff-diagram-C61RwL {
+  background-color: transparent;
+  height: auto;
+  left: 1257px;
+  letter-spacing: 0.00px;
+  line-height: 42px;
+  position: absolute;
+  text-align: center;
+  top: 203px;
+  white-space: nowrap;
+  width: auto;
+}
+.strategies-breakdown-bearputspread-page .secondary-background-C61RwL {
+  background-color: transparent;
+  background-image: url(../img/path-81-1@1x.png);
+  background-size: 100% 100%;
+  height: 1000px;
+  left: 40px;
+  position: absolute;
+  top: 40px;
+  width: 1840px;
+}
+:root {
+  --alto: rgba(217,217,217,1.0);
+  --black: rgba(0,0,0,1.0);
+  --casal: rgba(49,89,112,1.0);
+  --cedar: rgba(66,18,19,1.0);
+  --dove-gray: rgba(112,112,112,1.0);
+  --heath: rgba(84,22,23,1.0);
+  --pumice: rgba(201,201,201,1.0);
+  --quick-silver: rgba(167,167,167,1.0);
+  --san-juan: rgba(44,74,103,1.0);
+  --white: rgba(255,255,255,1.0);
+}
+@media screen and (max-width: 1279px) {
+  .strategies-breakdown-bearputspread-page { 
+    display: none;
+   }
+  .x1280-strategies-breakdown-8 { 
+    display: none;
+   }
+}
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+  .strategies-breakdown-bearputspread-page { 
+    display: none;
+   }
+  .x768-strategies-breakdown-8 { 
+    display: none;
+   }
+}
+@media screen and (min-width: 1920px) {
+  .x1280-strategies-breakdown-8 { 
+    display: none;
+   }
+  .x768-strategies-breakdown-8 { 
+    display: none;
+   }
+}

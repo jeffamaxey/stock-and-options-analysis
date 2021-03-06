@@ -1,0 +1,6629 @@
+/* screen - 1280-pricing-and-valuation-page2 */
+
+.border-10px-heath {
+  border: 10px solid var(--heath);
+}
+.border-1px-casal {
+  border: 1px solid var(--casal);
+}
+.border-1px-dove-gray {
+  border: 1px solid var(--dove-gray);
+}
+.border-2px-heath {
+  border: 2px solid var(--heath);
+}
+.border-4px-heath {
+  border: 4px solid var(--heath);
+}
+.border-class-1 {
+  border: 1px solid rgba(227,232,240,1.0);
+}
+.montserrat-normal-black-10px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-12px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-18px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-42px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-semi-bold-black-10px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-black-12px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-black-19px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-heath-20px {
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-white-12px {
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-white-19px {
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+}
+.x1280-pricing-and-valuation-page2 {
+  background-color: var(--pumice);
+  height: 1450px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1280px;
+}
+.x1280-pricing-and-valuation-page2 .analysis-input-C61RwL {
+  background-color: transparent;
+  height: 146px;
+  left: 100px;
+  position: absolute;
+  top: 214px;
+  width: 1081px;
+}
+.x1280-pricing-and-valuation-page2 .analysis-output-C61RwL {
+  background-color: transparent;
+  height: 441px;
+  left: 143px;
+  position: absolute;
+  top: 456px;
+  width: 190px;
+}
+.x1280-pricing-and-valuation-page2 .analyze-button-C61RwL {
+  background-color: var(--casal);
+  border-radius: 25px;
+  height: 45px;
+  left: 560px;
+  pointer-events: auto;
+  position: absolute;
+  top: 411px;
+  transition: all 0.2s ease;
+  width: 160px;
+}
+.x1280-pricing-and-valuation-page2 .analyze-button-C61RwL:hover {
+
+transform: scale(1.1);
+}
+.x1280-pricing-and-valuation-page2 .analyze-xWQ1KJ {
+  background-color: transparent;
+  bottom: calc(38.00% - 8px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  height: 20px;
+  letter-spacing: 0.00px;
+  line-height: 14px;
+  position: absolute;
+  right: calc(48.89% - 34px);
+  text-align: center;
+  white-space: nowrap;
+  width: 70px;
+}
+.x1280-pricing-and-valuation-page2 .ask-price-number-wSc5g0 {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(29.61% - 15px);
+  height: 50px;
+  left: calc(37.46% - 56px);
+  position: absolute;
+  width: 150px;
+}
+.x1280-pricing-and-valuation-page2 .ask-price-text-wSc5g0 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(29.61% - 15px);
+  height: 50px;
+  left: 27px;
+  position: absolute;
+  width: 220px;
+}
+.x1280-pricing-and-valuation-page2 .average-price-N5tHGw {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(49.14% - 51px);
+  text-align: center;
+  white-space: nowrap;
+  width: 104px;
+}
+.x1280-pricing-and-valuation-page2 .b-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(46.15% - 12px);
+  height: 25px;
+  position: absolute;
+  right: 2px;
+  width: 60px;
+}
+.x1280-pricing-and-valuation-page2 .bg-blue-uLbsQt {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 423px;
+}
+.x1280-pricing-and-valuation-page2 .bg-blue-wSc5g0 {
+  background-color: transparent;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 423px;
+}
+.x1280-pricing-and-valuation-page2 .bid-price-number-wSc5g0 {
+  background-color: rgba(72,135,108,1.0);
+  border-radius: 10px;
+  height: 50px;
+  left: calc(37.46% - 56px);
+  position: absolute;
+  top: calc(50.00% - 25px);
+  width: 150px;
+}
+.x1280-pricing-and-valuation-page2 .bid-text-wSc5g0 {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 50px;
+  left: 27px;
+  position: absolute;
+  top: calc(50.00% - 25px);
+  width: 220px;
+}
+.x1280-pricing-and-valuation-page2 .binomial-price-k4ifAk {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(49.11% - 53px);
+  text-align: center;
+  white-space: nowrap;
+  width: 108px;
+}
+.x1280-pricing-and-valuation-page2 .black-scholes-price-Gh9szH {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(48.61% - 72px);
+  text-align: center;
+  white-space: nowrap;
+  width: 148px;
+}
+.x1280-pricing-and-valuation-page2 .c-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 2px;
+  top: 0px;
+  width: 60px;
+}
+.x1280-pricing-and-valuation-page2 .call-c-6xvY2a {
+  background-color: transparent;
+  bottom: calc(25.02% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.75% - 22px);
+  text-align: center;
+  white-space: nowrap;
+  width: 46px;
+}
+.x1280-pricing-and-valuation-page2 .call-price-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 126px;
+}
+.x1280-pricing-and-valuation-page2 .close-price-number-wSc5g0 {
+  background-color: rgba(202,12,20,1.0);
+  border-radius: 10px;
+  height: 50px;
+  left: calc(37.46% - 56px);
+  position: absolute;
+  top: calc(29.61% - 15px);
+  width: 150px;
+}
+.x1280-pricing-and-valuation-page2 .close-price-wSc5g0 {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 50px;
+  left: 27px;
+  position: absolute;
+  top: calc(29.61% - 15px);
+  width: 220px;
+}
+.x1280-pricing-and-valuation-page2 .cost-of-carry-b-1wB4SW {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(45.45% - 47px);
+  text-align: center;
+  white-space: nowrap;
+  width: 104px;
+}
+.x1280-pricing-and-valuation-page2 .cost-of-carry-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(46.15% - 12px);
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  width: 126px;
+}
+.x1280-pricing-and-valuation-page2 .d1-f0Kxl3 {
+  background-color: transparent;
+  bottom: calc(25.00% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(49.11% - 7px);
+  text-align: center;
+  white-space: nowrap;
+  width: 14px;
+}
+.x1280-pricing-and-valuation-page2 .d1-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(23.08% - 6px);
+  height: 25px;
+  position: absolute;
+  right: 2px;
+  width: 60px;
+}
+.x1280-pricing-and-valuation-page2 .d1text-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(23.08% - 6px);
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  width: 126px;
+}
+.x1280-pricing-and-valuation-page2 .d2-pHd8w9 {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(49.09% - 8px);
+  text-align: center;
+  white-space: nowrap;
+  width: 16px;
+}
+.x1280-pricing-and-valuation-page2 .d2-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: 64px;
+  height: 25px;
+  position: absolute;
+  right: 2px;
+  width: 60px;
+}
+.x1280-pricing-and-valuation-page2 .d2text-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 64px;
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  width: 126px;
+}
+.x1280-pricing-and-valuation-page2 .data-source-rf4nxM {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(38.00% - 6px);
+  height: 17px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 76px;
+}
+.x1280-pricing-and-valuation-page2 .data-source-rf4nxM::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.x1280-pricing-and-valuation-page2 .delta-aJCu9z {
+  background-color: transparent;
+  bottom: calc(44.51% - 8px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(49.44% - 21px);
+  text-align: center;
+  white-space: nowrap;
+  width: 42px;
+}
+.x1280-pricing-and-valuation-page2 .earnings-date-number-wSc5g0 {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: 29px;
+  height: 50px;
+  left: calc(37.46% - 56px);
+  position: absolute;
+  width: 150px;
+}
+.x1280-pricing-and-valuation-page2 .earnings-date-text-wSc5g0 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 29px;
+  height: 50px;
+  left: 27px;
+  position: absolute;
+  width: 220px;
+}
+.x1280-pricing-and-valuation-page2 .expiration-date-AghIG5 {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(38.00% - 6px);
+  height: 17px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 95px;
+}
+.x1280-pricing-and-valuation-page2 .expiration-date-AghIG5::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.x1280-pricing-and-valuation-page2 .export-button-C61RwL {
+  background-color: transparent;
+  height: 50px;
+  left: 1108px;
+  pointer-events: auto;
+  position: absolute;
+  top: 18px;
+  transition: all 0.2s ease;
+  width: 150px;
+}
+.x1280-pricing-and-valuation-page2 .export-button-C61RwL:hover {
+
+transform: translate(0, -5px);
+box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
+}
+.x1280-pricing-and-valuation-page2 .export-fKSPGk {
+  background-color: transparent;
+  bottom: calc(43.26% - 8px);
+  height: 19px;
+  position: absolute;
+  right: calc(49.55% - 34px);
+  width: 68px;
+}
+.x1280-pricing-and-valuation-page2 .formula-variables-sPEAV6 {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 190px;
+}
+.x1280-pricing-and-valuation-page2 .fundamental-6EvOoV {
+  background-color: transparent;
+  bottom: calc(34.21% - 7px);
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  height: 21px;
+  left: 4px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+  width: calc(100.00% - 6px);
+}
+.x1280-pricing-and-valuation-page2 .fundamental-component-Z6zpbm {
+  background-color: var(--pumice);
+  height: 100%;
+  pointer-events: auto;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  transition: all 0.2s ease;
+  width: 120px;
+}
+.x1280-pricing-and-valuation-page2 .fundamental-component-Z6zpbm:hover {
+
+transform: translate(0, -5px);
+box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
+}
+.x1280-pricing-and-valuation-page2 .gamma-qwXBwa {
+  background-color: transparent;
+  bottom: calc(42.42% - 7px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(49.40% - 26px);
+  text-align: center;
+  white-space: nowrap;
+  width: 52px;
+}
+.x1280-pricing-and-valuation-page2 .icon-search-Nti9XO {
+  background-color: transparent;
+  bottom: calc(50.00% - 15px);
+  height: 30px;
+  position: absolute;
+  right: 22px;
+  width: 30px;
+}
+.x1280-pricing-and-valuation-page2 .implied-volatility-Tx1wag {
+  background-color: transparent;
+  bottom: calc(42.42% - 7px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(48.89% - 64px);
+  text-align: center;
+  white-space: nowrap;
+  width: 130px;
+}
+.x1280-pricing-and-valuation-page2 .input-ticker-DAnbUD {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 42px;
+  left: 0px;
+  position: absolute;
+  width: 236px;
+}
+.x1280-pricing-and-valuation-page2 .itm-atm-otm-SRpD7E {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(38.00% - 6px);
+  height: 17px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 99px;
+}
+.x1280-pricing-and-valuation-page2 .itm-atm-otm-SRpD7E::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.x1280-pricing-and-valuation-page2 .logo166x145-8MJZIW {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  pointer-events: auto;
+  position: absolute;
+  top: 0px;
+  transition: all 0.2s ease;
+  width: 166px;
+}
+.x1280-pricing-and-valuation-page2 .logo166x145-8MJZIW:hover {
+
+transform: scale(1.1);
+}
+.x1280-pricing-and-valuation-page2 .market-price-ahZp1f {
+  background-color: transparent;
+  bottom: calc(42.42% - 7px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(49.19% - 47px);
+  text-align: center;
+  white-space: nowrap;
+  width: 96px;
+}
+.x1280-pricing-and-valuation-page2 .md-arrow-dropdown-AghIG5 {
+  background-color: transparent;
+  bottom: calc(45.37% - 4px);
+  height: 9px;
+  position: absolute;
+  right: 21px;
+  width: 17px;
+}
+.x1280-pricing-and-valuation-page2 .md-arrow-dropdown-Isr8ZD {
+  background-color: transparent;
+  bottom: calc(45.37% - 4px);
+  height: 9px;
+  position: absolute;
+  right: 21px;
+  width: 17px;
+}
+.x1280-pricing-and-valuation-page2 .md-arrow-dropdown-SRpD7E {
+  background-color: transparent;
+  bottom: calc(45.37% - 4px);
+  height: 9px;
+  position: absolute;
+  right: 21px;
+  width: 17px;
+}
+.x1280-pricing-and-valuation-page2 .md-arrow-dropdown-ZAx7Lv {
+  background-color: transparent;
+  bottom: calc(45.37% - 4px);
+  height: 9px;
+  position: absolute;
+  right: 21px;
+  width: 17px;
+}
+.x1280-pricing-and-valuation-page2 .md-arrow-dropdown-rf4nxM {
+  background-color: transparent;
+  bottom: calc(45.37% - 4px);
+  height: 9px;
+  position: absolute;
+  right: 21px;
+  width: 17px;
+}
+.x1280-pricing-and-valuation-page2 .menu-center-8MJZIW {
+  background-color: transparent;
+  bottom: calc(43.81% - 18px);
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  width: 690px;
+}
+.x1280-pricing-and-valuation-page2 .navbar-C61RwL {
+  background-color: transparent;
+  height: 145px;
+  left: 37px;
+  position: absolute;
+  top: 33px;
+  width: 944px;
+}
+.x1280-pricing-and-valuation-page2 .nd1-f9B0bp {
+  background-color: transparent;
+  bottom: calc(25.00% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.96% - 15px);
+  text-align: center;
+  white-space: nowrap;
+  width: 30px;
+}
+.x1280-pricing-and-valuation-page2 .nd1-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: 32px;
+  height: 25px;
+  position: absolute;
+  right: 2px;
+  width: 60px;
+}
+.x1280-pricing-and-valuation-page2 .nd1text-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 32px;
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  width: 126px;
+}
+.x1280-pricing-and-valuation-page2 .nd2-lEsVBb {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.94% - 16px);
+  text-align: center;
+  white-space: nowrap;
+  width: 32px;
+}
+.x1280-pricing-and-valuation-page2 .nd2-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 25px;
+  position: absolute;
+  right: 2px;
+  width: 60px;
+}
+.x1280-pricing-and-valuation-page2 .nd2text-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  width: 126px;
+}
+.x1280-pricing-and-valuation-page2 .open-price-number-wSc5g0 {
+  background-color: rgba(72,135,108,1.0);
+  border-radius: 10px;
+  height: 50px;
+  left: calc(37.46% - 56px);
+  position: absolute;
+  top: 29px;
+  width: 150px;
+}
+.x1280-pricing-and-valuation-page2 .open-price-text-wSc5g0 {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 50px;
+  left: 27px;
+  position: absolute;
+  top: 29px;
+  width: 220px;
+}
+.x1280-pricing-and-valuation-page2 .option-pricing-valuation-DAnbUD {
+  background-color: transparent;
+  height: 54px;
+  left: 1px;
+  letter-spacing: 0.00px;
+  line-height: 42px;
+  position: absolute;
+  text-align: center;
+  top: 5px;
+  white-space: nowrap;
+  width: 666px;
+}
+.x1280-pricing-and-valuation-page2 .option-style-ZAx7Lv {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(38.00% - 6px);
+  height: 17px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 76px;
+}
+.x1280-pricing-and-valuation-page2 .option-style-ZAx7Lv::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.x1280-pricing-and-valuation-page2 .option-type-Isr8ZD {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(38.00% - 6px);
+  height: 17px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 75px;
+}
+.x1280-pricing-and-valuation-page2 .option-type-Isr8ZD::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.x1280-pricing-and-valuation-page2 .outline-button-PiBNS4 {
+  background-color: transparent;
+  border-radius: 2px;
+  height: 100%;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+.x1280-pricing-and-valuation-page2 .p-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 0px;
+  top: calc(7.69% - 2px);
+  width: 60px;
+}
+.x1280-pricing-and-valuation-page2 .pricing-greeks-output-C61RwL {
+  background-color: transparent;
+  height: 362px;
+  left: 373px;
+  position: absolute;
+  top: 492px;
+  width: 825px;
+}
+.x1280-pricing-and-valuation-page2 .put-p-MuxzWC {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.81% - 20px);
+  text-align: center;
+  white-space: nowrap;
+  width: 40px;
+}
+.x1280-pricing-and-valuation-page2 .put-price-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 2px;
+  position: absolute;
+  top: calc(7.69% - 2px);
+  width: 124px;
+}
+.x1280-pricing-and-valuation-page2 .pvst-sfacxH {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.89% - 18px);
+  text-align: center;
+  white-space: nowrap;
+  width: 36px;
+}
+.x1280-pricing-and-valuation-page2 .pvst-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(38.46% - 10px);
+  height: 25px;
+  position: absolute;
+  right: 2px;
+  width: 60px;
+}
+.x1280-pricing-and-valuation-page2 .pvsttext-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(38.46% - 10px);
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  width: 126px;
+}
+.x1280-pricing-and-valuation-page2 .pvx-0ZE0f2 {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.96% - 15px);
+  text-align: center;
+  white-space: nowrap;
+  width: 30px;
+}
+.x1280-pricing-and-valuation-page2 .pvx-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(30.77% - 8px);
+  height: 25px;
+  position: absolute;
+  right: 2px;
+  width: 60px;
+}
+.x1280-pricing-and-valuation-page2 .pvxtext-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(30.77% - 8px);
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  width: 126px;
+}
+.x1280-pricing-and-valuation-page2 .r-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 2px;
+  top: calc(46.15% - 12px);
+  width: 60px;
+}
+.x1280-pricing-and-valuation-page2 .return-volatility-6nz1eA {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(43.75% - 48px);
+  text-align: center;
+  white-space: nowrap;
+  width: 110px;
+}
+.x1280-pricing-and-valuation-page2 .return-volatility-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  top: 160px;
+  width: 126px;
+}
+.x1280-pricing-and-valuation-page2 .rho-iTm0TT {
+  background-color: transparent;
+  bottom: calc(42.42% - 7px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(49.47% - 15px);
+  text-align: center;
+  white-space: nowrap;
+  width: 30px;
+}
+.x1280-pricing-and-valuation-page2 .risk-free-rate-r-YWltJx {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(45.45% - 47px);
+  text-align: center;
+  white-space: nowrap;
+  width: 104px;
+}
+.x1280-pricing-and-valuation-page2 .riskfree-rate-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  top: calc(46.15% - 12px);
+  width: 126px;
+}
+.x1280-pricing-and-valuation-page2 .s-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 0px;
+  top: calc(15.38% - 4px);
+  width: 60px;
+}
+.x1280-pricing-and-valuation-page2 .select-data-source-DAnbUD {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 42px;
+  position: absolute;
+  right: calc(18.07% - 28px);
+  width: 157px;
+}
+.x1280-pricing-and-valuation-page2 .select-data-source-WCqau1 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 42px;
+  position: absolute;
+  right: 0px;
+  width: 157px;
+}
+.x1280-pricing-and-valuation-page2 .select-expiration-DAnbUD {
+  background-color: transparent;
+  background-image: url(../img/path-94@1x.png);
+  background-size: 100% 100%;
+  bottom: 0px;
+  height: 42px;
+  left: calc(27.71% - 43px);
+  position: absolute;
+  width: 157px;
+}
+.x1280-pricing-and-valuation-page2 .select-option-style-DAnbUD {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 42px;
+  left: calc(45.78% - 72px);
+  position: absolute;
+  width: 157px;
+}
+.x1280-pricing-and-valuation-page2 .select-option-type-DAnbUD {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 42px;
+  position: absolute;
+  right: calc(36.15% - 57px);
+  width: 157px;
+}
+.x1280-pricing-and-valuation-page2 .stnd-dev-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 2px;
+  top: 160px;
+  width: 60px;
+}
+.x1280-pricing-and-valuation-page2 .strategy-He3YyY {
+  background-color: transparent;
+  bottom: calc(34.21% - 7px);
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  height: 21px;
+  left: 25px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+  width: calc(100.00% - 48px);
+}
+.x1280-pricing-and-valuation-page2 .strategy-component-Z6zpbm {
+  background-color: var(--pumice);
+  height: 100%;
+  left: calc(31.05% - 37px);
+  pointer-events: auto;
+  position: absolute;
+  top: 0px;
+  transition: all 0.2s ease;
+  width: 120px;
+}
+.x1280-pricing-and-valuation-page2 .strategy-component-Z6zpbm:hover {
+
+transform: translate(0, -5px);
+box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
+}
+.x1280-pricing-and-valuation-page2 .strike-price-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 2px;
+  position: absolute;
+  top: calc(23.08% - 6px);
+  width: 124px;
+}
+.x1280-pricing-and-valuation-page2 .strike-x-po0oJv {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.53% - 27px);
+  text-align: center;
+  white-space: nowrap;
+  width: 56px;
+}
+.x1280-pricing-and-valuation-page2 .t-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 0px;
+  top: 128px;
+  width: 60px;
+}
+.x1280-pricing-and-valuation-page2 .technical-component-Z6zpbm {
+  background-color: var(--pumice);
+  height: 100%;
+  pointer-events: auto;
+  position: absolute;
+  right: calc(37.89% - 45px);
+  top: 0px;
+  transition: all 0.2s ease;
+  width: 120px;
+}
+.x1280-pricing-and-valuation-page2 .technical-component-Z6zpbm:hover {
+
+transform: translate(0, -5px);
+box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
+}
+.x1280-pricing-and-valuation-page2 .technical-lY8Sqq {
+  background-color: transparent;
+  bottom: calc(34.21% - 7px);
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  height: 21px;
+  left: 21px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+  width: calc(100.00% - 40px);
+}
+.x1280-pricing-and-valuation-page2 .theta-xLclwb {
+  background-color: transparent;
+  bottom: calc(42.42% - 7px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(49.44% - 21px);
+  text-align: center;
+  white-space: nowrap;
+  width: 42px;
+}
+.x1280-pricing-and-valuation-page2 .ticker-of-the-underlying-Nti9XO {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(36.40% - 6px);
+  height: 17px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 154px;
+}
+.x1280-pricing-and-valuation-page2 .ticker-of-the-underlying-Nti9XO::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.x1280-pricing-and-valuation-page2 .time-to-maturity-t-sxtgsu {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(37.50% - 44px);
+  text-align: center;
+  white-space: nowrap;
+  width: 116px;
+}
+.x1280-pricing-and-valuation-page2 .time-to-maturity-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 2px;
+  position: absolute;
+  top: 128px;
+  width: 124px;
+}
+.x1280-pricing-and-valuation-page2 .underlying-price-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 2px;
+  position: absolute;
+  top: calc(15.38% - 4px);
+  width: 124px;
+}
+.x1280-pricing-and-valuation-page2 .underlying-s-YP3gHJ {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(47.22% - 42px);
+  text-align: center;
+  white-space: nowrap;
+  width: 88px;
+}
+.x1280-pricing-and-valuation-page2 .valuation-5dtgbd {
+  background-color: transparent;
+  bottom: calc(34.21% - 7px);
+  color: var(--cedar);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  height: 21px;
+  left: 21px;
+  letter-spacing: 0.00px;
+  line-height: 16px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+  width: calc(100.00% - 40px);
+}
+.x1280-pricing-and-valuation-page2 .valuation-component-Z6zpbm {
+  background-color: var(--alto);
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 120px;
+}
+.x1280-pricing-and-valuation-page2 .vega-E5UdDS {
+  background-color: transparent;
+  bottom: calc(42.42% - 7px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(49.46% - 18px);
+  text-align: center;
+  white-space: nowrap;
+  width: 36px;
+}
+.x1280-pricing-and-valuation-page2 .x-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 0px;
+  top: calc(23.08% - 6px);
+  width: 60px;
+}
+.x1280-pricing-and-valuation-page2 .x0043-EUEm0H {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.30% - 14px);
+  text-align: center;
+  white-space: nowrap;
+  width: 30px;
+}
+.x1280-pricing-and-valuation-page2 .x0043-vUELif {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  left: calc(48.79% - 18px);
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 36px;
+}
+.x1280-pricing-and-valuation-page2 .x005-pTNEef {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.88% - 12px);
+  text-align: center;
+  white-space: nowrap;
+  width: 24px;
+}
+.x1280-pricing-and-valuation-page2 .x0054-A1vT6n {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  left: calc(48.79% - 18px);
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 36px;
+}
+.x1280-pricing-and-valuation-page2 .x0055-HCEmBt {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  left: calc(48.80% - 17px);
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 34px;
+}
+.x1280-pricing-and-valuation-page2 .x00967-4wkroD {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(47.36% - 17px);
+  text-align: center;
+  white-space: nowrap;
+  width: 36px;
+}
+.x1280-pricing-and-valuation-page2 .x00967-iDnxWV {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(47.36% - 17px);
+  text-align: center;
+  white-space: nowrap;
+  width: 36px;
+}
+.x1280-pricing-and-valuation-page2 .x01232-HBQX2m {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.08% - 15px);
+  text-align: center;
+  white-space: nowrap;
+  width: 32px;
+}
+.x1280-pricing-and-valuation-page2 .x01232-Q7Pkey {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.08% - 15px);
+  text-align: center;
+  white-space: nowrap;
+  width: 32px;
+}
+.x1280-pricing-and-valuation-page2 .x0173-wwViCw {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  left: calc(48.81% - 16px);
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 32px;
+}
+.x1280-pricing-and-valuation-page2 .x02-3WQ1jw {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(49.29% - 8px);
+  text-align: center;
+  white-space: nowrap;
+  width: 16px;
+}
+.x1280-pricing-and-valuation-page2 .x025-i5if0C {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(49.00% - 11px);
+  text-align: center;
+  white-space: nowrap;
+  width: 22px;
+}
+.x1280-pricing-and-valuation-page2 .x05-07-2021-78kOx3 {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  left: calc(47.95% - 39px);
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 82px;
+}
+.x1280-pricing-and-valuation-page2 .x0534-beoU2c {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  left: calc(48.80% - 17px);
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 34px;
+}
+.x1280-pricing-and-valuation-page2 .x1-year-number-wSc5g0 {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: 29px;
+  height: 50px;
+  position: absolute;
+  right: 25px;
+  width: 150px;
+}
+.x1280-pricing-and-valuation-page2 .x1-year-text-wSc5g0 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 29px;
+  height: 50px;
+  position: absolute;
+  right: calc(30.02% - 66px);
+  width: 220px;
+}
+.x1280-pricing-and-valuation-page2 .x10743-KMzKxA {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  left: calc(48.71% - 22px);
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 46px;
+}
+.x1280-pricing-and-valuation-page2 .x14523-prbHlX {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.08% - 15px);
+  text-align: center;
+  white-space: nowrap;
+  width: 32px;
+}
+.x1280-pricing-and-valuation-page2 .x24-high-number-wSc5g0 {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 50px;
+  position: absolute;
+  right: 25px;
+  top: calc(29.61% - 15px);
+  width: 150px;
+}
+.x1280-pricing-and-valuation-page2 .x24-high-text-wSc5g0 {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 50px;
+  position: absolute;
+  right: calc(30.02% - 66px);
+  top: calc(29.61% - 15px);
+  width: 220px;
+}
+.x1280-pricing-and-valuation-page2 .x24-low-number-wSc5g0 {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 50px;
+  position: absolute;
+  right: 25px;
+  top: 29px;
+  width: 150px;
+}
+.x1280-pricing-and-valuation-page2 .x24low-text-wSc5g0 {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 50px;
+  position: absolute;
+  right: calc(30.02% - 66px);
+  top: 29px;
+  width: 220px;
+}
+.x1280-pricing-and-valuation-page2 .x4034-7RBbGW {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.30% - 14px);
+  text-align: center;
+  white-space: nowrap;
+  width: 30px;
+}
+.x1280-pricing-and-valuation-page2 .x4323-LQoj7Y {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.50% - 14px);
+  text-align: center;
+  white-space: nowrap;
+  width: 28px;
+}
+.x1280-pricing-and-valuation-page2 .x52-high-number-wSc5g0 {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(29.61% - 15px);
+  height: 50px;
+  position: absolute;
+  right: 25px;
+  width: 150px;
+}
+.x1280-pricing-and-valuation-page2 .x52-high-text-wSc5g0 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(29.61% - 15px);
+  height: 50px;
+  position: absolute;
+  right: calc(30.02% - 66px);
+  width: 220px;
+}
+.x1280-pricing-and-valuation-page2 .x52-low-number-wSc5g0 {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 50px;
+  position: absolute;
+  right: 25px;
+  top: calc(50.00% - 25px);
+  width: 150px;
+}
+.x1280-pricing-and-valuation-page2 .x52-low-text-wSc5g0 {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 50px;
+  position: absolute;
+  right: calc(30.02% - 66px);
+  top: calc(50.00% - 25px);
+  width: 220px;
+}
+.x1280-pricing-and-valuation-page2 .x8942-JyNa0z {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  left: calc(48.74% - 20px);
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 42px;
+}
+.x1280-pricing-and-valuation-page2 .x9464-h4qzDl {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(46.67% - 14px);
+  text-align: center;
+  white-space: nowrap;
+  width: 30px;
+}
+.x1280-pricing-and-valuation-page2 .x9501-EmovK7 {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  left: calc(48.76% - 20px);
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 40px;
+}
+.x1280-pricing-and-valuation-page2 .x9501-cXBAFW {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.66% - 13px);
+  text-align: center;
+  white-space: nowrap;
+  width: 26px;
+}
+.x1280-pricing-and-valuation-page2 .x9534-waIBB1 {
+  background-color: transparent;
+  bottom: calc(8.75% - 1px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(48.15% - 16px);
+  text-align: center;
+  white-space: nowrap;
+  width: 34px;
+}
+.x1280-pricing-and-valuation-page2 .x9892-nQic3J {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  left: calc(48.74% - 20px);
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 42px;
+}
+:root {
+  --alto: rgba(217,217,217,1.0);
+  --black: rgba(0,0,0,1.0);
+  --casal: rgba(49,89,112,1.0);
+  --cedar: rgba(66,18,19,1.0);
+  --dove-gray: rgba(112,112,112,1.0);
+  --heath: rgba(84,22,23,1.0);
+  --pumice: rgba(201,201,201,1.0);
+  --quick-silver: rgba(167,167,167,1.0);
+  --san-juan: rgba(44,74,103,1.0);
+  --white: rgba(255,255,255,1.0);
+}
+/* screen - 375-pricing-and-valuation-page2 */
+
+.border-10px-heath {
+  border: 10px solid var(--heath);
+}
+.border-1px-casal {
+  border: 1px solid var(--casal);
+}
+.border-1px-dove-gray {
+  border: 1px solid var(--dove-gray);
+}
+.border-2px-heath {
+  border: 2px solid var(--heath);
+}
+.border-4px-heath {
+  border: 4px solid var(--heath);
+}
+.border-class-1 {
+  border: 1px solid rgba(227,232,240,1.0);
+}
+.montserrat-normal-black-10px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-12px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-18px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-42px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-semi-bold-black-10px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-black-12px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-black-19px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-heath-20px {
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-white-12px {
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-white-19px {
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+}
+.x375-pricing-and-valuation-page2 {
+  background-color: var(--pumice);
+  height: 1189.59px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 375px;
+}
+.x375-pricing-and-valuation-page2 .analysis-input-7x4dAY {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+.x375-pricing-and-valuation-page2 .analysis-output-C61RwL {
+  background-color: transparent;
+  height: 911px;
+  left: 4px;
+  position: absolute;
+  top: 157px;
+  width: 367px;
+}
+.x375-pricing-and-valuation-page2 .analyze-button-C61RwL {
+  background-color: var(--san-juan);
+  border-radius: 25px;
+  height: 20px;
+  left: 284px;
+  pointer-events: auto;
+  position: absolute;
+  top: 121px;
+  transition: all 0.2s ease;
+  width: 60px;
+}
+.x375-pricing-and-valuation-page2 .analyze-button-C61RwL:hover {
+
+transform: scale(1.1);
+}
+.x375-pricing-and-valuation-page2 .analyze-xWQ1KJ {
+  background-color: transparent;
+  bottom: calc(30.00% - 3px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 600;
+  height: 10px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  position: absolute;
+  right: calc(46.55% - 14px);
+  text-align: center;
+  white-space: nowrap;
+  width: 31px;
+}
+.x375-pricing-and-valuation-page2 .average-price-pxL0PO {
+  background-color: transparent;
+  bottom: calc(35.65% - 5px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(47.96% - 41px);
+  text-align: center;
+  white-space: nowrap;
+  width: 86px;
+}
+.x375-pricing-and-valuation-page2 .avg-price-number-sPEAV6 {
+  background-color: rgba(72,135,108,1.0);
+  border-radius: 10px;
+  height: 50px;
+  position: absolute;
+  right: calc(26.66% - 23px);
+  top: calc(46.05% - 23px);
+  width: 85px;
+}
+.x375-pricing-and-valuation-page2 .avg-price-text-sPEAV6 {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 50px;
+  left: calc(30.96% - 42px);
+  position: absolute;
+  top: calc(46.05% - 23px);
+  width: 135px;
+}
+.x375-pricing-and-valuation-page2 .b-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 60px;
+}
+.x375-pricing-and-valuation-page2 .bg-blue-sPEAV6 {
+  background-color: transparent;
+  bottom: 0px;
+  height: 661px;
+  left: 38px;
+  position: absolute;
+  width: calc(100.00% - 77px);
+}
+.x375-pricing-and-valuation-page2 .binomial-price-A6JQAW {
+  background-color: transparent;
+  bottom: calc(35.65% - 5px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(47.78% - 43px);
+  text-align: center;
+  white-space: nowrap;
+  width: 90px;
+}
+.x375-pricing-and-valuation-page2 .binomial-price-number-sPEAV6 {
+  background-color: rgba(202,12,20,1.0);
+  border-radius: 10px;
+  height: 50px;
+  position: absolute;
+  right: calc(26.66% - 23px);
+  top: calc(38.67% - 19px);
+  width: 85px;
+}
+.x375-pricing-and-valuation-page2 .binomial-price-sPEAV6 {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 50px;
+  left: calc(30.96% - 42px);
+  position: absolute;
+  top: calc(38.67% - 19px);
+  width: 135px;
+}
+.x375-pricing-and-valuation-page2 .black-scholes-price-6ChAPe {
+  background-color: transparent;
+  bottom: calc(35.65% - 5px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(40.91% - 51px);
+  text-align: center;
+  white-space: nowrap;
+  width: 124px;
+}
+.x375-pricing-and-valuation-page2 .black-scholes-price-number-sPEAV6 {
+  background-color: rgba(72,135,108,1.0);
+  border-radius: 10px;
+  height: 50px;
+  position: absolute;
+  right: calc(26.66% - 23px);
+  top: calc(31.28% - 16px);
+  width: 85px;
+}
+.x375-pricing-and-valuation-page2 .black-scholes-price-text-sPEAV6 {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 50px;
+  left: calc(30.96% - 42px);
+  position: absolute;
+  top: calc(31.28% - 16px);
+  width: 135px;
+}
+.x375-pricing-and-valuation-page2 .c-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 192px;
+  top: 0px;
+  width: 60px;
+}
+.x375-pricing-and-valuation-page2 .call-c-6xvY2a {
+  background-color: transparent;
+  bottom: calc(25.00% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.75% - 22px);
+  text-align: center;
+  white-space: nowrap;
+  width: 46px;
+}
+.x375-pricing-and-valuation-page2 .call-price-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 126px;
+}
+.x375-pricing-and-valuation-page2 .component-150-3-C61RwL {
+  background-color: transparent;
+  height: 70px;
+  left: 32px;
+  position: absolute;
+  top: 72px;
+  width: 312px;
+}
+.x375-pricing-and-valuation-page2 .cost-of-carry-b-1wB4SW {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(45.45% - 47px);
+  text-align: center;
+  white-space: nowrap;
+  width: 104px;
+}
+.x375-pricing-and-valuation-page2 .cost-of-carry-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 192px;
+  position: absolute;
+  top: 0px;
+  width: 126px;
+}
+.x375-pricing-and-valuation-page2 .d1-f0Kxl3 {
+  background-color: transparent;
+  bottom: calc(25.00% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(49.11% - 7px);
+  text-align: center;
+  white-space: nowrap;
+  width: 14px;
+}
+.x375-pricing-and-valuation-page2 .d1-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 0px;
+  top: calc(50.00% - 12px);
+  width: 60px;
+}
+.x375-pricing-and-valuation-page2 .d1text-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 192px;
+  position: absolute;
+  top: calc(50.00% - 12px);
+  width: 126px;
+}
+.x375-pricing-and-valuation-page2 .d2-pHd8w9 {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(49.09% - 8px);
+  text-align: center;
+  white-space: nowrap;
+  width: 16px;
+}
+.x375-pricing-and-valuation-page2 .d2-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: 64px;
+  height: 25px;
+  position: absolute;
+  right: 0px;
+  width: 60px;
+}
+.x375-pricing-and-valuation-page2 .d2text-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 64px;
+  height: 25px;
+  left: 192px;
+  position: absolute;
+  width: 126px;
+}
+.x375-pricing-and-valuation-page2 .data-source-oY6dyy {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(30.01% - 3px);
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 400;
+  height: 10px;
+  left: 12px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 39px;
+}
+.x375-pricing-and-valuation-page2 .data-source-oY6dyy::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.x375-pricing-and-valuation-page2 .delta-2N6NOR {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(48.92% - 21px);
+  text-align: center;
+  white-space: nowrap;
+  width: 42px;
+}
+.x375-pricing-and-valuation-page2 .delta-number-sPEAV6 {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(31.79% - 16px);
+  height: 50px;
+  position: absolute;
+  right: calc(25.47% - 22px);
+  width: 85px;
+}
+.x375-pricing-and-valuation-page2 .delta-text-sPEAV6 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(31.79% - 16px);
+  height: 50px;
+  left: calc(31.66% - 43px);
+  position: absolute;
+  width: 135px;
+}
+.x375-pricing-and-valuation-page2 .expiration-date-N5MdiK {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(30.01% - 3px);
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 400;
+  height: 10px;
+  left: 6px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 49px;
+}
+.x375-pricing-and-valuation-page2 .expiration-date-N5MdiK::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.x375-pricing-and-valuation-page2 .export-button-C61RwL {
+  background-color: transparent;
+  height: 13px;
+  left: 322px;
+  pointer-events: auto;
+  position: absolute;
+  top: 8px;
+  transition: all 0.2s ease;
+  width: 42px;
+}
+.x375-pricing-and-valuation-page2 .export-button-C61RwL:hover {
+
+transform: translate(0, -5px);
+box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
+}
+.x375-pricing-and-valuation-page2 .export-fKSPGk {
+  background-color: transparent;
+  bottom: calc(49.98% - 4px);
+  height: 8px;
+  left: calc(50.00% - 13px);
+  position: absolute;
+  width: 26px;
+}
+.x375-pricing-and-valuation-page2 .formula-variables-sPEAV6 {
+  background-color: transparent;
+  height: 217px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+.x375-pricing-and-valuation-page2 .fundamental-6EvOoV {
+  background-color: transparent;
+  bottom: calc(40.62% - 3px);
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 5px;
+  font-style: normal;
+  font-weight: 600;
+  height: 8px;
+  left: 2px;
+  letter-spacing: 0.00px;
+  line-height: 5px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+  width: calc(100.00% - 8px);
+}
+.x375-pricing-and-valuation-page2 .fundamental-component-Z6zpbm {
+  background-color: transparent;
+  height: 100%;
+  pointer-events: auto;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  transition: all 0.2s ease;
+  width: 45px;
+}
+.x375-pricing-and-valuation-page2 .fundamental-component-Z6zpbm:hover {
+
+transform: translate(0, -5px);
+box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
+}
+.x375-pricing-and-valuation-page2 .fundamental-rectangle-6EvOoV {
+  background-color: var(--pumice);
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: calc(100.00% - 5px);
+}
+.x375-pricing-and-valuation-page2 .gamma-9k21gN {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(48.80% - 25px);
+  text-align: center;
+  white-space: nowrap;
+  width: 52px;
+}
+.x375-pricing-and-valuation-page2 .gamma-number-sPEAV6 {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(24.40% - 12px);
+  height: 50px;
+  position: absolute;
+  right: calc(25.47% - 22px);
+  width: 85px;
+}
+.x375-pricing-and-valuation-page2 .gamma-text-sPEAV6 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(24.40% - 12px);
+  height: 50px;
+  left: calc(31.66% - 43px);
+  position: absolute;
+  width: 135px;
+}
+.x375-pricing-and-valuation-page2 .icon-search-4pyx8v {
+  background-color: transparent;
+  bottom: calc(49.98% - 7px);
+  height: 14px;
+  position: absolute;
+  right: 7px;
+  width: 14px;
+}
+.x375-pricing-and-valuation-page2 .implied-vol-text-sPEAV6 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(39.17% - 20px);
+  height: 50px;
+  left: calc(30.96% - 42px);
+  position: absolute;
+  width: 135px;
+}
+.x375-pricing-and-valuation-page2 .implied-volatility-FOhYHi {
+  background-color: transparent;
+  bottom: calc(35.65% - 5px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(46.30% - 50px);
+  text-align: center;
+  white-space: nowrap;
+  width: 108px;
+}
+.x375-pricing-and-valuation-page2 .implied-volatility-number-sPEAV6 {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(39.17% - 20px);
+  height: 50px;
+  position: absolute;
+  right: calc(26.66% - 23px);
+  width: 85px;
+}
+.x375-pricing-and-valuation-page2 .input-ticker-UuXn8C {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 20px;
+  left: 1px;
+  position: absolute;
+  top: calc(42.95% - 9px);
+  width: 120px;
+}
+.x375-pricing-and-valuation-page2 .itm-atm-otm-qEWPUz {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(30.01% - 3px);
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 400;
+  height: 10px;
+  left: 6px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 51px;
+}
+.x375-pricing-and-valuation-page2 .itm-atm-otm-qEWPUz::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.x375-pricing-and-valuation-page2 .logo50x44-8MJZIW {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  pointer-events: auto;
+  position: absolute;
+  top: 0px;
+  transition: all 0.2s ease;
+  width: 50px;
+}
+.x375-pricing-and-valuation-page2 .logo50x44-8MJZIW:hover {
+
+transform: scale(1.1);
+}
+.x375-pricing-and-valuation-page2 .market-price-gWWVVQ {
+  background-color: transparent;
+  bottom: calc(35.65% - 5px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.18% - 39px);
+  text-align: center;
+  white-space: nowrap;
+  width: 80px;
+}
+.x375-pricing-and-valuation-page2 .market-price-number-sPEAV6 {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(46.56% - 23px);
+  height: 50px;
+  position: absolute;
+  right: calc(26.66% - 23px);
+  width: 85px;
+}
+.x375-pricing-and-valuation-page2 .market-price-text-sPEAV6 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(46.56% - 23px);
+  height: 50px;
+  left: calc(30.96% - 42px);
+  position: absolute;
+  width: 135px;
+}
+.x375-pricing-and-valuation-page2 .menu-center-8MJZIW {
+  background-color: transparent;
+  bottom: calc(50.00% - 7px);
+  height: 13px;
+  position: absolute;
+  right: 0px;
+  width: 209px;
+}
+.x375-pricing-and-valuation-page2 .navbar-C61RwL {
+  background-color: transparent;
+  height: 44px;
+  left: 17px;
+  position: absolute;
+  top: 11px;
+  width: 292px;
+}
+.x375-pricing-and-valuation-page2 .nd1-f9B0bp {
+  background-color: transparent;
+  bottom: calc(25.00% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.96% - 15px);
+  text-align: center;
+  white-space: nowrap;
+  width: 30px;
+}
+.x375-pricing-and-valuation-page2 .nd1-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: 32px;
+  height: 25px;
+  position: absolute;
+  right: 0px;
+  width: 60px;
+}
+.x375-pricing-and-valuation-page2 .nd1text-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 32px;
+  height: 25px;
+  left: 192px;
+  position: absolute;
+  width: 126px;
+}
+.x375-pricing-and-valuation-page2 .nd2-lEsVBb {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.94% - 16px);
+  text-align: center;
+  white-space: nowrap;
+  width: 32px;
+}
+.x375-pricing-and-valuation-page2 .nd2-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 25px;
+  position: absolute;
+  right: 0px;
+  width: 60px;
+}
+.x375-pricing-and-valuation-page2 .nd2text-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 25px;
+  left: 192px;
+  position: absolute;
+  width: 126px;
+}
+.x375-pricing-and-valuation-page2 .option-pricing-valuation-UuXn8C {
+  background-color: transparent;
+  height: 15px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  text-align: center;
+  top: 2px;
+  white-space: nowrap;
+  width: 160px;
+}
+.x375-pricing-and-valuation-page2 .option-style-S3BWxQ {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(30.01% - 3px);
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 400;
+  height: 10px;
+  left: 12px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 39px;
+}
+.x375-pricing-and-valuation-page2 .option-style-S3BWxQ::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.x375-pricing-and-valuation-page2 .option-type-PtZQkg {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(30.01% - 3px);
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 400;
+  height: 10px;
+  left: 12px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 39px;
+}
+.x375-pricing-and-valuation-page2 .option-type-PtZQkg::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.x375-pricing-and-valuation-page2 .outline-button-PiBNS4 {
+  background-color: transparent;
+  border-radius: 2px;
+  height: 100%;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+.x375-pricing-and-valuation-page2 .p-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 190px;
+  top: calc(16.67% - 4px);
+  width: 60px;
+}
+.x375-pricing-and-valuation-page2 .put-p-MuxzWC {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.81% - 20px);
+  text-align: center;
+  white-space: nowrap;
+  width: 40px;
+}
+.x375-pricing-and-valuation-page2 .put-price-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 2px;
+  position: absolute;
+  top: calc(16.67% - 4px);
+  width: 124px;
+}
+.x375-pricing-and-valuation-page2 .pvst-sfacxH {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.89% - 18px);
+  text-align: center;
+  white-space: nowrap;
+  width: 36px;
+}
+.x375-pricing-and-valuation-page2 .pvst-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 0px;
+  top: calc(16.67% - 4px);
+  width: 60px;
+}
+.x375-pricing-and-valuation-page2 .pvsttext-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 192px;
+  position: absolute;
+  top: calc(16.67% - 4px);
+  width: 126px;
+}
+.x375-pricing-and-valuation-page2 .pvx-0ZE0f2 {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.96% - 15px);
+  text-align: center;
+  white-space: nowrap;
+  width: 30px;
+}
+.x375-pricing-and-valuation-page2 .pvx-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 0px;
+  top: calc(33.33% - 8px);
+  width: 60px;
+}
+.x375-pricing-and-valuation-page2 .pvxtext-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 192px;
+  position: absolute;
+  top: calc(33.33% - 8px);
+  width: 126px;
+}
+.x375-pricing-and-valuation-page2 .r-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 25px;
+  position: absolute;
+  right: 192px;
+  width: 60px;
+}
+.x375-pricing-and-valuation-page2 .return-volatility-6nz1eA {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(43.75% - 48px);
+  text-align: center;
+  white-space: nowrap;
+  width: 110px;
+}
+.x375-pricing-and-valuation-page2 .return-volatility-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  top: 160px;
+  width: 126px;
+}
+.x375-pricing-and-valuation-page2 .rho-R9q6EL {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(49.05% - 15px);
+  text-align: center;
+  white-space: nowrap;
+  width: 30px;
+}
+.x375-pricing-and-valuation-page2 .rho-number-sPEAV6 {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: 19px;
+  height: 50px;
+  position: absolute;
+  right: calc(25.47% - 22px);
+  width: 85px;
+}
+.x375-pricing-and-valuation-page2 .rho-text-sPEAV6 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 19px;
+  height: 50px;
+  left: calc(31.66% - 43px);
+  position: absolute;
+  width: 135px;
+}
+.x375-pricing-and-valuation-page2 .risk-free-rate-r-YWltJx {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(45.45% - 47px);
+  text-align: center;
+  white-space: nowrap;
+  width: 104px;
+}
+.x375-pricing-and-valuation-page2 .riskfree-rate-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  width: 126px;
+}
+.x375-pricing-and-valuation-page2 .s-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 190px;
+  top: calc(33.33% - 8px);
+  width: 60px;
+}
+.x375-pricing-and-valuation-page2 .select-data-source-UuXn8C {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 20px;
+  position: absolute;
+  right: calc(25.40% - 15px);
+  top: calc(42.95% - 9px);
+  width: 60px;
+}
+.x375-pricing-and-valuation-page2 .select-expiration-UuXn8C {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 20px;
+  left: calc(49.21% - 30px);
+  position: absolute;
+  top: calc(42.95% - 9px);
+  width: 60px;
+}
+.x375-pricing-and-valuation-page2 .select-itmatmotm-UuXn8C {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 20px;
+  position: absolute;
+  right: 0px;
+  top: calc(42.95% - 9px);
+  width: 60px;
+}
+.x375-pricing-and-valuation-page2 .select-option-style-UuXn8C {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 20px;
+  left: calc(49.21% - 30px);
+  position: absolute;
+  width: 60px;
+}
+.x375-pricing-and-valuation-page2 .select-option-type-UuXn8C {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 20px;
+  position: absolute;
+  right: calc(25.40% - 15px);
+  width: 60px;
+}
+.x375-pricing-and-valuation-page2 .stnd-dev-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 192px;
+  top: 160px;
+  width: 60px;
+}
+.x375-pricing-and-valuation-page2 .strategy-He3YyY {
+  background-color: transparent;
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 600;
+  height: 10px;
+  left: 7px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  position: absolute;
+  text-align: left;
+  top: calc(110.00% - 11px);
+  white-space: nowrap;
+  width: calc(100.00% - 12px);
+}
+.x375-pricing-and-valuation-page2 .strategy-component-Z6zpbm {
+  background-color: var(--pumice);
+  height: 100%;
+  left: calc(32.31% - 13px);
+  pointer-events: auto;
+  position: absolute;
+  top: 1px;
+  transition: all 0.2s ease;
+  width: 40px;
+}
+.x375-pricing-and-valuation-page2 .strategy-component-Z6zpbm:hover {
+
+transform: translate(0, -5px);
+box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
+}
+.x375-pricing-and-valuation-page2 .strike-price-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 2px;
+  position: absolute;
+  top: calc(50.00% - 12px);
+  width: 124px;
+}
+.x375-pricing-and-valuation-page2 .strike-x-po0oJv {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.53% - 27px);
+  text-align: center;
+  white-space: nowrap;
+  width: 56px;
+}
+.x375-pricing-and-valuation-page2 .t-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 190px;
+  top: 128px;
+  width: 60px;
+}
+.x375-pricing-and-valuation-page2 .technical-component-Z6zpbm {
+  background-color: var(--pumice);
+  height: 100%;
+  pointer-events: auto;
+  position: absolute;
+  right: calc(35.38% - 14px);
+  top: 1px;
+  transition: all 0.2s ease;
+  width: 40px;
+}
+.x375-pricing-and-valuation-page2 .technical-component-Z6zpbm:hover {
+
+transform: translate(0, -5px);
+box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
+}
+.x375-pricing-and-valuation-page2 .technical-lY8Sqq {
+  background-color: transparent;
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 600;
+  height: 10px;
+  left: 6px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  position: absolute;
+  text-align: left;
+  top: calc(110.03% - 11px);
+  white-space: nowrap;
+  width: calc(100.00% - 9px);
+}
+.x375-pricing-and-valuation-page2 .theta-5eQv9x {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(48.92% - 21px);
+  text-align: center;
+  white-space: nowrap;
+  width: 42px;
+}
+.x375-pricing-and-valuation-page2 .theta-number-sPEAV6 {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(17.01% - 9px);
+  height: 50px;
+  position: absolute;
+  right: calc(25.47% - 22px);
+  width: 85px;
+}
+.x375-pricing-and-valuation-page2 .theta-text-sPEAV6 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(17.01% - 9px);
+  height: 50px;
+  left: calc(31.66% - 43px);
+  position: absolute;
+  width: 135px;
+}
+.x375-pricing-and-valuation-page2 .ticker-of-the-underlying-4pyx8v {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(30.00% - 3px);
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 400;
+  height: 10px;
+  left: 7px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 78px;
+}
+.x375-pricing-and-valuation-page2 .ticker-of-the-underlying-4pyx8v::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.x375-pricing-and-valuation-page2 .time-to-maturity-t-sxtgsu {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(37.50% - 44px);
+  text-align: center;
+  white-space: nowrap;
+  width: 116px;
+}
+.x375-pricing-and-valuation-page2 .time-to-maturity-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 2px;
+  position: absolute;
+  top: 128px;
+  width: 124px;
+}
+.x375-pricing-and-valuation-page2 .underlying-price-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 2px;
+  position: absolute;
+  top: calc(33.33% - 8px);
+  width: 124px;
+}
+.x375-pricing-and-valuation-page2 .underlying-s-YP3gHJ {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(47.22% - 42px);
+  text-align: center;
+  white-space: nowrap;
+  width: 88px;
+}
+.x375-pricing-and-valuation-page2 .valuation-5dtgbd {
+  background-color: transparent;
+  color: var(--cedar);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 6px;
+  font-style: normal;
+  font-weight: 600;
+  height: 10px;
+  left: 6px;
+  letter-spacing: 0.00px;
+  line-height: 6px;
+  position: absolute;
+  text-align: left;
+  top: calc(110.03% - 11px);
+  white-space: nowrap;
+  width: calc(100.00% - 9px);
+}
+.x375-pricing-and-valuation-page2 .valuation-component-Z6zpbm {
+  background-color: var(--alto);
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 1px;
+  width: 40px;
+}
+.x375-pricing-and-valuation-page2 .vega-number-sPEAV6 {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: 83px;
+  height: 50px;
+  position: absolute;
+  right: calc(25.47% - 22px);
+  width: 85px;
+}
+.x375-pricing-and-valuation-page2 .vega-text-sPEAV6 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 83px;
+  height: 50px;
+  left: calc(31.66% - 43px);
+  position: absolute;
+  width: 135px;
+}
+.x375-pricing-and-valuation-page2 .vega-z3gJm3 {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(48.99% - 18px);
+  text-align: center;
+  white-space: nowrap;
+  width: 36px;
+}
+.x375-pricing-and-valuation-page2 .x-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 190px;
+  top: calc(50.00% - 12px);
+  width: 60px;
+}
+.x375-pricing-and-valuation-page2 .x0043-EUEm0H {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.30% - 14px);
+  text-align: center;
+  white-space: nowrap;
+  width: 30px;
+}
+.x375-pricing-and-valuation-page2 .x0043-xJP627 {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  left: calc(49.90% - 18px);
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 36px;
+}
+.x375-pricing-and-valuation-page2 .x005-pTNEef {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.88% - 12px);
+  text-align: center;
+  white-space: nowrap;
+  width: 24px;
+}
+.x375-pricing-and-valuation-page2 .x0054-hNmdz9 {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  left: calc(49.90% - 18px);
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 36px;
+}
+.x375-pricing-and-valuation-page2 .x0055-75L8x8 {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  left: calc(49.85% - 17px);
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 34px;
+}
+.x375-pricing-and-valuation-page2 .x00967-4wkroD {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(47.36% - 17px);
+  text-align: center;
+  white-space: nowrap;
+  width: 36px;
+}
+.x375-pricing-and-valuation-page2 .x00967-iDnxWV {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(47.36% - 17px);
+  text-align: center;
+  white-space: nowrap;
+  width: 36px;
+}
+.x375-pricing-and-valuation-page2 .x01232-HBQX2m {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.08% - 15px);
+  text-align: center;
+  white-space: nowrap;
+  width: 32px;
+}
+.x375-pricing-and-valuation-page2 .x01232-Q7Pkey {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.08% - 15px);
+  text-align: center;
+  white-space: nowrap;
+  width: 32px;
+}
+.x375-pricing-and-valuation-page2 .x0173-pkxQUl {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  left: calc(49.81% - 16px);
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 32px;
+}
+.x375-pricing-and-valuation-page2 .x02-3WQ1jw {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(49.29% - 8px);
+  text-align: center;
+  white-space: nowrap;
+  width: 16px;
+}
+.x375-pricing-and-valuation-page2 .x025-i5if0C {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(49.00% - 11px);
+  text-align: center;
+  white-space: nowrap;
+  width: 22px;
+}
+.x375-pricing-and-valuation-page2 .x0534-wYmJKm {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  left: calc(49.85% - 17px);
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 34px;
+}
+.x375-pricing-and-valuation-page2 .x10743-pPKeqN {
+  background-color: transparent;
+  bottom: calc(35.65% - 5px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(49.96% - 20px);
+  text-align: center;
+  white-space: nowrap;
+  width: 40px;
+}
+.x375-pricing-and-valuation-page2 .x14523-prbHlX {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.08% - 15px);
+  text-align: center;
+  white-space: nowrap;
+  width: 32px;
+}
+.x375-pricing-and-valuation-page2 .x4034-7RBbGW {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.30% - 14px);
+  text-align: center;
+  white-space: nowrap;
+  width: 30px;
+}
+.x375-pricing-and-valuation-page2 .x4323-LQoj7Y {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.50% - 14px);
+  text-align: center;
+  white-space: nowrap;
+  width: 28px;
+}
+.x375-pricing-and-valuation-page2 .x817-7Pv8mj {
+  background-color: transparent;
+  bottom: calc(35.65% - 5px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  left: calc(49.79% - 15px);
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 30px;
+}
+.x375-pricing-and-valuation-page2 .x8942-4urhF3 {
+  background-color: transparent;
+  bottom: calc(35.65% - 5px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  left: calc(49.93% - 18px);
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 36px;
+}
+.x375-pricing-and-valuation-page2 .x9464-h4qzDl {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(46.67% - 14px);
+  text-align: center;
+  white-space: nowrap;
+  width: 30px;
+}
+.x375-pricing-and-valuation-page2 .x9501-cXBAFW {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.66% - 13px);
+  text-align: center;
+  white-space: nowrap;
+  width: 26px;
+}
+.x375-pricing-and-valuation-page2 .x9501-pBTbHd {
+  background-color: transparent;
+  bottom: calc(35.65% - 5px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  left: calc(49.88% - 17px);
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 34px;
+}
+.x375-pricing-and-valuation-page2 .x9534-waIBB1 {
+  background-color: transparent;
+  bottom: calc(8.75% - 1px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(48.15% - 16px);
+  text-align: center;
+  white-space: nowrap;
+  width: 34px;
+}
+.x375-pricing-and-valuation-page2 .x9892-kRAu4x {
+  background-color: transparent;
+  bottom: calc(35.65% - 5px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  left: calc(49.93% - 18px);
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 36px;
+}
+:root {
+  --alto: rgba(217,217,217,1.0);
+  --black: rgba(0,0,0,1.0);
+  --casal: rgba(49,89,112,1.0);
+  --cedar: rgba(66,18,19,1.0);
+  --dove-gray: rgba(112,112,112,1.0);
+  --heath: rgba(84,22,23,1.0);
+  --pumice: rgba(201,201,201,1.0);
+  --quick-silver: rgba(167,167,167,1.0);
+  --san-juan: rgba(44,74,103,1.0);
+  --white: rgba(255,255,255,1.0);
+}
+/* screen - 768-pricing-and-valuation-page2 */
+
+.border-10px-heath {
+  border: 10px solid var(--heath);
+}
+.border-1px-casal {
+  border: 1px solid var(--casal);
+}
+.border-1px-dove-gray {
+  border: 1px solid var(--dove-gray);
+}
+.border-2px-heath {
+  border: 2px solid var(--heath);
+}
+.border-4px-heath {
+  border: 4px solid var(--heath);
+}
+.border-class-1 {
+  border: 1px solid rgba(227,232,240,1.0);
+}
+.montserrat-normal-black-10px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-12px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-18px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-42px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-semi-bold-black-10px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-black-12px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-black-19px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-heath-20px {
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-white-12px {
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-white-19px {
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+}
+.x768-pricing-and-valuation-page2 {
+  background-color: var(--pumice);
+  height: 880.2px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 768px;
+}
+.x768-pricing-and-valuation-page2 .analysis-input-C61RwL {
+  background-color: transparent;
+  height: 121px;
+  left: 83px;
+  position: absolute;
+  top: 131px;
+  width: 577px;
+}
+.x768-pricing-and-valuation-page2 .analysis-output-C61RwL {
+  background-color: transparent;
+  height: 441px;
+  left: 25px;
+  position: absolute;
+  top: 265px;
+  width: 190px;
+}
+.x768-pricing-and-valuation-page2 .analyze-button-C61RwL {
+  background-color: var(--casal);
+  border-radius: 25px;
+  height: 30px;
+  left: 554px;
+  pointer-events: auto;
+  position: absolute;
+  top: 222px;
+  transition: all 0.2s ease;
+  width: 90px;
+}
+.x768-pricing-and-valuation-page2 .analyze-button-C61RwL:hover {
+
+transform: scale(1.1);
+}
+.x768-pricing-and-valuation-page2 .analyze-xWQ1KJ {
+  background-color: transparent;
+  bottom: calc(30.77% - 5px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(46.67% - 28px);
+  text-align: center;
+  white-space: nowrap;
+  width: 60px;
+}
+.x768-pricing-and-valuation-page2 .ask-price-number-wSc5g0 {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(29.61% - 15px);
+  height: 50px;
+  left: calc(38.22% - 32px);
+  position: absolute;
+  width: 85px;
+}
+.x768-pricing-and-valuation-page2 .ask-price-text-wSc5g0 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(29.61% - 15px);
+  height: 50px;
+  left: 24px;
+  position: absolute;
+  width: 135px;
+}
+.x768-pricing-and-valuation-page2 .average-price-N5tHGw {
+  background-color: transparent;
+  bottom: calc(42.86% - 6px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(47.96% - 41px);
+  text-align: center;
+  white-space: nowrap;
+  width: 86px;
+}
+.x768-pricing-and-valuation-page2 .b-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(46.15% - 12px);
+  height: 25px;
+  position: absolute;
+  right: 2px;
+  width: 60px;
+}
+.x768-pricing-and-valuation-page2 .bid-price-number-wSc5g0 {
+  background-color: rgba(72,135,108,1.0);
+  border-radius: 10px;
+  height: 50px;
+  left: calc(38.22% - 32px);
+  position: absolute;
+  top: calc(50.00% - 25px);
+  width: 85px;
+}
+.x768-pricing-and-valuation-page2 .bid-text-wSc5g0 {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 50px;
+  left: 24px;
+  position: absolute;
+  top: calc(50.00% - 25px);
+  width: 135px;
+}
+.x768-pricing-and-valuation-page2 .binomial-price-k4ifAk {
+  background-color: transparent;
+  bottom: calc(42.86% - 6px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(47.78% - 43px);
+  text-align: center;
+  white-space: nowrap;
+  width: 90px;
+}
+.x768-pricing-and-valuation-page2 .black-scholes-price-Gh9szH {
+  background-color: transparent;
+  bottom: calc(42.86% - 6px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(40.91% - 51px);
+  text-align: center;
+  white-space: nowrap;
+  width: 124px;
+}
+.x768-pricing-and-valuation-page2 .c-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 2px;
+  top: 0px;
+  width: 60px;
+}
+.x768-pricing-and-valuation-page2 .call-c-6xvY2a {
+  background-color: transparent;
+  bottom: calc(25.02% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.75% - 22px);
+  text-align: center;
+  white-space: nowrap;
+  width: 46px;
+}
+.x768-pricing-and-valuation-page2 .call-price-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 126px;
+}
+.x768-pricing-and-valuation-page2 .close-price-number-wSc5g0 {
+  background-color: rgba(202,12,20,1.0);
+  border-radius: 10px;
+  height: 50px;
+  left: calc(38.22% - 32px);
+  position: absolute;
+  top: calc(29.61% - 15px);
+  width: 85px;
+}
+.x768-pricing-and-valuation-page2 .close-price-wSc5g0 {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 50px;
+  left: 24px;
+  position: absolute;
+  top: calc(29.61% - 15px);
+  width: 135px;
+}
+.x768-pricing-and-valuation-page2 .cost-of-carry-b-1wB4SW {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(45.45% - 47px);
+  text-align: center;
+  white-space: nowrap;
+  width: 104px;
+}
+.x768-pricing-and-valuation-page2 .cost-of-carry-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(46.15% - 12px);
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  width: 126px;
+}
+.x768-pricing-and-valuation-page2 .d1-f0Kxl3 {
+  background-color: transparent;
+  bottom: calc(25.00% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(49.11% - 7px);
+  text-align: center;
+  white-space: nowrap;
+  width: 14px;
+}
+.x768-pricing-and-valuation-page2 .d1-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(23.08% - 6px);
+  height: 25px;
+  position: absolute;
+  right: 2px;
+  width: 60px;
+}
+.x768-pricing-and-valuation-page2 .d1text-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(23.08% - 6px);
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  width: 126px;
+}
+.x768-pricing-and-valuation-page2 .d2-pHd8w9 {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(49.09% - 8px);
+  text-align: center;
+  white-space: nowrap;
+  width: 16px;
+}
+.x768-pricing-and-valuation-page2 .d2-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: 64px;
+  height: 25px;
+  position: absolute;
+  right: 2px;
+  width: 60px;
+}
+.x768-pricing-and-valuation-page2 .d2text-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 64px;
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  width: 126px;
+}
+.x768-pricing-and-valuation-page2 .delta-aJCu9z {
+  background-color: transparent;
+  bottom: calc(42.86% - 6px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.99% - 18px);
+  text-align: center;
+  white-space: nowrap;
+  width: 36px;
+}
+.x768-pricing-and-valuation-page2 .earnings-date-number-wSc5g0 {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: 29px;
+  height: 50px;
+  left: calc(38.22% - 32px);
+  position: absolute;
+  width: 85px;
+}
+.x768-pricing-and-valuation-page2 .earnings-date-text-wSc5g0 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 29px;
+  height: 50px;
+  left: 24px;
+  position: absolute;
+  width: 135px;
+}
+.x768-pricing-and-valuation-page2 .expiration-date-AghIG5 {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(34.18% - 5px);
+  height: 15px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 80px;
+}
+.x768-pricing-and-valuation-page2 .expiration-date-AghIG5::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.x768-pricing-and-valuation-page2 .export-button-C61RwL {
+  background-color: transparent;
+  height: 40px;
+  left: 638px;
+  pointer-events: auto;
+  position: absolute;
+  top: 10px;
+  transition: all 0.2s ease;
+  width: 120px;
+}
+.x768-pricing-and-valuation-page2 .export-button-C61RwL:hover {
+
+transform: translate(0, -5px);
+box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
+}
+.x768-pricing-and-valuation-page2 .export-fKSPGk {
+  background-color: transparent;
+  bottom: calc(50.00% - 7px);
+  height: 15px;
+  left: calc(50.00% - 26px);
+  position: absolute;
+  width: 52px;
+}
+.x768-pricing-and-valuation-page2 .formula-variables-sPEAV6 {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 190px;
+}
+.x768-pricing-and-valuation-page2 .fundamental-6EvOoV {
+  background-color: transparent;
+  bottom: calc(32.15% - 5px);
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 600;
+  height: 16px;
+  left: 6px;
+  letter-spacing: 0.00px;
+  line-height: 11px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+  width: calc(100.00% - 11px);
+}
+.x768-pricing-and-valuation-page2 .fundamental-component-Z6zpbm {
+  background-color: var(--pumice);
+  height: 100%;
+  pointer-events: auto;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  transition: all 0.2s ease;
+  width: 90px;
+}
+.x768-pricing-and-valuation-page2 .fundamental-component-Z6zpbm:hover {
+
+transform: translate(0, -5px);
+box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
+}
+.x768-pricing-and-valuation-page2 .gamma-qwXBwa {
+  background-color: transparent;
+  bottom: calc(42.86% - 6px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.90% - 22px);
+  text-align: center;
+  white-space: nowrap;
+  width: 44px;
+}
+.x768-pricing-and-valuation-page2 .icon-search-Nti9XO {
+  background-color: transparent;
+  height: 19px;
+  position: absolute;
+  right: 14px;
+  top: calc(48.85% - 9px);
+  width: 19px;
+}
+.x768-pricing-and-valuation-page2 .implied-volatility-Tx1wag {
+  background-color: transparent;
+  bottom: calc(42.86% - 6px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(46.30% - 50px);
+  text-align: center;
+  white-space: nowrap;
+  width: 108px;
+}
+.x768-pricing-and-valuation-page2 .input-ticker-DAnbUD {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 30px;
+  left: 0px;
+  position: absolute;
+  top: calc(49.45% - 15px);
+  width: 180px;
+}
+.x768-pricing-and-valuation-page2 .logo80x70-8MJZIW {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  pointer-events: auto;
+  position: absolute;
+  top: 0px;
+  transition: all 0.2s ease;
+  width: 80px;
+}
+.x768-pricing-and-valuation-page2 .logo80x70-8MJZIW:hover {
+
+transform: scale(1.1);
+}
+.x768-pricing-and-valuation-page2 .market-price-ahZp1f {
+  background-color: transparent;
+  bottom: calc(42.86% - 6px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.18% - 39px);
+  text-align: center;
+  white-space: nowrap;
+  width: 80px;
+}
+.x768-pricing-and-valuation-page2 .md-arrow-dropdown-AghIG5 {
+  background-color: transparent;
+  bottom: calc(43.15% - 4px);
+  height: 10px;
+  position: absolute;
+  right: 9px;
+  width: 17px;
+}
+.x768-pricing-and-valuation-page2 .md-arrow-dropdown-Isr8ZD {
+  background-color: transparent;
+  bottom: calc(43.15% - 4px);
+  height: 10px;
+  position: absolute;
+  right: 9px;
+  width: 17px;
+}
+.x768-pricing-and-valuation-page2 .md-arrow-dropdown-ZAx7Lv {
+  background-color: transparent;
+  bottom: calc(43.15% - 4px);
+  height: 10px;
+  position: absolute;
+  right: 9px;
+  width: 17px;
+}
+.x768-pricing-and-valuation-page2 .md-arrow-dropdown-kB46EP {
+  background-color: transparent;
+  bottom: calc(43.15% - 4px);
+  height: 10px;
+  position: absolute;
+  right: 9px;
+  width: 17px;
+}
+.x768-pricing-and-valuation-page2 .md-arrow-dropdown-rf4nxM {
+  background-color: transparent;
+  bottom: calc(43.15% - 4px);
+  height: 10px;
+  position: absolute;
+  right: 9px;
+  width: 17px;
+}
+.x768-pricing-and-valuation-page2 .menu-center-8MJZIW {
+  background-color: transparent;
+  height: 30px;
+  position: absolute;
+  right: 0px;
+  top: calc(41.25% - 12px);
+  width: 438px;
+}
+.x768-pricing-and-valuation-page2 .navbar-C61RwL {
+  background-color: transparent;
+  height: 70px;
+  left: 36px;
+  position: absolute;
+  top: 36px;
+  width: 576px;
+}
+.x768-pricing-and-valuation-page2 .nd1-f9B0bp {
+  background-color: transparent;
+  bottom: calc(25.00% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.96% - 15px);
+  text-align: center;
+  white-space: nowrap;
+  width: 30px;
+}
+.x768-pricing-and-valuation-page2 .nd1-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: 32px;
+  height: 25px;
+  position: absolute;
+  right: 2px;
+  width: 60px;
+}
+.x768-pricing-and-valuation-page2 .nd1text-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 32px;
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  width: 126px;
+}
+.x768-pricing-and-valuation-page2 .nd2-lEsVBb {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.94% - 16px);
+  text-align: center;
+  white-space: nowrap;
+  width: 32px;
+}
+.x768-pricing-and-valuation-page2 .nd2-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 25px;
+  position: absolute;
+  right: 2px;
+  width: 60px;
+}
+.x768-pricing-and-valuation-page2 .nd2text-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  width: 126px;
+}
+.x768-pricing-and-valuation-page2 .open-price-number-wSc5g0 {
+  background-color: rgba(72,135,108,1.0);
+  border-radius: 10px;
+  height: 50px;
+  left: calc(38.22% - 32px);
+  position: absolute;
+  top: 29px;
+  width: 85px;
+}
+.x768-pricing-and-valuation-page2 .open-price-text-wSc5g0 {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 50px;
+  left: 24px;
+  position: absolute;
+  top: 29px;
+  width: 135px;
+}
+.x768-pricing-and-valuation-page2 .option-pricing-valuation-DAnbUD {
+  background-color: transparent;
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  height: 31px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 24px;
+  position: absolute;
+  text-align: center;
+  top: 2px;
+  white-space: nowrap;
+  width: 380px;
+}
+.x768-pricing-and-valuation-page2 .option-style-Isr8ZD {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(34.18% - 5px);
+  height: 15px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 63px;
+}
+.x768-pricing-and-valuation-page2 .option-style-Isr8ZD::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.x768-pricing-and-valuation-page2 .option-style-ZAx7Lv {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(34.18% - 5px);
+  height: 15px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 64px;
+}
+.x768-pricing-and-valuation-page2 .option-style-ZAx7Lv::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.x768-pricing-and-valuation-page2 .option-style-kB46EP {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(34.20% - 5px);
+  height: 15px;
+  left: 6px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 83px;
+}
+.x768-pricing-and-valuation-page2 .option-style-kB46EP::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.x768-pricing-and-valuation-page2 .option-style-rf4nxM {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(33.33% - 5px);
+  height: 15px;
+  left: 7px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 63px;
+}
+.x768-pricing-and-valuation-page2 .option-style-rf4nxM::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.x768-pricing-and-valuation-page2 .outline-button-PiBNS4 {
+  background-color: transparent;
+  border-radius: 2px;
+  height: 100%;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+.x768-pricing-and-valuation-page2 .p-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 0px;
+  top: calc(7.69% - 2px);
+  width: 60px;
+}
+.x768-pricing-and-valuation-page2 .pricing-greeks-output-C61RwL {
+  background-color: transparent;
+  background-image: url(../img/bg-blue-26@1x.png);
+  background-size: 100% 100%;
+  height: 362px;
+  left: 218px;
+  position: absolute;
+  top: 265px;
+  width: 500px;
+}
+.x768-pricing-and-valuation-page2 .put-p-MuxzWC {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.81% - 20px);
+  text-align: center;
+  white-space: nowrap;
+  width: 40px;
+}
+.x768-pricing-and-valuation-page2 .put-price-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 2px;
+  position: absolute;
+  top: calc(7.69% - 2px);
+  width: 124px;
+}
+.x768-pricing-and-valuation-page2 .pvst-sfacxH {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.89% - 18px);
+  text-align: center;
+  white-space: nowrap;
+  width: 36px;
+}
+.x768-pricing-and-valuation-page2 .pvst-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(38.46% - 10px);
+  height: 25px;
+  position: absolute;
+  right: 2px;
+  width: 60px;
+}
+.x768-pricing-and-valuation-page2 .pvsttext-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(38.46% - 10px);
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  width: 126px;
+}
+.x768-pricing-and-valuation-page2 .pvx-0ZE0f2 {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.96% - 15px);
+  text-align: center;
+  white-space: nowrap;
+  width: 30px;
+}
+.x768-pricing-and-valuation-page2 .pvx-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(30.77% - 8px);
+  height: 25px;
+  position: absolute;
+  right: 2px;
+  width: 60px;
+}
+.x768-pricing-and-valuation-page2 .pvxtext-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(30.77% - 8px);
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  width: 126px;
+}
+.x768-pricing-and-valuation-page2 .r-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 2px;
+  top: calc(46.15% - 12px);
+  width: 60px;
+}
+.x768-pricing-and-valuation-page2 .return-volatility-6nz1eA {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(43.75% - 48px);
+  text-align: center;
+  white-space: nowrap;
+  width: 110px;
+}
+.x768-pricing-and-valuation-page2 .return-volatility-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  top: 160px;
+  width: 126px;
+}
+.x768-pricing-and-valuation-page2 .rho-iTm0TT {
+  background-color: transparent;
+  bottom: calc(42.86% - 6px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(49.08% - 13px);
+  text-align: center;
+  white-space: nowrap;
+  width: 26px;
+}
+.x768-pricing-and-valuation-page2 .risk-free-rate-r-YWltJx {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(45.45% - 47px);
+  text-align: center;
+  white-space: nowrap;
+  width: 104px;
+}
+.x768-pricing-and-valuation-page2 .riskfree-rate-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 0px;
+  position: absolute;
+  top: calc(46.15% - 12px);
+  width: 126px;
+}
+.x768-pricing-and-valuation-page2 .s-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 0px;
+  top: calc(15.38% - 4px);
+  width: 60px;
+}
+.x768-pricing-and-valuation-page2 .select-data-source-DAnbUD {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 30px;
+  left: calc(43.67% - 52px);
+  position: absolute;
+  width: 119px;
+}
+.x768-pricing-and-valuation-page2 .select-expiration-DAnbUD {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 30px;
+  left: calc(43.67% - 52px);
+  position: absolute;
+  top: calc(49.45% - 15px);
+  width: 119px;
+}
+.x768-pricing-and-valuation-page2 .select-itmatmotm-DAnbUD {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 30px;
+  position: absolute;
+  right: calc(28.17% - 34px);
+  width: 119px;
+}
+.x768-pricing-and-valuation-page2 .select-option-style-DAnbUD {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 30px;
+  position: absolute;
+  right: calc(28.17% - 34px);
+  top: calc(49.45% - 15px);
+  width: 119px;
+}
+.x768-pricing-and-valuation-page2 .select-option-type-DAnbUD {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 30px;
+  position: absolute;
+  right: 0px;
+  top: calc(49.45% - 15px);
+  width: 119px;
+}
+.x768-pricing-and-valuation-page2 .stnd-dev-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 2px;
+  top: 160px;
+  width: 60px;
+}
+.x768-pricing-and-valuation-page2 .strategy-He3YyY {
+  background-color: transparent;
+  bottom: calc(30.77% - 5px);
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  height: 17px;
+  left: 18px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+  width: calc(100.00% - 35px);
+}
+.x768-pricing-and-valuation-page2 .strategy-component-Z6zpbm {
+  background-color: var(--pumice);
+  height: 100%;
+  left: calc(33.33% - 30px);
+  pointer-events: auto;
+  position: absolute;
+  top: 0px;
+  transition: all 0.2s ease;
+  width: 90px;
+}
+.x768-pricing-and-valuation-page2 .strategy-component-Z6zpbm:hover {
+
+transform: translate(0, -5px);
+box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
+}
+.x768-pricing-and-valuation-page2 .strike-price-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 2px;
+  position: absolute;
+  top: calc(23.08% - 6px);
+  width: 124px;
+}
+.x768-pricing-and-valuation-page2 .strike-x-po0oJv {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.53% - 27px);
+  text-align: center;
+  white-space: nowrap;
+  width: 56px;
+}
+.x768-pricing-and-valuation-page2 .t-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 0px;
+  top: 128px;
+  width: 60px;
+}
+.x768-pricing-and-valuation-page2 .technical-component-Z6zpbm {
+  background-color: var(--pumice);
+  height: 100%;
+  pointer-events: auto;
+  position: absolute;
+  right: calc(33.33% - 30px);
+  top: 0px;
+  transition: all 0.2s ease;
+  width: 90px;
+}
+.x768-pricing-and-valuation-page2 .technical-component-Z6zpbm:hover {
+
+transform: translate(0, -5px);
+box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
+}
+.x768-pricing-and-valuation-page2 .technical-lY8Sqq {
+  background-color: transparent;
+  bottom: calc(30.77% - 5px);
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  height: 17px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+  width: calc(100.00% - 29px);
+}
+.x768-pricing-and-valuation-page2 .theta-xLclwb {
+  background-color: transparent;
+  bottom: calc(42.86% - 6px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.99% - 18px);
+  text-align: center;
+  white-space: nowrap;
+  width: 36px;
+}
+.x768-pricing-and-valuation-page2 .ticker-of-the-underlying-Nti9XO {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(34.18% - 5px);
+  height: 15px;
+  left: 10px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 128px;
+}
+.x768-pricing-and-valuation-page2 .ticker-of-the-underlying-Nti9XO::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.x768-pricing-and-valuation-page2 .time-to-maturity-t-sxtgsu {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(37.50% - 44px);
+  text-align: center;
+  white-space: nowrap;
+  width: 116px;
+}
+.x768-pricing-and-valuation-page2 .time-to-maturity-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 2px;
+  position: absolute;
+  top: 128px;
+  width: 124px;
+}
+.x768-pricing-and-valuation-page2 .underlying-price-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 25px;
+  left: 2px;
+  position: absolute;
+  top: calc(15.38% - 4px);
+  width: 124px;
+}
+.x768-pricing-and-valuation-page2 .underlying-s-YP3gHJ {
+  background-color: transparent;
+  bottom: calc(25.01% - 4px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(47.22% - 42px);
+  text-align: center;
+  white-space: nowrap;
+  width: 88px;
+}
+.x768-pricing-and-valuation-page2 .valuation-5dtgbd {
+  background-color: transparent;
+  bottom: calc(30.77% - 5px);
+  color: var(--cedar);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  height: 17px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+  width: calc(100.00% - 29px);
+}
+.x768-pricing-and-valuation-page2 .valuation-component-Z6zpbm {
+  background-color: var(--alto);
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 90px;
+}
+.x768-pricing-and-valuation-page2 .vega-E5UdDS {
+  background-color: transparent;
+  bottom: calc(42.86% - 6px);
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(49.03% - 16px);
+  text-align: center;
+  white-space: nowrap;
+  width: 32px;
+}
+.x768-pricing-and-valuation-page2 .x-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 25px;
+  position: absolute;
+  right: 0px;
+  top: calc(23.08% - 6px);
+  width: 60px;
+}
+.x768-pricing-and-valuation-page2 .x0043-EUEm0H {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.30% - 14px);
+  text-align: center;
+  white-space: nowrap;
+  width: 30px;
+}
+.x768-pricing-and-valuation-page2 .x0043-vUELif {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  left: calc(49.90% - 18px);
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 36px;
+}
+.x768-pricing-and-valuation-page2 .x005-pTNEef {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.88% - 12px);
+  text-align: center;
+  white-space: nowrap;
+  width: 24px;
+}
+.x768-pricing-and-valuation-page2 .x0054-A1vT6n {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  left: calc(49.90% - 18px);
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 36px;
+}
+.x768-pricing-and-valuation-page2 .x0055-HCEmBt {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  left: calc(49.85% - 17px);
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 34px;
+}
+.x768-pricing-and-valuation-page2 .x00967-4wkroD {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(47.36% - 17px);
+  text-align: center;
+  white-space: nowrap;
+  width: 36px;
+}
+.x768-pricing-and-valuation-page2 .x00967-iDnxWV {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(47.36% - 17px);
+  text-align: center;
+  white-space: nowrap;
+  width: 36px;
+}
+.x768-pricing-and-valuation-page2 .x01232-HBQX2m {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.08% - 15px);
+  text-align: center;
+  white-space: nowrap;
+  width: 32px;
+}
+.x768-pricing-and-valuation-page2 .x01232-Q7Pkey {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.08% - 15px);
+  text-align: center;
+  white-space: nowrap;
+  width: 32px;
+}
+.x768-pricing-and-valuation-page2 .x0173-wwViCw {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  left: calc(49.81% - 16px);
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 32px;
+}
+.x768-pricing-and-valuation-page2 .x02-3WQ1jw {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(49.29% - 8px);
+  text-align: center;
+  white-space: nowrap;
+  width: 16px;
+}
+.x768-pricing-and-valuation-page2 .x025-i5if0C {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(49.00% - 11px);
+  text-align: center;
+  white-space: nowrap;
+  width: 22px;
+}
+.x768-pricing-and-valuation-page2 .x05-07-2021-78kOx3 {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(22.36% - 18px);
+  text-align: center;
+  white-space: nowrap;
+  width: 82px;
+}
+.x768-pricing-and-valuation-page2 .x0534-beoU2c {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  left: calc(49.85% - 17px);
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 34px;
+}
+.x768-pricing-and-valuation-page2 .x1-year-number-wSc5g0 {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: 29px;
+  height: 50px;
+  position: absolute;
+  right: 24px;
+  width: 85px;
+}
+.x768-pricing-and-valuation-page2 .x1-year-text-wSc5g0 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 29px;
+  height: 50px;
+  position: absolute;
+  right: calc(29.77% - 40px);
+  width: 135px;
+}
+.x768-pricing-and-valuation-page2 .x10743-KMzKxA {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(49.75% - 23px);
+  text-align: center;
+  white-space: nowrap;
+  width: 46px;
+}
+.x768-pricing-and-valuation-page2 .x14523-prbHlX {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.08% - 15px);
+  text-align: center;
+  white-space: nowrap;
+  width: 32px;
+}
+.x768-pricing-and-valuation-page2 .x24-high-number-wSc5g0 {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 50px;
+  position: absolute;
+  right: 24px;
+  top: calc(29.61% - 15px);
+  width: 85px;
+}
+.x768-pricing-and-valuation-page2 .x24-high-text-wSc5g0 {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 50px;
+  position: absolute;
+  right: calc(29.77% - 40px);
+  top: calc(29.61% - 15px);
+  width: 135px;
+}
+.x768-pricing-and-valuation-page2 .x24-low-number-wSc5g0 {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 50px;
+  position: absolute;
+  right: 24px;
+  top: 29px;
+  width: 85px;
+}
+.x768-pricing-and-valuation-page2 .x24low-text-wSc5g0 {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 50px;
+  position: absolute;
+  right: calc(29.77% - 40px);
+  top: 29px;
+  width: 135px;
+}
+.x768-pricing-and-valuation-page2 .x4034-7RBbGW {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.30% - 14px);
+  text-align: center;
+  white-space: nowrap;
+  width: 30px;
+}
+.x768-pricing-and-valuation-page2 .x4323-LQoj7Y {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.50% - 14px);
+  text-align: center;
+  white-space: nowrap;
+  width: 28px;
+}
+.x768-pricing-and-valuation-page2 .x52-high-number-wSc5g0 {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(29.61% - 15px);
+  height: 50px;
+  position: absolute;
+  right: 24px;
+  width: 85px;
+}
+.x768-pricing-and-valuation-page2 .x52-high-text-wSc5g0 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(29.61% - 15px);
+  height: 50px;
+  position: absolute;
+  right: calc(29.77% - 40px);
+  width: 135px;
+}
+.x768-pricing-and-valuation-page2 .x52-low-number-wSc5g0 {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 50px;
+  position: absolute;
+  right: 24px;
+  top: calc(50.00% - 25px);
+  width: 85px;
+}
+.x768-pricing-and-valuation-page2 .x52-low-text-wSc5g0 {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 50px;
+  position: absolute;
+  right: calc(29.77% - 40px);
+  top: calc(50.00% - 25px);
+  width: 135px;
+}
+.x768-pricing-and-valuation-page2 .x8942-JyNa0z {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(49.92% - 21px);
+  text-align: center;
+  white-space: nowrap;
+  width: 42px;
+}
+.x768-pricing-and-valuation-page2 .x9464-h4qzDl {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(46.67% - 14px);
+  text-align: center;
+  white-space: nowrap;
+  width: 30px;
+}
+.x768-pricing-and-valuation-page2 .x9501-EmovK7 {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(49.98% - 20px);
+  text-align: center;
+  white-space: nowrap;
+  width: 40px;
+}
+.x768-pricing-and-valuation-page2 .x9501-cXBAFW {
+  background-color: transparent;
+  bottom: calc(10.82% - 2px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  height: 15px;
+  letter-spacing: 0.00px;
+  line-height: 10px;
+  position: absolute;
+  right: calc(48.66% - 13px);
+  text-align: center;
+  white-space: nowrap;
+  width: 26px;
+}
+.x768-pricing-and-valuation-page2 .x9534-waIBB1 {
+  background-color: transparent;
+  bottom: calc(8.75% - 1px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(48.15% - 16px);
+  text-align: center;
+  white-space: nowrap;
+  width: 34px;
+}
+.x768-pricing-and-valuation-page2 .x9892-nQic3J {
+  background-color: transparent;
+  bottom: calc(37.81% - 6px);
+  height: 17px;
+  letter-spacing: 0.00px;
+  line-height: 12px;
+  position: absolute;
+  right: calc(49.92% - 21px);
+  text-align: center;
+  white-space: nowrap;
+  width: 42px;
+}
+:root {
+  --alto: rgba(217,217,217,1.0);
+  --black: rgba(0,0,0,1.0);
+  --casal: rgba(49,89,112,1.0);
+  --cedar: rgba(66,18,19,1.0);
+  --dove-gray: rgba(112,112,112,1.0);
+  --heath: rgba(84,22,23,1.0);
+  --pumice: rgba(201,201,201,1.0);
+  --quick-silver: rgba(167,167,167,1.0);
+  --san-juan: rgba(44,74,103,1.0);
+  --white: rgba(255,255,255,1.0);
+}
+/* screen - pricing-and-valuation-page2 */
+
+.border-10px-heath {
+  border: 10px solid var(--heath);
+}
+.border-1px-casal {
+  border: 1px solid var(--casal);
+}
+.border-1px-dove-gray {
+  border: 1px solid var(--dove-gray);
+}
+.border-2px-heath {
+  border: 2px solid var(--heath);
+}
+.border-4px-heath {
+  border: 4px solid var(--heath);
+}
+.border-class-1 {
+  border: 1px solid rgba(227,232,240,1.0);
+}
+.montserrat-normal-black-10px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-12px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-18px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-normal-black-42px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 400;
+}
+.montserrat-semi-bold-black-10px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-black-12px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-black-19px {
+  color: var(--black);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-heath-20px {
+  color: var(--heath);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-white-12px {
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+.montserrat-semi-bold-white-19px {
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 600;
+}
+.pricing-and-valuation-page2 {
+  background-color: var(--pumice);
+  height: 1311px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1920px;
+}
+.pricing-and-valuation-page2 .analysis-input-C61RwL {
+  background-color: transparent;
+  height: 145px;
+  left: 140px;
+  position: absolute;
+  top: 226px;
+  width: 1744px;
+}
+.pricing-and-valuation-page2 .analysis-output-C61RwL {
+  background-color: transparent;
+  height: 599px;
+  left: 54px;
+  position: absolute;
+  top: 533px;
+  width: 1811px;
+}
+.pricing-and-valuation-page2 .analyze-button-C61RwL {
+  background-color: var(--casal);
+  border-radius: 25px;
+  height: 60px;
+  left: 860px;
+  pointer-events: auto;
+  position: absolute;
+  top: 425px;
+  transition: all 0.2s ease;
+  width: 200px;
+}
+.pricing-and-valuation-page2 .analyze-button-C61RwL:hover {
+
+transform: scale(1.1);
+}
+.pricing-and-valuation-page2 .analyze-xWQ1KJ {
+  background-color: transparent;
+  bottom: calc(41.18% - 11px);
+  color: var(--white);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  height: 26px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  right: calc(48.29% - 47px);
+  text-align: center;
+  white-space: nowrap;
+  width: 98px;
+}
+.pricing-and-valuation-page2 .average-price-pxL0PO {
+  background-color: transparent;
+  bottom: calc(41.67% - 10px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(49.31% - 80px);
+  text-align: center;
+  white-space: nowrap;
+  width: 162px;
+}
+.pricing-and-valuation-page2 .avg-price-number-sPEAV6 {
+  background-color: rgba(72,135,108,1.0);
+  border-radius: 10px;
+  bottom: calc(49.49% - 30px);
+  height: 61px;
+  position: absolute;
+  right: calc(45.55% - 82px);
+  width: 180px;
+}
+.pricing-and-valuation-page2 .avg-price-text-sPEAV6 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(49.49% - 30px);
+  height: 61px;
+  left: calc(33.55% - 103px);
+  position: absolute;
+  width: 306px;
+}
+.pricing-and-valuation-page2 .b-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(46.15% - 18px);
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  width: 140px;
+}
+.pricing-and-valuation-page2 .bg-blue-7xqaxI {
+  background-color: transparent;
+  height: calc(100.00% - 101px);
+  left: calc(40.14% - 253px);
+  position: absolute;
+  top: 55px;
+  width: 630px;
+}
+.pricing-and-valuation-page2 .bg-blue-sPEAV6 {
+  background-color: transparent;
+  height: calc(100.00% - 101px);
+  position: absolute;
+  right: 0px;
+  top: 56px;
+  width: 630px;
+}
+.pricing-and-valuation-page2 .binomial-price-A6JQAW {
+  background-color: transparent;
+  bottom: calc(41.67% - 10px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(49.26% - 84px);
+  text-align: center;
+  white-space: nowrap;
+  width: 170px;
+}
+.pricing-and-valuation-page2 .binomial-price-number-sPEAV6 {
+  background-color: rgba(202,12,20,1.0);
+  border-radius: 10px;
+  height: 61px;
+  position: absolute;
+  right: calc(45.55% - 82px);
+  top: calc(32.67% - 20px);
+  width: 180px;
+}
+.pricing-and-valuation-page2 .binomial-price-sPEAV6 {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 61px;
+  left: calc(33.55% - 103px);
+  position: absolute;
+  top: calc(32.67% - 20px);
+  width: 306px;
+}
+.pricing-and-valuation-page2 .black-scholes-price-6ChAPe {
+  background-color: transparent;
+  bottom: calc(41.67% - 10px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(48.61% - 114px);
+  text-align: center;
+  white-space: nowrap;
+  width: 234px;
+}
+.pricing-and-valuation-page2 .black-scholes-price-number-sPEAV6 {
+  background-color: rgba(72,135,108,1.0);
+  border-radius: 10px;
+  height: 61px;
+  position: absolute;
+  right: calc(45.55% - 82px);
+  top: 80px;
+  width: 180px;
+}
+.pricing-and-valuation-page2 .black-scholes-price-text-sPEAV6 {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 61px;
+  left: calc(33.55% - 103px);
+  position: absolute;
+  top: 80px;
+  width: 306px;
+}
+.pricing-and-valuation-page2 .c-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 140px;
+}
+.pricing-and-valuation-page2 .call-c-6xvY2a {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(49.43% - 42px);
+  text-align: center;
+  white-space: nowrap;
+  width: 84px;
+}
+.pricing-and-valuation-page2 .call-price-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 260px;
+}
+.pricing-and-valuation-page2 .cost-of-carry-b-1wB4SW {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(48.48% - 94px);
+  text-align: center;
+  white-space: nowrap;
+  width: 194px;
+}
+.pricing-and-valuation-page2 .cost-of-carry-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(46.15% - 18px);
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  width: 260px;
+}
+.pricing-and-valuation-page2 .d1-f0Kxl3 {
+  background-color: transparent;
+  bottom: calc(26.67% - 7px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(49.58% - 12px);
+  text-align: center;
+  white-space: nowrap;
+  width: 24px;
+}
+.pricing-and-valuation-page2 .d1-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(23.08% - 9px);
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  width: 140px;
+}
+.pricing-and-valuation-page2 .d1text-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(23.08% - 9px);
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  width: 260px;
+}
+.pricing-and-valuation-page2 .d2-pHd8w9 {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(49.57% - 14px);
+  text-align: center;
+  white-space: nowrap;
+  width: 28px;
+}
+.pricing-and-valuation-page2 .d2-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: 86px;
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  width: 140px;
+}
+.pricing-and-valuation-page2 .d2text-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 86px;
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  width: 260px;
+}
+.pricing-and-valuation-page2 .data-source-rf4nxM {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(41.67% - 10px);
+  height: 24px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 112px;
+}
+.pricing-and-valuation-page2 .data-source-rf4nxM::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.pricing-and-valuation-page2 .delta-2N6NOR {
+  background-color: transparent;
+  bottom: calc(41.67% - 10px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(49.58% - 33px);
+  text-align: center;
+  white-space: nowrap;
+  width: 66px;
+}
+.pricing-and-valuation-page2 .delta-number-sPEAV6 {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 61px;
+  position: absolute;
+  right: 29px;
+  top: 81px;
+  width: 180px;
+}
+.pricing-and-valuation-page2 .delta-text-sPEAV6 {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 61px;
+  position: absolute;
+  right: calc(19.02% - 58px);
+  top: 81px;
+  width: 306px;
+}
+.pricing-and-valuation-page2 .expiration-date-AghIG5 {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(41.67% - 10px);
+  height: 24px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 142px;
+}
+.pricing-and-valuation-page2 .expiration-date-AghIG5::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.pricing-and-valuation-page2 .export-button-C61RwL {
+  background-color: transparent;
+  height: 68px;
+  left: 1560px;
+  pointer-events: auto;
+  position: absolute;
+  top: 68px;
+  transition: all 0.2s ease;
+  width: 220px;
+}
+.pricing-and-valuation-page2 .export-button-C61RwL:hover {
+
+transform: translate(0, -5px);box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
+}
+.pricing-and-valuation-page2 .export-fKSPGk {
+  background-color: transparent;
+  bottom: calc(47.73% - 11px);
+  height: 24px;
+  position: absolute;
+  right: calc(49.47% - 43px);
+  width: 86px;
+}
+.pricing-and-valuation-page2 .formula-variables-sPEAV6 {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 400px;
+}
+.pricing-and-valuation-page2 .fundamental-6EvOoV {
+  background-color: transparent;
+  bottom: calc(42.50% - 11px);
+  height: 26px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  right: calc(49.02% - 69px);
+  text-align: left;
+  white-space: nowrap;
+  width: 141px;
+}
+.pricing-and-valuation-page2 .fundamental-component-Z6zpbm {
+  background-color: var(--pumice);
+  height: calc(100.00% - 3px);
+  pointer-events: auto;
+  position: absolute;
+  right: 0px;
+  top: 3px;
+  transition: all 0.2s ease;
+  width: 243px;
+}
+.pricing-and-valuation-page2 .fundamental-component-Z6zpbm:hover {
+
+transform: translate(0, -5px);
+box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
+}
+.pricing-and-valuation-page2 .gamma-9k21gN {
+  background-color: transparent;
+  bottom: calc(41.67% - 10px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(49.55% - 41px);
+  text-align: center;
+  white-space: nowrap;
+  width: 82px;
+}
+.pricing-and-valuation-page2 .gamma-number-sPEAV6 {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 61px;
+  position: absolute;
+  right: 29px;
+  top: calc(32.97% - 20px);
+  width: 180px;
+}
+.pricing-and-valuation-page2 .gamma-text-sPEAV6 {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 61px;
+  position: absolute;
+  right: calc(19.02% - 58px);
+  top: calc(32.97% - 20px);
+  width: 306px;
+}
+.pricing-and-valuation-page2 .icon-search-Nti9XO {
+  background-color: transparent;
+  bottom: calc(50.00% - 15px);
+  height: 30px;
+  position: absolute;
+  right: 22px;
+  width: 30px;
+}
+.pricing-and-valuation-page2 .implied-vol-text-sPEAV6 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 74px;
+  height: 61px;
+  left: calc(33.55% - 103px);
+  position: absolute;
+  width: 306px;
+}
+.pricing-and-valuation-page2 .implied-volatility-FOhYHi {
+  background-color: transparent;
+  bottom: calc(41.67% - 10px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(49.02% - 100px);
+  text-align: center;
+  white-space: nowrap;
+  width: 204px;
+}
+.pricing-and-valuation-page2 .implied-volatility-number-sPEAV6 {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: 74px;
+  height: 61px;
+  position: absolute;
+  right: calc(45.55% - 82px);
+  width: 180px;
+}
+.pricing-and-valuation-page2 .input-ticker-DAnbUD {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 60px;
+  left: 0px;
+  position: absolute;
+  width: 356px;
+}
+.pricing-and-valuation-page2 .itm-atm-otm-SRpD7E {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(41.67% - 10px);
+  height: 24px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 148px;
+}
+.pricing-and-valuation-page2 .itm-atm-otm-SRpD7E::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.pricing-and-valuation-page2 .logo166x145-8MJZIW {
+  background-color: transparent;
+  height: 100%;
+  left: 0px;
+  pointer-events: auto;
+  position: absolute;
+  top: 0px;
+  transition: all 0.2s ease;
+  width: 166px;
+}
+.pricing-and-valuation-page2 .logo166x145-8MJZIW:hover {
+
+transform: scale(1.1);
+}
+.pricing-and-valuation-page2 .market-price-gWWVVQ {
+  background-color: transparent;
+  bottom: calc(41.67% - 10px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(49.35% - 75px);
+  text-align: center;
+  white-space: nowrap;
+  width: 152px;
+}
+.pricing-and-valuation-page2 .market-price-number-sPEAV6 {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(31.65% - 19px);
+  height: 61px;
+  position: absolute;
+  right: calc(45.55% - 82px);
+  width: 180px;
+}
+.pricing-and-valuation-page2 .market-price-text-sPEAV6 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(31.65% - 19px);
+  height: 61px;
+  left: calc(33.55% - 103px);
+  position: absolute;
+  width: 306px;
+}
+.pricing-and-valuation-page2 .md-arrow-dropdown-AghIG5 {
+  background-color: transparent;
+  bottom: calc(45.37% - 4px);
+  height: 9px;
+  position: absolute;
+  right: 21px;
+  width: 17px;
+}
+.pricing-and-valuation-page2 .md-arrow-dropdown-Isr8ZD {
+  background-color: transparent;
+  bottom: calc(45.37% - 4px);
+  height: 9px;
+  position: absolute;
+  right: 21px;
+  width: 17px;
+}
+.pricing-and-valuation-page2 .md-arrow-dropdown-SRpD7E {
+  background-color: transparent;
+  bottom: calc(45.37% - 4px);
+  height: 9px;
+  position: absolute;
+  right: 21px;
+  width: 17px;
+}
+.pricing-and-valuation-page2 .md-arrow-dropdown-ZAx7Lv {
+  background-color: transparent;
+  bottom: calc(45.37% - 4px);
+  height: 9px;
+  position: absolute;
+  right: 21px;
+  width: 17px;
+}
+.pricing-and-valuation-page2 .md-arrow-dropdown-rf4nxM {
+  background-color: transparent;
+  bottom: calc(45.37% - 4px);
+  height: 9px;
+  position: absolute;
+  right: 21px;
+  width: 17px;
+}
+.pricing-and-valuation-page2 .menu-center-8MJZIW {
+  background-color: transparent;
+  height: 69px;
+  position: absolute;
+  right: 0px;
+  top: calc(44.74% - 31px);
+  width: 1042px;
+}
+.pricing-and-valuation-page2 .navbar-C61RwL {
+  background-color: transparent;
+  height: 145px;
+  left: 37px;
+  position: absolute;
+  top: 33px;
+  width: 1421px;
+}
+.pricing-and-valuation-page2 .nd1-f9B0bp {
+  background-color: transparent;
+  bottom: calc(26.67% - 7px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(49.51% - 27px);
+  text-align: center;
+  white-space: nowrap;
+  width: 54px;
+}
+.pricing-and-valuation-page2 .nd1-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: 43px;
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  width: 140px;
+}
+.pricing-and-valuation-page2 .nd1text-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 43px;
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  width: 260px;
+}
+.pricing-and-valuation-page2 .nd2-lEsVBb {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(49.50% - 29px);
+  text-align: center;
+  white-space: nowrap;
+  width: 58px;
+}
+.pricing-and-valuation-page2 .nd2-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  width: 140px;
+}
+.pricing-and-valuation-page2 .nd2text-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  width: 260px;
+}
+.pricing-and-valuation-page2 .option-pricing-valuation-DAnbUD {
+  background-color: transparent;
+  height: 54px;
+  left: 0px;
+  letter-spacing: 0.00px;
+  line-height: 42px;
+  position: absolute;
+  text-align: center;
+  top: 5px;
+  white-space: nowrap;
+  width: 666px;
+}
+.pricing-and-valuation-page2 .option-style-ZAx7Lv {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(41.67% - 10px);
+  height: 24px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 113px;
+}
+.pricing-and-valuation-page2 .option-style-ZAx7Lv::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.pricing-and-valuation-page2 .option-type-Isr8ZD {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(41.67% - 10px);
+  height: 24px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 112px;
+}
+.pricing-and-valuation-page2 .option-type-Isr8ZD::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.pricing-and-valuation-page2 .outline-button-PiBNS4 {
+  background-color: transparent;
+  border-radius: 2px;
+  height: 100%;
+  left: 0px;
+  position: relative;
+  top: 0px;
+  width: 100%;
+}
+.pricing-and-valuation-page2 .p-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  top: calc(7.69% - 3px);
+  width: 140px;
+}
+.pricing-and-valuation-page2 .put-p-MuxzWC {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(49.46% - 37px);
+  text-align: center;
+  white-space: nowrap;
+  width: 74px;
+}
+.pricing-and-valuation-page2 .put-price-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  top: calc(7.69% - 3px);
+  width: 260px;
+}
+.pricing-and-valuation-page2 .pvst-sfacxH {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(49.48% - 33px);
+  text-align: center;
+  white-space: nowrap;
+  width: 66px;
+}
+.pricing-and-valuation-page2 .pvst-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(38.46% - 15px);
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  width: 140px;
+}
+.pricing-and-valuation-page2 .pvsttext-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(38.46% - 15px);
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  width: 260px;
+}
+.pricing-and-valuation-page2 .pvx-0ZE0f2 {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(49.51% - 28px);
+  text-align: center;
+  white-space: nowrap;
+  width: 56px;
+}
+.pricing-and-valuation-page2 .pvx-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(30.77% - 12px);
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  width: 140px;
+}
+.pricing-and-valuation-page2 .pvxtext-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(30.77% - 12px);
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  width: 260px;
+}
+.pricing-and-valuation-page2 .r-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  top: calc(46.15% - 18px);
+  width: 140px;
+}
+.pricing-and-valuation-page2 .return-volatility-6nz1eA {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(48.08% - 100px);
+  text-align: center;
+  white-space: nowrap;
+  width: 208px;
+}
+.pricing-and-valuation-page2 .return-volatility-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  top: 215px;
+  width: 260px;
+}
+.pricing-and-valuation-page2 .rho-R9q6EL {
+  background-color: transparent;
+  bottom: calc(41.67% - 10px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(49.61% - 24px);
+  text-align: center;
+  white-space: nowrap;
+  width: 48px;
+}
+.pricing-and-valuation-page2 .rho-number-sPEAV6 {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: 73px;
+  height: 61px;
+  position: absolute;
+  right: 29px;
+  width: 180px;
+}
+.pricing-and-valuation-page2 .rho-text-sPEAV6 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 73px;
+  height: 61px;
+  position: absolute;
+  right: calc(19.02% - 58px);
+  width: 306px;
+}
+.pricing-and-valuation-page2 .risk-free-rate-r-YWltJx {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(48.44% - 95px);
+  text-align: center;
+  white-space: nowrap;
+  width: 196px;
+}
+.pricing-and-valuation-page2 .riskfree-rate-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  top: calc(46.15% - 18px);
+  width: 260px;
+}
+.pricing-and-valuation-page2 .s-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  top: calc(15.38% - 6px);
+  width: 140px;
+}
+.pricing-and-valuation-page2 .select-data-source-DAnbUD {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 60px;
+  position: absolute;
+  right: calc(18.18% - 41px);
+  width: 226px;
+}
+.pricing-and-valuation-page2 .select-data-source-WCqau1 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 60px;
+  position: absolute;
+  right: 0px;
+  width: 226px;
+}
+.pricing-and-valuation-page2 .select-expiration-DAnbUD {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 60px;
+  left: calc(27.27% - 62px);
+  position: absolute;
+  width: 226px;
+}
+.pricing-and-valuation-page2 .select-option-style-DAnbUD {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 60px;
+  position: absolute;
+  right: calc(36.36% - 82px);
+  width: 226px;
+}
+.pricing-and-valuation-page2 .select-option-type-DAnbUD {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: 0px;
+  height: 60px;
+  left: calc(45.45% - 103px);
+  position: absolute;
+  width: 226px;
+}
+.pricing-and-valuation-page2 .stnd-dev-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  top: 215px;
+  width: 140px;
+}
+.pricing-and-valuation-page2 .strategies-component-Z6zpbm {
+  background-color: var(--pumice);
+  height: calc(100.00% - 1px);
+  left: calc(33.58% - 74px);
+  pointer-events: auto;
+  position: absolute;
+  top: 1px;
+  transition: all 0.2s ease;
+  width: 220px;
+}
+.pricing-and-valuation-page2 .strategies-component-Z6zpbm:hover {
+
+transform: translate(0, -5px);box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
+}
+.pricing-and-valuation-page2 .strategy-q8CpeS {
+  background-color: transparent;
+  bottom: calc(45.24% - 12px);
+  height: 26px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  right: calc(49.23% - 44px);
+  text-align: left;
+  white-space: nowrap;
+  width: 90px;
+}
+.pricing-and-valuation-page2 .strike-price-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  top: calc(23.08% - 9px);
+  width: 260px;
+}
+.pricing-and-valuation-page2 .strike-x-po0oJv {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(49.36% - 51px);
+  text-align: center;
+  white-space: nowrap;
+  width: 104px;
+}
+.pricing-and-valuation-page2 .t-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  top: 172px;
+  width: 140px;
+}
+.pricing-and-valuation-page2 .technical-component-Z6zpbm {
+  background-color: var(--pumice);
+  height: calc(100.00% - 1px);
+  pointer-events: auto;
+  position: absolute;
+  right: calc(33.90% - 75px);
+  top: 0px;
+  transition: all 0.2s ease;
+  width: 222px;
+}
+.pricing-and-valuation-page2 .technical-component-Z6zpbm:hover {
+
+transform: translate(0, -5px);
+box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
+}
+.pricing-and-valuation-page2 .technical-lY8Sqq {
+  background-color: transparent;
+  bottom: calc(42.86% - 11px);
+  height: 26px;
+  left: calc(49.18% - 49px);
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  text-align: left;
+  white-space: nowrap;
+  width: 100px;
+}
+.pricing-and-valuation-page2 .theta-5eQv9x {
+  background-color: transparent;
+  bottom: calc(41.67% - 10px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(49.58% - 33px);
+  text-align: center;
+  white-space: nowrap;
+  width: 66px;
+}
+.pricing-and-valuation-page2 .theta-number-sPEAV6 {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(49.19% - 30px);
+  height: 61px;
+  position: absolute;
+  right: 29px;
+  width: 180px;
+}
+.pricing-and-valuation-page2 .theta-text-sPEAV6 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(49.19% - 30px);
+  height: 61px;
+  position: absolute;
+  right: calc(19.02% - 58px);
+  width: 306px;
+}
+.pricing-and-valuation-page2 .ticker-of-the-underlying-Nti9XO {
+  background-color: transparent;
+  border: 0;
+  bottom: calc(41.67% - 10px);
+  height: 24px;
+  left: 16px;
+  letter-spacing: 0.00px;
+  line-height: 18px;
+  padding: 0;
+  position: absolute;
+  resize: none;
+  text-align: left;
+  white-space: nowrap;
+  width: 230px;
+}
+.pricing-and-valuation-page2 .ticker-of-the-underlying-Nti9XO::placeholder {
+  color: rgba(0,0,0,0.6);
+}
+.pricing-and-valuation-page2 .time-to-maturity-t-sxtgsu {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(47.50% - 104px);
+  text-align: center;
+  white-space: nowrap;
+  width: 220px;
+}
+.pricing-and-valuation-page2 .time-to-maturity-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  top: 172px;
+  width: 260px;
+}
+.pricing-and-valuation-page2 .underlying-price-xGOR6F {
+  background-color: var(--white);
+  border-radius: 10px;
+  height: 40px;
+  left: 0px;
+  position: absolute;
+  top: calc(15.38% - 6px);
+  width: 260px;
+}
+.pricing-and-valuation-page2 .underlying-s-YP3gHJ {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(48.96% - 80px);
+  text-align: center;
+  white-space: nowrap;
+  width: 164px;
+}
+.pricing-and-valuation-page2 .valuation-5dtgbd {
+  background-color: transparent;
+  bottom: calc(42.86% - 11px);
+  color: var(--cedar);
+  font-family: 'Montserrat', Helvetica, Arial, serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  height: 26px;
+  letter-spacing: 0.00px;
+  line-height: 20px;
+  position: absolute;
+  right: calc(49.15% - 50px);
+  text-align: left;
+  white-space: nowrap;
+  width: 102px;
+}
+.pricing-and-valuation-page2 .valuation-component-Z6zpbm {
+  background-color: var(--alto);
+  border-radius: 10px;
+  height: calc(100.00% - 1px);
+  left: 0px;
+  position: absolute;
+  top: 1px;
+  width: 220px;
+}
+.pricing-and-valuation-page2 .vega-number-sPEAV6 {
+  background-color: var(--black);
+  border-radius: 10px;
+  bottom: calc(31.34% - 19px);
+  height: 61px;
+  position: absolute;
+  right: 29px;
+  width: 180px;
+}
+.pricing-and-valuation-page2 .vega-text-sPEAV6 {
+  background-color: var(--white);
+  border-radius: 10px;
+  bottom: calc(31.34% - 19px);
+  height: 61px;
+  position: absolute;
+  right: calc(19.02% - 58px);
+  width: 306px;
+}
+.pricing-and-valuation-page2 .vega-z3gJm3 {
+  background-color: transparent;
+  bottom: calc(41.67% - 10px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(49.60% - 29px);
+  text-align: center;
+  white-space: nowrap;
+  width: 58px;
+}
+.pricing-and-valuation-page2 .x-xGOR6F {
+  background-color: var(--black);
+  border-radius: 10px;
+  height: 40px;
+  position: absolute;
+  right: 0px;
+  top: calc(23.08% - 9px);
+  width: 140px;
+}
+.pricing-and-valuation-page2 .x0043-EUEm0H {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  left: calc(48.81% - 27px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 56px;
+}
+.pricing-and-valuation-page2 .x0043-xJP627 {
+  background-color: transparent;
+  bottom: calc(41.67% - 10px);
+  height: 25px;
+  left: calc(48.39% - 27px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 56px;
+}
+.pricing-and-valuation-page2 .x005-pTNEef {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  left: calc(48.98% - 21px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 42px;
+}
+.pricing-and-valuation-page2 .x0054-hNmdz9 {
+  background-color: transparent;
+  bottom: calc(41.67% - 10px);
+  height: 25px;
+  left: calc(48.39% - 27px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 56px;
+}
+.pricing-and-valuation-page2 .x0055-75L8x8 {
+  background-color: transparent;
+  bottom: calc(41.67% - 10px);
+  height: 25px;
+  left: calc(48.41% - 26px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 54px;
+}
+.pricing-and-valuation-page2 .x00967-4wkroD {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  left: calc(48.61% - 33px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 68px;
+}
+.pricing-and-valuation-page2 .x00967-iDnxWV {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  left: calc(48.61% - 33px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 68px;
+}
+.pricing-and-valuation-page2 .x01232-HBQX2m {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  left: calc(48.75% - 29px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 60px;
+}
+.pricing-and-valuation-page2 .x01232-Q7Pkey {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  left: calc(48.75% - 29px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 60px;
+}
+.pricing-and-valuation-page2 .x0173-pkxQUl {
+  background-color: transparent;
+  bottom: calc(41.67% - 10px);
+  height: 25px;
+  left: calc(48.48% - 23px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 48px;
+}
+.pricing-and-valuation-page2 .x02-3WQ1jw {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  left: calc(49.09% - 15px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 30px;
+}
+.pricing-and-valuation-page2 .x025-i5if0C {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  left: calc(48.98% - 21px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 42px;
+}
+.pricing-and-valuation-page2 .x0534-wYmJKm {
+  background-color: transparent;
+  bottom: calc(41.67% - 10px);
+  height: 25px;
+  left: calc(48.41% - 26px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 54px;
+}
+.pricing-and-valuation-page2 .x10743-pPKeqN {
+  background-color: transparent;
+  bottom: calc(41.67% - 10px);
+  height: 25px;
+  left: calc(48.15% - 35px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 72px;
+}
+.pricing-and-valuation-page2 .x14523-prbHlX {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  left: calc(48.75% - 29px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 60px;
+}
+.pricing-and-valuation-page2 .x4034-7RBbGW {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  left: calc(48.81% - 27px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 56px;
+}
+.pricing-and-valuation-page2 .x4323-LQoj7Y {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  left: calc(48.86% - 25px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 52px;
+}
+.pricing-and-valuation-page2 .x817-7Pv8mj {
+  background-color: transparent;
+  bottom: calc(41.67% - 10px);
+  height: 25px;
+  left: calc(48.41% - 26px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 54px;
+}
+.pricing-and-valuation-page2 .x8942-4urhF3 {
+  background-color: transparent;
+  bottom: calc(41.67% - 10px);
+  height: 25px;
+  left: calc(48.25% - 32px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 66px;
+}
+.pricing-and-valuation-page2 .x9464-h4qzDl {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  right: calc(48.81% - 27px);
+  text-align: center;
+  white-space: nowrap;
+  width: 56px;
+}
+.pricing-and-valuation-page2 .x9501-cXBAFW {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  left: calc(48.89% - 24px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 50px;
+}
+.pricing-and-valuation-page2 .x9501-pBTbHd {
+  background-color: transparent;
+  bottom: calc(41.67% - 10px);
+  height: 25px;
+  left: calc(48.31% - 30px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 62px;
+}
+.pricing-and-valuation-page2 .x9534-waIBB1 {
+  background-color: transparent;
+  bottom: calc(30.00% - 8px);
+  height: 25px;
+  left: calc(48.84% - 26px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 54px;
+}
+.pricing-and-valuation-page2 .x9892-kRAu4x {
+  background-color: transparent;
+  bottom: calc(41.67% - 10px);
+  height: 25px;
+  left: calc(48.25% - 32px);
+  letter-spacing: 0.00px;
+  line-height: 19px;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+  width: 66px;
+}
+:root {
+  --alto: rgba(217,217,217,1.0);
+  --black: rgba(0,0,0,1.0);
+  --casal: rgba(49,89,112,1.0);
+  --cedar: rgba(66,18,19,1.0);
+  --dove-gray: rgba(112,112,112,1.0);
+  --heath: rgba(84,22,23,1.0);
+  --pumice: rgba(201,201,201,1.0);
+  --quick-silver: rgba(167,167,167,1.0);
+  --san-juan: rgba(44,74,103,1.0);
+  --white: rgba(255,255,255,1.0);
+}
+@media screen and (max-width: 767px) {
+  .pricing-and-valuation-page2 { 
+    display: none;
+   }
+  .x1280-pricing-and-valuation-page2 { 
+    display: none;
+   }
+  .x768-pricing-and-valuation-page2 { 
+    display: none;
+   }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .pricing-and-valuation-page2 { 
+    display: none;
+   }
+  .x1280-pricing-and-valuation-page2 { 
+    display: none;
+   }
+  .x375-pricing-and-valuation-page2 { 
+    display: none;
+   }
+}
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+  .pricing-and-valuation-page2 { 
+    display: none;
+   }
+  .x768-pricing-and-valuation-page2 { 
+    display: none;
+   }
+  .x375-pricing-and-valuation-page2 { 
+    display: none;
+   }
+}
+@media screen and (min-width: 1920px) {
+  .x1280-pricing-and-valuation-page2 { 
+    display: none;
+   }
+  .x768-pricing-and-valuation-page2 { 
+    display: none;
+   }
+  .x375-pricing-and-valuation-page2 { 
+    display: none;
+   }
+}

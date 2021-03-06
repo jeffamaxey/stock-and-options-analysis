@@ -1,0 +1,385 @@
+<!-- extends the base.html template -->
+{% extends "base.html" %}
+
+{% block title %} Contact {% endblock %}
+  {% block head%}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="../static/css/contact-page.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Montserrat:700,400,500,600,500italic");
+
+      .component-wrapper a,
+      .screen a {
+        text-decoration: none;
+        display: contents;
+      }
+
+      .full-width-a {
+        width: 100%;
+      }
+
+      .full-height-a {
+        height: 100%;
+      }
+
+      .screen textarea:focus,
+      .screen input:focus {
+        outline: none;
+      }
+
+      .screen *,
+      .component-wrapper * {
+        box-sizing: border-box;
+      }
+
+      .screen div {
+        -webkit-text-size-adjust: none;
+      }
+
+      .container-center-vertical,
+      .container-center-horizontal {
+        pointer-events: none;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+      }
+
+      .container-center-vertical {
+        align-items: center;
+        height: 100%;
+      }
+
+      .container-center-horizontal {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .container-center-vertical > *,
+      .container-center-horizontal > * {
+        pointer-events: auto;
+        flex-shrink: 0;
+      }
+
+      .component-wrapper,
+      .screen {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+        word-break: break-word;
+      }
+
+      .auto-animated div {
+        opacity: 0;
+        position: absolute;
+        --z-index: -1;
+      }
+
+      .auto-animated .container-center-vertical,
+      .auto-animated .container-center-horizontal {
+        opacity: 1;
+      }
+
+      .overlay {
+        position: absolute;
+        opacity: 0;
+        display: none;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+      }
+
+      .animate-appear {
+        opacity: 0;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 normal forwards;
+      }
+
+      .animate-disappear {
+        opacity: 1;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 reverse forwards;
+      }
+
+      .animate-nodelay {
+        animation-delay: 0s;
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .align-self-flex-start {
+        align-self: flex-start;
+      }
+      .align-self-flex-end {
+        align-self: flex-end;
+      }
+      .align-self-flex-center {
+        align-self: center;
+      }
+      .valign-text-middle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .valign-text-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      input:focus {
+        outline: none;
+      }
+      .component-wrapper,
+      .component-wrapper * {
+        pointer-events: none;
+      }
+
+      .component-wrapper a *,
+      .component-wrapper a,
+      .component-wrapper input,
+      .component-wrapper video,
+      .component-wrapper iframe,
+      .listeners-active,
+      .listeners-active * {
+        pointer-events: auto;
+      }
+
+      .hidden,
+      .hidden * {
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .smart-layers-pointers,
+      .smart-layers-pointers * {
+        pointer-events: auto;
+        visibility: visible;
+      }
+
+      .component-wrapper.not-ready,
+      .component-wrapper.not-ready * {
+        visibility: hidden !important;
+      }
+
+      .listeners-active-click,
+      .listeners-active-click * {
+        cursor: pointer;
+      }
+    </style>
+    <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+  </head>
+  {% endblock %}
+
+  {% block content %}
+  <body style="margin: 0; background: rgba(255, 255, 255, 1)">
+    <input type="hidden" id="anPageName" name="page" value="contact-page" />
+    <div class="container-center-horizontal">
+      <form class="contact-page screen" name="form9" action="form9" method="post">
+        <div class="information-box-C61RwL">
+          <div class="thank-you-for-t-oon-as-possible-kXflxP">
+            Thank you for taking the time to reach out to us. Please send us an email and we will get back to you as
+            soon as possible,
+          </div>
+          <div class="x1-800-953-2929-kXflxP">1-800-953-2929</div>
+          <div class="emailexamplecom-kXflxP">email@example.com</div>
+        </div>
+        <div class="get-in-touch-C61RwL">GET IN TOUCH</div>
+        <div class="send-button-C61RwL smart-layers-pointers">
+          <a href="javascript:SubmitForm('form9')"> <div class="rectangle-60-mtdATG smart-layers-pointers"></div></a>
+          <div class="send-mtdATG">SEND</div>
+        </div>
+        <div class="message-box-C61RwL border-1px-casal">
+          <input
+            class="write-your-message-here-8FMtqg"
+            name="write-your-message-here1"
+            placeholder="Write Your Message Here ..."
+            required
+          />
+        </div>
+        <div class="subject-box-C61RwL border-1px-casal">
+          <input class="subject-GtWPf7" name="subject1" placeholder="Subject" required />
+        </div>
+        <div class="email-box-C61RwL border-1px-casal">
+          <input class="email-YKjPez" name="email11" placeholder="Email" type="email" required />
+        </div>
+        <a href="landing-page.html"
+          ><img class="logo200x175-C61RwL smart-layers-pointers" src="../static/img/logo200x175@1x.png"
+        /></a>
+        <div class="group-55-C61RwL">
+          <a href="https://facebook.com" target="_blank"
+            ><img class="facebook-f-4W6TZx smart-layers-pointers" src="../static/img/facebook-f@1x.png"
+          /></a>
+          <a href="https://linkedin.com" target="_blank"
+            ><img class="linkedin-in-4W6TZx smart-layers-pointers" src="../static/img/linkedin-in@1x.png"
+          /></a>
+          <a href="https://twitter.com" target="_blank"
+            ><img class="twitter-4W6TZx smart-layers-pointers" src="../static/img/twitter@1x.png"
+          /></a>
+        </div>
+      </form>
+    </div>
+    <div class="container-center-horizontal">
+      <form class="x1280-contact-page screen" name="form30" action="form30" method="post">
+        <div class="information-box-C61RwL">
+          <div class="thank-you-for-t-oon-as-possible-kXflxP">
+            Thank you for taking the time to reach out to us. Please send us an email and we will get back to you as
+            soon as possible,
+          </div>
+          <div class="x1-800-953-2929-kXflxP">1-800-953-2929</div>
+          <div class="emailexamplecom-kXflxP">email@example.com</div>
+          <div class="group-55-kXflxP">
+            <a href="https://facebook.com" target="_blank"
+              ><img class="facebook-f-eXjJNO smart-layers-pointers" src="../static/img/facebook-f@1x.png"
+            /></a>
+            <a href="https://linkedin.com" target="_blank"
+              ><img class="linkedin-in-eXjJNO smart-layers-pointers" src="../static/img/linkedin-in@1x.png"
+            /></a>
+            <a href="https://twitter.com" target="_blank"
+              ><img class="twitter-eXjJNO smart-layers-pointers" src="../static/img/twitter@1x.png"
+            /></a>
+          </div>
+        </div>
+        <div class="get-in-touch-C61RwL">GET IN TOUCH</div>
+        <a href="javascript:SubmitForm('form30')">
+          <div class="sendbutton-C61RwL smart-layers-pointers"><div class="send-IRiZkX">SEND</div></div></a
+        >
+        <div class="message-box-C61RwL border-1px-casal">
+          <input
+            class="write-your-message-here-8FMtqg smart-layers-pointers"
+            name="write-your-message-here11"
+            placeholder="Write Your Message Here ..."
+            required
+          />
+        </div>
+        <div class="subject-box-C61RwL border-1px-casal">
+          <input class="subject-GtWPf7 smart-layers-pointers" name="subject11" placeholder="Subject" required />
+        </div>
+        <div class="email-box-C61RwL border-1px-casal">
+          <input class="email-YKjPez smart-layers-pointers" name="email18" placeholder="Email" type="email" required />
+        </div>
+        <a href="landing-page.html"
+          ><img class="logo166x145-C61RwL smart-layers-pointers" src="../static/img/logo166x145@1x.png"
+        /></a>
+      </form>
+    </div>
+    <div class="container-center-horizontal">
+      <form class="x768-contact-page screen" name="form50" action="form50" method="post">
+        <div class="information-box-C61RwL">
+          <div class="thank-you-for-t-oon-as-possible-kXflxP">
+            Thank you for taking the time to reach out to us. Please send us an email and we will get back to you as
+            soon as possible,
+          </div>
+          <div class="x1-800-953-2929-kXflxP">1-800-953-2929</div>
+          <div class="emailexamplecom-kXflxP">email@example.com</div>
+          <div class="group-55-kXflxP">
+            <a href="https://facebook.com" target="_blank"
+              ><img class="facebook-f-eXjJNO smart-layers-pointers" src="../static/img/facebook-f@1x.png"
+            /></a>
+            <a href="https://linkedin.com" target="_blank"
+              ><img class="linkedin-in-eXjJNO smart-layers-pointers" src="../static/img/linkedin-in@1x.png"
+            /></a>
+            <a href="https://twitter.com" target="_blank"
+              ><img class="twitter-eXjJNO smart-layers-pointers" src="../static/img/twitter@1x.png"
+            /></a>
+          </div>
+        </div>
+        <div class="get-in-touch-C61RwL">GET IN TOUCH</div>
+        <div class="message-box-C61RwL border-1px-casal">
+          <input
+            class="write-your-message-here-8FMtqg smart-layers-pointers"
+            name="write-your-message-here12"
+            placeholder="Write Your Message Here ..."
+            required
+          />
+        </div>
+        <div class="subject-box-C61RwL border-1px-casal">
+          <input class="subject-GtWPf7 smart-layers-pointers" name="subject12" placeholder="Subject" required />
+        </div>
+        <div class="email-box-C61RwL border-1px-casal">
+          <input class="email-YKjPez smart-layers-pointers" name="email113" placeholder="Email" type="email" required />
+        </div>
+        <a href="landing-page.html">
+          <div class="sendbutton-C61RwL smart-layers-pointers"><div class="send-IRiZkX">SEND</div></div></a
+        >
+        <a href="landing-page.html"
+          ><img class="logo80x70-C61RwL smart-layers-pointers" src="../static/img/logo80x70@1x.png"
+        /></a>
+      </form>
+    </div>
+    <div class="container-center-horizontal">
+      <form class="x375-contact-page screen" name="form71" action="form71" method="post">
+        <div class="message-box-C61RwL border-1px-casal">
+          <input
+            class="write-your-message-here-8FMtqg smart-layers-pointers"
+            name="write-your-message-here13"
+            placeholder="Write Your Message Here ..."
+            required
+          />
+        </div>
+        <div class="subject-box-C61RwL border-1px-casal">
+          <input class="subject-GtWPf7 smart-layers-pointers" name="subject13" placeholder="Subject" required />
+        </div>
+        <div class="email-box-C61RwL border-1px-casal">
+          <input class="email-YKjPez smart-layers-pointers" name="email118" placeholder="Email" type="email" required />
+        </div>
+        <a href="javascript:SubmitForm('form71')">
+          <div class="sendbutton-C61RwL smart-layers-pointers"><div class="send-IRiZkX">SEND</div></div></a
+        >
+        <div class="get-in-touch-C61RwL">GET IN TOUCH</div>
+        <div class="information-box-C61RwL">
+          <div class="thank-you-reach-us-please-send-kXflxP">Thank you reach out to us. Please send</div>
+          <div class="x1-800-953-2929-kXflxP">1-800-953-2929</div>
+          <div class="emailexamplecom-kXflxP">email@example.com</div>
+          <div class="group-35-kXflxP">
+            <a href="https://facebook.com" target="_blank"
+              ><img class="facebook-f-J0iJ68 smart-layers-pointers" src="../static/img/facebook-f-9@1x.png"
+            /></a>
+            <a href="https://instagram.com" target="_blank"
+              ><img class="linkedin-in-J0iJ68 smart-layers-pointers" src="../static/img/linkedin-in-3@1x.png"
+            /></a>
+            <a href="https://twitter.com" target="_blank"
+              ><img class="twitter-J0iJ68 smart-layers-pointers" src="../static/img/twitter-3@1x.png"
+            /></a>
+          </div>
+        </div>
+        <a href="landing-page.html"
+          ><img class="logo50x44-C61RwL smart-layers-pointers" src="../static/img/logo50x44@1x.png"
+        /></a>
+      </form>
+    </div>
+    <script>
+      /* Copyright (c) 2016 Tobias Buschor https://goo.gl/gl0mbf | MIT License https://goo.gl/HgajeK */
+
+      if (!HTMLFormElement.prototype.reportValidity) {
+        HTMLFormElement.prototype.reportValidity = function () {
+          if (this.checkValidity()) return true;
+          var btn = document.createElement("button");
+          this.appendChild(btn);
+          btn.click();
+          this.removeChild(btn);
+          return false;
+        };
+      }
+
+      function SubmitForm(form_name) {
+        var form = document.getElementsByName(form_name)[0];
+        if (form.reportValidity()) {
+          form.submit();
+          if (window.submitted) window.submitted();
+        }
+      }
+    </script>
+  </body>
+  {% endblock %}
