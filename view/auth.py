@@ -154,7 +154,7 @@ def delete_user():
         if UserDB.check_password(current_user.email, password):
             UserDB.delete(current_user.email)
             flash("Your account has been successfully deleted.", category="Success")
-            return redirect(url_for("login.login"))     # redirect the user to the login page
+            return redirect(url_for("login"))     # redirect the user to the login page
         else:
             flash("Incorrect password. Please try again.", category="Error")
 
