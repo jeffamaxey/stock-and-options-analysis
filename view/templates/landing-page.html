@@ -189,7 +189,7 @@
   <body style="margin: 0; background: rgba(255, 255, 255, 1)">
     <input type="hidden" id="anPageName" name="page" value="landing-page" />
     <div class="container-center-horizontal">
-      <form class="landing-page screen" name="form1" action="form1" method="post">
+      <form class="landing-page screen" name="form1" method="post">
         <div class="bg-bottom-C61RwL"></div>
         <div class="bg-top-C61RwL" id="bg-top"></div>
         <div class="x-the-automation-h-basic-financi-C61RwL">
@@ -198,6 +198,7 @@
           of a human user with basic financial knowledge. This is not financial advice, all gains and losses made from
           the insight received from this website are those of the users alone.
         </div>
+        <a href="/payment">
         <div class="deluxe-plan-C61RwL smart-layers-pointers">
           <div class="solid-button-3JUt34 smart-layers-pointers"><div class="subscribe-QyALBP">SUBSCRIBE</div></div>
           <img class="line-20-3JUt34" src="../static/img/line-17@1x.png" />
@@ -212,6 +213,8 @@
           <div class="x8999-3JUt34">$89.99</div>
           <div class="deluxe-3JUt34">DELUXE</div>
         </div>
+        </a>
+        <a href="payment">
         <div class="basic-plan-C61RwL smart-layers-pointers">
           <div class="solid-button-d6iMyr smart-layers-pointers"><div class="subscribe-duCmXd">SUBSCRIBE</div></div>
           <img class="line-20-d6iMyr" src="../static/img/line-17@1x.png" />
@@ -226,7 +229,8 @@
           <div class="x2999-d6iMyr">$29.99</div>
           <div class="basic-d6iMyr">BASIC</div>
         </div>
-        <a href="payment-processing-page.html">
+        </a>
+        <a href="/payment">
           <div class="bundled-plan-C61RwL smart-layers-pointers">
             <div class="solid-button-5Fq7lF smart-layers-pointers">
               <div class="subscribe-TfhIUF montserrat-semi-bold-heath-20px">SUBSCRIBE</div>
@@ -289,8 +293,13 @@
             <div class="register-HOxaGp montserrat-semi-bold-heath-20px">REGISTER</div>
           </div>
           <div class="product-yjACxR border-1px-dove-gray">
-            <img class="md-arrow-dropdown-VzCElo" src="../static/img/md-arrow-dropdown@1x.png" />
-            <input class="product-VzCElo" name="product21" placeholder="Product" required />
+            <img class="md-arrow-dropdown-VzCElo" src="../static/img/md-arrow-dropdown@1x.png">
+            <input list="product" class="product-VzCElo" name="product21" placeholder="Product" required />
+              <datalist id="product">
+                <option value="BASIC">
+                <option value="BUNDLED">
+                <option value="DELUXE">
+              </datalist>
           </div>
           <div class="password-yjACxR border-1px-dove-gray">
             <input class="password-i3NNCP" name="password1" placeholder="Password" type="password" required />
@@ -303,44 +312,46 @@
         <div class="landing-content-C61RwL">
           <div class="beginner-friend-onable-insights-iR1gF7">Beginner Friendly<br />Actionable Insights</div>
           <div class="automated-and-e-ancial-analysis-iR1gF7">Automated and easy to understand financial analysis.</div>
+          <a href="/tutorial">
           <div class="component7-iR1gF7 smart-layers-pointers">
             <div class="watch-how-it-works-gbbylO">watch how it works</div>
             <img class="ios-play-circle-gbbylO" src="../static/img/ios-play-circle@1x.png" />
           </div>
+          </a>
         </div>
         <div class="navbar-C61RwL">
           <div class="menu-center-8MJZIW">
-            <a href="signup-page.html">
+            <a href="/sign-up">
               <div class="sign-up-component-Z6zpbm border-1px-dove-gray smart-layers-pointers">
                 <div class="sign-up-C4Ldyd montserrat-semi-bold-heath-20px">Sign Up</div>
               </div></a
             >
-            <a href="login-page.html">
+            <a href="/login">
               <div class="login-component-Z6zpbm border-1px-dove-gray smart-layers-pointers">
                 <div class="login-bvKRUK montserrat-semi-bold-heath-20px">Login</div>
               </div></a
             >
-            <a href="contact-page.html">
+            <a href="/contact">
               <div class="contact-component-Z6zpbm smart-layers-pointers">
                 <div class="contact-POQGFP montserrat-semi-bold-heath-20px">Contact</div>
               </div></a
             >
-            <a href="fundamental-analysis-page.html">
+            <a href="/fundamental-analysis">
               <div class="fundamental-component-Z6zpbm smart-layers-pointers">
                 <div class="fundamental-6EvOoV montserrat-semi-bold-heath-20px">Fundamental</div>
               </div></a
             >
-            <a href="technical-analysis-page.html">
+            <a href="/technical-analysis">
               <div class="technical-component-Z6zpbm smart-layers-pointers">
                 <div class="technical-lY8Sqq montserrat-semi-bold-heath-20px">Technical</div>
               </div></a
             >
-            <a href="strategies-page.html">
+            <a href="/strategies">
               <div class="strategies-component-Z6zpbm smart-layers-pointers">
                 <div class="strategy-q8CpeS montserrat-semi-bold-heath-20px">Strategy</div>
               </div></a
             >
-            <a href="pricing-and-valuation-page.html">
+            <a href="/pricing-valuation">
               <div class="valuation-component-Z6zpbm smart-layers-pointers">
                 <div class="valuation-5dtgbd montserrat-semi-bold-heath-20px">Valuation</div>
               </div></a
@@ -356,12 +367,12 @@
               <img class="path-85-NV3h6C" src="../static/img/path-85@1x.png" />
             </div></div
         ></a>
-        <a href="profile-page.html"
+        <a href="/profile"
           ><img class="icon-profile-C61RwL smart-layers-pointers" src="../static/img/icon-profile@1x.png"
         /></a>
         <div class="feature4-C61RwL bp1-animate-enter" show-on-scroll>
           <div class="circle-eEK7uI smart-layers-pointers">
-            <a href="fundamental-analysis-page.html">
+            <a href="/fundamental-analysis">
               <div class="twist-star-5ZzEAj">
                 <div class="ellipse4-Cjf8MP border-4px-heath"></div>
                 <div class="starsymbol4-Cjf8MP">
@@ -377,7 +388,7 @@
         </div>
         <div class="feature3-C61RwL bp1-animate-enter1" show-on-scroll>
           <div class="circle-NLoDnr smart-layers-pointers">
-            <a href="technical-analysis-page.html">
+            <a href="/technical-analysis">
               <div class="twist-star-6FEqA3">
                 <div class="ellipse3-xd0jjN border-4px-heath"></div>
                 <div class="starsymbol3-xd0jjN">
@@ -393,7 +404,7 @@
           </div>
         </div>
         <div class="feature2-C61RwL bp1-animate-enter2" show-on-scroll>
-          <a href="strategies-page.html">
+          <a href="/strategies">
             <div class="circle-unHWOl smart-layers-pointers">
               <div class="twist-star-50RMqu">
                 <div class="ellipse2-gp4DaD border-4px-heath"></div>
@@ -411,7 +422,7 @@
         </div>
         <div class="feature1-C61RwL bp1-animate-enter3" show-on-scroll>
           <div class="circle-fhxHYD smart-layers-pointers">
-            <a href="pricing-and-valuation-page.html">
+            <a href="/pricing-valuation">
               <div class="twist-star-iRdTjK">
                 <div class="ellipse1-2YEszl border-4px-heath"></div>
                 <div class="starsymbol1-2YEszl">
@@ -430,7 +441,7 @@
       </form>
     </div>
     <div class="container-center-horizontal">
-      <form class="x1280-landing-page screen" name="form22" action="form22" method="post">
+      <form class="x1280-landing-page screen" name="form22" method="post">
         <div class="bg-top1-C61RwL" id="bg-top1"></div>
         <div class="bg-bottom-C61RwL"></div>
         <a href="#bg-top1">
@@ -449,7 +460,7 @@
           the insight received from this website are those of the users alone.
         </div>
         <div class="deluxe-plan-C61RwL smart-layers-pointers">
-          <a href="payment-processing-page.html">
+          <a href="/payment">
             <div class="solid-button-3JUt34 smart-layers-pointers">
               <div class="subscribe-QyALBP">SUBSCRIBE</div>
             </div></a
@@ -467,7 +478,7 @@
           <div class="deluxe-3JUt34">DELUXE</div>
         </div>
         <div class="bundled-plan-C61RwL smart-layers-pointers">
-          <a href="payment-processing-page.html">
+          <a href="/payment">
             <div class="solid-button-5Fq7lF smart-layers-pointers">
               <div class="subscribe-TfhIUF montserrat-semi-bold-heath-20px">SUBSCRIBE</div>
             </div></a
@@ -485,7 +496,7 @@
           <div class="bundled-5Fq7lF">BUNDLED</div>
         </div>
         <div class="basic-plan-C61RwL smart-layers-pointers">
-          <a href="payment-processing-page.html">
+          <a href="/payment">
             <div class="solid-button-d6iMyr smart-layers-pointers">
               <div class="subscribe-duCmXd">SUBSCRIBE</div>
             </div></a
@@ -544,7 +555,7 @@
         </div>
         <div class="feature4-C61RwL bp2-animate-enter" show-on-scroll>
           <div class="circle-eEK7uI smart-layers-pointers">
-            <a href="fundamental-analysis-page.html">
+            <a href="/fundamental-analysis">
               <div class="twist-star-5ZzEAj">
                 <div class="ellipse4-Cjf8MP border-4px-heath"></div>
                 <div class="starsymbol4-Cjf8MP">
@@ -560,7 +571,7 @@
         </div>
         <div class="feature3-C61RwL bp2-animate-enter1" show-on-scroll>
           <div class="circle-NLoDnr smart-layers-pointers">
-            <a href="technical-analysis-page.html">
+            <a href="/technical-analysis">
               <div class="twist-star-6FEqA3">
                 <div class="ellipse3-xd0jjN border-4px-heath"></div>
                 <div class="starsymbol3-xd0jjN">
@@ -576,7 +587,7 @@
           </div>
         </div>
         <div class="feature2-C61RwL bp2-animate-enter2" show-on-scroll>
-          <a href="strategies-page.html">
+          <a href="/strategies">
             <div class="circle-unHWOl smart-layers-pointers">
               <div class="twist-star-50RMqu">
                 <div class="ellipse2-gp4DaD border-4px-heath"></div>
@@ -594,7 +605,7 @@
         </div>
         <div class="feature1-C61RwL bp2-animate-enter3" show-on-scroll>
           <div class="circle-fhxHYD smart-layers-pointers">
-            <a href="pricing-and-valuation-page.html">
+            <a href="/pricing-valuation">
               <div class="twist-star-iRdTjK">
                 <div class="ellipse1-2YEszl border-4px-heath"></div>
                 <div class="starsymbol1-2YEszl">
@@ -616,7 +627,7 @@
           </div>
           <div class="product-yjACxR border-1px-dove-gray smart-layers-pointers">
             <img class="md-arrow-dropdown-VzCElo" src="../static/img/md-arrow-dropdown@1x.png" />
-            <input class="product-VzCElo" name="product23" placeholder="Product" required />
+            <input list="product" class="product-VzCElo" name="product23" placeholder="Product" required />
           </div>
           <div class="password-yjACxR border-1px-dove-gray smart-layers-pointers">
             <input class="password-i3NNCP" name="password15" placeholder="Password" type="password" required />
@@ -629,7 +640,7 @@
         <div class="landing-content-C61RwL">
           <div class="beginner-friend-onable-insights-iR1gF7">Beginner Friendly<br />Actionable Insights</div>
           <div class="automated-and-e-ancial-analysis-iR1gF7">Automated and easy to understand financial analysis.</div>
-          <a href="video-player-page2.html">
+          <a href="/tutorial">
             <div class="component7-iR1gF7 smart-layers-pointers">
               <div class="watch-how-it-works-gbbylO">watch how it works</div>
               <img class="ios-play-circle-gbbylO" src="../static/img/ios-play-circle-3@1x.png" /></div
@@ -637,44 +648,44 @@
         </div>
         <div class="navbar-C61RwL">
           <div class="menu-center-8MJZIW">
-            <a href="signup-page.html">
+            <a href="/sign-up">
               <div class="signup-component-Z6zpbm border-1px-dove-gray smart-layers-pointers">
                 <div class="sign-up-9Rxxny">Sign Up</div>
               </div></a
             >
-            <a href="login-page.html">
+            <a href="/login">
               <div class="login-component-Z6zpbm border-1px-dove-gray smart-layers-pointers">
                 <div class="login-bvKRUK">Login</div>
               </div></a
             >
-            <a href="contact-page.html">
+            <a href="/contact">
               <div class="contact-component-Z6zpbm smart-layers-pointers">
                 <div class="contact-POQGFP">Contact</div>
               </div></a
             >
-            <a href="fundamental-analysis-page.html">
+            <a href="/fundamental-analysis">
               <div class="fundamental-component-Z6zpbm smart-layers-pointers">
                 <div class="fundamental-6EvOoV">Fundamental</div>
               </div></a
             >
-            <a href="technical-analysis-page.html">
+            <a href="/technical-analysis">
               <div class="technical-component-Z6zpbm smart-layers-pointers">
                 <div class="technical-lY8Sqq">Technical</div>
               </div></a
             >
-            <a href="strategies-page.html">
+            <a href="/strategies">
               <div class="strategy-component-Z6zpbm smart-layers-pointers">
                 <div class="strategy-He3YyY">Strategy</div>
               </div></a
             >
-            <a href="pricing-and-valuation-page.html">
+            <a href="/pricing-valuation">
               <div class="valuation-component-Z6zpbm smart-layers-pointers">
                 <div class="valuation-5dtgbd">Valuation</div>
               </div></a
             >
           </div>
         </div>
-        <a href="profile-page.html"
+        <a href="/profile"
           ><img class="icon-profile-C61RwL smart-layers-pointers" src="../static/img/icon-profile-1@1x.png"
         /></a>
         <img class="logo-black166x145-C61RwL smart-layers-pointers" src="../static/img/logoblack166x145@1x.png" />
@@ -682,7 +693,7 @@
       </form>
     </div>
     <div class="container-center-horizontal">
-      <form class="x768-landing-page screen" name="form42" action="form42" method="post">
+      <form class="x768-landing-page screen" name="form42" method="post">
         <div class="bg-top2-C61RwL" id="bg-top2"></div>
         <img class="rectangle-steps-C61RwL" src="../static/img/rectanglesteps-2@1x.png" />
         <div class="step-2-C61RwL border-10px-heath smart-layers-pointers">
@@ -714,7 +725,7 @@
         <div class="landing-content-C61RwL">
           <div class="beginner-friend-onable-insights-iR1gF7">Beginner Friendly<br />Actionable Insights</div>
           <div class="automated-and-e-ancial-analysis-iR1gF7">Automated and easy to understand financial analysis.</div>
-          <a href="video-player-page2.html">
+          <a href="/tutorial2">
             <div class="component7-iR1gF7 smart-layers-pointers">
               <div class="watch-how-it-works-gbbylO">watch how it works</div>
               <img class="ios-play-circle-gbbylO" src="../static/img/ios-play-circle-4@1x.png" /></div
@@ -722,12 +733,12 @@
         </div>
         <div class="navbar-C61RwL">
           <div class="menu-center-8MJZIW">
-            <a href="signup-page.html">
+            <a href="/sign-up">
               <div class="signup-component-Z6zpbm border-1px-dove-gray smart-layers-pointers">
                 <div class="sign-up-9Rxxny">Sign Up</div>
               </div></a
             >
-            <a href="login-page.html">
+            <a href="/login">
               <div class="login-component-Z6zpbm smart-layers-pointers">
                 <a href="login-page.html" onclick="window.event.stopPropagation()">
                   <div class="login-rectangle-bvKRUK border-1px-dove-gray"></div
@@ -735,12 +746,12 @@
                 <div class="login-bvKRUK">Login</div>
               </div></a
             >
-            <a href="contact-page.html">
+            <a href="/contact">
               <div class="contact-component-Z6zpbm smart-layers-pointers">
                 <div class="contact-POQGFP">Contact</div>
               </div></a
             >
-            <a href="fundamental-analysis-page.html">
+            <a href="/fundamental-analysis">
               <div class="fundamental-component-Z6zpbm smart-layers-pointers">
                 <a href="fundamental-analysis-page.html" onclick="window.event.stopPropagation()">
                   <div class="fundamental-rectangle-6EvOoV"></div
@@ -748,17 +759,17 @@
                 <div class="fundamental-6EvOoV">Fundamental</div>
               </div></a
             >
-            <a href="technical-analysis-page.html">
+            <a href="/technical-analysis">
               <div class="technical-component-Z6zpbm smart-layers-pointers">
                 <div class="technical-lY8Sqq">Technical</div>
               </div></a
             >
-            <a href="strategies-page.html">
+            <a href="/strategies">
               <div class="strategy-component-Z6zpbm smart-layers-pointers">
                 <div class="strategy-He3YyY">Strategy</div>
               </div></a
             >
-            <a href="pricing-and-valuation-page.html">
+            <a href="/pricing-valuation">
               <div class="valuation-component-Z6zpbm smart-layers-pointers">
                 <div class="valuation-5dtgbd">Valuation</div>
               </div></a
@@ -774,7 +785,7 @@
           </div>
           <div class="product-yjACxR border-1px-dove-gray smart-layers-pointers">
             <img class="md-arrow-dropdown-VzCElo" src="../static/img/md-arrow-dropdown@1x.png" />
-            <input class="product-VzCElo" name="product25" placeholder="Product" required />
+            <input list="product" class="product-VzCElo" name="product25" placeholder="Product" required />
           </div>
           <div class="password-yjACxR border-1px-dove-gray smart-layers-pointers">
             <input class="password-i3NNCP" name="password18" placeholder="Password" type="password" required />
@@ -812,7 +823,7 @@
         ></a>
         <div class="group-52-C61RwL">
           <div class="deluxe-plan-odKgLo smart-layers-pointers">
-            <a href="payment-processing-page.html">
+            <a href="/payment">
               <div class="solid-button-TDe8Vo smart-layers-pointers">
                 <div class="subscribe-Uzhe6N">SUBSCRIBE</div>
               </div></a
@@ -834,7 +845,7 @@
             <div class="basic-kko8j4">BASIC</div>
           </div>
           <div class="bundled-plan-odKgLo smart-layers-pointers">
-            <a href="payment-processing-page.html">
+            <a href="/payment">
               <div class="solid-button-Ugb5r3 smart-layers-pointers">
                 <div class="subscribe-G6CJsr montserrat-semi-bold-heath-20px">SUBSCRIBE</div>
               </div></a
@@ -845,12 +856,12 @@
             <div class="bundled-Ugb5r3">BUNDLED</div>
           </div>
         </div>
-        <a href="profile-page.html"
+        <a href="/profile"
           ><img class="icon-profile-C61RwL smart-layers-pointers" src="../static/img/icon-profile-2@1x.png"
         /></a>
         <div class="feature4-C61RwL bp3-animate-enter" show-on-scroll>
           <div class="circle-eEK7uI smart-layers-pointers">
-            <a href="fundamental-analysis-page.html">
+            <a href="/fundamental-analysis">
               <div class="twist-star-5ZzEAj">
                 <div class="ellipse4-Cjf8MP border-4px-heath"></div>
                 <div class="starsymbol4-Cjf8MP">
@@ -866,7 +877,7 @@
         </div>
         <div class="feature3-C61RwL bp3-animate-enter1" show-on-scroll>
           <div class="circle-NLoDnr smart-layers-pointers">
-            <a href="technical-analysis-page.html">
+            <a href="/technical-analysis">
               <div class="twist-star-6FEqA3">
                 <div class="ellipse3-xd0jjN border-4px-heath"></div>
                 <div class="starsymbol3-xd0jjN">
@@ -882,7 +893,7 @@
           </div>
         </div>
         <div class="feature2-C61RwL bp3-animate-enter2" show-on-scroll>
-          <a href="strategies-page.html">
+          <a href="/strategies">
             <div class="circle-unHWOl smart-layers-pointers">
               <div class="twist-star-50RMqu">
                 <div class="ellipse2-gp4DaD border-4px-heath"></div>
@@ -900,7 +911,7 @@
         </div>
         <div class="feature1-C61RwL bp3-animate-enter3" show-on-scroll>
           <div class="circle-fhxHYD smart-layers-pointers">
-            <a href="pricing-and-valuation-page.html">
+            <a href="/pricing-valuation">
               <div class="twist-star-iRdTjK">
                 <div class="ellipse1-2YEszl border-4px-heath"></div>
                 <div class="starsymbol1-2YEszl">
@@ -917,7 +928,7 @@
       </form>
     </div>
     <div class="container-center-horizontal">
-      <form class="x375-landing-page screen" name="form63" action="form63" method="post">
+      <form class="x375-landing-page screen" name="form63" method="post">
         <div class="bg-top3-C61RwL" id="bg-top3"></div>
         <img class="rectangle-steps-C61RwL" src="../static/img/rectanglesteps-3@1x.png" />
         <div class="we-have-various-we-have-featur-C61RwL">
@@ -930,7 +941,7 @@
         <div class="landing-content-C61RwL">
           <div class="beginner-friend-onable-insights-iR1gF7">Beginner Friendly<br />Actionable Insights</div>
           <div class="automated-and-e-ancial-analysis-iR1gF7">Automated and easy to understand financial analysis.</div>
-          <a href="video-player-page2.html">
+          <a href="/tutorial2">
             <div class="component7-iR1gF7 smart-layers-pointers">
               <div class="watch-how-it-works-gbbylO">watch how it works</div>
               <img class="ios-play-circle-gbbylO" src="../static/img/ios-play-circle-4@1x.png" /></div
@@ -938,37 +949,37 @@
         </div>
         <div class="navbar-C61RwL">
           <div class="menu-center-8MJZIW">
-            <a href="signup-page.html">
+            <a href="/sign-up">
               <div class="signup-component-Z6zpbm border-1px-dove-gray smart-layers-pointers">
                 <div class="sign-up-9Rxxny">Sign Up</div>
               </div></a
             >
-            <a href="login-page.html">
+            <a href="/login">
               <div class="login-component-Z6zpbm border-1px-dove-gray smart-layers-pointers">
                 <div class="login-bvKRUK">Login</div>
               </div></a
             >
-            <a href="contact-page.html">
+            <a href="/contact">
               <div class="contact-component-Z6zpbm smart-layers-pointers">
                 <div class="contact-POQGFP">Contact</div>
               </div></a
             >
-            <a href="technical-analysis-page.html">
+            <a href="/technical-analysis">
               <div class="technical-component-Z6zpbm smart-layers-pointers">
                 <div class="technical-lY8Sqq">Technical</div>
               </div></a
             >
-            <a href="strategies-page.html">
+            <a href="/strategies">
               <div class="strategy-component-Z6zpbm smart-layers-pointers">
                 <div class="strategy-He3YyY">Strategy</div>
               </div></a
             >
-            <a href="pricing-and-valuation-page.html">
+            <a href="/pricing-valuation">
               <div class="valuation-component-Z6zpbm smart-layers-pointers">
                 <div class="valuation-5dtgbd">Valuation</div>
               </div></a
             >
-            <a href="fundamental-analysis-page.html">
+            <a href="/fundamental-analysis">
               <div class="fundamental-component-Z6zpbm smart-layers-pointers">
                 <div class="fundamental-rectangle-6EvOoV"></div>
                 <div class="fundamental-6EvOoV">Fundamental</div>
@@ -983,7 +994,7 @@
           </div>
           <div class="product-yjACxR border-1px-dove-gray smart-layers-pointers">
             <img class="md-arrow-dropdown-VzCElo" src="../static/img/md-arrow-dropdown@1x.png" />
-            <input class="product-VzCElo" name="product27" placeholder="Product" required />
+            <input list="product"  class="product-VzCElo" name="product27" placeholder="Product" required />
           </div>
           <div class="password-yjACxR border-1px-dove-gray smart-layers-pointers">
             <input class="password-i3NNCP" name="password111" placeholder="Password" type="password" required />
@@ -1003,7 +1014,7 @@
         <div class="choose-your-plan-C61RwL">CHOOSE YOUR PLAN</div>
         <div class="group-52-C61RwL">
           <div class="deluxe-plan-odKgLo smart-layers-pointers">
-            <a href="payment-processing-page.html">
+            <a href="/payment">
               <div class="solid-button-TDe8Vo smart-layers-pointers">
                 <div class="subscribe-Uzhe6N">SUBSCRIBE</div>
               </div></a
@@ -1014,7 +1025,7 @@
             <div class="deluxe-TDe8Vo">DELUXE</div>
           </div>
           <div class="basic-plan-odKgLo smart-layers-pointers">
-            <a href="payment-processing-page.html">
+            <a href="/payment">
               <div class="solid-button-kko8j4 smart-layers-pointers">
                 <div class="subscribe-8RZTeS">SUBSCRIBE</div>
               </div></a
@@ -1025,7 +1036,7 @@
             <div class="basic-kko8j4">BASIC</div>
           </div>
           <div class="bundled-plan-odKgLo smart-layers-pointers">
-            <a href="payment-processing-page.html">
+            <a href="/payment">
               <div class="solid-button-Ugb5r3 smart-layers-pointers">
                 <div class="subscribe-G6CJsr montserrat-semi-bold-heath-20px">SUBSCRIBE</div>
               </div></a
@@ -1045,11 +1056,11 @@
               <img class="path-85-NV3h6C" src="../static/img/path-85@1x.png" />
             </div></div
         ></a>
-        <a href="profile-page.html"
+        <a href="/profile"
           ><img class="icon-profile-C61RwL smart-layers-pointers" src="../static/img/icon-profile-3@1x.png"
         /></a>
         <div class="feature4-C61RwL bp4-animate-enter" show-on-scroll>
-          <a href="fundamental-analysis-page.html">
+          <a href="/fundamental-analysis">
             <div class="circle-eEK7uI smart-layers-pointers">
               <div class="twist-star-5ZzEAj">
                 <div class="ellipse4-Cjf8MP border-4px-heath"></div>
@@ -1066,7 +1077,7 @@
         </div>
         <div class="feature3-C61RwL bp4-animate-enter1" show-on-scroll>
           <div class="circle-NLoDnr smart-layers-pointers">
-            <a href="technical-analysis-page.html">
+            <a href="/technical-analysis">
               <div class="twist-star-6FEqA3">
                 <div class="ellipse3-xd0jjN border-4px-heath"></div>
                 <div class="starsymbol3-xd0jjN">
@@ -1082,7 +1093,7 @@
           </div>
         </div>
         <div class="feature2-C61RwL bp4-animate-enter2" show-on-scroll>
-          <a href="strategies-page.html">
+          <a href="/strategies">
             <div class="circle-unHWOl smart-layers-pointers">
               <div class="twist-star-50RMqu">
                 <div class="ellipse2-gp4DaD border-4px-heath"></div>
@@ -1100,7 +1111,7 @@
         </div>
         <div class="feature1-C61RwL bp4-animate-enter3" show-on-scroll>
           <div class="circle-fhxHYD smart-layers-pointers">
-            <a href="pricing-and-valuation-page.html">
+            <a href="/pricing-valuation">
               <div class="twist-star-iRdTjK">
                 <div class="ellipse1-2YEszl border-4px-heath"></div>
                 <div class="starsymbol1-2YEszl">

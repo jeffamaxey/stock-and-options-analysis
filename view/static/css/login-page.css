@@ -1964,6 +1964,7 @@ transform: scale(0.9);
     display: none;
    }
 }
+
 @media screen and (min-width: 1920px) {
   .x1280-login-page { 
     display: none;

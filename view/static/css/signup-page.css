@@ -2075,35 +2075,35 @@ transform: scale(0.9);
   --white: rgba(255,255,255,1.0);
 }
 @media screen and (max-width: 767px) {
-  .signup-page { 
+  .signup-page {
     display: none;
    }
-  .x1280-signup-page { 
+  .x1280-signup-page {
     display: none;
    }
-  .x768-signup-page { 
+  .x768-signup-page {
     display: none;
    }
 }
 @media screen and (min-width: 768px) and (max-width: 1279px) {
-  .signup-page { 
+  .signup-page {
     display: none;
    }
-  .x1280-signup-page { 
+  .x1280-signup-page {
     display: none;
    }
-  .x375-signup-page { 
+  .x375-signup-page {
     display: none;
    }
 }
 @media screen and (min-width: 1280px) and (max-width: 1919px) {
-  .signup-page { 
+  .signup-page {
     display: none;
    }
-  .x768-signup-page { 
+  .x768-signup-page {
     display: none;
    }
-  .x375-signup-page { 
+  .x375-signup-page {
     display: none;
    }
 }
