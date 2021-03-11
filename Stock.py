@@ -144,7 +144,6 @@ class Stock:
         # since dataframe returns information as a string we must convert to integer
         self._threeMonthAvgVolume = convert.convertStringToInteger(self._threeMonthAvgVolume)
 
-
     def get_three_month_volume(self):
         """
         Gets the three month average Volume of a stock
@@ -153,6 +152,47 @@ class Stock:
 
         return self._threeMonthAvgVolume
 
+    def set_eps(self):
+        """
+        Sets the 12 month EPS value of a stock
+        """
+
+        self._EPS = si.get_quote_table(self.ticker)['EPS (TTM)']
+
+    def get_eps(self):
+        """
+        Gets the 12 month EPS value of a stock
+        :return EPS of a stock as a integer
+        """
+        return self._EPS
+
+    def set_Pe_Ratio(self):
+        """
+        Sets the 12 month Pe-Ratio value of a stock
+        """
+
+        self._PeRatio = si.get_quote_table(self.ticker)['PE Ratio (TTM)']
+
+    def get_Pe_Ratio(self):
+        """
+        Gets the 12 month Pe-Ratio value of a stock
+        :return Pe-Ratio of a stock as a float value
+        """
+        return self._PeRatio
+
+    def set_Beta(self):
+        """
+        Sets the 5Y Monthly Beta value of a stock
+        """
+
+        self._Beta = si.get_quote_table(self.ticker)['Beta (5Y Monthly)']
+
+    def get_Beta(self):
+        """
+        Gets the 5Y Monthly Beta value of a stock
+        :return Beta of a stock as a float value
+        """
+        return self._Beta
 
 
     def set_all_stock_info(self):
@@ -165,6 +205,9 @@ class Stock:
         self.set_market_cap()
         self.set_volume()
         self.set_three_month_volume()
+        self.set_eps()
+        self.set_Pe_Ratio()
+        self.set_Beta()
 
 
 
@@ -188,6 +231,9 @@ print(s1.get_market_cap())
 print(s1.get_stock_company_name())
 print(s1.get_volume())
 print(s1.get_three_month_volume())
+print(s1.get_eps())
+print(s1.get_Pe_Ratio())
+print(s1.get_Beta())
 # print(s1.stats())
 # print(s1.getNews().news_tostring())
 
