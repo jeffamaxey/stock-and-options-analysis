@@ -11,6 +11,7 @@ class Article:
     """
     The Article class represents a news article
     """
+
     def __init__(self, category, article_date, headline, image, source, summary, url):
         # attributes of Article class
         self._category = category
@@ -28,14 +29,12 @@ class Article:
           """
         return self._category
 
-
     def get_datetime(self):
         """
         Gets the datetime of the article
         @return the datetime of the article as a string
         """
         return self._datetime
-
 
     def get_headline(self):
         """
@@ -44,14 +43,12 @@ class Article:
         """
         return self._headline
 
-
     def get_image(self):
         """
         Gets the image of the article
         @return a string url containing the image of the article
         """
         return self._image
-
 
     def get_url(self):
         """
@@ -60,14 +57,12 @@ class Article:
          """
         return self._url
 
-
     def get_source(self):
         """
         Gets the source of the article
         @return the source of the article as a string
         """
         return self._source
-
 
     def get_summary(self):
         """
@@ -83,6 +78,7 @@ class News:
     @param ticker is the ticker symbol of the Stock to find news for
     @thrown RuntimeError if ticker is invalid
     """
+
     def __init__(self, ticker):
         # if the ticker is not valid an exception is thrown
         if not validTicker.valid_ticker(ticker):
@@ -91,12 +87,15 @@ class News:
         # attributes of news class
         self._ticker = ticker
         self._articles = []
-        self._max_articles = 10 # maximum number of news articles we will store
+        self._max_articles = 10  # maximum number of news articles we will store
 
-    def get_news(self):
+        # call method to automatically get all news articles and store them in self._articles list
+        self.set_news()
+
+    def set_news(self):
         """
-        Gets a list of the company news articles for a particular stock within a 3 day period and store it in the news list
-        @return a list of company  news articles
+        Sets a list of the company news articles for a particular stock within a 3 day period and store it in the articles list
+        :return a list of company  news articles
         """
         end_date = date.today()  # the end date is the last day to get upto date news from
         start_date = end_date - timedelta(3)  # the start date is the starting date to get news from
@@ -114,7 +113,7 @@ class News:
             # get all article info from dictionary
             current_news = news[x]
             headline = current_news["headline"]
-            article_date = datetime.utcfromtimestamp(int(current_news ["datetime"])).strftime("%Y-%m-%d")
+            article_date = datetime.utcfromtimestamp(int(current_news["datetime"])).strftime("%Y-%m-%d")
             category = current_news["category"]
             image = current_news["image"]
             source = current_news["source"]
@@ -126,29 +125,34 @@ class News:
             # store the created article into the list of news
             self._articles.append(article)
 
+    def get_news_as_list(self):
+        """
+        Gets a python list of the company news articles for a particular stock within a 3 day period and store it in the articles list
+        The list contains article objects
+        :return a list of company  news articles
+        """
+
         # returning the list containing company news articles
         return self._articles
 
-
-    def news_to_string(self):
+    def news_tostring(self):
         """
-        Gets a list of the company news articles for a particular stock within a 3 day period and store it in the news list
-        @return a list of company  news articles
+        Gets a string representation of all articles related to the stock ticker within the news list
+        :return a string representation of all news articles within the articles list
         """
         news_string = "News for " + self._ticker + ' Stock\n'
         i = 0
         for article in self._articles:
             i += 1
-            news_string = news_string + "\nArticle " + str(i) + ":\n" + " Headline: " + article.get_headline() + "\n Date: " + article.get_datetime() +  \
+            news_string = news_string + "\nArticle " + str(
+                i) + ":\n" + " Headline: " + article.get_headline() + "\n Date: " + article.get_datetime() + \
                           "\n Category: " + article.get_category() + "\n Source: " + article.get_source() + "\n URL: " + article.get_url() \
                           + "\n Image: " + article.get_image() + "\n Summary: " + article.get_summary()
 
         return news_string
 
-
-
 # # testing
 # n1 = News("AAPL")
 # j = n1.get_news()
 #
-# print(n1.news_to_string())
+# print(n1.news_tostring())

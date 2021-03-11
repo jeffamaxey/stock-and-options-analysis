@@ -37,6 +37,9 @@ def valid_ticker(ticker):
         # exception thrown so the ticker is invalid and we return false
         return False
 
-# print(get_ticker_company("sklz"))
-# print(valid_ticker("nasdgfs"))
-# print(valid_ticker("stpk"))
+
+
+
+    # print(get_ticker_company("sklz"))
+    # print(valid_ticker("nasdgfs"))
+    # print(valid_ticker("stpk"))
