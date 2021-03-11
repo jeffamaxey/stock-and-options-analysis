@@ -9,6 +9,7 @@ def get_ticker_company(ticker):
     :return a string of the company name
     """
     # call the yahoo finance api and store the stock information as json into result list
+    # some of this code is borrowed from https://stackoverflow.com/questions/38967533/retrieve-company-name-with-ticker-symbol-input-yahoo-or-google-api
     ticker = ticker.upper()
     url = "http://d.yimg.com/autoc.finance.yahoo.com/autoc?query={}&region=1&lang=en".format(ticker)
     result = requests.get(url).json()
