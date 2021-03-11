@@ -1,10 +1,10 @@
 import pandas_datareader as web
-from yahoo_fin import stock_info as si
-
 import ValidTicker as validTicker
 import yfinance as yf
-from News import News
+import convertStringToInteger as convert
 
+from News import News
+from yahoo_fin import stock_info as si
 
 class Stock:
     """
@@ -109,7 +109,8 @@ class Stock:
         """
         Sets the current MarketCap of a stock
         """
-        self._marketCap = self.get_stock_stats().at[1, "Value"] # index 1 of the pandas dataframe corresponds to the Market Cap
+        self._marketCap = web.get_quote_yahoo(self.ticker)['marketCap'][0]  # index 0 to ignore excess ticker output
+
 
     def get_market_cap(self):
         """
@@ -133,6 +134,27 @@ class Stock:
         """
         return self._volume
 
+    def set_three_month_volume(self):
+        """
+        Sets the three month average Volume of a stock
+        This uses pandas data structure to read the the data into the instance variable
+        """
+
+        self._threeMonthAvgVolume = self.get_stock_stats().at[16, "Value"]# index 16 of the pandas dataframe corresponds to the three_month_volume
+        # since dataframe returns information as a string we must convert to integer
+        self._threeMonthAvgVolume = convert.convertStringToInteger(self._threeMonthAvgVolume)
+
+
+    def get_three_month_volume(self):
+        """
+        Gets the three month average Volume of a stock
+        :return three month average Volume of a stock as a string
+        """
+
+        return self._threeMonthAvgVolume
+
+
+
     def set_all_stock_info(self):
         """
         Call all appropriate methods to set the values of the attributes of the stock class
@@ -141,9 +163,8 @@ class Stock:
         self.set_stock_company_name()
         self.set_stock_price()
         self.set_market_cap()
-
-
         self.set_volume()
+        self.set_three_month_volume()
 
 
 
@@ -166,6 +187,7 @@ print(s1.get_stock_price())
 print(s1.get_market_cap())
 print(s1.get_stock_company_name())
 print(s1.get_volume())
+print(s1.get_three_month_volume())
 # print(s1.stats())
 # print(s1.getNews().news_tostring())
 
