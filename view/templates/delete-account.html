@@ -1,0 +1,309 @@
+<!-- extends the base.html template -->
+{% extends "base.html" %}
+
+{% block title %} Delete Account {% endblock %}
+
+  {% block head %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <link rel="stylesheet" type="text/css" href="../static/css/signup-page.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Montserrat:700,400,500,600,500italic");
+
+      .component-wrapper a,
+      .screen a {
+        text-decoration: none;
+        display: contents;
+      }
+
+      .full-width-a {
+        width: 100%;
+      }
+
+      .full-height-a {
+        height: 100%;
+      }
+
+      .screen textarea:focus,
+      .screen input:focus {
+        outline: none;
+      }
+
+      .screen *,
+      .component-wrapper * {
+        box-sizing: border-box;
+      }
+
+      .screen div {
+        -webkit-text-size-adjust: none;
+      }
+
+      .container-center-vertical,
+      .container-center-horizontal {
+        pointer-events: none;
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+        margin: 0;
+      }
+
+      .container-center-vertical {
+        align-items: center;
+        height: 100%;
+      }
+
+      .container-center-horizontal {
+        justify-content: center;
+        width: 100%;
+      }
+
+      .container-center-vertical > *,
+      .container-center-horizontal > * {
+        pointer-events: auto;
+        flex-shrink: 0;
+      }
+
+      .component-wrapper,
+      .screen {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+        word-break: break-word;
+      }
+
+      .auto-animated div {
+        opacity: 0;
+        position: absolute;
+        --z-index: -1;
+      }
+
+      .auto-animated .container-center-vertical,
+      .auto-animated .container-center-horizontal {
+        opacity: 1;
+      }
+
+      .overlay {
+        position: absolute;
+        opacity: 0;
+        display: none;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+      }
+
+      .animate-appear {
+        opacity: 0;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 normal forwards;
+      }
+
+      .animate-disappear {
+        opacity: 1;
+        display: block;
+        animation: reveal 0.3s ease-in-out 1 reverse forwards;
+      }
+
+      .animate-nodelay {
+        animation-delay: 0s;
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .align-self-flex-start {
+        align-self: flex-start;
+      }
+      .align-self-flex-end {
+        align-self: flex-end;
+      }
+      .align-self-flex-center {
+        align-self: center;
+      }
+      .valign-text-middle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .valign-text-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+      input:focus {
+        outline: none;
+      }
+      .component-wrapper,
+      .component-wrapper * {
+        pointer-events: none;
+      }
+
+      .component-wrapper a *,
+      .component-wrapper a,
+      .component-wrapper input,
+      .component-wrapper video,
+      .component-wrapper iframe,
+      .listeners-active,
+      .listeners-active * {
+        pointer-events: auto;
+      }
+
+      .hidden,
+      .hidden * {
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .smart-layers-pointers,
+      .smart-layers-pointers * {
+        pointer-events: auto;
+        visibility: visible;
+      }
+
+      .component-wrapper.not-ready,
+      .component-wrapper.not-ready * {
+        visibility: hidden !important;
+      }
+
+      .listeners-active-click,
+      .listeners-active-click * {
+        cursor: pointer;
+      }
+    </style>
+    <meta name="author" content="AnimaApp.com - Design to code, Automated." />
+  </head>
+  {% endblock %}
+
+  {% block content %}
+  <body style="margin: 0; background: rgba(201, 201, 201, 1)">
+    <input type="hidden" id="anPageName" name="page" value="signup-page" />
+    <div class="container-center-horizontal">
+      <form class="signup-page screen" name="form11" method="post">
+        <div class="terms-C61RwL smart-layers-pointers">
+<!--          <div class="rectangle-48-QRkWrx"></div>-->
+        </div>
+        <a href="javascript:SubmitForm('form11')">
+          <div class="solid-button-C61RwL smart-layers-pointers"><div class="sign-up-s3Kria">DELETE</div></div></a
+        >
+        <div class="password-box-C61RwL">
+          <input class="password-VTdSxX" name="password12" placeholder="Password" type="password" required />
+        </div>
+        <a href="/">
+          <div class="back-C61RwL smart-layers-pointers">
+            <img class="ios-arrow-back-7WGuVo" src="../static/img/ios-arrow-back@1x.png" />
+            <div class="back-to-home-7WGuVo">Back To Home</div>
+          </div></a
+        >
+        <a href="/">
+        <img class="logo250x219-C61RwL smart-layers-pointers" src="../static/img/logo250x219@1x.png" />
+        </a>
+      </form>
+    </div>
+    <div class="container-center-horizontal">
+      <form class="x1280-signup-page screen" name="form32" method="post">
+        <a href="/">
+          <div class="back-C61RwL smart-layers-pointers">
+            <img class="ios-arrow-back-7WGuVo" src="../static/img/ios-arrow-back-11@1x.png" />
+            <div class="back-to-home-7WGuVo">Back To Home</div>
+          </div></a
+        >
+        <a href="javascript:SubmitForm('form32')">
+          <div class="loginbutton-C61RwL smart-layers-pointers"><div class="sign-up-FWBO1s">DELETE</div></div></a
+        >
+        <div class="password-box-C61RwL">
+          <input
+            class="password-VTdSxX smart-layers-pointers"
+            name="password17"
+            placeholder="Password"
+            type="password"
+            required
+          />
+        </div>
+        <a href="/"
+          ><img class="logo166x145-C61RwL smart-layers-pointers" src="../static/img/logo166x145@1x.png"
+        /></a>
+      </form>
+    </div>
+    <div class="container-center-horizontal">
+      <form class="x768-signup-page screen" name="form52" method="post">
+        <a href="javascript:SubmitForm('form52')">
+          <div class="signupbutton-C61RwL smart-layers-pointers"><div class="sign-up-3bxz0l">DELETE</div></div></a
+        >
+        <a href="/">
+          <div class="back-C61RwL smart-layers-pointers">
+            <img class="ios-arrow-back-7WGuVo" src="../static/img/ios-arrow-back-22@1x.png" />
+            <div class="back-to-home-7WGuVo">Back To Home</div>
+          </div></a
+        >
+        <div class="password-box-C61RwL">
+          <input
+            class="password-VTdSxX smart-layers-pointers"
+            name="password110"
+            placeholder="Password"
+            type="password"
+            required
+          />
+        </div>
+        <a href="/"
+          ><img class="logo80x70-C61RwL smart-layers-pointers" src="../static/img/logo80x70@1x.png"
+        /></a>
+      </form>
+    </div>
+    <div class="container-center-horizontal">
+      <form class="x375-signup-page screen" name="form73" method="post">
+        <a href="javascript:SubmitForm('form73')">
+          <div class="signupbutton-C61RwL smart-layers-pointers"><div class="sign-up-3bxz0l">DELETE</div></div></a
+        >
+        <div class="password-box-C61RwL">
+          <input
+            class="password-VTdSxX smart-layers-pointers"
+            name="password113"
+            placeholder="Password"
+            type="password"
+            required
+          />
+        </div>
+        <a href="/">
+          <div class="back-C61RwL smart-layers-pointers">
+            <img class="ios-arrow-back-7WGuVo" src="../static/img/ios-arrow-back-11@1x.png" />
+            <div class="back-to-home-7WGuVo">Back To Home</div>
+          </div></a
+        >
+        <a href="/"
+          ><img class="logo50x44-C61RwL smart-layers-pointers" src="../static/img/logo50x44@1x.png"
+        /></a>
+      </form>
+    </div>
+    <script>
+      /* Copyright (c) 2016 Tobias Buschor https://goo.gl/gl0mbf | MIT License https://goo.gl/HgajeK */
+
+      if (!HTMLFormElement.prototype.reportValidity) {
+        HTMLFormElement.prototype.reportValidity = function () {
+          if (this.checkValidity()) return true;
+          var btn = document.createElement("button");
+          this.appendChild(btn);
+          btn.click();
+          this.removeChild(btn);
+          return false;
+        };
+      }
+
+      function SubmitForm(form_name) {
+        var form = document.getElementsByName(form_name)[0];
+        if (form.reportValidity()) {
+          form.submit();
+          if (window.submitted) window.submitted();
+        }
+      }
+    </script>
+  </body>
+  {% endblock %}

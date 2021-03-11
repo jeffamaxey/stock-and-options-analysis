@@ -149,13 +149,20 @@ def logout():
 @login_required     # Make sure the user can't delete their account when not logged in
 def delete_user():
     if request.method == "POST":
-        password = request.form.get("password")
+
+        password = request.form.get("password12")
+        if password is None:
+            password = request.form.get("password17")
+        if password is None:
+            password = request.form.get("password110")
+        if password is None:
+            password = request.form.get("password113")
 
         if UserDB.check_password(current_user.email, password):
             UserDB.delete(current_user.email)
             flash("Your account has been successfully deleted.", category="Success")
-            return redirect(url_for("login"))     # redirect the user to the login page
+            return redirect(url_for("auth.login"))     # redirect the user to the login page
         else:
             flash("Incorrect password. Please try again.", category="Error")
 
-    return render_template("HelloWorld.html", user=current_user)
+    return render_template("delete-account.html", user=current_user)
