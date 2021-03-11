@@ -1,6 +1,5 @@
 import pandas_datareader as web
 import ValidTicker as validTicker
-import yfinance as yf
 import convertStringToInteger as convert
 
 from News import News
@@ -29,16 +28,20 @@ class Stock:
         self._PeRatio = None
         self._Beta = None
         self._Open = None
-        self._Close = None
-        self._Bid = None
-        self._Ask = None
+        self._previous_close = None
+        self._bid = None
+        self._ask = None
         self._Low = None
         self._High = None
         self._EarningsDate = None
         self._Fifty_Two_week_low = None
         self._Fifty_Two_week_high = None
         self._one_year_estimate = None
+
+        # there two attributes store data from api calls to yahoo finance
         self._stock_stats = None
+        self._stock_quote = None
+
 
         # call function to automatically set all the stock info
         self.set_all_stock_info()
@@ -60,17 +63,32 @@ class Stock:
         """
         self._stock_stats = si.get_stats(self.ticker)
 
+    def set_stock_quote(self):
+        """
+        Sets a quote of the stock of the stock
+        This gets a quote from yahoo finance and the data is stored into a python dictionary
+        """
+        self._stock_quote = si.get_quote_table(self.ticker)
+
+    def get_stock_quote(self):
+        """
+        Gets a quote of the stock of the stock
+        :return a quote of the stock as a python dictionary
+        """
+        return self._stock_quote
+
+
     def get_stock_stats(self):
         """
         Gets a summary of stats of the stock
         :return a pandas dataFrame objects which has stock info from yahoo finance stored
         """
-
         return self._stock_stats
 
     def set_stock_company_name(self):
         """
         A function used to set the company name of the stock
+        Calls the validTicker script to get the company name returned as a string
         :throws a ProcessLookupError exception if a company name of a ticker is not found
         """
         self._companyName = validTicker.get_ticker_company(self.ticker)
@@ -92,22 +110,24 @@ class Stock:
     def set_stock_price(self):
         """
         A function used to set the current stock price using yahoo finance
-        THe method does not include after hours or pre-market price
+        The method does not include after hours or pre-market price
+        For this method we are indexing from our python dictionary which is returned by our previous API call to yahoo-fin
+
         """
-        self._pricePerShare = si.get_live_price(self.ticker)  # gets current live price of the stock
+        self._pricePerShare = self.get_stock_quote()['Quote Price']  # gets current live price of the stock
 
     def get_stock_price(self):
         """
         A function used to get the current stock price using yahoo finance
-        THe methoed does not include after hours or pre-market price
-        :return price of the stock as an integer
+        THe method does not include after hours or pre-market price
+        :return price of the stock as an floating point number
         """
-        self._pricePerShare = si.get_live_price(self.ticker)  # gets current live price of the stock
         return self._pricePerShare
 
     def set_market_cap(self):
         """
         Sets the current MarketCap of a stock
+        For this method we are using a pandas web call to get the marketCap as an integer from yahoo finance
         """
         self._marketCap = web.get_quote_yahoo(self.ticker)['marketCap'][0]  # index 0 to ignore excess ticker output
 
@@ -122,10 +142,9 @@ class Stock:
     def set_volume(self):
         """
         Sets the current Volume of a stock
-        This uses yf finance module which requires a history period when pulling data.
-        We index -1 to get the latest volume value
+        For this method we are indexing from our python dictionary which is returned by our previous API call to yahoo-fin
         """
-        self._volume = yf.Ticker(self.get_stock_ticker()).history(period ="1d")['Volume'][-1]
+        self._volume = self.get_stock_quote()['Volume']
 
     def get_volume(self):
         """
@@ -137,7 +156,7 @@ class Stock:
     def set_three_month_volume(self):
         """
         Sets the three month average Volume of a stock
-        This uses pandas data structure to read the the data into the instance variable
+        This uses pandas data structure given by our api call to read the the data into the instance variable
         """
 
         self._threeMonthAvgVolume = self.get_stock_stats().at[16, "Value"]# index 16 of the pandas dataframe corresponds to the three_month_volume
@@ -149,15 +168,15 @@ class Stock:
         Gets the three month average Volume of a stock
         :return three month average Volume of a stock as a string
         """
-
         return self._threeMonthAvgVolume
 
     def set_eps(self):
         """
         Sets the 12 month EPS value of a stock
+        For this method we are indexing from our python dictionary which is returned by our previous API call to yahoo-fin
         """
 
-        self._EPS = si.get_quote_table(self.ticker)['EPS (TTM)']
+        self._EPS = self.get_stock_quote()['EPS (TTM)']
 
     def get_eps(self):
         """
@@ -166,48 +185,171 @@ class Stock:
         """
         return self._EPS
 
-    def set_Pe_Ratio(self):
+    def set_pe_ratio(self):
         """
         Sets the 12 month Pe-Ratio value of a stock
+        For this method we are indexing from our python dictionary which is returned by our previous API call to yahoo-fin
         """
 
-        self._PeRatio = si.get_quote_table(self.ticker)['PE Ratio (TTM)']
+        self._PeRatio = self.get_stock_quote()['PE Ratio (TTM)']
 
-    def get_Pe_Ratio(self):
+    def get_pe_ratio(self):
         """
         Gets the 12 month Pe-Ratio value of a stock
         :return Pe-Ratio of a stock as a float value
         """
         return self._PeRatio
 
-    def set_Beta(self):
+    def set_beta(self):
         """
         Sets the 5Y Monthly Beta value of a stock
+        For this method we are indexing from our python dictionary which is returned by our previous API call to yahoo-fin
         """
 
-        self._Beta = si.get_quote_table(self.ticker)['Beta (5Y Monthly)']
+        self._Beta = self.get_stock_quote()['Beta (5Y Monthly)']
 
-    def get_Beta(self):
+    def get_beta(self):
         """
         Gets the 5Y Monthly Beta value of a stock
         :return Beta of a stock as a float value
         """
         return self._Beta
 
+    def set_open(self):
+        """
+        Sets the open price of a stock
+        For this method we are indexing from our python dictionary which is returned by our previous API call to yahoo-fin
+        """
+        self._Open = self.get_stock_quote()['Open']
+
+    def get_open(self):
+        """
+        Gets the open price of a stock
+        :return open price of a stock as a float value
+        """
+        return self._Open
+
+    def set_previous_close(self):
+        """
+        Sets the previous close price of a stock
+        For this method we are indexing from our python dictionary which is returned by our previous API call to yahoo-fin
+        """
+        self._previous_close = self.get_stock_quote()['Previous Close']
+
+    def get_previous_close(self):
+        """
+        Gets  the previous close price of a stock
+        :return the previous close price of a stock as a floating point number
+        """
+        return self._previous_close
+
+    def set_bid(self):
+        """
+        Sets the current bid of a stock
+        For this method we are indexing from our python dictionary which is returned by our previous API call to yahoo-fin
+        """
+        self._bid = self.get_stock_quote()['Bid']
+
+    def get_bid(self):
+        """
+        Gets current bid price of a stock
+        :return the current bid of a stock as a string
+        """
+        return self._bid
+
+    def set_ask(self):
+        """
+        Sets the current ask price of a stock
+        For this method we are indexing from our python dictionary which is returned by our previous API call to yahoo-fin
+        """
+        self._ask = self.get_stock_quote()['Ask']
+
+    def get_ask(self):
+        """
+        Gets current ask price of a stock
+        :return the current ask of a stock as a string
+        """
+        return self._ask
+
+    def set_low(self):
+        """
+        Sets the 52 week low price of a stock
+        For this method we are indexing from our pandas dataframe given from api call to yahoo_fin
+        """
+        self._Low= self.get_stock_stats().at[13, "Value"]# index 13 of the pandas dataframe corresponds to the 52 week low
+
+    def get_low(self):
+        """
+        Gets the 52 week low price of a stock
+        :return the the 52 week low price of a stock as a floating point number
+        """
+        return self._Low
+
+    def set_high(self):
+        """
+        Sets the 52 week high price of a stock
+        For this method we are indexing from our pandas dataframe given from api call to yahoo_fin
+        """
+        self._High = self.get_stock_stats().at[12, "Value"]  # index 12 of the pandas dataframe corresponds to the 52 week high
+
+    def get_high(self):
+        """
+        Gets the 52 week high price of a stock
+        :return the the 52 week low price of a stock as a floating point number
+        """
+        return self._High
+
+    def set_earnings_date(self):
+        """
+        Sets the earnings dates of the stock
+        For this method we are indexing from our python dictionary which is returned by our previous API call to yahoo-fin
+        """
+        self._EarningsDate = self.get_stock_quote()['Earnings Date']
+
+    def get_earnings_date(self):
+        """
+        Gets the earnings dates of the stock
+        :return the earnings dates of the stock as a string
+        """
+        return self._EarningsDate
+
+    def set_one_year_estimate(self):
+        """
+        Sets the one_year_estimate price of the stock
+        For this method we are indexing from our python dictionary which is returned by our previous API call to yahoo-fin
+        """
+        self._one_year_estimate = self.get_stock_quote()['1y Target Est']
+
+    def get_one_year_estimate(self):
+        """
+        Gets the  one_year_estimate price of the stock
+        :return the one_year_estimate price of the stock as a float
+        """
+        return self._one_year_estimate
+
 
     def set_all_stock_info(self):
         """
-        Call all appropriate methods to set the values of the attributes of the stock class
+        Call all appropriate setter methods to set the values of the attributes of the stock class
         """
         self.set_stock_stats()
+        self.set_stock_quote()
         self.set_stock_company_name()
         self.set_stock_price()
         self.set_market_cap()
         self.set_volume()
         self.set_three_month_volume()
         self.set_eps()
-        self.set_Pe_Ratio()
-        self.set_Beta()
+        self.set_pe_ratio()
+        self.set_beta()
+        self.set_open()
+        self.set_previous_close()
+        self.set_bid()
+        self.set_ask()
+        self.set_low()
+        self.set_high()
+        self.set_earnings_date()
+        self.set_one_year_estimate()
 
 
 
@@ -232,8 +374,16 @@ print(s1.get_stock_company_name())
 print(s1.get_volume())
 print(s1.get_three_month_volume())
 print(s1.get_eps())
-print(s1.get_Pe_Ratio())
-print(s1.get_Beta())
+print(s1.get_pe_ratio())
+print(s1.get_beta())
+print(s1.get_open())
+print(s1.get_previous_close())
+print(s1.get_bid())
+print(s1.get_ask())
+print(s1.get_low())
+print(s1.get_high())
+print(s1.get_earnings_date())
+print(s1.get_one_year_estimate())
 # print(s1.stats())
 # print(s1.getNews().news_tostring())
 
