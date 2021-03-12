@@ -38,11 +38,6 @@ def home():
     return render_template("landing-page.html", user=current_user)
 
 
-@general_bp.route("/contact")
-def contact():
-    return render_template("contact-page.html", user=current_user)
-
-
 @general_bp.route("/profile")
 @login_required     # Make sure the user can't access their profile page when not logged in
 def profile():

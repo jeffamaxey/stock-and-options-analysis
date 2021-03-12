@@ -16,8 +16,6 @@ def contact():
         if email is None:
             email = request.form.get("email18")
         if email is None:
-            email = request.form.get("email18")
-        if email is None:
             email = request.form.get("email113")
         if email is None:
             email = request.form.get("email118")
