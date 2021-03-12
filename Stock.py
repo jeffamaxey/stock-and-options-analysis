@@ -21,7 +21,7 @@ class Stock:
 
         # if the ticker is not valid an exception is thrown
         if not validTicker.valid_ticker(ticker):
-            raise RuntimeError
+            raise RuntimeError("This is not a valid ticker symbol")
 
         self.ticker = ticker
 
@@ -85,7 +85,8 @@ class Stock:
         self._one_year_estimate = self.get_stock_quote()['1y Target Est']
 
         # dividend info of stock
-        self._has_dividend = self.has_dividend()
+        self._has_dividend = self.get_stock_quote()['Forward Dividend & Yield'] != "N/A (N/A)"  # if we can pull the dividend yield we know the stock has a dividend; the dividend yield from API returns N/A (N/A) if stock does not have a dividend
+
         # self._dividendFrequency = None # can't figure out how to get as a string
         self._forward_annual_dividend_rate = self.stock_enhanced_quote.at[
             27, "Value"]  # index 27 of the pandas dataframe corresponds to the Forward Annual Dividend Rate
@@ -242,10 +243,7 @@ class Stock:
         Check whether the stock has a dividend
         :return a boolean true or false depending on whether the stock has a dividend or not
         """
-        # if we can pull the dividend yield we know the stock has a dividend
-        # the dividend yield from API returns N/A (N/A) if stock does not have a dividend
-
-        return self.get_stock_quote()['Forward Dividend & Yield'] != "N/A (N/A)"
+        return self._has_dividend
 
     def get_forward_annual_dividend_rate(self):
         """
@@ -257,22 +255,37 @@ class Stock:
     def get_dividend_yield(self):
         """
         Get the dividend yield of the stock
+        :precond stock must have dividend
+        :throws RuntimeError if stock does not have a dividend
         :return a dividend yield of stock as a floating point value
         """
+        if not self.has_dividend():
+            raise RuntimeError("This stock does not have dividend")
+
         return self._dividendYield
 
     def get_dividend_date(self):
         """
         Get the dividend date of the stock
+        :precond stock must have dividend
+        :throws RuntimeError if stock does not have a dividend
         :return a dividend date of stock as a string
         """
+        if not self.has_dividend():
+            raise RuntimeError("This stock does not have dividend")
+
         return self._dividendDate
 
     def get_ex_dividend(self):
         """
         Get the exDividend date of the stock
+        :precond stock must have dividend
+        :throws RuntimeError if stock does not have a dividend
         :return a exDividend date of stock as a string
         """
+        if not self.has_dividend():
+            raise RuntimeError("This stock does not have dividend")
+
         return self._exDividend
 
     def get_news(self):
