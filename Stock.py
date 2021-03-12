@@ -1,9 +1,8 @@
 import datetime
 import ValidTicker as validTicker
-
-
 from News import News
 from yahoo_fin import stock_info as si
+
 
 
 class Stock:
@@ -22,8 +21,9 @@ class Stock:
             raise RuntimeError
 
         self.ticker = ticker
-        # this variables will hold all information from api call
+        # these variables will hold all information from api call
         self._stock_quote = si.get_quote_table(self.ticker)
+        self.stock_enhanced_quote = si.get_stats(self.ticker)
 
         """
         Variables to store the stock information as provided below
@@ -47,8 +47,13 @@ class Stock:
             self._fifty_two_Week_Range  is the range of the stock price between the lowest price and the highest price of the stock within a 52 week period
             self._EarningsDate is the estimated rage of dates that the companies earnings report will be released
             self._one_year_estimate is the estimated price per share of the stock after 1 year
-
-
+            
+            self._has_dividend is a boolean which determines if the stock has a dividend
+            self._dividendFrequency is the divided frequency ex(quarterly, annually)
+            self._forward_annual_dividend_rate is the  projection of a company's yearly dividend
+            self._dividendYield is a financial ratio that shows how much a company pays out in dividends each year relative to its stock price
+            self._dividendDate is the date that the dividend is paid
+            self._exDividend is a date where if you purchase a stock on its exDividend date or after, you will not receive the next dividend payment
          """
 
         # declare all stock variables and get associated values from api call to yahoo finance
@@ -56,7 +61,7 @@ class Stock:
         self._pricePerShare = self.get_stock_quote()['Quote Price']
         self._marketCap = self.get_stock_quote()['Market Cap']
         self._volume = self.get_stock_quote()['Volume']
-        # self._threeMonthAvgVolume = convert.convertStringToInteger(self.get_stock_stats().at[16, "Value"] )
+        self._threeMonthAvgVolume = self.get_enhanced_quote().at[16, "Value"]# index 16 of the pandas dataframe corresponds to the three_month_volume
         self._EPS = self.get_stock_quote()['EPS (TTM)']
         self._PeRatio = self.get_stock_quote()['PE Ratio (TTM)']
         self._Beta = self.get_stock_quote()['Beta (5Y Monthly)']
@@ -64,7 +69,6 @@ class Stock:
         self._previous_close = self.get_stock_quote()['Previous Close']
         self._bid = self.get_stock_quote()['Bid']
         self._ask = self.get_stock_quote()['Ask']
-
         self._daily_range = self.get_stock_quote()["Day's Range"]
         self._fifty_two_Week_Range = self.get_stock_quote()['52 Week Range']
         self._EarningsDate = self.get_stock_quote()['Earnings Date']
@@ -72,10 +76,11 @@ class Stock:
 
         # dividend info of stock
         self._has_dividend = self.has_dividend()
-        self._dividendFrequency = None
-        self._dividendAmount = None
-        self._dividendDate = None
-        self._exDividend = None
+        #self._dividendFrequency = None # can't figure out how to get as a string
+        self._forward_annual_dividend_rate = self.stock_enhanced_quote.at[27, "Value"]# index 27 of the pandas dataframe corresponds to the Forward Annual Dividend Rate
+        self._dividendYield = self.stock_enhanced_quote.at[28, "Value"]# index 28 of the pandas dataframe corresponds to the Forward Annual Dividend Yield
+        self._dividendDate = self.stock_enhanced_quote.at[33, "Value"]# index 33 of the pandas dataframe corresponds to the Dividend Date
+        self._exDividend = self.stock_enhanced_quote.at[34, "Value"]# index 34 of the pandas dataframe corresponds to the Ex-Dividend Date
 
         # Automatically  gets news related to the stock
         self.news = News(self.ticker)
@@ -86,6 +91,13 @@ class Stock:
         :return a quote of the stock as a python dictionary
         """
         return self._stock_quote
+
+    def get_enhanced_quote(self):
+        """
+        Gets an enhanced quote of the stock which has more information
+        :return a quote of the stock as a python dictionary
+        """
+        return self.stock_enhanced_quote
 
     def get_stock_company_name(self):
         """
@@ -214,7 +226,36 @@ class Stock:
         """
         # if we can pull the dividend yield we know the stock has a dividend
         # the dividend yield from API returns N/A (N/A) if stock does not have a dividend
+
         return self.get_stock_quote()['Forward Dividend & Yield'] != "N/A (N/A)"
+
+    def get_forward_annual_dividend_rate(self):
+        """
+        Get the forward_annual_dividend_rate of the stock
+        :return a forward_annual_dividend_rate of stock as a floating point value
+        """
+        return self._forward_annual_dividend_rate
+
+    def get_dividend_yield(self):
+        """
+        Get the dividend yield of the stock
+        :return a dividend yield of stock as a floating point value
+        """
+        return self._dividendYield
+
+    def get_dividend_date(self):
+        """
+        Get the dividend date of the stock
+        :return a dividend date of stock as a string
+        """
+        return self._dividendDate
+
+    def get_ex_dividend(self):
+        """
+        Get the exDividend date of the stock
+        :return a exDividend date of stock as a string
+        """
+        return self._exDividend
 
     def get_news(self):
         """
@@ -235,7 +276,8 @@ print(s1.get_stock_price())
 print(s1.get_market_cap())
 print(s1.get_stock_company_name())
 print(s1.get_volume())
-# print(s1.get_three_month_volume())
+print(s1.get_three_month_volume())
+print(s1.get_three_month_volume())
 print(s1.get_eps())
 print(s1.get_pe_ratio())
 print(s1.get_beta())
@@ -247,8 +289,14 @@ print(s1.get_fifty_two_week_range())
 print(s1.get_daily_range())
 print(s1.get_earnings_date())
 print(s1.get_one_year_estimate())
-
 print(s1.has_dividend())
+print(s1.get_forward_annual_dividend_rate())
+print(s1.get_dividend_yield())
+print(s1.get_dividend_date())
+print(s1.get_ex_dividend())
+
+
+
 print(datetime.datetime.now() - begin_time)
 
 # print(s1.stats())
