@@ -1,8 +1,11 @@
 import datetime
 import ValidTicker as validTicker
 from News import News
+from Fundamental import Fundamental
+from BalanceSheet import BalanceSheet
+from IncomeStatement import IncomeStatement
+from CashFlow import CashFlow
 from yahoo_fin import stock_info as si
-
 
 
 class Stock:
@@ -21,6 +24,7 @@ class Stock:
             raise RuntimeError
 
         self.ticker = ticker
+
         # these variables will hold all information from api call
         self._stock_quote = si.get_quote_table(self.ticker)
         self.stock_enhanced_quote = si.get_stats(self.ticker)
@@ -49,11 +53,16 @@ class Stock:
             self._one_year_estimate is the estimated price per share of the stock after 1 year
             
             self._has_dividend is a boolean which determines if the stock has a dividend
-            self._dividendFrequency is the divided frequency ex(quarterly, annually)
             self._forward_annual_dividend_rate is the  projection of a company's yearly dividend
             self._dividendYield is a financial ratio that shows how much a company pays out in dividends each year relative to its stock price
             self._dividendDate is the date that the dividend is paid
             self._exDividend is a date where if you purchase a stock on its exDividend date or after, you will not receive the next dividend payment
+            self._news is a News object containing articles relating to the stock
+            self._fundamental is the Fundamental object containing methods to obtain a stocks fundamental information
+            self._balance_sheet is the BalanceSheet  object containing methods to obtain a stocks balanceSheet information
+            self._income_statement is the IncomeStatement object containing methods to obtain a stocks income statement information
+            self._cash_flow is the CashFlow object containing methods to obtain a stocks cashFlow information
+            
          """
 
         # declare all stock variables and get associated values from api call to yahoo finance
@@ -61,7 +70,8 @@ class Stock:
         self._pricePerShare = self.get_stock_quote()['Quote Price']
         self._marketCap = self.get_stock_quote()['Market Cap']
         self._volume = self.get_stock_quote()['Volume']
-        self._threeMonthAvgVolume = self.get_enhanced_quote().at[16, "Value"]# index 16 of the pandas dataframe corresponds to the three_month_volume
+        self._threeMonthAvgVolume = self.get_enhanced_quote().at[
+            16, "Value"]  # index 16 of the pandas dataframe corresponds to the three_month_volume
         self._EPS = self.get_stock_quote()['EPS (TTM)']
         self._PeRatio = self.get_stock_quote()['PE Ratio (TTM)']
         self._Beta = self.get_stock_quote()['Beta (5Y Monthly)']
@@ -76,14 +86,22 @@ class Stock:
 
         # dividend info of stock
         self._has_dividend = self.has_dividend()
-        #self._dividendFrequency = None # can't figure out how to get as a string
-        self._forward_annual_dividend_rate = self.stock_enhanced_quote.at[27, "Value"]# index 27 of the pandas dataframe corresponds to the Forward Annual Dividend Rate
-        self._dividendYield = self.stock_enhanced_quote.at[28, "Value"]# index 28 of the pandas dataframe corresponds to the Forward Annual Dividend Yield
-        self._dividendDate = self.stock_enhanced_quote.at[33, "Value"]# index 33 of the pandas dataframe corresponds to the Dividend Date
-        self._exDividend = self.stock_enhanced_quote.at[34, "Value"]# index 34 of the pandas dataframe corresponds to the Ex-Dividend Date
+        # self._dividendFrequency = None # can't figure out how to get as a string
+        self._forward_annual_dividend_rate = self.stock_enhanced_quote.at[
+            27, "Value"]  # index 27 of the pandas dataframe corresponds to the Forward Annual Dividend Rate
+        self._dividendYield = self.stock_enhanced_quote.at[
+            28, "Value"]  # index 28 of the pandas dataframe corresponds to the Forward Annual Dividend Yield
+        self._dividendDate = self.stock_enhanced_quote.at[
+            33, "Value"]  # index 33 of the pandas dataframe corresponds to the Dividend Date
+        self._exDividend = self.stock_enhanced_quote.at[
+            34, "Value"]  # index 34 of the pandas dataframe corresponds to the Ex-Dividend Date
 
-        # Automatically  gets news related to the stock
-        self.news = News(self.ticker)
+        # Automatically  gets news, fundamental related to the stock
+        self._news = News(self.ticker)
+        self._fundamental = Fundamental(self.ticker)
+        self._balance_sheet = BalanceSheet(self.ticker)
+        self._income_statement = IncomeStatement(self.ticker)
+        self._cash_flow = CashFlow(self.ticker)
 
     def get_stock_quote(self):
         """
@@ -264,44 +282,46 @@ class Stock:
         get_news_as_list() which returns article objects within a python list
         news_tostring() which will return a nicely formatted string representation of all news articles
 
-        :return a list of article objects relating to the stock
+        :return a News object relating to the stock
         """
-        return self.news
+        return self._news
 
+    def get_fundamental(self):
+        """
+        Get a Fundamental class object relating to the stock
+        The Fundamental  has methods that can be used by the user such as
+        get_priceFairValueTTM(), get_debtEquityRatioTTM,etc
 
-begin_time = datetime.datetime.now()
-s1 = Stock("aapl")
+        :return a Fundamental object relating to the stock
+        """
+        return self._fundamental
 
-print(s1.get_stock_price())
-print(s1.get_market_cap())
-print(s1.get_stock_company_name())
-print(s1.get_volume())
-print(s1.get_three_month_volume())
-print(s1.get_three_month_volume())
-print(s1.get_eps())
-print(s1.get_pe_ratio())
-print(s1.get_beta())
-print(s1.get_open())
-print(s1.get_previous_close())
-print(s1.get_bid())
-print(s1.get_ask())
-print(s1.get_fifty_two_week_range())
-print(s1.get_daily_range())
-print(s1.get_earnings_date())
-print(s1.get_one_year_estimate())
-print(s1.has_dividend())
-print(s1.get_forward_annual_dividend_rate())
-print(s1.get_dividend_yield())
-print(s1.get_dividend_date())
-print(s1.get_ex_dividend())
+    def get_balance_sheet(self):
+        """
+        Get a BalanceSheet class object relating to the stock
+        The BalanceSheet has methods that can be used by the user such as
+        get_totalCurrentAssets(), get_totalNonCurrentAssets(),etc
 
+        :return a BalanceSheet object relating to the stock
+        """
+        return self._balance_sheet
 
+    def get_income_statement(self):
+        """
+        Get a IncomeStatement class object relating to the stock
+        The IncomeStatement has methods that can be used by the user such as
+        getRevenue(), getIncomeTaxExpense(),etc
 
-print(datetime.datetime.now() - begin_time)
+        :return a BalanceSheet object relating to the stock
+        """
+        return self._income_statement
 
-# print(s1.stats())
-# print(s1.getNews().news_tostring())
+    def get_cash_flow(self):
+        """
+        Get a CashFlow class object relating to the stock
+        The CashFlow has methods that can be used by the user such as
+        getNetCashProvidedByOperatingActivities(), getNetCashUsedForInvestingActivites,etc
 
-#
-# print(si.get_holders("aapl"))
-# print(si.get_analysts_info("aapl"))
+        :return a CashFlow object relating to the stock
+        """
+        return self._cash_flow
