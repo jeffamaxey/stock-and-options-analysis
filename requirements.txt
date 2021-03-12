@@ -36,5 +36,6 @@ w3lib==1.22.0
 websockets==8.1
 wincertstore==0.2
 yahoo-fin==0.8.6
+yahoofinancials==1.6
 yfinance==0.1.55
 >>>>>>> 306e21c (Requirements file for dependencies)
