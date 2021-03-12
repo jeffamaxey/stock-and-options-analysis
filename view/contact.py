@@ -1,28 +1,42 @@
-from flask import Flask, Blueprint, render_template, request, flash, redirect, url_for,
-from flask.ext.mail import Message, Mail
+from flask import Flask, Blueprint, render_template, request, flash, redirect, url_for
+from flask_mail import Message, Mail
+from flask_login import current_user
+
+contact_bp = Blueprint("contact", __name__)
 
 mail = Mail()
 
-app = Flask(__name__)
-app.secret_key = 'dev key 123'
 
-# Use Message and Mail with Flask-Mail imports to config SMTP settings
-app.config["MAIL_SERVER"] = "smtp.gmail.com"
-app.config["MAIL_PORT"] = 465
-app.config["MAIL_USE_SSL"] = Truecoj
-app.config["MAIL_USERNAME"] = 'temp_email@gmail.com'
-app.config["MAIL_PASSWORD"] = 'put_password_here'
-
-mail.init_app(app)
-
-
-@app.route('/contact', methods=["GET", "POST"])
+@contact_bp.route('/contact', methods=["GET", "POST"])
 def contact():
     # Reads the input data when the user presses the submit button
     if request.method == 'POST':
-        email = request.form.get("email")
-        subject = request.form.get("subject")
-        message = request.form.get("message")
+
+        email = request.form.get("email11")
+        if email is None:
+            email = request.form.get("email18")
+        if email is None:
+            email = request.form.get("email18")
+        if email is None:
+            email = request.form.get("email113")
+        if email is None:
+            email = request.form.get("email118")
+
+        subject = request.form.get("subject1")
+        if subject is None:
+            subject = request.form.get("subject11")
+        if subject is None:
+            subject = request.form.get("subject12")
+        if subject is None:
+            subject = request.form.get("subject13")
+
+        message = request.form.get("write-your-message-here1")
+        if message is None:
+            message = request.form.get("write-your-message-here11")
+        if message is None:
+            message = request.form.get("write-your-message-here12")
+        if message is None:
+            message = request.form.get("write-your-message-here13")
 
         if len(email) == 0:
             flash("Please enter your email address.", category="Error")
@@ -33,7 +47,7 @@ def contact():
 
         else:
 
-            msg = Message(subject.data, sender='temp_email@gmail.com', recipients=['official_company_email@gmail.com'])
+            msg = Message(subject.data, sender='testemail.com', recipients=['testemail.com'])
         msg.body = """
         <%s>
       %s
@@ -41,8 +55,8 @@ def contact():
         mail.send(msg)
 
         flash("An email been sent from " + str(email) + ".", category="Success")
-        return render_template('contact-page.html', form=form)
+        return render_template('contact-page.html', user=current_user)
 
-# Go to contact page
-elif request.method == 'GET':
-return render_template('contact-page.html', form=form)
+    # Go to contact page
+    elif request.method == 'GET':
+        return render_template('contact-page.html', user=current_user)

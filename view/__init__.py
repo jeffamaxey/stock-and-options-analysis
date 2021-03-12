@@ -1,6 +1,7 @@
 from flask import Flask
 from database import UserDB
 from flask_login import LoginManager
+from flask_mail import Mail
 
 URL_PREFIX = "/"
 
@@ -44,5 +45,16 @@ def create_app():
             return UserDB.get_by_id(id)
         except LookupError:
             return None
+
+    # Use Message and Mail with Flask-Mail imports to config SMTP settings
+    from view.contact import mail
+
+    app.config["MAIL_SERVER"] = "smtp.gmail.com"
+    app.config["MAIL_PORT"] = 465
+    app.config["MAIL_USE_SSL"] = True
+    app.config["MAIL_USERNAME"] = 'testemail'
+    app.config["MAIL_PASSWORD"] = 'the password goes here'
+
+    mail.init_app(app)
 
     return app
