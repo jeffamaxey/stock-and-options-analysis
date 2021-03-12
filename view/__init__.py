@@ -23,10 +23,11 @@ def create_app():
     from view.technical import technical_analysis_bp
     from view.pricing_valuation import pricing_valuation_bp
     from view.payment import payment_bp
+    from view.contact import contact_bp
 
     # Register pages
     blueprints = [general_bp, auth_bp, strategies_bp, fundamental_analysis_bp, technical_analysis_bp,
-                  pricing_valuation_bp, payment_bp]
+                  pricing_valuation_bp, payment_bp, contact_bp]
 
     for blueprint in blueprints:
         app.register_blueprint(blueprint, url_prefix=URL_PREFIX)
