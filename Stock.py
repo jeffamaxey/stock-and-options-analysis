@@ -11,14 +11,39 @@ class Stock:
     :param ticker is the ticker symbol of the Stock
     :thrown RuntimeError if ticker is invalid
     """
-
     def __init__(self, ticker):
         # if the ticker is not valid an exception is thrown
         if not validTicker.valid_ticker(ticker):
             raise RuntimeError
 
-        # stock information
+        """
+        Variables to store the stock information as provided below
+        The are initialized to empty None values before the API calls to get and store the information
+        
+        Attributes:
+            self.ticker: is the ticker symbol of a stock ex (MSFT,AAPL,etc)
+            self._companyName: is the company name of a stock ex (Microsoft, Apple, etc)
+            self._pricePerShare: is the current live price per 1 share of the stock
+            self._marketCap: is the current Market capitalization which refers to the total dollar market value of a company's outstanding shares of stock
+            self._volume is the current Volume of the stock which is the number of shares traded 
+            self._threeMonthAvgVolume is the average volume of the stocks within the last 3 months
+            self._EPS is the Earnings per share of the stock
+            self._PeRatio is the price to earnings ratio of the stock
+            self._Beta is the measurement of a stock's volatility in relation to the overall market
+            self._Open is the opening price of the stock when the market opened on regular trading hours
+            self._previous_close is the previous closing price of the stock
+            self._bid is the highest price that someone is willing to pay for a share of the stock
+            self._ask is the lowest price that someone is willing to pay for a share of the stock
+            self._Fifty_Two_week_low  is the lowest price of the stock within a 52 week period
+            self._Fifty_Two_week_high  is the highest price of the stock within a 52 week period
+            self._EarningsDate is the estimated rage of dates that the companies earnings report will be released
+            self._one_year_estimate is the estimated price per share of the stock after 1 year
+            
+            
+         """
+
         self.ticker = ticker
+        # declare all stock variables
         self._companyName = None
         self._pricePerShare = None
         self._marketCap = None
@@ -31,30 +56,24 @@ class Stock:
         self._previous_close = None
         self._bid = None
         self._ask = None
-        self._Low = None
-        self._High = None
         self._EarningsDate = None
         self._Fifty_Two_week_low = None
         self._Fifty_Two_week_high = None
         self._one_year_estimate = None
 
-        # there two attributes store data from api calls to yahoo finance
-        self._stock_stats = None
-        self._stock_quote = None
-
-
-        # call function to automatically set all the stock info
-        self.set_all_stock_info()
-
-        # gets news related to the stock
-        self.news = News(self.ticker)
-
-        # dividend info
+        # dividend info of stock
         self._has_dividend = False
         self._dividendFrequency = None
         self._dividendAmount = None
         self._dividendDate = None
         self._exDividend = None
+
+        # call function to automatically set all the stock info
+        self.set_all_stock_info()
+
+        # Automatically  gets news related to the stock
+        self.news = News(self.ticker)
+
 
     def set_stock_stats(self):
         """
@@ -271,33 +290,33 @@ class Stock:
         """
         return self._ask
 
-    def set_low(self):
+    def set_fifty_two_week_low(self):
         """
         Sets the 52 week low price of a stock
         For this method we are indexing from our pandas dataframe given from api call to yahoo_fin
         """
-        self._Low= self.get_stock_stats().at[13, "Value"]# index 13 of the pandas dataframe corresponds to the 52 week low
+        self._Fifty_Two_week_low = self.get_stock_stats().at[13, "Value"]# index 13 of the pandas dataframe corresponds to the 52 week low
 
-    def get_low(self):
+    def get_fifty_two_week_low(self):
         """
         Gets the 52 week low price of a stock
         :return the the 52 week low price of a stock as a floating point number
         """
-        return self._Low
+        return self._Fifty_Two_week_low
 
-    def set_high(self):
+    def set_fifty_two_week_high(self):
         """
         Sets the 52 week high price of a stock
         For this method we are indexing from our pandas dataframe given from api call to yahoo_fin
         """
-        self._High = self.get_stock_stats().at[12, "Value"]  # index 12 of the pandas dataframe corresponds to the 52 week high
+        self._Fifty_Two_week_high = self.get_stock_stats().at[12, "Value"]  # index 12 of the pandas dataframe corresponds to the 52 week high
 
-    def get_high(self):
+    def get_fifty_two_week_high(self):
         """
         Gets the 52 week high price of a stock
         :return the the 52 week low price of a stock as a floating point number
         """
-        return self._High
+        return self._Fifty_Two_week_high
 
     def set_earnings_date(self):
         """
@@ -346,8 +365,8 @@ class Stock:
         self.set_previous_close()
         self.set_bid()
         self.set_ask()
-        self.set_low()
-        self.set_high()
+        self.set_fifty_two_week_low()
+        self.set_fifty_two_week_high()
         self.set_earnings_date()
         self.set_one_year_estimate()
 
@@ -380,8 +399,8 @@ print(s1.get_open())
 print(s1.get_previous_close())
 print(s1.get_bid())
 print(s1.get_ask())
-print(s1.get_low())
-print(s1.get_high())
+print(s1.get_fifty_two_week_low())
+print(s1.get_fifty_two_week_high())
 print(s1.get_earnings_date())
 print(s1.get_one_year_estimate())
 # print(s1.stats())
