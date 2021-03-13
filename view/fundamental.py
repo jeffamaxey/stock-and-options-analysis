@@ -29,11 +29,12 @@ def fundamental_analysis():
             data_source = request.form.get("data-source126")
 
         from control.controller import get_fundamental_analysis
-        fundamental_analysis_data.append(get_fundamental_analysis(ticker=ticker, data_source=data_source))
+        analysis = get_fundamental_analysis(ticker=ticker, data_source=data_source)
 
-        if fundamental_analysis_data is None:
+        if analysis is None:
             flash("Invalid ticker. Please try again.", category="Error")
         else:
+            fundamental_analysis_data.insert(0, analysis)
             return redirect(url_for("fundamental.fundamental_analysis_result"))
 
     return render_template("fundamental-analysis-page.html", user=current_user)
@@ -48,6 +49,9 @@ def fundamental_analysis_result():
     dividends = analysis["dividends"]
     financial_statements = analysis["financial_statements"]
     news = analysis["news"]
+
+    # clear the list so it doesn't grow as the user analyzes multiple times
+    fundamental_analysis_data.clear()
 
     return render_template("fundamental-analysis-page2.html", user=current_user,
                            open=stock_details["open"],
