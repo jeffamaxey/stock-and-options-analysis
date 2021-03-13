@@ -1,7 +1,7 @@
 # importing required modules
 from datetime import date, timedelta, datetime
 import requests
-import ValidTicker as validTicker
+from model import ValidTicker as validTicker
 
 # storing api key for FinHub
 api_key = "c0lb5ov48v6orbr11mgg"

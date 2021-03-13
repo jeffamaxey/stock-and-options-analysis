@@ -1,10 +1,10 @@
 import datetime
-import ValidTicker as validTicker
-from News import News
-from Fundamental import Fundamental
-from BalanceSheet import BalanceSheet
-from IncomeStatement import IncomeStatement
-from CashFlow import CashFlow
+from model import ValidTicker as validTicker
+from model.News import News
+from model.Fundamental import Fundamental
+from model.BalanceSheet import BalanceSheet
+from model.IncomeStatement import IncomeStatement
+from model.CashFlow import CashFlow
 from yahoo_fin import stock_info as si
 
 

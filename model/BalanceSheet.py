@@ -1,4 +1,4 @@
-import ValidTicker
+from model import ValidTicker
 import json
 from urllib.request import urlopen
 

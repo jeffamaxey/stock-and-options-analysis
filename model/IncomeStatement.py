@@ -1,6 +1,6 @@
 import json
 from urllib.request import urlopen
-import ValidTicker
+from model import ValidTicker
 
 
 def get_jsonparsed_data(ticker):
