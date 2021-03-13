@@ -47,58 +47,68 @@ def fundamental_analysis_result():
     stock_details = analysis["stock_details"]
     metrics = analysis["metrics"]
     dividends = analysis["dividends"]
-    financial_statements = analysis["financial_statements"]
+    income_statements = analysis["income_statements"]
     news = analysis["news"]
 
     # clear the list so it doesn't grow as the user analyzes multiple times
     fundamental_analysis_data.clear()
 
     return render_template("fundamental-analysis-page2.html", user=current_user,
+                           ticker=stock_details["ticker"],
+                           company_name=stock_details["company_name"],
+                           current_price_per_share=stock_details["current_price_per_share"],
                            open=stock_details["open"],
-                           close=stock_details["close"],
+                           previous_close=stock_details["previous_close"],
                            bid=stock_details["bid"],
                            ask=stock_details["ask"],
                            earnings_date=stock_details["earnings_date"],
-                           twenty_four_hour_low=stock_details["twenty_four_hour_low"],
-                           twenty_four_hour_high=stock_details["twenty_four_hour_high"],
-                           fifty_two_week_low=stock_details["fifty_two_week_low"],
-                           fifty_two_week_high=stock_details["fifty_two_week_high"],
+                           daily_range=stock_details["daily_range"],
+                           fifty_two_week_range=stock_details["fifty_two_week_range"],
                            year_estimate=stock_details["year_estimate"],
+
                            fair_value=metrics["fair_value"],
                            market_price=metrics["market_price"],
                            volume=metrics["volume"],
+                           three_month_average_volume=metrics["three_month_average_volume"],
                            market_cap=metrics["market_cap"],
-                           metrics_extra=metrics["extra"],
+                           EPS=metrics["EPS"],
+                           Beta=metrics["Beta"],
                            PE_ratio=metrics["PE_ratio"],
                            current_ratio=metrics["current_ratio"],
                            debt_to_equity=metrics["debt_to_equity"],
                            price_to_book_ratio=metrics["price_to_book_ratio"],
-                           frequency=dividends["frequency"],
-                           amount=dividends["amount"],
+                           price_fair_value_TTM=metrics["price_fair_value_TTM"],
+                           return_on_equity_TTM=metrics["return_on_equity_TTM"],
+                           price_earnings_to_growth_ratio_TTM=metrics["price_earnings_to_growth_ratio_TTM"],
+                           return_on_assets_TTM=metrics["return_on_assets_TTM"],
+                           return_on_capital_employed_TTM=metrics["return_on_capital_employed_TTM"],
+
+                           has_dividend=dividends["has_dividend"],
+                           forward_annual_dividend_rate=dividends["forward_annual_dividend_rate"],
                            dividend_yield=dividends["dividend_yield"],
                            dividend_date=dividends["dividend_date"],
                            ex_dividend=dividends["ex_dividend"],
-                           ddm=dividends["ddm"],
-                           dgm=dividends["dgm"],
-                           blended_forward_PE=dividends["blended_forward_PE"],
-                           npv=dividends["npv"],
-                           dividends_extra=dividends["extra"],
-                           current_assets=financial_statements["current_assets"],
-                           long_term_assets=financial_statements["long_term_assets"],
-                           total_assets=financial_statements["total_assets"],
-                           current_liabilities=financial_statements["current_liabilities"],
-                           long_term_liabilities=financial_statements["long_term_liabilities"],
-                           total_liabilities=financial_statements["total_liabilities"],
-                           shareholders_equity=financial_statements["shareholders_equity"],
-                           gross_revenue=financial_statements["gross_revenue"],
-                           ebitda=financial_statements["ebitda"],
-                           expenses=financial_statements["expenses"],
-                           net_income=financial_statements["net_income"],
-                           profit_margin=financial_statements["profit_margin"],
-                           net_operating_cash=financial_statements["net_operating_cash"],
-                           net_investing_cash=financial_statements["net_investing_cash"],
-                           net_financing_cash=financial_statements["net_financing_cash"],
-                           free_cash_flow=financial_statements["free_cash_flow"],
+
+                           total_current_assets=income_statements["total_current_assets"],
+
+                           net_cash_provided_by_operating_activities=income_statements["net_cash_provided_by_operating_activities"],
+                           net_cash_used_for_investing_activities=income_statements["net_cash_used_for_investing_activities"],
+                           net_cash_used_provided_by_financing_activities=income_statements["net_cash_used_provided_by_financing_activities"],
+                           free_cash_flow=income_statements["free_cash_flow"],
+                           revenue=income_statements["revenue"],
+                           ebitda=income_statements["ebitda"],
+                           income_tax_expense=income_statements["income_tax_expense"],
+                           net_income=income_statements["net_income"],
+                           gross_profit=income_statements["gross_profit"],
+
+                           total_non_current_assets=income_statements["total_non_current_assets"],
+                           total_assets=income_statements["total_assets"],
+                           total_current_liabilities=income_statements["total_current_liabilities"],
+                           total_non_current_liabilities=income_statements["total_non_current_liabilities"],
+                           total_liabilities=income_statements["total_liabilities"],
+                           total_stockholders_equity=income_statements["total_stockholders_equity"],
+                           total_liabilities_and_stockholders_equity=income_statements["total_liabilities_and_stockholders_equity"],
+
                            news=news
                            )
 
