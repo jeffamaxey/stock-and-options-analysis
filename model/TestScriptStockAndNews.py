@@ -12,7 +12,7 @@ def main():
     """
 
     # begin timer for execution time
-    ticker = "aapl"
+    ticker = "ayro"
     begin_time = datetime.datetime.now()
     s1 = Stock.Stock(ticker)
     execution_time = (datetime.datetime.now() - begin_time).total_seconds()
@@ -36,9 +36,9 @@ def main():
     print(s1.get_one_year_estimate())
     print(s1.has_dividend())
     print(s1.get_forward_annual_dividend_rate())
-    print(s1.get_dividend_yield())
-    print(s1.get_dividend_date())
-    print(s1.get_ex_dividend())
+    #print(s1.get_dividend_yield())
+    #print(s1.get_dividend_date())
+   # print(s1.get_ex_dividend())
     print(s1.get_news().news_tostring())
     print(s1.get_fundamental().get_priceFairValueTTM())
     print(s1.get_balance_sheet().get_totalCurrentAssets())

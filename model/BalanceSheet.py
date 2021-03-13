@@ -32,16 +32,27 @@ class BalanceSheet:
         if not ValidTicker.valid_ticker(ticker):
             raise RuntimeError
 
-        json_data = get_jsonparsed_data(ticker)
+        try:
+            json_data = get_jsonparsed_data(ticker)
+            self.totalCurrentAssets = json_data [0]["totalCurrentAssets"]
+            self.totalNonCurrentAssets = json_data [0]["totalNonCurrentAssets"]
+            self.totalAssets = json_data [0]["totalAssets"]
+            self.totalCurrentLiabilities = json_data [0]["totalCurrentLiabilities"]
+            self.totalNonCurrentLiabilities = json_data [0]["totalNonCurrentLiabilities"]
+            self.totalLiabilities = json_data [0]["totalLiabilities"]
+            self.totalStockholdersEquity = json_data [0]["totalStockholdersEquity"]
+            self.totalLiabilitiesAndStockholdersEquity = json_data [0]["totalLiabilitiesAndStockholdersEquity"]
 
-        self.totalCurrentAssets = json_data [0]["totalCurrentAssets"]
-        self.totalNonCurrentAssets = json_data [0]["totalNonCurrentAssets"]
-        self.totalAssets = json_data [0]["totalAssets"]
-        self.totalCurrentLiabilities = json_data [0]["totalCurrentLiabilities"]
-        self.totalNonCurrentLiabilities = json_data [0]["totalNonCurrentLiabilities"]
-        self.totalLiabilities = json_data [0]["totalLiabilities"]
-        self.totalStockholdersEquity = json_data [0]["totalStockholdersEquity"]
-        self.totalLiabilitiesAndStockholdersEquity = json_data [0]["totalLiabilitiesAndStockholdersEquity"]
+        except Exception as err:
+            # if exception is thrown this is because the api cannot fetch information from this stock and we have to return empty value
+            self.totalCurrentAssets = None
+            self.totalNonCurrentAssets = None
+            self.totalAssets = None
+            self.totalCurrentLiabilities = None
+            self.totalNonCurrentLiabilities = None
+            self.totalLiabilities = None
+            self.totalStockholdersEquity = None
+            self.totalLiabilitiesAndStockholdersEquity = None
 
     def get_totalCurrentAssets(self):
         return self.totalCurrentAssets

@@ -29,13 +29,21 @@ class IncomeStatement:
         if not ValidTicker.valid_ticker(ticker):
             raise RuntimeError
 
-        json_data = get_jsonparsed_data(ticker)
+        try:
+            json_data = get_jsonparsed_data(ticker)
+            self.revenue = json_data[0]["revenue"]
+            self.ebitda = json_data[0]["ebitda"]
+            self.incomeTaxExpense = json_data[0]["incomeTaxExpense"]
+            self.netIncome = json_data[0]["netIncome"]
+            self.grossProfit = json_data[0]["grossProfit"]
 
-        self.revenue = json_data[0]["revenue"]
-        self.ebitda = json_data[0]["ebitda"]
-        self.incomeTaxExpense = json_data[0]["incomeTaxExpense"]
-        self.netIncome = json_data[0]["netIncome"]
-        self.grossProfit = json_data[0]["grossProfit"]
+        except Exception as err:
+            # if exception is thrown this is because the api cannot fetch information from this stock and we have to return empty value
+            self.revenue = None
+            self.ebitda = None
+            self.incomeTaxExpense = None
+            self.netIncome = None
+            self.grossProfit = None
 
     def getRevenue(self):
         return self.revenue

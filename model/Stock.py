@@ -87,7 +87,7 @@ class Stock:
         # dividend info of stock
         self._has_dividend = self.get_stock_quote()['Forward Dividend & Yield'] != "N/A (N/A)"  # if we can pull the dividend yield we know the stock has a dividend; the dividend yield from API returns N/A (N/A) if stock does not have a dividend
 
-        # self._dividendFrequency = None # can't figure out how to get as a string
+
         self._forward_annual_dividend_rate = self.stock_enhanced_quote.at[
             27, "Value"]  # index 27 of the pandas dataframe corresponds to the Forward Annual Dividend Rate
         self._dividendYield = self.stock_enhanced_quote.at[

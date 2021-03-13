@@ -30,12 +30,19 @@ class CashFlow:
         if not ValidTicker.valid_ticker(ticker):
             raise RuntimeError
 
-        json_data = get_jsonparsed_data(ticker)
+        try:
+            json_data = get_jsonparsed_data(ticker)
+            self.netCashProvidedByOperatingActivities = json_data[0]["netCashProvidedByOperatingActivities"]
+            self.netCashUsedForInvestingActivites = json_data[0]["netCashUsedForInvestingActivites"]
+            self.netCashUsedProvidedByFinancingActivities = json_data[0]["netCashUsedProvidedByFinancingActivities"]
+            self.freeCashFlow = json_data[0]["freeCashFlow"]
 
-        self.netCashProvidedByOperatingActivities = json_data[0]["netCashProvidedByOperatingActivities"]
-        self.netCashUsedForInvestingActivites = json_data[0]["netCashUsedForInvestingActivites"]
-        self.netCashUsedProvidedByFinancingActivities = json_data[0]["netCashUsedProvidedByFinancingActivities"]
-        self.freeCashFlow = json_data[0]["freeCashFlow"]
+        except Exception as err:
+            # if exception is thrown this is because the api cannot fetch information from this stock and we have to return empty value
+            self.netCashProvidedByOperatingActivities = None
+            self.netCashUsedForInvestingActivites = None
+            self.netCashUsedProvidedByFinancingActivities = None
+            self.freeCashFlow = None
 
     def getNetCashProvidedByOperatingActivities(self):
         return self.netCashProvidedByOperatingActivities
