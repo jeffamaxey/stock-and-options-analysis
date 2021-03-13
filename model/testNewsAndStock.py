@@ -11,7 +11,7 @@ def main():
     """
 
     # begin timer for execution time
-    ticker = "sklz"
+    ticker = "sftw"
     begin_time = datetime.datetime.now()
     s1 = Stock.Stock(ticker)
     execution_time = (datetime.datetime.now() - begin_time).total_seconds()
