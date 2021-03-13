@@ -108,22 +108,29 @@ class News:
         news = requests.get(
             'https://finnhub.io/api/v1/company-news?symbol=' + self._ticker + '&from=' + start_date + '&to=' + end_date + '&token=' + api_key).json()
 
-        # go through the list of dictionaries and store news articles up till the max articles
-        for x in range(self._max_articles):
-            # get all article info from dictionary
-            current_news = news[x]
-            headline = current_news["headline"]
-            article_date = datetime.utcfromtimestamp(int(current_news["datetime"])).strftime("%Y-%m-%d")
-            category = current_news["category"]
-            image = current_news["image"]
-            source = current_news["source"]
-            summary = current_news["summary"]
-            url = current_news["url"]
+        try:
+            # try to add each article to list
 
-            # create new article with the needed attributes obtained from FinHub api
-            article = Article(category, article_date, headline, image, source, summary, url)
-            # store the created article into the list of news
-            self._articles.append(article)
+            # go through the list of dictionaries and store news articles up till the max articles
+            for x in range(self._max_articles):
+                # get all article info from dictionary
+                current_news = news[x]
+                headline = current_news["headline"]
+                article_date = datetime.utcfromtimestamp(int(current_news["datetime"])).strftime("%Y-%m-%d")
+                category = current_news["category"]
+                image = current_news["image"]
+                source = current_news["source"]
+                summary = current_news["summary"]
+                url = current_news["url"]
+
+                # create new article with the needed attributes obtained from FinHub api
+                article = Article(category, article_date, headline, image, source, summary, url)
+                # store the created article into the list of news
+                self._articles.append(article)
+
+        except IndexError as err:
+            return
+
 
     def get_news_as_list(self):
         """
