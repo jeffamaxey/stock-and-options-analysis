@@ -4,12 +4,10 @@ from flask_login import current_user
 
 contact_bp = Blueprint("contact", __name__)
 
-mail = Mail()
-
+mail = Mail(contact_bp)
 
 @contact_bp.route('/contact', methods=["GET", "POST"])
 def contact():
-    # Reads the input data when the user presses the submit button
     if request.method == 'POST':
 
         email = request.form.get("email11")
@@ -44,8 +42,7 @@ def contact():
             flash("Please enter a message.", category="Error")
 
         else:
-
-            msg = Message(subject.data, sender='testemail.com', recipients=['testemail.com'])
+            msg = Message(subject.data, sender='TheFinTechOrgTest@gmail.com', recipients=['TheFinTechOrgTest@gmail.com'])
         msg.body = """
         <%s>
       %s
