@@ -1,10 +1,10 @@
 import datetime
-import ValidTicker as validTicker
-from News import News
-from Fundamental import Fundamental
-from BalanceSheet import BalanceSheet
-from IncomeStatement import IncomeStatement
-from CashFlow import CashFlow
+from model import ValidTicker as validTicker
+from model.News import News
+from model.Fundamental import Fundamental
+from model.BalanceSheet import BalanceSheet
+from model.IncomeStatement import IncomeStatement
+from model.CashFlow import CashFlow
 from yahoo_fin import stock_info as si
 
 
@@ -67,7 +67,7 @@ class Stock:
 
         # declare all stock variables and get associated values from api call to yahoo finance
         self._companyName = validTicker.get_ticker_company(self.ticker)
-        self._pricePerShare = self.get_stock_quote()['Quote Price']
+        self._pricePerShare = round(self.get_stock_quote()['Quote Price'], 2)
         self._marketCap = self.get_stock_quote()['Market Cap']
         self._volume = self.get_stock_quote()['Volume']
         self._threeMonthAvgVolume = self.get_enhanced_quote().at[
@@ -82,12 +82,12 @@ class Stock:
         self._daily_range = self.get_stock_quote()["Day's Range"]
         self._fifty_two_Week_Range = self.get_stock_quote()['52 Week Range']
         self._EarningsDate = self.get_stock_quote()['Earnings Date']
-        self._one_year_estimate = self.get_stock_quote()['1y Target Est']
+        self._one_year_estimate = round(self.get_stock_quote()['1y Target Est'], 2)
 
         # dividend info of stock
         self._has_dividend = self.get_stock_quote()['Forward Dividend & Yield'] != "N/A (N/A)"  # if we can pull the dividend yield we know the stock has a dividend; the dividend yield from API returns N/A (N/A) if stock does not have a dividend
 
-        # self._dividendFrequency = None # can't figure out how to get as a string
+
         self._forward_annual_dividend_rate = self.stock_enhanced_quote.at[
             27, "Value"]  # index 27 of the pandas dataframe corresponds to the Forward Annual Dividend Rate
         self._dividendYield = self.stock_enhanced_quote.at[

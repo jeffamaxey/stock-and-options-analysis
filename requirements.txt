@@ -1,4 +1,4 @@
-
+<<<<<<< HEAD
 # Use BASH command to install the required packages: pip install -r requirements.txt
 # If you can't install them, try using this command: sudo apt-get install python3-distutils
 
@@ -7,6 +7,7 @@ flask-login >= 0.5.0
 flask-sqlalchemy >= 2.4.4   # database library
 Werkzeug >= 1.0.1   # Password encryption library
 Flask-Mail >= 0.9.1
+=======
 appdirs==1.4.4
 beautifulsoup4==4.9.3
 bs4==0.0.1
@@ -38,3 +39,4 @@ wincertstore==0.2
 yahoo-fin==0.8.6
 yahoofinancials==1.6
 yfinance==0.1.55
+>>>>>>> 306e21c (Requirements file for dependencies)
