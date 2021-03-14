@@ -43,7 +43,7 @@ def contact():
 
         else:
             # If past all prior if-statements, prepare to send message
-            msg = Message(subject, sender='TheFinTechOrgTest@gmail.com', recipients=['TheFinTechOrgTest@gmail.com'])
+            msg = Message(subject, recipients=['TheFinTechOrgTest@gmail.com'])
 
             msg.body = """ From: <%s> 
                 %s """ % (email, message)
