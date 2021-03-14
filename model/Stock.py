@@ -23,6 +23,7 @@ class Stock:
         if not validTicker.valid_ticker(ticker):
             raise RuntimeError("This is not a valid ticker symbol")
 
+        # update ticker symbol within the class
         self.ticker = ticker
 
         # these variables will hold all information from api call
@@ -87,7 +88,6 @@ class Stock:
         # dividend info of stock
         self._has_dividend = self.get_stock_quote()['Forward Dividend & Yield'] != "N/A (N/A)"  # if we can pull the dividend yield we know the stock has a dividend; the dividend yield from API returns N/A (N/A) if stock does not have a dividend
 
-
         self._forward_annual_dividend_rate = self.stock_enhanced_quote.at[
             27, "Value"]  # index 27 of the pandas dataframe corresponds to the Forward Annual Dividend Rate
         self._dividendYield = self.stock_enhanced_quote.at[
@@ -97,7 +97,7 @@ class Stock:
         self._exDividend = self.stock_enhanced_quote.at[
             34, "Value"]  # index 34 of the pandas dataframe corresponds to the Ex-Dividend Date
 
-        # Automatically  gets news, fundamental related to the stock
+        # Automatically  gets news, fundamental, balance sheet, income statement, cash flow related to the stock
         self._news = News(self.ticker)
         self._fundamental = Fundamental(self.ticker)
         self._balance_sheet = BalanceSheet(self.ticker)

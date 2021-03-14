@@ -566,6 +566,23 @@ def main():
     # manually test the news class to see if articles out put correctly
     print(s3.get_news().news_tostring())
 
+                                        # New stock to test
+################################################################################################################################################
+################################################################################################################################################
+
+    # testing with creating a stock using an invalid ticker
+    try:
+        print("\n\n\n\n")
+        ticker = "blahblah"
+        s3 = Stock.Stock(ticker)
+
+        # using an invalid ticker and still managed to create stock so display warning
+        print("Error " + ticker + " should not be a valid ticker but a stock was still created")
+
+    except RuntimeError as err:
+        # we should expect a RuntimeError when an invalid ticker is used
+        pass
+
 
     print("\n**** Testing Complete with " + str(ErrorCount) + " errors ****")
     print("Execution Time for " + s1.get_stock_ticker() + " Was: " + str(execution_time_apple_stock) + " seconds")
