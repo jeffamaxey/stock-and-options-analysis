@@ -50,7 +50,7 @@ def create_app():
     # Use Message and Mail with Flask-Mail imports to config SMTP settings
     from view.contact import mail
 
-    app.config["MAIL_SERVER"] = "smtp.gmail.com"
+    app.config["MAIL_SERVER"] = 'smtp.gmail.com'
     app.config["MAIL_PORT"] = 465
     app.config["MAIL_USE_SSL"] = True
     app.config['MAIL_USE_TLS'] = False

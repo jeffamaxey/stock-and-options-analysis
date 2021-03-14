@@ -1,5 +1,5 @@
 from flask import Flask, Blueprint, render_template, request, flash, redirect, url_for
-from flask_mail import Message, Mail
+from flask_mail import Mail, Message
 from flask_login import current_user
 
 contact_bp = Blueprint("contact", __name__)
@@ -41,20 +41,12 @@ def contact():
         if message is None:
             message = request.form.get("write-your-message-here13")
 
-        # if any field has no user input, flashes screen prompting correction
-        if len(email) == 0:
-            flash("Please enter your email address.", category="Error")
-        elif len(subject) == 0:
-            flash("Please enter a subject.", category="Error")
-        elif len(message) == 0:
-            flash("Please enter a message.", category="Error")
-
         else:
             # If past all prior if-statements, prepare to send message
-            msg = Message(subject.data, sender='TheFinTechOrgTest@gmail.com', recipients=['TheFinTechOrgTest@gmail.com'])
+            msg = Message(subject, sender='TheFinTechOrgTest@gmail.com', recipients=['TheFinTechOrgTest@gmail.com'])
 
-            msg.body = """ From: %s 
-                %s """ % (email.data, message.data)
+            msg.body = """ From: <%s> 
+                %s """ % (email, message)
             mail.send(msg)
 
             flash("An email has been sent. Thank you for contacting us, we will respond shortly.", category="Success")
