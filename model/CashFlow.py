@@ -32,10 +32,10 @@ class CashFlow:
 
         try:
             json_data = get_jsonparsed_data(ticker)
-            self.netCashProvidedByOperatingActivities = json_data[0]["netCashProvidedByOperatingActivities"]
-            self.netCashUsedForInvestingActivites = json_data[0]["netCashUsedForInvestingActivites"]
-            self.netCashUsedProvidedByFinancingActivities = json_data[0]["netCashUsedProvidedByFinancingActivities"]
-            self.freeCashFlow = json_data[0]["freeCashFlow"]
+            self.netCashProvidedByOperatingActivities = round(json_data[0]["netCashProvidedByOperatingActivities"], 2)
+            self.netCashUsedForInvestingActivites = round(json_data[0]["netCashUsedForInvestingActivites"], 2)
+            self.netCashUsedProvidedByFinancingActivities = round(json_data[0]["netCashUsedProvidedByFinancingActivities"], 2)
+            self.freeCashFlow = round(json_data[0]["freeCashFlow"], 2)
 
         except Exception as err:
             # if exception is thrown this is because the api cannot fetch information from this stock and we have to return empty value
@@ -56,8 +56,8 @@ class CashFlow:
     def getFreeCashFlow(self):
         return self.freeCashFlow
 
-
-# test1 = CashFlow()
+#
+# test1 = CashFlow("AAPL")
 # print(test1.getNetCashProvidedByOperatingActivities())
 # print(test1.getNetCashUsedForInvestingActivites())
 # print(test1.getNetCashUsedProvidedByFinancingActivities())

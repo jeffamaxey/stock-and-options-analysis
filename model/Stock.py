@@ -67,7 +67,7 @@ class Stock:
 
         # declare all stock variables and get associated values from api call to yahoo finance
         self._companyName = validTicker.get_ticker_company(self.ticker)
-        self._pricePerShare = self.get_stock_quote()['Quote Price']
+        self._pricePerShare = round(self.get_stock_quote()['Quote Price'], 2)
         self._marketCap = self.get_stock_quote()['Market Cap']
         self._volume = self.get_stock_quote()['Volume']
         self._threeMonthAvgVolume = self.get_enhanced_quote().at[
@@ -82,7 +82,7 @@ class Stock:
         self._daily_range = self.get_stock_quote()["Day's Range"]
         self._fifty_two_Week_Range = self.get_stock_quote()['52 Week Range']
         self._EarningsDate = self.get_stock_quote()['Earnings Date']
-        self._one_year_estimate = self.get_stock_quote()['1y Target Est']
+        self._one_year_estimate = round(self.get_stock_quote()['1y Target Est'], 2)
 
         # dividend info of stock
         self._has_dividend = self.get_stock_quote()['Forward Dividend & Yield'] != "N/A (N/A)"  # if we can pull the dividend yield we know the stock has a dividend; the dividend yield from API returns N/A (N/A) if stock does not have a dividend
