@@ -44,8 +44,8 @@ def contact():
         msg = Message(subject, recipients=['thefintechorgtest@gmail.com'])
 
         # for message format
-        msg.body = """ From: <%s> 
-            %s """ % (email, message)
+        msg.body = """ From: %s 
+        %s """ % (email, message)
         mail.send(msg)
 
         flash("An email has been sent. Thank you for contacting us, we will respond shortly.", category="Success")
