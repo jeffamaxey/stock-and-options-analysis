@@ -6,11 +6,11 @@ contact_bp = Blueprint("contact", __name__)
 
 mail = Mail(contact_bp)
 
-@contact_bp.route('/contact', methods=["GET", "POST"])
 """
 This function checks all input fields on contact-page.html and if they are correctly filled in, will use an email 
 address to send a message to a company email.
 """
+@contact_bp.route('/contact', methods=["GET", "POST"])
 def contact():
     if request.method == 'POST':
 
