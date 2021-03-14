@@ -5,3 +5,5 @@ flask >= 1.1.2  # website library
 flask-login >= 0.5.0
 flask-sqlalchemy >= 2.4.4   # database library
 Werkzeug >= 1.0.1   # Password encryption library
+numpy~=1.20.1
+scipy~=1.6.1
