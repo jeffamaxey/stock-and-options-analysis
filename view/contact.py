@@ -52,6 +52,5 @@ def contact():
         flash("An email has been sent. Thank you for contacting us, we will respond shortly.", category="Success")
         return render_template('contact-page.html', user=current_user)
 
-    else:
-        # load up contact page
-        return render_template('contact-page.html', user=current_user)
+    # load up contact page
+    return render_template('contact-page.html', user=current_user)
