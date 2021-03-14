@@ -32,14 +32,14 @@ class Fundamental:
 
         try:
             json_data = get_jsonparsed_data(ticker)
-            self.priceFairValueTTM = json_data[0]["priceFairValueTTM"]
-            self.debtEquityRatioTTM = json_data[0]["debtEquityRatioTTM"]
-            self.priceToBookRatioTTM = json_data[0]["priceToBookRatioTTM"]
-            self.returnOnEquityTTM = json_data[0]["returnOnEquityTTM"]
-            self.priceEarningsToGrowthRatioTTM = json_data[0]["priceEarningsToGrowthRatioTTM"]
-            self.returnOnAssetsTTM = json_data[0]["returnOnAssetsTTM"]
-            self.returnOnCapitalEmployedTTM = json_data[0]["returnOnCapitalEmployedTTM"]
-            self.currentRatioTTM = json_data[0]["currentRatioTTM"]
+            self.priceFairValueTTM = round(json_data[0]["priceFairValueTTM"], 2)
+            self.debtEquityRatioTTM = round(json_data[0]["debtEquityRatioTTM"], 2)
+            self.priceToBookRatioTTM = round(json_data[0]["priceToBookRatioTTM"], 2)
+            self.returnOnEquityTTM = round(json_data[0]["returnOnEquityTTM"], 2)
+            self.priceEarningsToGrowthRatioTTM = round(json_data[0]["priceEarningsToGrowthRatioTTM"], 2)
+            self.returnOnAssetsTTM = round(json_data[0]["returnOnAssetsTTM"], 2)
+            self.returnOnCapitalEmployedTTM = round(json_data[0]["returnOnCapitalEmployedTTM"], 2)
+            self.currentRatioTTM = round(json_data[0]["currentRatioTTM"], 2)
 
         except Exception as err:
             # if exception is thrown this is because the api cannot fetch information from this stock and we have to return empty value

@@ -60,7 +60,7 @@ class IncomeStatement:
     def getGrossProfit(self):
         return self.grossProfit
 
-# test1 = IncomeStatement()
+# test1 = IncomeStatement("AAPL")
 # print(test1.getRevenue())
 # print(test1.getEbitda())
 # print(test1.getIncomeTaxExpense())
