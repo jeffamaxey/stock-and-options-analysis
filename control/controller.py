@@ -11,8 +11,6 @@ def get_fundamental_analysis(ticker, data_source):
         return None
 
     fundamental = stock.get_fundamental()
-
-    # create these 3 classes which are needed
     balance_sheet = stock.get_balance_sheet()
     income_statement = stock.get_income_statement()
     cash_flow = stock.get_cash_flow()
@@ -43,7 +41,6 @@ def get_fundamental_analysis(ticker, data_source):
         "year_estimate": stock.get_one_year_estimate(),
     },
         "metrics": {"fair_value": fundamental.get_priceFairValueTTM(),
-                    "market_price": "-",
                     "volume": stock.get_volume(),
                     "three_month_average_volume": stock.get_three_month_volume(),
                     "market_cap": stock.get_market_cap(),
@@ -55,33 +52,24 @@ def get_fundamental_analysis(ticker, data_source):
                     "price_to_book_ratio": fundamental.get_priceToBookRatioTTM(),
                     "price_fair_value_TTM": fundamental.get_priceFairValueTTM(),
                     "return_on_equity_TTM": fundamental.get_returnOnEquityTTM(),
-                    "price_earnings_to_growth_ratio_TTM": fundamental.priceEarningsToGrowthRatioTTM(),
-                    "return_on_assets_TTM": fundamental.returnOnAssetsTTM(),
-                    "return_on_capital_employed_TTM": fundamental.returnOnCapitalEmployedTTM()
+                    "price_earnings_to_growth_ratio_TTM": fundamental.get_priceEarningsToGrowthRatioTTM(),
+                    "return_on_assets_TTM": fundamental.get_returnOnAssetsTTM(),
+                    "return_on_capital_employed_TTM": fundamental.get_returnOnCapitalEmployedTTM()
                     },
 
         "dividends": {
-            # create field has_dividend
             "has_dividend": stock.has_dividend(),
-
-            # do not call the methods below unless the stock has a dividend
-            # if the stock doesn't have a dividend set the dividends fields values below to  None
-
-            # create field forward_annual_dividend_rate:
             "forward_annual_dividend_rate": forward_annual_dividend_rate,
             "dividend_yield": dividend_yield,
             "dividend_date": dividend_date,
             "ex_dividend": ex_dividend,
-
-            # you can delete these fields since I do not have any methods to get this info
         },
         "income_statements": {
-            # rename to totalCurrentAssets
-            "total_current_assets": None,
+            "total_current_assets": balance_sheet.get_totalCurrentAssets(),
 
             "net_cash_provided_by_operating_activities": cash_flow.getNetCashProvidedByOperatingActivities(),
             "net_cash_used_for_investing_activities": cash_flow.getNetCashUsedForInvestingActivites(),
-            "net_cash_used_provided_by_financing_activities:": cash_flow.getNetCashUsedProvidedByFinancingActivities(),
+            "net_cash_used_provided_by_financing_activities": cash_flow.getNetCashUsedProvidedByFinancingActivities(),
             "free_cash_flow": cash_flow.getFreeCashFlow(),
             "revenue": income_statement.getRevenue(),
             "ebitda": income_statement.getEbitda(),
@@ -89,7 +77,7 @@ def get_fundamental_analysis(ticker, data_source):
             "net_income": income_statement.getNetIncome(),
             "gross_profit": income_statement.getGrossProfit(),
 
-            "total_non_current_assets": balance_sheet.get_totalCurrentAssets(),
+            "total_non_current_assets": balance_sheet.get_totalNonCurrentAssets(),
             "total_assets": balance_sheet.get_totalAssets(),
             "total_current_liabilities": balance_sheet.get_totalCurrentLiabilities(),
             "total_non_current_liabilities": balance_sheet.get_totalNonCurrentLiabilities(),

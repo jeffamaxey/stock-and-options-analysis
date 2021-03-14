@@ -33,6 +33,7 @@ def fundamental_analysis():
 
         if analysis is None:
             flash("Invalid ticker. Please try again.", category="Error")
+            return redirect(url_for("fundamental.fundamental_analysis"))
         else:
             fundamental_analysis_data.insert(0, analysis)
             return redirect(url_for("fundamental.fundamental_analysis_result"))
@@ -40,10 +41,44 @@ def fundamental_analysis():
     return render_template("fundamental-analysis-page.html", user=current_user)
 
 
-@fundamental_analysis_bp.route("/fundamental-analysis/result")
+@fundamental_analysis_bp.route("/fundamental-analysis/result", methods=["GET", "POST"])
 @login_required
 def fundamental_analysis_result():
-    analysis = fundamental_analysis_data[0]
+    # when the user entered tha page by pressing the analyze button
+    if request.method == "POST":
+
+        ticker = request.form.get("ticker-of-the-underlying-110")
+        if ticker is None:
+            ticker = request.form.get("ticker-of-the-underlying-120")
+        if ticker is None:
+            ticker = request.form.get("ticker-of-the-underlying-130")
+        if ticker is None:
+            ticker = request.form.get("ticker-of-the-underlying-140")
+
+        data_source = request.form.get("data-source110")
+        if data_source is None:
+            data_source = request.form.get("data-source120")
+        if data_source is None:
+            data_source = request.form.get("option-style140")
+        if data_source is None:
+            data_source = request.form.get("data-source130")
+
+        from control.controller import get_fundamental_analysis
+        analysis = get_fundamental_analysis(ticker=ticker, data_source=data_source)
+
+        if analysis is None:
+            flash("Invalid ticker. Please try again.", category="Error")
+            return redirect(url_for("fundamental.fundamental_analysis"))
+        else:
+            fundamental_analysis_data.insert(0, analysis)
+            return redirect(url_for("fundamental.fundamental_analysis_result"))
+
+    # when the user entered tha page without pressing the analyze button
+    try:
+        analysis = fundamental_analysis_data[0]
+    except IndexError:  # if this exception is thrown, it means the user refreshed the result page or entered by simple tying the url
+        return redirect(url_for("fundamental.fundamental_analysis"))
+
     stock_details = analysis["stock_details"]
     metrics = analysis["metrics"]
     dividends = analysis["dividends"]
@@ -67,7 +102,6 @@ def fundamental_analysis_result():
                            year_estimate=stock_details["year_estimate"],
 
                            fair_value=metrics["fair_value"],
-                           market_price=metrics["market_price"],
                            volume=metrics["volume"],
                            three_month_average_volume=metrics["three_month_average_volume"],
                            market_cap=metrics["market_cap"],
@@ -90,7 +124,6 @@ def fundamental_analysis_result():
                            ex_dividend=dividends["ex_dividend"],
 
                            total_current_assets=income_statements["total_current_assets"],
-
                            net_cash_provided_by_operating_activities=income_statements["net_cash_provided_by_operating_activities"],
                            net_cash_used_for_investing_activities=income_statements["net_cash_used_for_investing_activities"],
                            net_cash_used_provided_by_financing_activities=income_statements["net_cash_used_provided_by_financing_activities"],
@@ -100,7 +133,6 @@ def fundamental_analysis_result():
                            income_tax_expense=income_statements["income_tax_expense"],
                            net_income=income_statements["net_income"],
                            gross_profit=income_statements["gross_profit"],
-
                            total_non_current_assets=income_statements["total_non_current_assets"],
                            total_assets=income_statements["total_assets"],
                            total_current_liabilities=income_statements["total_current_liabilities"],
@@ -111,5 +143,3 @@ def fundamental_analysis_result():
 
                            news=news
                            )
-
-

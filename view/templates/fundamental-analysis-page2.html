@@ -187,7 +187,7 @@
   <body style="margin: 0; background: rgba(201, 201, 201, 1)">
     <input type="hidden" id="anPageName" name="page" value="fundamental-analysis-page2" />
     <div class="container-center-horizontal">
-      <form class="fundamental-analysis-page2 screen" name="form21" action="form21" method="post">
+      <form class="fundamental-analysis-page2 screen" name="form21" method="post">
         <div class="news-output-C61RwL">
           <div class="news-annual-report-Mo5SzT montserrat-normal-black-42px">NEWS &amp; ANNUAL REPORT</div>
         </div>
@@ -378,55 +378,55 @@
           </div>
           <div class="extra-UuuZad border-1px-dove-gray"><img class="extra-ULQOxS" src="../static/img/extra@1x.png" /></div>
           <div class="price-book-number-UuuZad border-1px-dove-gray">
-            <div class="x0043-50c8tr montserrat-semi-bold-white-19px">0.043</div>
+            <div class="x0043-50c8tr montserrat-semi-bold-white-19px">{{ current_ratio }}</div>
           </div>
           <div class="price-book-UuuZad border-1px-dove-gray">
-            <div class="price-to-book-ratio-LR5b4V montserrat-semi-bold-black-19px">PRICE TO BOOK RATIO</div>
+            <div class="price-to-book-ratio-LR5b4V montserrat-semi-bold-black-19px">CURRENT RATIO</div>
           </div>
           <div class="debt-to-equity-number-UuuZad border-1px-dove-gray">
-            <div class="x-0054-v41gUH montserrat-semi-bold-white-19px">( -0.054 )</div>
+            <div class="x-0054-v41gUH montserrat-semi-bold-white-19px">{{ PE_ratio }}</div>
           </div>
           <div class="debt-equity-UuuZad border-1px-dove-gray">
-            <div class="debt-to-equity-xzyEmx montserrat-semi-bold-black-19px">DEBT TO EQUITY</div>
+            <div class="debt-to-equity-xzyEmx montserrat-semi-bold-black-19px">P/E RATIO</div>
           </div>
           <div class="current-ratio-number-UuuZad border-1px-dove-gray">
-            <div class="x0173-j18RTu montserrat-semi-bold-white-19px">0.173</div>
+            <div class="x0173-j18RTu montserrat-semi-bold-white-19px">{{ Beta }}</div>
           </div>
           <div class="current-ratio-UuuZad border-1px-dove-gray">
-            <div class="current-ratio-nOGwPE montserrat-semi-bold-black-19px">CURRENT RATIO</div>
+            <div class="current-ratio-nOGwPE montserrat-semi-bold-black-19px">BETA</div>
           </div>
           <div class="p-enumber-UuuZad border-1px-dove-gray">
-            <div class="x0055-9ePK3W montserrat-semi-bold-white-19px">0.055</div>
+            <div class="x0055-9ePK3W montserrat-semi-bold-white-19px">{{ EPS }}</div>
           </div>
           <div class="p-eratio-UuuZad border-1px-dove-gray">
-            <div class="pe-ratio-B1y7Ip montserrat-semi-bold-black-19px">P/E RATIO</div>
+            <div class="pe-ratio-B1y7Ip montserrat-semi-bold-black-19px">EPS</div>
           </div>
           <div class="ep-snumber-UuuZad border-1px-dove-gray">
-            <div class="x0534-K4dWMJ montserrat-semi-bold-white-19px">0.534</div>
+            <div class="x0534-K4dWMJ montserrat-semi-bold-white-19px">{{ market_cap }}</div>
           </div>
           <div class="eps-UuuZad border-1px-dove-gray">
-            <div class="eps-R5FzVN montserrat-semi-bold-black-19px">EPS</div>
+            <div class="eps-R5FzVN montserrat-semi-bold-black-19px">MARKET CAP</div>
           </div>
           <div class="cap-number-UuuZad border-1px-dove-gray">
-            <div class="x9501-PbWSlg montserrat-semi-bold-white-19px">$95.01</div>
+            <div class="x9501-PbWSlg montserrat-semi-bold-white-19px">{{ three_month_average_volume }}</div>
           </div>
           <div class="market-cap-UuuZad border-1px-dove-gray">
-            <div class="market-cap-CmD0LB montserrat-semi-bold-black-19px">MARKET CAP</div>
+            <div class="market-cap-CmD0LB montserrat-semi-bold-black-19px">3 MONTH AVERAGE VOLUME</div>
           </div>
           <div class="volume-number-UuuZad border-1px-dove-gray">
-            <div class="x9892-GSeZYM montserrat-semi-bold-white-19px">$98.92</div>
+            <div class="x9892-GSeZYM montserrat-semi-bold-white-19px">{{ volume }}</div>
           </div>
           <div class="volume-UuuZad border-1px-dove-gray">
             <div class="volume-mtrSf4 montserrat-semi-bold-black-19px">VOLUME</div>
           </div>
           <div class="market-number-UuuZad border-1px-dove-gray">
-            <div class="x8942-DFhv9H montserrat-semi-bold-white-19px">$89.42</div>
+            <div class="x8942-DFhv9H montserrat-semi-bold-white-19px">{{ debt_to_equity }}</div>
           </div>
           <div class="market-price-UuuZad border-1px-dove-gray">
-            <div class="market-price-Uya1Q5 montserrat-semi-bold-black-19px">MARKET PRICE</div>
+            <div class="market-price-Uya1Q5 montserrat-semi-bold-black-19px">DEBT TO EQUITY</div>
           </div>
           <div class="fair-value-number-UuuZad border-1px-dove-gray">
-            <div class="x10743-FyVnz5 montserrat-semi-bold-white-19px">$107.43</div>
+            <div class="x10743-FyVnz5 montserrat-semi-bold-white-19px">{{ fair_value }}</div>
           </div>
           <div class="fair-value-UuuZad border-1px-dove-gray">
             <div class="fair-value-VXZkK2 montserrat-semi-bold-black-19px">FAIR VALUE</div>
@@ -437,81 +437,87 @@
           <img class="bg-blue-RheoVh" src="../static/img/bg-blue-4@1x.png" />
           <img class="bg-blue-QHIxFR" src="../static/img/bg-blue-4@1x.png" />
           <div class="x1year-estimate-number-RheoVh border-1px-dove-gray">
-            <div class="x25034-lIAJGH montserrat-semi-bold-white-19px">250.34</div>
+            <div class="x25034-lIAJGH montserrat-semi-bold-white-19px">{{ fifty_two_week_range }}</div>
           </div>
           <div class="one-year-estimate-price-RheoVh border-1px-dove-gray">
-            <div class="x1-year-estimate-euvtW8 montserrat-semi-bold-black-19px">1 YEAR ESTIMATE</div>
+            <div class="x1-year-estimate-euvtW8 montserrat-semi-bold-black-19px">52 WEEK RANGE</div>
           </div>
           <div class="x52-high-number-RheoVh border-1px-dove-gray">
-            <div class="x23489-QbLFsP montserrat-semi-bold-white-19px">234.89</div>
+            <div class="x23489-QbLFsP montserrat-semi-bold-white-19px">{{ daily_range }}</div>
           </div>
           <div class="x52-week-high-RheoVh border-1px-dove-gray">
-            <div class="x52-week-high-Ko7iEJ montserrat-semi-bold-black-19px">52 WEEK HIGH</div>
+            <div class="x52-week-high-Ko7iEJ montserrat-semi-bold-black-19px">DAILY RANGE</div>
           </div>
           <div class="x52-low-number-RheoVh border-1px-dove-gray">
-            <div class="x23434-JgTTyD montserrat-semi-bold-white-19px">234.34</div>
+            <div class="x23434-JgTTyD montserrat-semi-bold-white-19px">{{ earnings_date }}</div>
           </div>
           <div class="x52-week-low-RheoVh border-1px-dove-gray">
-            <div class="x52-week-low-OeazNa montserrat-semi-bold-black-19px">52 WEEK LOW</div>
+            <div class="x52-week-low-OeazNa montserrat-semi-bold-black-19px">EARNINGS DATE</div>
           </div>
           <div class="x24-hr-high-number-RheoVh border-1px-dove-gray">
-            <div class="x23434-of2cdU montserrat-semi-bold-white-19px">234.34</div>
+            <div class="x23434-of2cdU montserrat-semi-bold-white-19px">{{ ask }}</div>
           </div>
           <div class="x24-hr-high-price-RheoVh border-1px-dove-gray">
-            <div class="x24-hour-high-GPpQWh montserrat-semi-bold-black-19px">24 HOUR HIGH</div>
+            <div class="x24-hour-high-GPpQWh montserrat-semi-bold-black-19px">ASK</div>
           </div>
           <div class="x24-hr-low-number-RheoVh border-1px-dove-gray">
-            <div class="x23412-kDZex5 montserrat-semi-bold-white-19px">234.12</div>
+            <div class="x23412-kDZex5 montserrat-semi-bold-white-19px">{{ bid }}</div>
           </div>
           <div class="x24-hr-low-price-RheoVh border-1px-dove-gray">
-            <div class="x24-h-our-low-bZWSiN montserrat-semi-bold-black-19px">24 HOUR LOW</div>
+            <div class="x24-h-our-low-bZWSiN montserrat-semi-bold-black-19px">BID</div>
           </div>
           <div class="earnings-date-number-RheoVh border-1px-dove-gray">
-            <div class="x05-07-2021-rbox2d montserrat-semi-bold-white-19px">05 / 07 / 2021</div>
+            <div class="x05-07-2021-rbox2d montserrat-semi-bold-white-19px">{{ previous_close }}</div>
           </div>
           <div class="earnings-date-RheoVh border-1px-dove-gray">
-            <div class="earnings-date-nEgjFL montserrat-semi-bold-black-19px">EARNINGS DATE</div>
+            <div class="earnings-date-nEgjFL montserrat-semi-bold-black-19px">PREVIOUS CLOSE</div>
           </div>
           <div class="ask-number-RheoVh border-1px-dove-gray">
-            <div class="x9501-63Z0rc montserrat-semi-bold-white-19px">$95.01</div>
+            <div class="x9501-63Z0rc montserrat-semi-bold-white-19px">{{ open }}</div>
           </div>
           <div class="ask-price-RheoVh border-1px-dove-gray">
-            <div class="ask-dwPj44 montserrat-semi-bold-black-19px">ASK</div>
+            <div class="ask-dwPj44 montserrat-semi-bold-black-19px">OPEN</div>
           </div>
           <div class="bid-number-RheoVh border-1px-dove-gray">
-            <div class="x9892-KLBsoL montserrat-semi-bold-white-19px">$98.92</div>
+            <div class="x9892-KLBsoL montserrat-semi-bold-white-19px">{{ current_price_per_share }}</div>
           </div>
           <div class="bid-price-RheoVh border-1px-dove-gray">
-            <div class="bid-UpzWkW montserrat-semi-bold-black-19px">BID</div>
+            <div class="bid-UpzWkW montserrat-semi-bold-black-19px">CURRENT PRICE PER SHARE</div>
           </div>
           <div class="close-number-RheoVh border-1px-dove-gray">
-            <div class="x8942-YskxNe montserrat-semi-bold-white-19px">$89.42</div>
+            <div class="x8942-YskxNe montserrat-semi-bold-white-19px">{{ company_name }}</div>
           </div>
           <div class="close-price-RheoVh border-1px-dove-gray">
-            <div class="close-2MJCNR montserrat-semi-bold-black-19px">CLOSE</div>
+            <div class="close-2MJCNR montserrat-semi-bold-black-19px">COMPANY NAME</div>
           </div>
           <div class="open-number-RheoVh border-1px-dove-gray">
-            <div class="x10743-hWZ8wM montserrat-semi-bold-white-19px">{{ open }}</div>
+            <div class="x10743-hWZ8wM montserrat-semi-bold-white-19px">{{ ticker }}</div>
           </div>
           <div class="open-price-RheoVh border-1px-dove-gray">
-            <div class="open-A3QhPc montserrat-semi-bold-black-19px">OPEN</div>
+            <div class="open-A3QhPc montserrat-semi-bold-black-19px">TICKER</div>
           </div>
           <div class="stock-details-RheoVh montserrat-normal-black-42px">STOCK DETAILS</div>
         </div>
         <div class="analysis-input-C61RwL">
           <div class="select-data-source-DAnbUD">
             <input
+              list="data-source"
               class="data-source-rf4nxM montserrat-normal-black-18px"
               name="data-source110"
+              value="Yahoo"
               placeholder="Data Source"
               required
             />
+            <datalist id="data-source">
+                  <option value="Yahoo"></option>
+          </datalist>
             <img class="md-arrow-dropdown-rf4nxM" src="../static/img/md-arrow-dropdown-1@1x.png" />
           </div>
           <div class="input-ticker-DAnbUD">
             <input
               class="ticker-of-the-underlying-Nti9XO montserrat-normal-black-18px"
               name="ticker-of-the-underlying-110"
+              value="AAPL"
               placeholder="Ticker of the Underlying"
               required
             />
@@ -565,7 +571,7 @@
       </form>
     </div>
     <div class="container-center-horizontal">
-      <form class="x1280-fundamental-analysis-page2 screen" name="form41" action="form41" method="post">
+      <form class="x1280-fundamental-analysis-page2 screen" name="form41" method="post">
         <div class="financial-statements-output-C61RwL">
           <img class="bg-blue-JF8Bxw" src="../static/img/bg-blue-24@1x.png" />
           <div class="financial-statements-JF8Bxw montserrat-normal-black-42px">FINANCIAL STATEMENTS</div>
@@ -573,8 +579,10 @@
         <div class="analysis-input-C61RwL">
           <div class="select-data-source-DAnbUD">
             <input
+              list="data-source"
               class="data-source-rf4nxM montserrat-normal-black-12px"
               name="data-source120"
+              value="Yahoo"
               placeholder="Data Source"
               required
             />
@@ -584,6 +592,7 @@
             <input
               class="ticker-of-the-underlying-Nti9XO montserrat-normal-black-12px"
               name="ticker-of-the-underlying-120"
+              value="AAPL"
               placeholder="Ticker of the Underlying"
               required
             />
@@ -607,134 +616,134 @@
         <img class="bg-blue-C61RwL" src="../static/img/bg-blue-15@1x.png" />
         <img class="bg-blue-VMr6Om" src="../static/img/bg-blue-15@1x.png" />
         <div class="x1-year-number-C61RwL border-1px-dove-gray">
-          <div class="x0043-PjOmOE montserrat-semi-bold-white-12px">0.043</div>
+          <div class="x0043-PjOmOE montserrat-semi-bold-white-12px">{{ fifty_two_week_range }}</div>
         </div>
         <div class="x1-year-text-C61RwL border-1px-dove-gray">
-          <div class="x1-year-estimate-zxu0AF montserrat-semi-bold-black-12px">1 YEAR ESTIMATE</div>
+          <div class="x1-year-estimate-zxu0AF montserrat-semi-bold-black-12px">52 WEEK RANGE</div>
         </div>
         <div class="x52-high-number-C61RwL border-1px-dove-gray">
-          <div class="x0054-VErWMx montserrat-semi-bold-white-12px">0.054</div>
+          <div class="x0054-VErWMx montserrat-semi-bold-white-12px">{{ daily_range }}</div>
         </div>
         <div class="x52-high-text-C61RwL border-1px-dove-gray">
-          <div class="x52-week-high-RrfDOx montserrat-semi-bold-black-12px">52 WEEK HIGH</div>
+          <div class="x52-week-high-RrfDOx montserrat-semi-bold-black-12px">DAILY RANGE</div>
         </div>
         <div class="x52-low-number-C61RwL border-1px-dove-gray">
-          <div class="x0173-EPkuxW montserrat-semi-bold-white-12px">0.173</div>
+          <div class="x0173-EPkuxW montserrat-semi-bold-white-12px">{{ ask }}</div>
         </div>
         <div class="x52-low-text-C61RwL border-1px-dove-gray">
-          <div class="x52-week-low-Lzngmw montserrat-semi-bold-black-12px">52 WEEK LOW</div>
+          <div class="x52-week-low-Lzngmw montserrat-semi-bold-black-12px">ASK</div>
         </div>
         <div class="x24-high-number-C61RwL border-1px-dove-gray">
-          <div class="x0055-N9VDjt montserrat-semi-bold-white-12px">0.055</div>
+          <div class="x0055-N9VDjt montserrat-semi-bold-white-12px">{{ bid }}</div>
         </div>
         <div class="x24-high-text-C61RwL border-1px-dove-gray">
-          <div class="x24-hour-high-UMxdyn montserrat-semi-bold-black-12px">24 HOUR HIGH</div>
+          <div class="x24-hour-high-UMxdyn montserrat-semi-bold-black-12px">BID</div>
         </div>
         <div class="x24-low-number-C61RwL border-1px-dove-gray">
-          <div class="x0534-uszoR6 montserrat-semi-bold-white-12px">0.534</div>
+          <div class="x0534-uszoR6 montserrat-semi-bold-white-12px">{{ previous_close }}</div>
         </div>
         <div class="x24low-text-C61RwL border-1px-dove-gray">
-          <div class="x24-hour-low-CUtepa montserrat-semi-bold-black-12px">24 HOUR LOW</div>
+          <div class="x24-hour-low-CUtepa montserrat-semi-bold-black-12px">PREVOUS CLOSE</div>
         </div>
         <div class="earnings-date-number-C61RwL border-1px-dove-gray">
-          <div class="x05-07-2021-uAYzno montserrat-semi-bold-white-12px">05 / 07 / 2021</div>
+          <div class="x05-07-2021-uAYzno montserrat-semi-bold-white-12px">{{ earnings_date }}</div>
         </div>
         <img class="earnings-date-text-C61RwL border-1px-dove-gray" src="../static/img/earningsdatetext-1@1x.png" />
         <div class="ask-price-number-C61RwL border-1px-dove-gray">
-          <div class="x9501-zFzIEo montserrat-semi-bold-white-12px">$95.01</div>
+          <div class="x9501-zFzIEo montserrat-semi-bold-white-12px">{{ open }}</div>
         </div>
         <div class="ask-price-text-C61RwL border-1px-dove-gray">
-          <div class="ask-ws77bx montserrat-semi-bold-black-12px">ASK</div>
+          <div class="ask-ws77bx montserrat-semi-bold-black-12px">OPEN</div>
         </div>
         <div class="bid-price-number-C61RwL border-1px-dove-gray">
-          <div class="x9892-fmFs3Q montserrat-semi-bold-white-12px">$98.92</div>
+          <div class="x9892-fmFs3Q montserrat-semi-bold-white-12px">{{ current_price_per_share }}</div>
         </div>
         <div class="bid-text-C61RwL border-1px-dove-gray">
-          <div class="bid-xOexjD montserrat-semi-bold-black-12px">BID</div>
+          <div class="bid-xOexjD montserrat-semi-bold-black-12px">CURRENT PRICE PER SHARE</div>
         </div>
         <div class="close-price-number-C61RwL border-1px-dove-gray">
-          <div class="x8942-sXWEqq montserrat-semi-bold-white-12px">$89.42</div>
+          <div class="x8942-sXWEqq montserrat-semi-bold-white-12px">{{ company_name }}</div>
         </div>
         <div class="close-price-C61RwL border-1px-dove-gray">
-          <div class="close-jJ8Dsy montserrat-semi-bold-black-12px">CLOSE</div>
+          <div class="close-jJ8Dsy montserrat-semi-bold-black-12px">COMPANY NAME</div>
         </div>
         <div class="open-price-number-C61RwL border-1px-dove-gray">
-          <div class="x10743-GI0xCe montserrat-semi-bold-white-12px">{{ open }}</div>
+          <div class="x10743-GI0xCe montserrat-semi-bold-white-12px">{{ ticker }}</div>
         </div>
         <div class="open-price-text-C61RwL border-1px-dove-gray">
-          <div class="open-MHj4Ak montserrat-semi-bold-black-12px">OPEN</div>
+          <div class="open-MHj4Ak montserrat-semi-bold-black-12px">TICKER</div>
         </div>
         <div class="stock-details-C61RwL montserrat-normal-black-42px">STOCK DETAILS</div>
         <img class="bg-blue-mzXdH9" src="../static/img/bg-blue-21@1x.png" />
         <div class="repeat-grid-1-C61RwL">
           <div class="x0-mrdmCX">
             <div class="generic-number-box-FCfPAI border-1px-dove-gray">
-              <div class="x000-Ucf5AW montserrat-semi-bold-white-12px">$0.00</div>
+              <div class="x000-Ucf5AW montserrat-semi-bold-white-12px">{{ fair_value }}</div>
             </div>
             <div class="generic-text-box-FCfPAI border-1px-dove-gray">
-              <div class="text-5JJBRI montserrat-semi-bold-black-12px">TEXT</div>
+              <div class="text-5JJBRI montserrat-semi-bold-black-12px">FAIR VALUE</div>
             </div>
             <div class="generic-number-FCfPAI border-1px-dove-gray">
-              <div class="x000-QhBpej montserrat-semi-bold-white-12px">$0.00</div>
+              <div class="x000-QhBpej montserrat-semi-bold-white-12px">{{ volume }}</div>
             </div>
             <div class="generic-text-FCfPAI border-1px-dove-gray">
-              <div class="text-tBojFe montserrat-semi-bold-black-12px">TEXT</div>
+              <div class="text-tBojFe montserrat-semi-bold-black-12px">VOLUME</div>
             </div>
           </div>
           <div class="x1-mrdmCX">
             <div class="generic-number-box-OfQnN0 border-1px-dove-gray">
-              <div class="x000-0D03RB montserrat-semi-bold-white-12px">$0.00</div>
+              <div class="x000-0D03RB montserrat-semi-bold-white-12px">{{ three_month_average_volume }}</div>
             </div>
             <div class="generic-text-box-OfQnN0 border-1px-dove-gray">
-              <div class="text-4Bx471 montserrat-semi-bold-black-12px">TEXT</div>
+              <div class="text-4Bx471 montserrat-semi-bold-black-12px">3 MONTH AVERAGE VOLUME</div>
             </div>
             <div class="generic-number-OfQnN0 border-1px-dove-gray">
-              <div class="x000-OoJ5R1 montserrat-semi-bold-white-12px">$0.00</div>
+              <div class="x000-OoJ5R1 montserrat-semi-bold-white-12px">{{ market_cap }}</div>
             </div>
             <div class="generic-text-OfQnN0 border-1px-dove-gray">
-              <div class="text-IGxh63 montserrat-semi-bold-black-12px">TEXT</div>
+              <div class="text-IGxh63 montserrat-semi-bold-black-12px">MARKET CAP</div>
             </div>
           </div>
           <div class="x2-mrdmCX">
             <div class="generic-number-box-7mD736 border-1px-dove-gray">
-              <div class="x000-vOuXm5 montserrat-semi-bold-white-12px">$0.00</div>
+              <div class="x000-vOuXm5 montserrat-semi-bold-white-12px">{{ EPS }}</div>
             </div>
             <div class="generic-text-box-7mD736 border-1px-dove-gray">
-              <div class="text-dcLBhw montserrat-semi-bold-black-12px">TEXT</div>
+              <div class="text-dcLBhw montserrat-semi-bold-black-12px">EPS</div>
             </div>
             <div class="generic-number-7mD736 border-1px-dove-gray">
-              <div class="x000-LX0e0B montserrat-semi-bold-white-12px">$0.00</div>
+              <div class="x000-LX0e0B montserrat-semi-bold-white-12px">{{ Beta }}</div>
             </div>
             <div class="generic-text-7mD736 border-1px-dove-gray">
-              <div class="text-j8LiKp montserrat-semi-bold-black-12px">TEXT</div>
+              <div class="text-j8LiKp montserrat-semi-bold-black-12px">BETA</div>
             </div>
           </div>
           <div class="x3-mrdmCX">
             <div class="generic-number-box-PoHmFY border-1px-dove-gray">
-              <div class="x000-11KaBk montserrat-semi-bold-white-12px">$0.00</div>
+              <div class="x000-11KaBk montserrat-semi-bold-white-12px">{{ PE_ratio }}</div>
             </div>
             <div class="generic-text-box-PoHmFY border-1px-dove-gray">
-              <div class="text-kPihnD montserrat-semi-bold-black-12px">TEXT</div>
+              <div class="text-kPihnD montserrat-semi-bold-black-12px">PE RATIO</div>
             </div>
             <div class="generic-number-PoHmFY border-1px-dove-gray">
-              <div class="x000-EGyTkA montserrat-semi-bold-white-12px">$0.00</div>
+              <div class="x000-EGyTkA montserrat-semi-bold-white-12px">{{ current_ratio }}</div>
             </div>
             <div class="generic-text-PoHmFY border-1px-dove-gray">
-              <div class="text-2QKgkt montserrat-semi-bold-black-12px">TEXT</div>
+              <div class="text-2QKgkt montserrat-semi-bold-black-12px">CURRENT RATIO</div>
             </div>
           </div>
           <div class="x4-mrdmCX">
             <div class="generic-number-box-vMzTxV border-1px-dove-gray">
-              <div class="x000-8gXZdA montserrat-semi-bold-white-12px">$0.00</div>
+              <div class="x000-8gXZdA montserrat-semi-bold-white-12px">{{ debt_to_equity }}</div>
             </div>
             <div class="generic-text-box-vMzTxV border-1px-dove-gray">
-              <div class="text-z11cxn montserrat-semi-bold-black-12px">TEXT</div>
+              <div class="text-z11cxn montserrat-semi-bold-black-12px">DEBT TO EQUITY</div>
             </div>
             <div class="generic-number-vMzTxV border-1px-dove-gray">
-              <div class="x000-G1w0Os montserrat-semi-bold-white-12px">$0.00</div>
+              <div class="x000-G1w0Os montserrat-semi-bold-white-12px">{{ price_to_book_ratio }}</div>
             </div>
             <div class="generic-text-vMzTxV border-1px-dove-gray">
-              <div class="text-Ks6JyZ montserrat-semi-bold-black-12px">TEXT</div>
+              <div class="text-Ks6JyZ montserrat-semi-bold-black-12px">PRICE TO BOOK RATIO</div>
             </div>
           </div>
         </div>
@@ -968,7 +977,7 @@
       </form>
     </div>
     <div class="container-center-horizontal">
-      <form class="x768-fundamental-analysis-page2 screen" name="form62" action="form62" method="post">
+      <form class="x768-fundamental-analysis-page2 screen" name="form62" method="post">
         <div class="financial-statements-output-C61RwL">
           <img class="bg-blue-JF8Bxw" src="../static/img/bg-blue-32@1x.png" />
           <div class="financial-statements-JF8Bxw">FINANCIAL STATEMENTS</div>
@@ -980,82 +989,82 @@
           <div class="repeat-grid-6-ZzhBS7">
             <div class="x04-xc4Bda">
               <div class="generic-number-Msibrq border-1px-dove-gray">
-                <div class="x000-WXZ2Vu montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-WXZ2Vu montserrat-semi-bold-white-12px">{{ fair_value }}</div>
               </div>
               <div class="generic-text-Msibrq border-1px-dove-gray">
-                <div class="text-NJxnzO montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-NJxnzO montserrat-semi-bold-black-12px">FAIR VALUE</div>
               </div>
             </div>
             <div class="x14-xc4Bda">
               <div class="generic-number-ojRA5C border-1px-dove-gray">
-                <div class="x000-GTJXtf montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-GTJXtf montserrat-semi-bold-white-12px">{{ volume }}</div>
               </div>
               <div class="generic-text-ojRA5C border-1px-dove-gray">
-                <div class="text-BWJ8u2 montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-BWJ8u2 montserrat-semi-bold-black-12px">VOLUME</div>
               </div>
             </div>
             <div class="x24-xc4Bda">
               <div class="generic-number-62u9u7 border-1px-dove-gray">
-                <div class="x000-PBfLV8 montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-PBfLV8 montserrat-semi-bold-white-12px">{{ three_month_average_volume }}</div>
               </div>
               <div class="generic-text-62u9u7 border-1px-dove-gray">
-                <div class="text-EP6Qts montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-EP6Qts montserrat-semi-bold-black-12px">3 MONTH AVERAGE VOLUME</div>
               </div>
             </div>
             <div class="x34-xc4Bda">
               <div class="generic-number-A6K5Qq border-1px-dove-gray">
-                <div class="x000-JJGXDG montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-JJGXDG montserrat-semi-bold-white-12px">{{ market_cap }}</div>
               </div>
               <div class="generic-text-A6K5Qq border-1px-dove-gray">
-                <div class="text-vI2Hud montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-vI2Hud montserrat-semi-bold-black-12px">MARKET CAP</div>
               </div>
             </div>
             <div class="x43-xc4Bda">
               <div class="generic-number-PKoBGE border-1px-dove-gray">
-                <div class="x000-kYnWzQ montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-kYnWzQ montserrat-semi-bold-white-12px">{{ EPS }}</div>
               </div>
               <div class="generic-text-PKoBGE border-1px-dove-gray">
-                <div class="text-cc86Hl montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-cc86Hl montserrat-semi-bold-black-12px">EPS</div>
               </div>
             </div>
             <div class="x5-xc4Bda">
               <div class="generic-number-Nq20cY border-1px-dove-gray">
-                <div class="x000-O4knzo montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-O4knzo montserrat-semi-bold-white-12px">{{ Beta }}</div>
               </div>
               <div class="generic-text-Nq20cY border-1px-dove-gray">
-                <div class="text-6fTrVZ montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-6fTrVZ montserrat-semi-bold-black-12px">BETA</div>
               </div>
             </div>
             <div class="x6-xc4Bda">
               <div class="generic-number-Ytj4eR border-1px-dove-gray">
-                <div class="x000-5oUrTM montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-5oUrTM montserrat-semi-bold-white-12px">{{ PE_ratio }}</div>
               </div>
               <div class="generic-text-Ytj4eR border-1px-dove-gray">
-                <div class="text-yBVKC8 montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-yBVKC8 montserrat-semi-bold-black-12px">PE RATIO</div>
               </div>
             </div>
             <div class="x7-xc4Bda">
               <div class="generic-number-eK31xf border-1px-dove-gray">
-                <div class="x000-IIFrxH montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-IIFrxH montserrat-semi-bold-white-12px">{{ current_ratio }}</div>
               </div>
               <div class="generic-text-eK31xf border-1px-dove-gray">
-                <div class="text-ZR1Krc montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-ZR1Krc montserrat-semi-bold-black-12px">CURRENT RATIO</div>
               </div>
             </div>
             <div class="x8-xc4Bda">
               <div class="generic-number-6py357 border-1px-dove-gray">
-                <div class="x000-lqLsxz montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-lqLsxz montserrat-semi-bold-white-12px">{{ debt_to_equity }}</div>
               </div>
               <div class="generic-text-6py357 border-1px-dove-gray">
-                <div class="text-MGlKuP montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-MGlKuP montserrat-semi-bold-black-12px">DEBT TO EQUITY</div>
               </div>
             </div>
             <div class="x9-xc4Bda">
               <div class="generic-number-FQ9HVc border-1px-dove-gray">
-                <div class="x000-xZIHw5 montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-xZIHw5 montserrat-semi-bold-white-12px">{{ price_to_book_ratio }}</div>
               </div>
               <div class="generic-text-FQ9HVc border-1px-dove-gray">
-                <div class="text-kzj2AI montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-kzj2AI montserrat-semi-bold-black-12px">PRICE TO BOOK RATIO</div>
               </div>
             </div>
           </div>
@@ -1064,82 +1073,82 @@
           <div class="repeat-grid-6-hFKELu">
             <div class="x05-yOfqB2">
               <div class="generic-number-7KO0tc border-1px-dove-gray">
-                <div class="x000-PSejYP montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-PSejYP montserrat-semi-bold-white-12px">{{ fifty_two_week_range }}</div>
               </div>
               <div class="generic-text-7KO0tc border-1px-dove-gray">
-                <div class="text-pa3Oxl montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-pa3Oxl montserrat-semi-bold-black-12px">52 WEEK RANGE</div>
               </div>
             </div>
             <div class="x15-yOfqB2">
               <div class="generic-number-LvHK7U border-1px-dove-gray">
-                <div class="x000-A6xDZ7 montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-A6xDZ7 montserrat-semi-bold-white-12px">{{ daily_range }}</div>
               </div>
               <div class="generic-text-LvHK7U border-1px-dove-gray">
-                <div class="text-DPIPPe montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-DPIPPe montserrat-semi-bold-black-12px">DAILY RANGE</div>
               </div>
             </div>
             <div class="x25-yOfqB2">
               <div class="generic-number-zDRUbY border-1px-dove-gray">
-                <div class="x000-OwAfEa montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-OwAfEa montserrat-semi-bold-white-12px">{{ earnings_date }}</div>
               </div>
               <div class="generic-text-zDRUbY border-1px-dove-gray">
-                <div class="text-f77Utx montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-f77Utx montserrat-semi-bold-black-12px">EARNINGS DATE</div>
               </div>
             </div>
             <div class="x35-yOfqB2">
               <div class="generic-number-LNn7q6 border-1px-dove-gray">
-                <div class="x000-kH55hZ montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-kH55hZ montserrat-semi-bold-white-12px">{{ ask }}</div>
               </div>
               <div class="generic-text-LNn7q6 border-1px-dove-gray">
-                <div class="text-h4yHFz montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-h4yHFz montserrat-semi-bold-black-12px">ASK</div>
               </div>
             </div>
             <div class="x44-yOfqB2">
               <div class="generic-number-xUOmSu border-1px-dove-gray">
-                <div class="x000-Oe11Ep montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-Oe11Ep montserrat-semi-bold-white-12px">{{ bid }}</div>
               </div>
               <div class="generic-text-xUOmSu border-1px-dove-gray">
-                <div class="text-WicGKE montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-WicGKE montserrat-semi-bold-black-12px">BID</div>
               </div>
             </div>
             <div class="x51-yOfqB2">
               <div class="generic-number-7nsrrr border-1px-dove-gray">
-                <div class="x000-9gi365 montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-9gi365 montserrat-semi-bold-white-12px">{{ previous_close }}</div>
               </div>
               <div class="generic-text-7nsrrr border-1px-dove-gray">
-                <div class="text-ecvbVy montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-ecvbVy montserrat-semi-bold-black-12px">PREVIOUS CLOSE</div>
               </div>
             </div>
             <div class="x61-yOfqB2">
               <div class="generic-number-B66Pri border-1px-dove-gray">
-                <div class="x000-MSOi2c montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-MSOi2c montserrat-semi-bold-white-12px">{{ open }}</div>
               </div>
               <div class="generic-text-B66Pri border-1px-dove-gray">
-                <div class="text-qMgxUv montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-qMgxUv montserrat-semi-bold-black-12px">OPEN</div>
               </div>
             </div>
             <div class="x71-yOfqB2">
               <div class="generic-number-ZcWhLO border-1px-dove-gray">
-                <div class="x000-RGkNG9 montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-RGkNG9 montserrat-semi-bold-white-12px">{{ current_price_per_share }}</div>
               </div>
               <div class="generic-text-ZcWhLO border-1px-dove-gray">
-                <div class="text-FZTtij montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-FZTtij montserrat-semi-bold-black-12px">CURRENT PRICE PER SHARE</div>
               </div>
             </div>
             <div class="x81-yOfqB2">
               <div class="generic-number-7tD6Vh border-1px-dove-gray">
-                <div class="x000-6xsGax montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-6xsGax montserrat-semi-bold-white-12px">{{ company_name }}</div>
               </div>
               <div class="generic-text-7tD6Vh border-1px-dove-gray">
-                <div class="text-YLMnZN montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-YLMnZN montserrat-semi-bold-black-12px">NO</div>
               </div>
             </div>
             <div class="x91-yOfqB2">
               <div class="generic-number-uHlzGV border-1px-dove-gray">
-                <div class="x000-g3Pr8x montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-g3Pr8x montserrat-semi-bold-white-12px">{{ ticker }}</div>
               </div>
               <div class="generic-text-uHlzGV border-1px-dove-gray">
-                <div class="text-FvRvY6 montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-FvRvY6 montserrat-semi-bold-black-12px">NO</div>
               </div>
             </div>
           </div>
@@ -1173,82 +1182,82 @@
           <div class="repeat-grid-6-VKtKIU">
             <div class="x06-CUl0FW">
               <div class="generic-number-D0AFmR border-1px-dove-gray">
-                <div class="x000-9xEmCj montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-9xEmCj montserrat-semi-bold-white-12px">{{ ticker }}</div>
               </div>
               <div class="generic-text-D0AFmR border-1px-dove-gray">
-                <div class="text-uFvSme montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-uFvSme montserrat-semi-bold-black-12px">TICEKR</div>
               </div>
             </div>
             <div class="x16-CUl0FW">
               <div class="generic-number-Lu8Oi4 border-1px-dove-gray">
-                <div class="x000-goE4RR montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-goE4RR montserrat-semi-bold-white-12px">{{ company_name }}</div>
               </div>
               <div class="generic-text-Lu8Oi4 border-1px-dove-gray">
-                <div class="text-KqX9gE montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-KqX9gE montserrat-semi-bold-black-12px">COMPANY NAME</div>
               </div>
             </div>
             <div class="x26-CUl0FW">
               <div class="generic-number-mbIZGh border-1px-dove-gray">
-                <div class="x000-hSj1GH montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-hSj1GH montserrat-semi-bold-white-12px">{{ current_price_per_share }}</div>
               </div>
               <div class="generic-text-mbIZGh border-1px-dove-gray">
-                <div class="text-0Emh4C montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-0Emh4C montserrat-semi-bold-black-12px">CURRENT PRICE PER SHARE</div>
               </div>
             </div>
             <div class="x36-CUl0FW">
               <div class="generic-number-1LdLE9 border-1px-dove-gray">
-                <div class="x000-qtVEs3 montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-qtVEs3 montserrat-semi-bold-white-12px">{{ open }}</div>
               </div>
               <div class="generic-text-1LdLE9 border-1px-dove-gray">
-                <div class="text-4yQv8e montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-4yQv8e montserrat-semi-bold-black-12px">OPEN</div>
               </div>
             </div>
             <div class="x45-CUl0FW">
               <div class="generic-number-wGVA4L border-1px-dove-gray">
-                <div class="x000-DeZFH7 montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-DeZFH7 montserrat-semi-bold-white-12px">{{ previous_close }}</div>
               </div>
               <div class="generic-text-wGVA4L border-1px-dove-gray">
-                <div class="text-YMJQJ3 montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-YMJQJ3 montserrat-semi-bold-black-12px">PREVIOUS CLOSE</div>
               </div>
             </div>
             <div class="x52-CUl0FW">
               <div class="generic-number-KunEtT border-1px-dove-gray">
-                <div class="x000-Yuw6QY montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-Yuw6QY montserrat-semi-bold-white-12px">{{ bid }}</div>
               </div>
               <div class="generic-text-KunEtT border-1px-dove-gray">
-                <div class="text-Io77cG montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-Io77cG montserrat-semi-bold-black-12px">BID</div>
               </div>
             </div>
             <div class="x62-CUl0FW">
               <div class="generic-number-NpLijo border-1px-dove-gray">
-                <div class="x000-5R7XC2 montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-5R7XC2 montserrat-semi-bold-white-12px">{{ ask }}</div>
               </div>
               <div class="generic-text-NpLijo border-1px-dove-gray">
-                <div class="text-0zuOM2 montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-0zuOM2 montserrat-semi-bold-black-12px">ASK</div>
               </div>
             </div>
             <div class="x72-CUl0FW">
               <div class="generic-number-Nivnnr border-1px-dove-gray">
-                <div class="x000-aSXR6H montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-aSXR6H montserrat-semi-bold-white-12px">{{ earnings_date }}</div>
               </div>
               <div class="generic-text-Nivnnr border-1px-dove-gray">
-                <div class="text-mxcJmr montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-mxcJmr montserrat-semi-bold-black-12px">EARNINGS DATE</div>
               </div>
             </div>
             <div class="x82-CUl0FW">
               <div class="generic-number-umn9mG border-1px-dove-gray">
-                <div class="x000-jg26xx montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-jg26xx montserrat-semi-bold-white-12px">{{ daily_range }}</div>
               </div>
               <div class="generic-text-umn9mG border-1px-dove-gray">
-                <div class="text-7851nR montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-7851nR montserrat-semi-bold-black-12px">DAILY RANGE</div>
               </div>
             </div>
             <div class="x92-CUl0FW">
               <div class="generic-number-4NcDDA border-1px-dove-gray">
-                <div class="x000-3ccgD3 montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-3ccgD3 montserrat-semi-bold-white-12px">{{ fifty_two_week_range }}</div>
               </div>
               <div class="generic-text-4NcDDA border-1px-dove-gray">
-                <div class="text-oUf3xM montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-oUf3xM montserrat-semi-bold-black-12px">52 WEEK RANGE</div>
               </div>
             </div>
           </div>
@@ -1378,8 +1387,10 @@
         <div class="analysis-input-C61RwL">
           <div class="select-data-source-DAnbUD">
             <input
+              list="data-source"
               class="option-style-rf4nxM montserrat-normal-black-10px"
               name="option-style140"
+              value="Yahoo"
               placeholder="Data Source"
               required
             />
@@ -1389,6 +1400,7 @@
             <input
               class="ticker-of-the-underlying-Nti9XO montserrat-normal-black-10px"
               name="ticker-of-the-underlying-130"
+              value="AAPL"
               placeholder="Ticker of the Underlying"
               required
             />
@@ -1429,7 +1441,7 @@
       </form>
     </div>
     <div class="container-center-horizontal">
-      <form class="x375-fundamental-analysis-page2 screen" name="form82" action="form82" method="post">
+      <form class="x375-fundamental-analysis-page2 screen" name="form82" method="post">
         <div class="stock-details-C61RwL">STOCK DETAILS</div>
         <img class="bg-blue-C61RwL" src="../static/img/bg-blue-37@1x.png" />
         <img class="bg-blue-VMr6Om" src="../static/img/bg-blue-38@1x.png" />
@@ -1437,42 +1449,42 @@
           <div class="repeat-grid-6-ZzhBS7">
             <div class="x07-xc4Bda">
               <div class="generic-number-t9Zmbq border-1px-dove-gray">
-                <div class="x000-JZdZBH montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-JZdZBH montserrat-semi-bold-white-12px">{{ fair_value }}</div>
               </div>
               <div class="generic-text-t9Zmbq border-1px-dove-gray">
-                <div class="text-xSTnTF montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-xSTnTF montserrat-semi-bold-black-12px">FAIR VALUE</div>
               </div>
             </div>
             <div class="x17-xc4Bda">
               <div class="generic-number-xHgOxf border-1px-dove-gray">
-                <div class="x000-yVojN5 montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-yVojN5 montserrat-semi-bold-white-12px">{{ volume }}</div>
               </div>
               <div class="generic-text-xHgOxf border-1px-dove-gray">
-                <div class="text-mfpWIp montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-mfpWIp montserrat-semi-bold-black-12px">VOLUME</div>
               </div>
             </div>
             <div class="x27-xc4Bda">
               <div class="generic-number-p4mpXL border-1px-dove-gray">
-                <div class="x000-boucBT montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-boucBT montserrat-semi-bold-white-12px">{{ three_month_average_volume }}</div>
               </div>
               <div class="generic-text-p4mpXL border-1px-dove-gray">
-                <div class="text-oTy77N montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-oTy77N montserrat-semi-bold-black-12px">3 MONTH AVERAGE VOLUME</div>
               </div>
             </div>
             <div class="x37-xc4Bda">
               <div class="generic-number-lxGJGG border-1px-dove-gray">
-                <div class="x000-4CcdiB montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-4CcdiB montserrat-semi-bold-white-12px">{{ market_cap }}</div>
               </div>
               <div class="generic-text-lxGJGG border-1px-dove-gray">
-                <div class="text-9Pa7cq montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-9Pa7cq montserrat-semi-bold-black-12px">MARKET CAP</div>
               </div>
             </div>
             <div class="x46-xc4Bda">
               <div class="generic-number-84mV8o border-1px-dove-gray">
-                <div class="x000-CnH5KR montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-CnH5KR montserrat-semi-bold-white-12px">{{ EPS }}</div>
               </div>
               <div class="generic-text-84mV8o border-1px-dove-gray">
-                <div class="text-Si4kU2 montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-Si4kU2 montserrat-semi-bold-black-12px">EPS</div>
               </div>
             </div>
           </div>
@@ -1528,42 +1540,42 @@
           <div class="repeat-grid-6-VKtKIU">
             <div class="x09-CUl0FW">
               <div class="generic-number-AO0Zoz border-1px-dove-gray">
-                <div class="x000-ZtXcZf montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-ZtXcZf montserrat-semi-bold-white-12px">{{ ticker }}</div>
               </div>
               <div class="generic-text-AO0Zoz border-1px-dove-gray">
-                <div class="text-Hx5hVN montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-Hx5hVN montserrat-semi-bold-black-12px">TICKER</div>
               </div>
             </div>
             <div class="x19-CUl0FW">
               <div class="generic-number-DNzcSh border-1px-dove-gray">
-                <div class="x000-hx2ReB montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-hx2ReB montserrat-semi-bold-white-12px">{{ company_name }}</div>
               </div>
               <div class="generic-text-DNzcSh border-1px-dove-gray">
-                <div class="text-GlPkmD montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-GlPkmD montserrat-semi-bold-black-12px">COMPANY NAME</div>
               </div>
             </div>
             <div class="x29-CUl0FW">
               <div class="generic-number-khCijI border-1px-dove-gray">
-                <div class="x000-nynPUQ montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-nynPUQ montserrat-semi-bold-white-12px">{{ current_price_per_share }}</div>
               </div>
               <div class="generic-text-khCijI border-1px-dove-gray">
-                <div class="text-AAUhKo montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-AAUhKo montserrat-semi-bold-black-12px">CURRENT PRICE PER SHARE</div>
               </div>
             </div>
             <div class="x39-CUl0FW">
               <div class="generic-number-21Uryx border-1px-dove-gray">
-                <div class="x000-E0Gp9b montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-E0Gp9b montserrat-semi-bold-white-12px">{{ open }}</div>
               </div>
               <div class="generic-text-21Uryx border-1px-dove-gray">
-                <div class="text-oHLEOx montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-oHLEOx montserrat-semi-bold-black-12px">OPEN</div>
               </div>
             </div>
             <div class="x48-CUl0FW">
               <div class="generic-number-R325xD border-1px-dove-gray">
-                <div class="x000-OQtnRr montserrat-semi-bold-white-12px">$0.00</div>
+                <div class="x000-OQtnRr montserrat-semi-bold-white-12px">{{ previous_close }}</div>
               </div>
               <div class="generic-text-R325xD border-1px-dove-gray">
-                <div class="text-ygxBTM montserrat-semi-bold-black-12px">TEXT</div>
+                <div class="text-ygxBTM montserrat-semi-bold-black-12px">PREVIOUS CLOSE</div>
               </div>
             </div>
           </div>
@@ -1718,12 +1730,13 @@
         </div>
         <div class="analysis-input-C61RwL">
           <div class="select-data-source-DAnbUD">
-            <input class="data-source-rf4nxM" name="data-source130" placeholder="Data Source" required />
+            <input list="data-source" class="data-source-rf4nxM" name="data-source130" value="Yahoo" placeholder="Data Source" required />
           </div>
           <div class="input-ticker-DAnbUD">
             <input
               class="ticker-of-the-underlying-Nti9XO"
               name="ticker-of-the-underlying-140"
+              value="AAPL"
               placeholder="Ticker of the Underlying"
               required
             />
