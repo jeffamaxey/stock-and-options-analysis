@@ -43,11 +43,12 @@ def contact():
 
         else:
             msg = Message(sender='TheFinTechOrgTest@gmail.com', recipients=['TheFinTechOrgTest@gmail.com'])
-        msg.body = """ From: %s 
-        %s """ % (email.data, message.data)
-        mail.send(msg)
+            msg.body = """ From: %s 
+                %s """ % (email.data, message.data)
+            mail.send(msg)
 
-        flash("An email has been sent. Thank you for contacting us, we will respond shortly.", category="Success")
+            flash("An email has been sent. Thank you for contacting us, we will respond shortly.", category="Success")
+            return render_template('contact-page.html', user=current_user)
+
+    else:
         return render_template('contact-page.html', user=current_user)
-
-    return render_template('contact-page.html', user=current_user)
