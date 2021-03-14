@@ -528,7 +528,9 @@
         <div class="analysis-output-summary-C61RwL">
           <div class="summary-box-xGbJnA border-1px-dove-gray">
             <div class="news-headlines-revenue-growth-UWluB0 montserrat-semi-bold-black-19px">
-              {{ news }}
+              {% autoescape false %}
+                {{ news | replace('\n', '<br>')}}
+              {% endautoescape %}
             </div>
           </div>
         </div>
@@ -602,7 +604,9 @@
           <div class="analysis-output-summary-Mo5SzT">
             <div class="summary-box-TH7FW4 border-1px-dove-gray">
               <div class="h-eadlines-and-revenue-growth-FKNxMW montserrat-semi-bold-black-12px">
-                  {{ news }}
+              {% autoescape false %}
+                {{ news | replace('\n', '<br>')}}
+              {% endautoescape %}
               </div>
             </div>
           </div>
@@ -1158,7 +1162,9 @@
           <div class="analysis-output-summary-Mo5SzT">
             <div class="summary-box-TH7FW4 border-1px-dove-gray">
               <div class="h-eadlines-and-revenue-growth-FKNxMW montserrat-semi-bold-black-12px">
-                {{ news }}
+              {% autoescape false %}
+                {{ news | replace('\n', '<br>')}}
+              {% endautoescape %}
               </div>
             </div>
           </div>
@@ -1584,7 +1590,9 @@
           <div class="analysis-output-summary-Mo5SzT">
             <div class="summary-box-TH7FW4 border-1px-dove-gray">
               <div class="h-eadlines-and-revenue-growth-FKNxMW">
-                {{ news }}
+              {% autoescape false %}
+                {{ news | replace('\n', '<br>')}}
+              {% endautoescape %}
               </div>
             </div>
           </div>
