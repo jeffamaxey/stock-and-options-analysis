@@ -1,7 +1,6 @@
 from flask import Flask
 from database import UserDB
 from flask_login import LoginManager
-from flask_mail import Mail
 
 URL_PREFIX = "/"
 
@@ -54,9 +53,9 @@ def create_app():
     app.config["MAIL_PORT"] = 465
     app.config["MAIL_USE_SSL"] = True
     app.config['MAIL_USE_TLS'] = False
-    app.config["MAIL_USERNAME"] = 'TheFinTechOrgTest@gmail.com'
+    app.config["MAIL_USERNAME"] = 'thefintechorgtest@gmail.com'
     app.config["MAIL_PASSWORD"] = 'FTO12345'
-    app.config['MAIL_DEFAULT_SENDER'] = 'TheFinTechOrgTest@gmail.com'
+    app.config['MAIL_DEFAULT_SENDER'] = 'thefintechorgtest@gmail.com'
 
     mail.init_app(app)
 

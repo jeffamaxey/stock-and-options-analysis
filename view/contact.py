@@ -7,8 +7,7 @@ contact_bp = Blueprint("contact", __name__)
 mail = Mail()
 
 """
-This function checks all input fields on contact-page.html and if they are correctly filled in, will use an email 
-address to send a message to a company email.
+This function checks all input fields on contact-page.html and if they are correctly filled in, will send a message to a company email.
 """
 @contact_bp.route('/contact', methods=["GET", "POST"])
 def contact():
@@ -42,7 +41,7 @@ def contact():
             message = request.form.get("write-your-message-here13")
 
         # If past all prior if-statements, prepare to send message
-        msg = Message(subject, recipients=['TheFinTechOrgTest@gmail.com'])
+        msg = Message(subject, recipients=['thefintechorgtest@gmail.com'])
 
         # for message format
         msg.body = """ From: <%s> 
