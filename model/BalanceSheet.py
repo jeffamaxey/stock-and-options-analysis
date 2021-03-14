@@ -1,4 +1,4 @@
-import ValidTicker
+from model import ValidTicker
 import json
 from urllib.request import urlopen
 
@@ -32,16 +32,27 @@ class BalanceSheet:
         if not ValidTicker.valid_ticker(ticker):
             raise RuntimeError
 
-        json_data = get_jsonparsed_data(ticker)
+        try:
+            json_data = get_jsonparsed_data(ticker)
+            self.totalCurrentAssets = round(json_data[0]["totalCurrentAssets"], 2)
+            self.totalNonCurrentAssets = round(json_data[0]["totalNonCurrentAssets"], 2)
+            self.totalAssets = round(json_data[0]["totalAssets"], 2)
+            self.totalCurrentLiabilities = round(json_data[0]["totalCurrentLiabilities"], 2)
+            self.totalNonCurrentLiabilities = round(json_data[0]["totalNonCurrentLiabilities"], 2)
+            self.totalLiabilities = round(json_data[0]["totalLiabilities"], 2)
+            self.totalStockholdersEquity = round(json_data[0]["totalStockholdersEquity"], 2)
+            self.totalLiabilitiesAndStockholdersEquity = round(json_data[0]["totalLiabilitiesAndStockholdersEquity"], 2)
 
-        self.totalCurrentAssets = json_data [0]["totalCurrentAssets"]
-        self.totalNonCurrentAssets = json_data [0]["totalNonCurrentAssets"]
-        self.totalAssets = json_data [0]["totalAssets"]
-        self.totalCurrentLiabilities = json_data [0]["totalCurrentLiabilities"]
-        self.totalNonCurrentLiabilities = json_data [0]["totalNonCurrentLiabilities"]
-        self.totalLiabilities = json_data [0]["totalLiabilities"]
-        self.totalStockholdersEquity = json_data [0]["totalStockholdersEquity"]
-        self.totalLiabilitiesAndStockholdersEquity = json_data [0]["totalLiabilitiesAndStockholdersEquity"]
+        except Exception as err:
+            # if exception is thrown this is because the api cannot fetch information from this stock and we have to return empty value
+            self.totalCurrentAssets = None
+            self.totalNonCurrentAssets = None
+            self.totalAssets = None
+            self.totalCurrentLiabilities = None
+            self.totalNonCurrentLiabilities = None
+            self.totalLiabilities = None
+            self.totalStockholdersEquity = None
+            self.totalLiabilitiesAndStockholdersEquity = None
 
     def get_totalCurrentAssets(self):
         return self.totalCurrentAssets
