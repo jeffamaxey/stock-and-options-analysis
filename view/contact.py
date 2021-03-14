@@ -4,7 +4,7 @@ from flask_login import current_user
 
 contact_bp = Blueprint("contact", __name__)
 
-mail = Mail(contact_bp)
+mail = Mail()
 
 """
 This function checks all input fields on contact-page.html and if they are correctly filled in, will use an email 
