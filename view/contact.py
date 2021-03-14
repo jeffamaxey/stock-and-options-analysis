@@ -41,16 +41,15 @@ def contact():
         if message is None:
             message = request.form.get("write-your-message-here13")
 
-        else:
-            # If past all prior if-statements, prepare to send message
-            msg = Message(subject, recipients=['TheFinTechOrgTest@gmail.com'])
+        # If past all prior if-statements, prepare to send message
+        msg = Message(subject, recipients=['TheFinTechOrgTest@gmail.com'])
 
-            msg.body = """ From: <%s> 
-                %s """ % (email, message)
-            mail.send(msg)
+        msg.body = """ From: <%s> 
+            %s """ % (email, message)
+        mail.send(msg)
 
-            flash("An email has been sent. Thank you for contacting us, we will respond shortly.", category="Success")
-            return render_template('contact-page.html', user=current_user)
+        flash("An email has been sent. Thank you for contacting us, we will respond shortly.", category="Success")
+        return render_template('contact-page.html', user=current_user)
 
     else:
         # load up contact page
