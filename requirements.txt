@@ -6,7 +6,6 @@ flask-login >= 0.5.0
 flask-sqlalchemy >= 2.4.4   # database library
 Werkzeug >= 1.0.1   # Password encryption library
 Flask-Mail >= 0.9.1
-=======
 appdirs==1.4.4
 beautifulsoup4==4.9.3
 bs4==0.0.1
