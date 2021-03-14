@@ -44,6 +44,7 @@ def contact():
         # If past all prior if-statements, prepare to send message
         msg = Message(subject, recipients=['TheFinTechOrgTest@gmail.com'])
 
+        # for message format
         msg.body = """ From: <%s> 
             %s """ % (email, message)
         mail.send(msg)

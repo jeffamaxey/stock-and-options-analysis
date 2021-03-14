@@ -56,6 +56,7 @@ def create_app():
     app.config['MAIL_USE_TLS'] = False
     app.config["MAIL_USERNAME"] = 'TheFinTechOrgTest@gmail.com'
     app.config["MAIL_PASSWORD"] = 'FTO12345'
+    app.config['MAIL_DEFAULT_SENDER'] = 'TheFinTechOrgTest@gmail.com'
 
     mail.init_app(app)
 
