@@ -2,7 +2,6 @@ from model import ValidTicker
 import json
 from urllib.request import urlopen
 
-
 def get_jsonparsed_data(ticker):
     """
     Receive the content of ``url``, parse it as JSON and return the object.
@@ -29,7 +28,7 @@ class Fundamental:
     def __init__(self, ticker):
         if not ValidTicker.valid_ticker(ticker):
             raise RuntimeError
-
+        # get the attributes of the underlying stock and check if they're valid
         try:
             json_data = get_jsonparsed_data(ticker)
             self.priceFairValueTTM = round(json_data[0]["priceFairValueTTM"], 2)
@@ -52,31 +51,52 @@ class Fundamental:
             self.returnOnCapitalEmployedTTM = None
             self.currentRatioTTM = None
 
-
-
-
     def get_priceFairValueTTM(self):
+        """
+        returns the price fair value TTM of the company
+        """
         return self.priceFairValueTTM
 
     def get_debtEquityRatioTTM(self):
+        """
+        returns the debt equity ratio TTM of the company
+        """
         return self.debtEquityRatioTTM
 
     def get_priceToBookRatioTTM(self):
+        """
+        returns the price to book ratio TTM of the company
+        """
         return self.priceToBookRatioTTM
 
     def get_returnOnEquityTTM(self):
+        """
+        returns the return on equity TTM of the company
+        """
         return self.returnOnEquityTTM
 
     def get_priceEarningsToGrowthRatioTTM(self):
+        """
+        returns the price earnings to growth ratio TTM of the company
+        """
         return self.priceEarningsToGrowthRatioTTM
 
     def get_returnOnAssetsTTM(self):
+        """
+        returns the return on assets TTM of the company
+        """
         return self.returnOnAssetsTTM
 
     def get_returnOnCapitalEmployedTTM(self):
+        """
+        returns the return on capital employed TTM of the company
+        """
         return self.returnOnCapitalEmployedTTM
 
     def get_currentRatioTTM(self):
+        """
+        returns the current ratio TTM of the company
+        """
         return self.currentRatioTTM
 
 # test1 = Fundamental("aapl")

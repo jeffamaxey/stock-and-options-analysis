@@ -28,7 +28,7 @@ class IncomeStatement:
     def __init__(self, ticker):
         if not ValidTicker.valid_ticker(ticker):
             raise RuntimeError
-
+        # get the attributes of the underlying stock and check if they're valid
         try:
             json_data = get_jsonparsed_data(ticker)
             self.revenue = json_data[0]["revenue"]
@@ -46,18 +46,33 @@ class IncomeStatement:
             self.grossProfit = None
 
     def getRevenue(self):
+        """
+        returns the revenue of the company
+        """
         return self.revenue
 
     def getEbitda(self):
+        """
+        returns the EBITDA of the company
+        """
         return self.ebitda
 
     def getIncomeTaxExpense(self):
+        """
+        returns the income tax expense of the company
+        """
         return self.incomeTaxExpense
 
     def getNetIncome(self):
+        """
+        returns the net income of the company
+        """
         return self.netIncome
 
     def getGrossProfit(self):
+        """
+        returns the gross profit of the company
+        """
         return self.grossProfit
 
 # test1 = IncomeStatement("AAPL")
