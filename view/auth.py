@@ -7,6 +7,7 @@ auth_bp = Blueprint("auth", __name__)
 
 @auth_bp.route("/login", methods=["GET", "POST"])
 def login():
+
     if request.method == "POST":
 
         email = request.form.get("email12")
@@ -42,7 +43,7 @@ def login():
     return render_template("login-page.html", user=current_user)
 
 
-def register(email, password1, password2=None, agreed=None, redirect_url="/", product=None):
+def register(email, password1, password2=None, agreed=None, product=None):
     """
     Check if the values are valid and if so, add the user to the database
     :param email: The email address of the user
@@ -77,8 +78,6 @@ def register(email, password1, password2=None, agreed=None, redirect_url="/", pr
         login_user(user, remember=True)
 
         flash("Account has been successfully created!", category="Success")
-
-        return redirect(url_for(redirect_url))  # redirect the user
 
 
 @auth_bp.route("/sign-up", methods=["GET", "POST"])
@@ -118,7 +117,8 @@ def sign_up():
         if agreed is None:
             agreed = request.form.get("checkbox4")
 
-        register(email, password1, password2, agreed, "payment.payment")
+        register(email=email, password1=password1, password2=password2, agreed=agreed)
+        return redirect(url_for("payment.payment"))
 
     return render_template("signup-page.html", user=current_user)
 
@@ -142,7 +142,8 @@ def password_recovery():
 @login_required     # Make sure user cannot logout when the user is not logged in
 def logout():
     logout_user()
-    return redirect((url_for("login")))   # redirect the user to the login page
+    flash("You are logged out.", category="Success")
+    return redirect((url_for("auth.login")))   # redirect the user to the login page
 
 
 @auth_bp.route("/delete-account", methods=["GET", "POST"])
@@ -161,7 +162,7 @@ def delete_user():
         if UserDB.check_password(current_user.email, password):
             UserDB.delete(current_user.email)
             flash("Your account has been successfully deleted.", category="Success")
-            return redirect(url_for("auth.login"))     # redirect the user to the login page
+            return redirect(url_for("general.home"))     # redirect the user to the home page
         else:
             flash("Incorrect password. Please try again.", category="Error")
 

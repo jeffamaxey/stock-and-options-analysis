@@ -7,7 +7,7 @@ def get_fundamental_analysis(ticker, data_source):
     """
     try:
         stock = Stock(ticker=ticker)
-    except RuntimeError:
+    except RuntimeError:    # This exception is thrown when the ticker is invalid
         return None
 
     fundamental = stock.get_fundamental()

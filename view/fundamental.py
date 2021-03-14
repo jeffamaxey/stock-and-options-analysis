@@ -73,10 +73,10 @@ def fundamental_analysis_result():
             fundamental_analysis_data.insert(0, analysis)
             return redirect(url_for("fundamental.fundamental_analysis_result"))
 
-    # when the user entered tha page without pressing the analyze button
+    # when the user entered the page without pressing the analyze button
     try:
         analysis = fundamental_analysis_data[0]
-    except IndexError:  # if this exception is thrown, it means the user refreshed the result page or entered by simple tying the url
+    except IndexError:  # if this exception is thrown, it means the user refreshed the result page or entered by simply tying the url
         return redirect(url_for("fundamental.fundamental_analysis"))
 
     stock_details = analysis["stock_details"]

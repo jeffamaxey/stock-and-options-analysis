@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, redirect, url_for
 from flask_login import current_user, login_required
 
 general_bp = Blueprint("general", __name__)
@@ -33,7 +33,8 @@ def home():
             product = request.form.get("product27")
 
         from view.auth import register
-        register(email=email, password1=password, redirect_url="payment.payment", product=product)
+        register(email=email, password1=password, product=product)
+        return redirect(url_for("payment.payment"))
 
     return render_template("landing-page.html", user=current_user)
 
