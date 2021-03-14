@@ -3,7 +3,6 @@ from urllib.request import urlopen
 from model import ValidTicker
 
 
-
 def get_jsonparsed_data(ticker):
     """
     Receive the content of ``url``, parse it as JSON and return the object.
@@ -29,7 +28,7 @@ class CashFlow:
     def __init__(self,ticker):
         if not ValidTicker.valid_ticker(ticker):
             raise RuntimeError
-
+        # get the attributes of the underlying stock and check if they're valid
         try:
             json_data = get_jsonparsed_data(ticker)
             self.netCashProvidedByOperatingActivities = round(json_data[0]["netCashProvidedByOperatingActivities"], 2)
@@ -45,15 +44,27 @@ class CashFlow:
             self.freeCashFlow = None
 
     def getNetCashProvidedByOperatingActivities(self):
+        """
+        returns the Net Cash Provided By Operating Activities of the company
+        """
         return self.netCashProvidedByOperatingActivities
 
     def getNetCashUsedForInvestingActivites(self):
+        """
+        returns the Net Cash used By investing Activities of the company
+        """
         return self.netCashUsedForInvestingActivites
 
     def getNetCashUsedProvidedByFinancingActivities(self):
+        """
+        returns the Net Cash used provided By financing Activities of the company
+        """
         return self.netCashUsedProvidedByFinancingActivities
 
     def getFreeCashFlow(self):
+        """
+        returns the free Cash flow of the company
+        """
         return self.freeCashFlow
 
 #

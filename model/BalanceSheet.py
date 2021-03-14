@@ -28,10 +28,10 @@ class BalanceSheet:
     """
     The balance sheet of the company
     """
-    def __init__(self,ticker):
+    def __init__(self, ticker):
         if not ValidTicker.valid_ticker(ticker):
             raise RuntimeError
-
+        # get the attributes of the underlying stock and check if they're valid
         try:
             json_data = get_jsonparsed_data(ticker)
             self.totalCurrentAssets = round(json_data[0]["totalCurrentAssets"], 2)
@@ -55,25 +55,49 @@ class BalanceSheet:
             self.totalLiabilitiesAndStockholdersEquity = None
 
     def get_totalCurrentAssets(self):
+        """
+        returns the total current assets of the company
+        """
         return self.totalCurrentAssets
 
     def get_totalNonCurrentAssets(self):
+        """
+        returns the total non_current assets of the company
+        """
         return self.totalNonCurrentAssets
 
     def get_totalAssets(self):
+        """
+        returns the total_assets of the company
+        """
         return self.totalAssets
 
     def get_totalCurrentLiabilities(self):
+        """
+        returns the total_current_liabilities of the company
+        """
         return self.totalCurrentLiabilities
 
     def get_totalNonCurrentLiabilities(self):
+        """
+        returns the total non_current liabilities of the company
+        """
         return self.totalNonCurrentLiabilities
 
     def get_totalLiabilities(self):
+        """
+        returns the total liabilities of the company
+        """
         return self.totalLiabilities
 
     def get_totalStockholdersEquity(self):
+        """
+        returns the total StockholdersEquity of the company
+        """
         return self.totalStockholdersEquity
 
     def get_totalLiabilitiesAndStockholdersEquity(self):
+        """
+        returns the total LiabilitiesAndStockholdersEquity of the company
+        """
         return self.totalLiabilitiesAndStockholdersEquity
