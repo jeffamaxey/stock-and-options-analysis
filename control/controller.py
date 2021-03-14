@@ -15,11 +15,11 @@ def get_fundamental_analysis(ticker, data_source):
     income_statement = stock.get_income_statement()
     cash_flow = stock.get_cash_flow()
 
-    # Values to be shown to the page when dividend doesn't exist
-    forward_annual_dividend_rate = "-"
-    dividend_yield = "-"
-    dividend_date = "-"
-    ex_dividend = "-"
+    # Values to be shown to the page when the stock doesn't have dividend
+    forward_annual_dividend_rate = "( - )"
+    dividend_yield = "( - )"
+    dividend_date = "( - )"
+    ex_dividend = "( - )"
 
     if stock.has_dividend():
         forward_annual_dividend_rate = stock.get_forward_annual_dividend_rate()
