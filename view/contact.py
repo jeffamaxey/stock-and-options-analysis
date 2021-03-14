@@ -42,16 +42,12 @@ def contact():
             flash("Please enter a message.", category="Error")
 
         else:
-            msg = Message(subject.data, sender='TheFinTechOrgTest@gmail.com', recipients=['TheFinTechOrgTest@gmail.com'])
-        msg.body = """
-        <%s>
-      %s
-      """ % (email.data, message.data)
+            msg = Message(sender='TheFinTechOrgTest@gmail.com', recipients=['TheFinTechOrgTest@gmail.com'])
+        msg.body = """ From: %s 
+        %s """ % (email.data, message.data)
         mail.send(msg)
 
-        flash("An email been sent from " + str(email) + ".", category="Success")
+        flash("An email has been sent. Thank you for contacting us, we will respond shortly.", category="Success")
         return render_template('contact-page.html', user=current_user)
 
-    # Go to contact page
-    elif request.method == 'GET':
-        return render_template('contact-page.html', user=current_user)
+    return render_template('contact-page.html', user=current_user)
