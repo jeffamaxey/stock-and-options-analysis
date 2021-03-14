@@ -18,7 +18,6 @@ def create(app):
 
     if not path.exists(__USER_DB_PATH):  # Check if the user database doesn't exist
         user_db.create_all(app=app)
-        print("Created user database!")
 
 
 def add(email, password):
