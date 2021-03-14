@@ -225,7 +225,7 @@ def main():
         print("Error in dividend methods for " + ticker + ", throwing exception when they should not have ")
 
     # manually test the news class to see if articles out put correctly
-    print(s1.get_news().news_tostring_for_testing())
+    print(s1.get_news().news_tostring())
 
 
                                             # New stock to test
@@ -406,7 +406,7 @@ def main():
         pass
 
     # manually test the news class to see if articles out put correctly
-    print(s2.get_news().news_tostring_for_testing())
+    print(s2.get_news().news_tostring())
 
 
 
@@ -564,7 +564,7 @@ def main():
         pass
 
     # manually test the news class to see if articles out put correctly
-    print(s3.get_news().news_tostring_for_testing())
+    print(s3.get_news().news_tostring())
 
 
     print("\n**** Testing Complete with " + str(ErrorCount) + " errors ****")
