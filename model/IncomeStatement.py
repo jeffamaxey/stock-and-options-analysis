@@ -30,11 +30,17 @@ class IncomeStatement:
             raise RuntimeError
         # get the attributes of the underlying stock and check if they're valid
         try:
+            #Stock ticker
             json_data = get_jsonparsed_data(ticker)
+            # revenue for the underlying stock
             self.revenue = json_data[0]["revenue"]
+            # ebitda for the underlying stock
             self.ebitda = json_data[0]["ebitda"]
+            # incomeTaxExpense for the underlying stock
             self.incomeTaxExpense = json_data[0]["incomeTaxExpense"]
+            # netIncome for the underlying stock
             self.netIncome = json_data[0]["netIncome"]
+            # grossProfit for the underlying stock
             self.grossProfit = json_data[0]["grossProfit"]
 
         except Exception as err:

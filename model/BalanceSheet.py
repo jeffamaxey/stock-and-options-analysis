@@ -33,14 +33,23 @@ class BalanceSheet:
             raise RuntimeError
         # get the attributes of the underlying stock and check if they're valid
         try:
+            # ticker for the underlying stock
             json_data = get_jsonparsed_data(ticker)
+            # totalCurrentAssets for the underlying stock
             self.totalCurrentAssets = round(json_data[0]["totalCurrentAssets"], 2)
+            # totalNonCurrentAssets for the underlying stock
             self.totalNonCurrentAssets = round(json_data[0]["totalNonCurrentAssets"], 2)
+            # totalAssets for the underlying stock
             self.totalAssets = round(json_data[0]["totalAssets"], 2)
+            # totalCurrentLiabilities for the underlying stock
             self.totalCurrentLiabilities = round(json_data[0]["totalCurrentLiabilities"], 2)
+            # totalNonCurrentLiabilities for the underlying stock
             self.totalNonCurrentLiabilities = round(json_data[0]["totalNonCurrentLiabilities"], 2)
+            # totalLiabilities for the underlying stock
             self.totalLiabilities = round(json_data[0]["totalLiabilities"], 2)
+            # totalStockholdersEquity for the underlying stock
             self.totalStockholdersEquity = round(json_data[0]["totalStockholdersEquity"], 2)
+            # totalLiabilitiesAndStockholdersEquity for the underlying stock
             self.totalLiabilitiesAndStockholdersEquity = round(json_data[0]["totalLiabilitiesAndStockholdersEquity"], 2)
 
         except Exception as err:
