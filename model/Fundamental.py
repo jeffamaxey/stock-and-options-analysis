@@ -2,7 +2,6 @@ from model import ValidTicker
 import json
 from urllib.request import urlopen
 
-
 def get_jsonparsed_data(ticker):
     """
     Receive the content of ``url``, parse it as JSON and return the object.
@@ -31,14 +30,23 @@ class Fundamental:
             raise RuntimeError
         # get the attributes of the underlying stock and check if they're valid
         try:
+            # Stock ticker
             json_data = get_jsonparsed_data(ticker)
+            # priceFairValueTTM for the underlying stock
             self.priceFairValueTTM = round(json_data[0]["priceFairValueTTM"], 2)
+            # debtEquityRatioTTM for the underlying stock
             self.debtEquityRatioTTM = round(json_data[0]["debtEquityRatioTTM"], 2)
+            # priceToBookRatioTTM for the underlying stock
             self.priceToBookRatioTTM = round(json_data[0]["priceToBookRatioTTM"], 2)
+            # returnOnEquityTTM for the underlying stock
             self.returnOnEquityTTM = round(json_data[0]["returnOnEquityTTM"], 2)
+            # priceEarningsToGrowthRatioTTM for the underlying stock
             self.priceEarningsToGrowthRatioTTM = round(json_data[0]["priceEarningsToGrowthRatioTTM"], 2)
+            # returnOnAssetsTTM for the underlying stock
             self.returnOnAssetsTTM = round(json_data[0]["returnOnAssetsTTM"], 2)
+            # returnOnCapitalEmployedTTM for the underlying stock
             self.returnOnCapitalEmployedTTM = round(json_data[0]["returnOnCapitalEmployedTTM"], 2)
+            # currentRatioTTM for the underlying stock
             self.currentRatioTTM = round(json_data[0]["currentRatioTTM"], 2)
 
         except Exception as err:

@@ -30,10 +30,15 @@ class CashFlow:
             raise RuntimeError
         # get the attributes of the underlying stock and check if they're valid
         try:
+            # ticker for the underlying stock
             json_data = get_jsonparsed_data(ticker)
+            # netCashProvidedByOperatingActivities for the underlying stock
             self.netCashProvidedByOperatingActivities = round(json_data[0]["netCashProvidedByOperatingActivities"], 2)
+            # netCashUsedForInvestingActivites for the underlying stock
             self.netCashUsedForInvestingActivites = round(json_data[0]["netCashUsedForInvestingActivites"], 2)
+            # netCashUsedProvidedByFinancingActivities for the underlying stock
             self.netCashUsedProvidedByFinancingActivities = round(json_data[0]["netCashUsedProvidedByFinancingActivities"], 2)
+            # freeCashFlow for the underlying stock
             self.freeCashFlow = round(json_data[0]["freeCashFlow"], 2)
 
         except Exception as err:
