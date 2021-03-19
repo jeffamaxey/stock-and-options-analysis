@@ -1,7 +1,7 @@
 from flask import Flask
 from database import UserDB
 from flask_login import LoginManager
-import ray
+import ray # module for multi processing
 
 URL_PREFIX = "/"
 
