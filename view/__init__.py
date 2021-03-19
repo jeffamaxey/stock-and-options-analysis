@@ -40,6 +40,7 @@ def create_app():
     login_manager.login_view = "auth.login"  # redirect to the page when the user is not logged in
     login_manager.init_app(app)
 
+    # initialize the multithreading module
     ray.init(ignore_reinit_error=True)
 
     @login_manager.user_loader
