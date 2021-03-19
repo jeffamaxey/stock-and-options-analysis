@@ -1,4 +1,12 @@
-import datetime
+"""
+  The modules used in the file are shown below
+  :The News module is a class used to fetch news relating to a stock
+  :The Fundamental module is a class used to fetch stock fundamentals
+  :The BalanceSheet module is a class used to fetch BalanceSheet information of the stock
+  :The CashFlow module is a class used to fetch CashFlow information of the stock
+  :The yahoo_fin module is used to fetch stock metrics
+  """
+
 from model import ValidTicker as validTicker
 from model.News import News
 from model.Fundamental import Fundamental

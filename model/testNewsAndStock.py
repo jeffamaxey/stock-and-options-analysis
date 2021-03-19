@@ -63,8 +63,8 @@ def main():
                 s1.get_volume()))
         ErrorCount += 1
 
-    # check if the returned volume of the stock is within a valid range. (aapl is usually within the 50,105,050 to 150,752,167 volume range)
-    if not 50105050 < s1.get_volume() < 150752167:
+    # check if the returned volume of the stock is within a valid range. (aapl is usually within the 50,105,050 to 350,752,167 volume range)
+    if not 50105050 < s1.get_volume() < 350752167:
         print("Error in returned value of get_volume() method for " + ticker)
         ErrorCount += 1
 
