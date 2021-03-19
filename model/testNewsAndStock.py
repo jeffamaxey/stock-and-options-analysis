@@ -12,6 +12,7 @@
 import datetime
 
 import Stock as Stock
+import ray
 
 
 def main():
@@ -20,6 +21,9 @@ def main():
     This tests all available getter methods to make sure they are returning the appropriate data types
     The Test also displays the execution time in seconds to store and get all attributes to create the stock class
     """
+    # initialize ray
+    ray.init(ignore_reinit_error=True)
+
     # set the number of errors in code to 0
     ErrorCount = 0
 
