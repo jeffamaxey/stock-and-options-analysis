@@ -12,6 +12,7 @@
 import datetime
 
 import Stock as Stock
+import ray
 
 
 def main():
@@ -20,6 +21,9 @@ def main():
     This tests all available getter methods to make sure they are returning the appropriate data types
     The Test also displays the execution time in seconds to store and get all attributes to create the stock class
     """
+    # initialize ray
+    ray.init(ignore_reinit_error=True)
+
     # set the number of errors in code to 0
     ErrorCount = 0
 
@@ -63,8 +67,8 @@ def main():
                 s1.get_volume()))
         ErrorCount += 1
 
-    # check if the returned volume of the stock is within a valid range. (aapl is usually within the 50,105,050 to 150,752,167 volume range)
-    if not 50105050 < s1.get_volume() < 150752167:
+    # check if the returned volume of the stock is within a valid range. (aapl is usually within the 50,105,050 to 350,752,167 volume range)
+    if not 50105050 < s1.get_volume() < 350752167:
         print("Error in returned value of get_volume() method for " + ticker)
         ErrorCount += 1
 

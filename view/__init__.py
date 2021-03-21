@@ -1,6 +1,7 @@
 from flask import Flask
 from database import UserDB
 from flask_login import LoginManager
+import ray # module for multi processing
 
 URL_PREFIX = "/"
 
@@ -38,6 +39,9 @@ def create_app():
     login_manager = LoginManager()
     login_manager.login_view = "auth.login"  # redirect to the page when the user is not logged in
     login_manager.init_app(app)
+
+    # initialize the multithreading module
+    ray.init(ignore_reinit_error=True)
 
     @login_manager.user_loader
     def load_user(id):

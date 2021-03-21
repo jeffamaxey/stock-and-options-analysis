@@ -1,4 +1,12 @@
-import datetime
+"""
+  The modules used in the file are shown below
+  :The News module is a class used to fetch news relating to a stock
+  :The Fundamental module is a class used to fetch stock fundamentals
+  :The BalanceSheet module is a class used to fetch BalanceSheet information of the stock
+  :The CashFlow module is a class used to fetch CashFlow information of the stock
+  :The yahoo_fin module is used to fetch stock metrics
+  """
+
 from model import ValidTicker as validTicker
 from model.News import News
 from model.Fundamental import Fundamental
@@ -6,6 +14,8 @@ from model.BalanceSheet import BalanceSheet
 from model.IncomeStatement import IncomeStatement
 from model.CashFlow import CashFlow
 from yahoo_fin import stock_info as si
+
+import ray
 
 
 class Stock:
@@ -18,17 +28,28 @@ class Stock:
     def __init__(self, ticker):
         # convert passed in ticker to all upper case
         ticker = ticker.upper()
+        # update ticker symbol within the class
+        self.ticker = ticker
 
         # if the ticker is not valid an exception is thrown
         if not validTicker.valid_ticker(ticker):
             raise RuntimeError("This is not a valid ticker symbol")
 
-        # update ticker symbol within the class
-        self.ticker = ticker
+        # initialize multiprocessing
+        ray.init(ignore_reinit_error=True)
 
-        # these variables will hold all information from api call
-        self._stock_quote = si.get_quote_table(self.ticker)
-        self.stock_enhanced_quote = si.get_stats(self.ticker)
+        # using parallel processing to get quotes of stock
+        ret_id1 = self.set_stock_quote.remote(self)
+        ret_id2 = self.set_enhanced_quote.remote(self)
+        ret_id3 = self.set_news.remote(self)
+        ret_id4 = self.set_fundamental.remote(self)
+        ret_id5 = self.set_balancesheet.remote(self)
+        ret_id6 = self.set_income_statement.remote(self)
+        ret_id7 = self.set_cash_flow.remote(self)
+
+        # the quote variables will hold all information from api call
+        # Automatically  gets news, fundamental, balance sheet, income statement, cash flow related to the stock
+        self._stock_quote, self.stock_enhanced_quote, self._news, self._fundamental,  self._balance_sheet, self._income_statement, self._cash_flow  = ray.get([ret_id1, ret_id2, ret_id3, ret_id4, ret_id5, ret_id6, ret_id7])
 
         """
         Variables to store the stock information as provided below
@@ -86,7 +107,8 @@ class Stock:
         self._one_year_estimate = round(self.get_stock_quote()['1y Target Est'], 2)
 
         # dividend info of stock
-        self._has_dividend = self.get_stock_quote()['Forward Dividend & Yield'] != "N/A (N/A)"  # if we can pull the dividend yield we know the stock has a dividend; the dividend yield from API returns N/A (N/A) if stock does not have a dividend
+        self._has_dividend = self.get_stock_quote()[
+                                 'Forward Dividend & Yield'] != "N/A (N/A)"  # if we can pull the dividend yield we know the stock has a dividend; the dividend yield from API returns N/A (N/A) if stock does not have a dividend
 
         self._forward_annual_dividend_rate = self.stock_enhanced_quote.at[
             27, "Value"]  # index 27 of the pandas dataframe corresponds to the Forward Annual Dividend Rate
@@ -97,12 +119,61 @@ class Stock:
         self._exDividend = self.stock_enhanced_quote.at[
             34, "Value"]  # index 34 of the pandas dataframe corresponds to the Ex-Dividend Date
 
-        # Automatically  gets news, fundamental, balance sheet, income statement, cash flow related to the stock
-        self._news = News(self.ticker)
-        self._fundamental = Fundamental(self.ticker)
-        self._balance_sheet = BalanceSheet(self.ticker)
-        self._income_statement = IncomeStatement(self.ticker)
-        self._cash_flow = CashFlow(self.ticker)
+    @ray.remote
+    def set_stock_quote(self):
+        """
+        Sets a quote of the stock of the stock containing stock information
+         :return a quote of the stock as a python dictionary from api call
+        """
+        return si.get_quote_table(self.ticker)
+
+    @ray.remote
+    def set_enhanced_quote(self):
+        """
+        Sets an enhanced quote of the stock which has more information
+        :return a quote of the stock as a python dictionary from apic all
+        """
+        return si.get_stats(self.ticker)
+
+    @ray.remote
+    def set_news(self):
+        """
+        Sets news object relating to the stock
+        :return a news object containing all news of stock
+        """
+        return News(self.ticker)
+
+    @ray.remote
+    def set_fundamental(self):
+        """
+        Sets fundamental object relating to the stock
+        :return a fundamental object relating to the stock
+        """
+        return Fundamental(self.ticker)
+
+    @ray.remote
+    def set_balancesheet(self):
+        """
+        Sets balance sheet object relating to the stock
+        :return a balance sheet object relating to the stock
+        """
+        return BalanceSheet(self.ticker)
+
+    @ray.remote
+    def set_income_statement(self):
+        """
+        Sets income_statement object relating to the stock
+        :return a income_statement object relating to the stock
+        """
+        return IncomeStatement(self.ticker)
+
+    @ray.remote
+    def set_cash_flow(self):
+        """
+        Sets cashflow object relating to the stock
+        :return a cashflow object relating to the stock
+        """
+        return CashFlow(self.ticker)
 
     def get_stock_quote(self):
         """
