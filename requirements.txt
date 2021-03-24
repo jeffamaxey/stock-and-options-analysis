@@ -37,3 +37,7 @@ wincertstore==0.2
 yahoo-fin==0.8.6
 yahoofinancials==1.6
 yfinance==0.1.55
+
+ray~=1.2.0
+aiohttp~=3.7.4.post0
+finta~=1.2
