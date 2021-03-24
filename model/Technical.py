@@ -1,22 +1,17 @@
-from aiohttp import web
-from finta.utils import resample
-
-
+"""
+  The modules used in the file are shown below
+  :The finta module is used to compute technical analysis indicators
+  :The valid ticker is used to check the validity of a stocks ticker
+  :The datetime module is used to get the current date and a range of dates
+  :The pandas_datareader.data is used to get history of stock data for technical analysis from yahoo fina
+  :The ray module is used for parallel processing
+  """
 from model import ValidTicker as validTicker
 from finta import TA
-import yfinance as yahoo_finance
 import datetime
-
-
-
-# ___library_import_statements___
-import pandas as pd
-# make pandas to print dataframes nicely
-pd.set_option('expand_frame_repr', False)
 import pandas_datareader.data as web
+import ray
 
-#newest yahoo API
-import yfinance as yahoo_finance
 
 class Technical:
     """
@@ -41,28 +36,102 @@ class Technical:
         start_time = (datetime.date.today() - datetime.timedelta(60)).isoformat()
 
         # save a ohlc DataFrame which is returned from yahoo finance
-        ohlc = web.get_data_yahoo(self.ticker, start=start_time, end=end_time)
+        self.ohlc = web.get_data_yahoo(self.ticker, start=start_time, end=end_time)
 
-        # calculate all values necessary for technical analysis
-        self._RSI = round(float(TA.RSI(ohlc).values[-1]), 2) # convert to float from numpy and round to 2 decimal places
-        self._MACD = str(TA.MACD(ohlc).values[-1]) # get a string representation of the MACD
+        # initialize multiprocessing
+        ray.init(ignore_reinit_error=True)
 
-        simple_moving_average_30_day = round(float(TA.SMA(ohlc,30).values[-1],), 2) # convert simple 30 day moving average to float and round to 2 decimal places
-        simple_moving_average_10_day = round(float(TA.SMA(ohlc, 10).values[-1], ),
+        # using parallel processing to get quotes of stock
+        ret_id1 = self.set_rsi.remote(self)
+        ret_id2 = self.set_macd.remote(self)
+        ret_id3 = self.set_simple_moving_average_range_30_10.remote(self)
+        ret_id4 = self.set_pivot_fib.remote(self)
+        ret_id5 = self.set_mass_index.remote(self)
+
+        # get all values necessary for technical analysis
+        self._RSI, self._MACD, self._simple_moving_average_range_30_10,self._pivot_fib,self._mass_index   = ray.get(
+            [ret_id1, ret_id2, ret_id3, ret_id4, ret_id5])
+
+
+    @ray.remote
+    def set_rsi(self):
+        """
+        Sets the rsi of a stock
+        :return rsi of a stock as a floating point number
+        """
+        return round(float(TA.RSI(self.ohlc).values[-1]), 2) # convert to float from numpy and round to 2 decimal places
+
+    @ray.remote
+    def set_macd(self):
+        """
+        Sets the MACD of a stock
+        :return MACD of a stock as a string
+        """
+        return str(TA.MACD(self.ohlc).values[-1]) # get a string representation of the MACD
+
+    @ray.remote
+    def set_simple_moving_average_range_30_10(self):
+        """
+        Sets the simple_moving_average_range_30_10 of a stock
+        :return simple_moving_average_range_30_10 of a stock as a string
+        """
+        simple_moving_average_30_day = round(float(TA.SMA(self.ohlc, 30).values[-1], ),
+                                             2)  # convert simple 30 day moving average to float and round to 2 decimal places
+        simple_moving_average_10_day = round(float(TA.SMA(self.ohlc, 10).values[-1], ),
                                              2)  # convert simple 10 day moving average to float and round to 2 decimal places
 
-        self._simple_moving_average_range_30_10 = str(simple_moving_average_30_day) + " : " + str(simple_moving_average_10_day) # set up a range of the 30 and 10 day moving average as a string
-        self._pivot_fib = TA.PIVOT_FIB(ohlc).values[-1][-4:] # get the last 4 latest fibonacci pivot points
+        return str(simple_moving_average_30_day) + " : " + str(simple_moving_average_10_day) # set up a range of the 30 and 10 day moving average as a string
+
+    @ray.remote
+    def set_pivot_fib(self):
+        """
+        Sets the pivot_fib of a stock
+        :return pivot_fib of a stock as a string
+        """
+        return str(TA.PIVOT_FIB(self.ohlc).values[-1][-4:]) # get the last 4 latest fibonacci pivot points
+
+    @ray.remote
+    def set_mass_index(self):
+        """
+        Sets the mass_index of a stock
+        :return mass_index of a stock as a floating point number
+        """
+        return round(float(TA.MI(self.ohlc).values[-1]),2) # convert to float from numpy and round to 2 decimal places
+
+    def get_rsi(self):
+        """
+        Gets the rsi of a stock
+        :return rsi of a stock as a floating point number
+        """
+        return self._RSI
+
+    def get_macd(self):
+        """
+        Gets the MACD of a stock
+        :return MACD of a stock as a string
+        """
+        return self._MACD
+
+    def get_simple_moving_average_range_30_10(self):
+        """
+        Gets the simple_moving_average_range_30_10 of a stock
+        :return simple_moving_average_range_30_10 of a stock as a string
+        """
+        return self._simple_moving_average_range_30_10
+
+    def get_pivot_fib(self):
+        """
+        Gets the pivot_fib of a stock
+        :return pivot_fib of a stock as a string
+        """
+        return self._pivot_fib
+
+    def get_mass_index(self):
+        """
+        Gets the mass_index of a stock
+        :return mass_index of a stock as a floating point number
+        """
+        return self._mass_index
 
 
-
-        print(self._RSI)
-        print(self._MACD)
-        print(self._simple_moving_average_range_30_10)
-        print(self._pivot_fib)
-
-
-
-
-stock = Technical("aapl")
-
+#
