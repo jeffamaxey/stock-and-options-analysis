@@ -40,6 +40,33 @@ def valid_ticker(ticker):
         # exception thrown so the ticker is invalid and we return false
         return False
 
-    # print(get_ticker_company("sklz"))
-    # print(valid_ticker("nasdgfs"))
-    # print(valid_ticker("stpk"))
+
+def get_exchange(ticker):
+    """
+    Get the stock exchange of the ticker
+    Currently works with NYSE and Nasdaq
+    :param ticker is the ticker symbol to get the exchange
+    :throws a ProcessLookupError exception if a exchange name of a ticker is not found
+    :return a string of the stock exchange
+    """
+    # call the yahoo finance api and store the stock information as json into result list
+    # some of the code for get_exchange is borrowed from https://stackoverflow.com/questions/38967533/retrieve-company-name-with-ticker-symbol-input-yahoo-or-google-api
+    ticker = ticker.upper()
+    url = "http://d.yimg.com/autoc.finance.yahoo.com/autoc?query={}&region=1&lang=en".format(ticker)
+    result = requests.get(url).json()
+
+    # go through the list and return stock exchange of stock
+    for x in result['ResultSet']['Result']:
+        if x['symbol'] == ticker:
+            exchange = x["exch"]
+            if exchange == "NYS":
+                return "NYSE"
+            if exchange == "NMS" or "NAS":
+                return "NASDAQ"
+
+            return exchange
+
+    # if the exchange name is not found then a ProcessLookupError exception is thrown
+    raise ProcessLookupError('company name of stock not found')
+
+print(get_exchange("goog"))
