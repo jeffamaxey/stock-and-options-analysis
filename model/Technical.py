@@ -1,11 +1,22 @@
+from aiohttp import web
+from finta.utils import resample
+
+
 from model import ValidTicker as validTicker
+from finta import TA
+import yfinance as yahoo_finance
+import datetime
 
 
-from tradingview_ta import TA_Handler, Interval, Exchange
-from yahoo_fin import stock_info as si
 
+# ___library_import_statements___
+import pandas as pd
+# make pandas to print dataframes nicely
+pd.set_option('expand_frame_repr', False)
+import pandas_datareader.data as web
 
-
+#newest yahoo API
+import yfinance as yahoo_finance
 
 class Technical:
     """
@@ -24,47 +35,34 @@ class Technical:
         if not validTicker.valid_ticker(ticker):
             raise RuntimeError("This is not a valid ticker symbol")
 
+        # set end time to me the current date
+        end_time = datetime.datetime.now().date().isoformat()
+        # set start time to be 60 days prior to today's date for more accurate analysis
+        start_time = (datetime.date.today() - datetime.timedelta(60)).isoformat()
+
+        # save a ohlc DataFrame which is returned from yahoo finance
+        ohlc = web.get_data_yahoo(self.ticker, start=start_time, end=end_time)
+
+        # calculate all values necessary for technical analysis
+        self._RSI = round(float(TA.RSI(ohlc).values[-1]), 2) # convert to float from numpy and round to 2 decimal places
+        self._MACD = str(TA.MACD(ohlc).values[-1]) # get a string representation of the MACD
+
+        simple_moving_average_30_day = round(float(TA.SMA(ohlc,30).values[-1],), 2) # convert simple 30 day moving average to float and round to 2 decimal places
+        simple_moving_average_10_day = round(float(TA.SMA(ohlc, 10).values[-1], ),
+                                             2)  # convert simple 10 day moving average to float and round to 2 decimal places
+
+        self._simple_moving_average_range_30_10 = str(simple_moving_average_30_day) + " : " + str(simple_moving_average_10_day) # set up a range of the 30 and 10 day moving average as a string
+        self._pivot_fib = TA.PIVOT_FIB(ohlc).values[-1][-4:] # get the last 4 latest fibonacci pivot points
+
+
+
+        print(self._RSI)
+        print(self._MACD)
+        print(self._simple_moving_average_range_30_10)
+        print(self._pivot_fib)
 
 
 
 
-    # def Datapull(self):
-    #     try:
-    #         df = (pd.io.data.DataReader(self.ticker,'yahoo',start='01/01/2010'))
-    #         return df
-    #         print 'Retrieved', Stock
-    #         time.sleep(5)
-    #     except Exception, e:
-    #         print 'Main Loop', str(e)
-    #
-    #
-    # def RSIfun(price, n=14):
-    #     delta = price['Close'].diff()
-    #
-    #     dUp, dDown = delta.copy(), delta.copy()
-    #     dUp[dUp < 0] = 0
-    #     dDown[dDown > 0] = 0
-    #
-    #     RolUp = pd.rolling_mean(dUp, n)
-    #     RolDown = pd.rolling_mean(dDown, n).abs()
-    #
-    #     RS = RolUp / RolDown
-    #
-    #     rsi = 100.0 - (100.0 / (1.0 + RS))
-    #     return rsi
-    #
-    # Stock='AAPL'
-    # df=Datapull(Stock)
-    # RSIfun(df)
+stock = Technical("aapl")
 
-tesla = TA_Handler(
-    symbol="tsla",
-    screener="america",
-    exchange="NASDAQ",
-    interval=Interval.INTERVAL_1_MINUTE
-)
-rsi = tesla.get_analysis().indicators.get("RSI")
-print(rsi)
-print(tesla.get_analysis().indicators)
-
-validTicker.get_ticker_company("aapl")
