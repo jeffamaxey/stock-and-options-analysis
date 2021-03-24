@@ -1,4 +1,10 @@
-stock = Technical("aapl")
+import Technical as Technical
+import ray
+
+# initialize multiprocessing
+ray.init(ignore_reinit_error=True)
+
+stock = Technical.Technical("aapl")
 print(stock.get_rsi())
 print(stock.get_mass_index())
 print(stock.get_pivot_fib())
