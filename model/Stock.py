@@ -1,5 +1,6 @@
 """
   The modules used in the file are shown below
+  :The ValidTicker
   :The News module is a class used to fetch news relating to a stock
   :The Fundamental module is a class used to fetch stock fundamentals
   :The BalanceSheet module is a class used to fetch BalanceSheet information of the stock
