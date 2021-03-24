@@ -69,4 +69,4 @@ def get_exchange(ticker):
     # if the exchange name is not found then a ProcessLookupError exception is thrown
     raise ProcessLookupError('company name of stock not found')
 
-print(get_exchange("goog"))
+# print(get_exchange("goog"))
