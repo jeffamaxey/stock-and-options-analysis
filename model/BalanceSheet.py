@@ -36,77 +36,77 @@ class BalanceSheet:
             # ticker for the underlying stock
             json_data = get_jsonparsed_data(ticker)
             # totalCurrentAssets for the underlying stock
-            self.totalCurrentAssets = round(json_data[0]["totalCurrentAssets"], 2)
+            self._totalCurrentAssets = round(json_data[0]["totalCurrentAssets"], 2)
             # totalNonCurrentAssets for the underlying stock
-            self.totalNonCurrentAssets = round(json_data[0]["totalNonCurrentAssets"], 2)
+            self._totalNonCurrentAssets = round(json_data[0]["totalNonCurrentAssets"], 2)
             # totalAssets for the underlying stock
-            self.totalAssets = round(json_data[0]["totalAssets"], 2)
+            self._totalAssets = round(json_data[0]["totalAssets"], 2)
             # totalCurrentLiabilities for the underlying stock
-            self.totalCurrentLiabilities = round(json_data[0]["totalCurrentLiabilities"], 2)
+            self._totalCurrentLiabilities = round(json_data[0]["totalCurrentLiabilities"], 2)
             # totalNonCurrentLiabilities for the underlying stock
-            self.totalNonCurrentLiabilities = round(json_data[0]["totalNonCurrentLiabilities"], 2)
+            self._totalNonCurrentLiabilities = round(json_data[0]["totalNonCurrentLiabilities"], 2)
             # totalLiabilities for the underlying stock
-            self.totalLiabilities = round(json_data[0]["totalLiabilities"], 2)
+            self._totalLiabilities = round(json_data[0]["totalLiabilities"], 2)
             # totalStockholdersEquity for the underlying stock
-            self.totalStockholdersEquity = round(json_data[0]["totalStockholdersEquity"], 2)
+            self._totalStockholdersEquity = round(json_data[0]["totalStockholdersEquity"], 2)
             # totalLiabilitiesAndStockholdersEquity for the underlying stock
-            self.totalLiabilitiesAndStockholdersEquity = round(json_data[0]["totalLiabilitiesAndStockholdersEquity"], 2)
+            self._totalLiabilitiesAndStockholdersEquity = round(json_data[0]["totalLiabilitiesAndStockholdersEquity"], 2)
 
         except Exception as err:
             # if exception is thrown this is because the api cannot fetch information from this stock and we have to return empty value
-            self.totalCurrentAssets = None
-            self.totalNonCurrentAssets = None
-            self.totalAssets = None
-            self.totalCurrentLiabilities = None
-            self.totalNonCurrentLiabilities = None
-            self.totalLiabilities = None
-            self.totalStockholdersEquity = None
-            self.totalLiabilitiesAndStockholdersEquity = None
+            self._totalCurrentAssets = None
+            self._totalNonCurrentAssets = None
+            self._totalAssets = None
+            self._totalCurrentLiabilities = None
+            self._totalNonCurrentLiabilities = None
+            self._totalLiabilities = None
+            self._totalStockholdersEquity = None
+            self._totalLiabilitiesAndStockholdersEquity = None
 
     def get_totalCurrentAssets(self):
         """
         returns the total current assets of the company
         """
-        return self.totalCurrentAssets
+        return self._totalCurrentAssets
 
     def get_totalNonCurrentAssets(self):
         """
         returns the total non_current assets of the company
         """
-        return self.totalNonCurrentAssets
+        return self._totalNonCurrentAssets
 
     def get_totalAssets(self):
         """
         returns the total_assets of the company
         """
-        return self.totalAssets
+        return self._totalAssets
 
     def get_totalCurrentLiabilities(self):
         """
         returns the total_current_liabilities of the company
         """
-        return self.totalCurrentLiabilities
+        return self._totalCurrentLiabilities
 
     def get_totalNonCurrentLiabilities(self):
         """
         returns the total non_current liabilities of the company
         """
-        return self.totalNonCurrentLiabilities
+        return self._totalNonCurrentLiabilities
 
     def get_totalLiabilities(self):
         """
         returns the total liabilities of the company
         """
-        return self.totalLiabilities
+        return self._totalLiabilities
 
     def get_totalStockholdersEquity(self):
         """
         returns the total StockholdersEquity of the company
         """
-        return self.totalStockholdersEquity
+        return self._totalStockholdersEquity
 
     def get_totalLiabilitiesAndStockholdersEquity(self):
         """
         returns the total LiabilitiesAndStockholdersEquity of the company
         """
-        return self.totalLiabilitiesAndStockholdersEquity
+        return self._totalLiabilitiesAndStockholdersEquity

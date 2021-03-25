@@ -33,44 +33,44 @@ class CashFlow:
             # ticker for the underlying stock
             json_data = get_jsonparsed_data(ticker)
             # netCashProvidedByOperatingActivities for the underlying stock
-            self.netCashProvidedByOperatingActivities = round(json_data[0]["netCashProvidedByOperatingActivities"], 2)
+            self._netCashProvidedByOperatingActivities = round(json_data[0]["netCashProvidedByOperatingActivities"], 2)
             # netCashUsedForInvestingActivites for the underlying stock
-            self.netCashUsedForInvestingActivites = round(json_data[0]["netCashUsedForInvestingActivites"], 2)
+            self._netCashUsedForInvestingActivites = round(json_data[0]["netCashUsedForInvestingActivites"], 2)
             # netCashUsedProvidedByFinancingActivities for the underlying stock
-            self.netCashUsedProvidedByFinancingActivities = round(json_data[0]["netCashUsedProvidedByFinancingActivities"], 2)
+            self._netCashUsedProvidedByFinancingActivities = round(json_data[0]["netCashUsedProvidedByFinancingActivities"], 2)
             # freeCashFlow for the underlying stock
-            self.freeCashFlow = round(json_data[0]["freeCashFlow"], 2)
+            self._freeCashFlow = round(json_data[0]["freeCashFlow"], 2)
 
         except Exception as err:
             # if exception is thrown this is because the api cannot fetch information from this stock and we have to return empty value
-            self.netCashProvidedByOperatingActivities = None
-            self.netCashUsedForInvestingActivites = None
-            self.netCashUsedProvidedByFinancingActivities = None
-            self.freeCashFlow = None
+            self._netCashProvidedByOperatingActivities = None
+            self._netCashUsedForInvestingActivites = None
+            self._netCashUsedProvidedByFinancingActivities = None
+            self._freeCashFlow = None
 
     def getNetCashProvidedByOperatingActivities(self):
         """
         returns the Net Cash Provided By Operating Activities of the company
         """
-        return self.netCashProvidedByOperatingActivities
+        return self._netCashProvidedByOperatingActivities
 
     def getNetCashUsedForInvestingActivites(self):
         """
         returns the Net Cash used By investing Activities of the company
         """
-        return self.netCashUsedForInvestingActivites
+        return self._netCashUsedForInvestingActivites
 
     def getNetCashUsedProvidedByFinancingActivities(self):
         """
         returns the Net Cash used provided By financing Activities of the company
         """
-        return self.netCashUsedProvidedByFinancingActivities
+        return self._netCashUsedProvidedByFinancingActivities
 
     def getFreeCashFlow(self):
         """
         returns the free Cash flow of the company
         """
-        return self.freeCashFlow
+        return self._freeCashFlow
 
 #
 # test1 = CashFlow("AAPL")
