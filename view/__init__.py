@@ -3,7 +3,7 @@ from database import UserDB
 from flask_login import LoginManager
 import ray
 
-URL_PREFIX = "/"
+__URL_PREFIX = "/"
 
 
 def create_app():
@@ -28,7 +28,7 @@ def create_app():
     blueprints = [general_bp, auth_bp, strategies_bp, fundamental_analysis_bp, technical_analysis_bp,
                   pricing_valuation_bp, payment_bp, contact_bp]
     for blueprint in blueprints:
-        app.register_blueprint(blueprint, url_prefix=URL_PREFIX)
+        app.register_blueprint(blueprint, url_prefix=__URL_PREFIX)
 
     # initialize the user account database
     UserDB.init(app)

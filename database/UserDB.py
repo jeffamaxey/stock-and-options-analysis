@@ -3,22 +3,22 @@ from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 
-user_db = SQLAlchemy()    # database for users
-__USER_DB_PATH = "../database/user.db"
-
 MIN_EMAIL_LEN = 6
 MAX_EMAIL_LEN = 150
 MIN_PASSWORD_LEN = 6
 MAX_PASSWORD_LEN = 150
 
+_user_db = SQLAlchemy()    # database for users
+__USER_DB_PATH = "../database/user.db"
 
-class User(user_db.Model, UserMixin):
+
+class User(_user_db.Model, UserMixin):
     """
     A user account of the website
     """
-    id = user_db.Column(user_db.Integer, primary_key=True)
-    email = user_db.Column(user_db.String(MAX_EMAIL_LEN), unique=True)
-    password = user_db.Column(user_db.String(MAX_PASSWORD_LEN))
+    id = _user_db.Column(_user_db.Integer, primary_key=True)
+    email = _user_db.Column(_user_db.String(MAX_EMAIL_LEN), unique=True)
+    password = _user_db.Column(_user_db.String(MAX_PASSWORD_LEN))
 
 
 def init(app):
@@ -27,10 +27,10 @@ def init(app):
     :param app: The app created by create_app()
     """
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + __USER_DB_PATH
-    user_db.init_app(app)
+    _user_db.init_app(app)
 
     if not path.exists(__USER_DB_PATH):  # Check if the user database doesn't exist
-        user_db.create_all(app=app)
+        _user_db.create_all(app=app)
 
 
 def add(email, password):
@@ -41,8 +41,8 @@ def add(email, password):
     """
     encrypted_password = generate_password_hash(password, method="sha256")
     new_user = User(email=email, password=encrypted_password)
-    user_db.session.add(new_user)
-    user_db.session.commit()
+    _user_db.session.add(new_user)
+    _user_db.session.commit()
 
 
 def get(email):
@@ -101,5 +101,5 @@ def delete(email):
         raise LookupError("The user is not found in the user database to delete.")
 
     user = get(email)
-    user_db.session.delete(user)
-    user_db.session.commit()
+    _user_db.session.delete(user)
+    _user_db.session.commit()
