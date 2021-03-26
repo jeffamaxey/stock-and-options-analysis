@@ -416,7 +416,3 @@ class Stock:
         :return a CashFlow object relating to the stock
         """
         return self._cash_flow
-
-    def get_rsi(self):
-
-        return self._rsi

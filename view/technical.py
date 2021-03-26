@@ -66,4 +66,15 @@ def technical_analysis_result():
         # simply tying the url
         return redirect(url_for("technical.technical_analysis"))
 
-    return render_template("technical-analysis-page2.html", user=current_user)
+    technical_details = analysis["technical_details"]
+
+    # clear the list so it doesn't grow as the user analyzes multiple times
+    technical_analysis_data.clear()
+
+    return render_template("technical-analysis-page2.html", user=current_user,
+                           rsi=technical_details["RSI"],
+                           macd=technical_details["MACD"],
+                           mri=technical_details["MRI"],
+                           moving_avgs=technical_details["MOVING_AVGS"],
+                           fibonacci_targets=technical_details["FIBONACCI_TARGETS"]
+                           )
