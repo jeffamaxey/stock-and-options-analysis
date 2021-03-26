@@ -7,6 +7,9 @@
 
     This script does not test any of the methods from the  Fundamental, Cashflow, Income, Statement, BalanceSheet classes
     Those classes were to be tested by Ramtin's test script
+
+    Disclaimer: Do to varying market conditions there may be situations where the script reports an error on the values expected to bve returned by functions.
+                it is the testers responsibility to manually check to see if expected values on the test script should be updated or not when an error is announced.
     """
 
 import datetime
@@ -594,7 +597,8 @@ def main():
     print("Execution Time for " + s3.get_stock_ticker() + " Was: " + str(execution_time_stpk_stock) + " seconds")
 
 
-main()
+if __name__ == "__main__":
+    main()
 
 
 
