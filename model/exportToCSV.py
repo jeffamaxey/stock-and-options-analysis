@@ -9,6 +9,7 @@ class exportToCSV:
         # checking if the passed in object is actually equivalent to a Stock.Stock type
         if type(object) == Stock.Stock:
             self._stock = object
+            exportToCSV.exportFundamental(self)
 
     def exportFundamental(self):
         """
@@ -77,4 +78,4 @@ class exportToCSV:
                              'freeCashFlow': str(self._stock.get_cash_flow().getFreeCashFlow())})
 
 # for testing purposes
-# exportToCSV(Stock.Stock("PRTS")).exportFundamental()
+# exportToCSV(Stock.Stock("PRTS"))
