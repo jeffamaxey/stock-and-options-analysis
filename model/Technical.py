@@ -178,13 +178,3 @@ stock = "zom"
 tech = Technical(stock)
 print(tech.to_string_summary())
 
-        return String
-
-stock = "aapl"
-tech = Technical(stock)
-print(tech.get_rsi())
-print(tech.get_macd())
-print(tech.get_mass_index())
-print(tech.get_pivot_fib())
-print(tech.get_simple_moving_average_range_30_10())
-print(tech.to_string_summary())
