@@ -2,8 +2,6 @@ import numpy as np
 from scipy.stats import norm
 import time
 
-from model import ValidTicker
-
 
 class Valuation:
     def __init__(self, N, ticker, r, s, x, T, sigma, optionType, iterations):
@@ -30,10 +28,6 @@ class Valuation:
         self.sigma = sigma
         self.optionType = optionType
         self.iterations = iterations
-
-        # If the ticker is not valid an exception is thrown
-        if not ValidTicker.valid_ticker(ticker):
-            raise RuntimeError
 
     def blackScholes(self):
         # Compute the Black Scholes price for a call or put
@@ -207,83 +201,5 @@ class Valuation:
             _sigma = self.sigma + difference/self.vega
         return _sigma
 
-
-if __name__ == "__main__":
-
-    r = 0.01
-    s = 30.0
-    x = 40.0
-    T = 240.0/365.0
-    sigma = 0.30
-    optionType = "Call"
-    iterations = 100
-    N = 100
-    ticker = "AAPL"
-
-    financialModel = Valuation(N, ticker, r, s, x, T, sigma, optionType, iterations)
-
-    # Round to 2 decimal places and print
-    black_scholes_price = financialModel.blackScholes()
-    round(black_scholes_price, 2)
-    print("Black Scholes Price: ", black_scholes_price)
-
-    #binomial_price = financialModel.binomialModel()
-    #round(binomial_price), 2
-    #print("Binomial Price: ", binomial_price)
-
-    monte_carlo_price = financialModel.monteCarloSimulation()
-    round(monte_carlo_price), 2
-    print("Monte-Carlo Simulation Price: ", monte_carlo_price)
-
-    intrinsic_value = financialModel.intrinsicValue()
-    round(intrinsic_value), 2
-    print("Intrinsic Value: ", intrinsic_value)
-
-    speculative_premium = financialModel.speculativePremium()
-    round(speculative_premium), 2
-    print("Speculative Premium: ", speculative_premium)
-
-    delta = financialModel.delta()
-    round(delta), 2
-    print("Delta: ", delta)
-
-    gamma = financialModel.gamma()
-    round(gamma), 2
-    print("Gamma: ", gamma)
-
-    charm = financialModel.charm()
-    round(charm), 2
-    print("Charm: ", charm)
-
-    vega = financialModel.vega()
-    round(vega), 2
-    print("Vega: ", vega)
-
-    theta = financialModel.theta()
-    round(theta), 2
-    print("Theta: ", theta)
-
-    rho = financialModel.rho()
-    round(rho), 2
-    print("Rho: ", rho)
-
-    implied_volatility = financialModel.impliedVolatility()
-    round(implied_volatility), 2
-    print("Implied Volatility: ", implied_volatility)
-
-    risk_free_rate = r
-    print("Risk Free Rate: ", risk_free_rate)
-
-    current_stock_price = s
-    print("Current Stock Price: ", current_stock_price)
-
-    current_strike_price = x
-    print("Option Strike Price: ", current_strike_price)
-
-    time_to_maturity = T
-    print("Time to Maturity: ", time_to_maturity)
-
-    volatility_sigma = sigma
-    print("Volatility: ", volatility_sigma)
 
 

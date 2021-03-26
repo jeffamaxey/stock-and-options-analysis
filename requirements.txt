@@ -15,9 +15,6 @@ scipy~=1.6.1
 
 requests~=2.25.1
 yfinance~=0.1.55
-bs4~=0.0.1
-beautifulsoup4~=4.9.3
-pynance~=1.0.0
 pandas~=1.2.2
 
 
