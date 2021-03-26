@@ -1,5 +1,6 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, redirect, url_for
 from flask_login import current_user, login_required
+from view.general import read_field
 
 strategies_bp = Blueprint("strategies", __name__)
 
@@ -8,55 +9,14 @@ strategies_bp = Blueprint("strategies", __name__)
 @login_required
 def strategies():
     if request.method == "POST":
-
-        ticker = request.form.get("ticker-of-the-underlying-11")
-        if ticker is None:
-            ticker = request.form.get("ticker-of-the-underlying-112")
-        if ticker is None:
-            ticker = request.form.get("ticker-of-the-underlying-122")
-        if ticker is None:
-            ticker = request.form.get("ticker-of-the-underlying-132")
-
-        expiration_date = request.form.get("expiration-date11")
-        if expiration_date is None:
-            expiration_date = request.form.get("expiration-date18")
-        if expiration_date is None:
-            expiration_date = request.form.get("expiration-date114")
-        if expiration_date is None:
-            expiration_date = request.form.get("expiration-date120")
-
-        option_type = request.form.get("option-type11")
-        if option_type is None:
-            option_type = request.form.get("option-type18")
-        if option_type is None:
-            option_type = request.form.get("option-style118")
-        if option_type is None:
-            option_type = request.form.get("option-type114")
-
-        option_style = request.form.get("option-style11")
-        if option_style is None:
-            option_style = request.form.get("option-style18")
-        if option_style is None:
-            option_style = request.form.get("option-style117")
-        if option_style is None:
-            option_style = request.form.get("option-style142")
-
-        data_source = request.form.get("data-source11")
-        if data_source is None:
-            data_source = request.form.get("data-source112")
-        if data_source is None:
-            data_source = request.form.get("option-style119")
-        if data_source is None:
-            data_source = request.form.get("data-source122")
-
-        itm_atm_otm = request.form.get("itm-atm-otm11")
-        if itm_atm_otm is None:
-            itm_atm_otm = request.form.get("itm-atm-otm18")
-        if itm_atm_otm is None:
-            itm_atm_otm = request.form.get("option-style120")
-        if itm_atm_otm is None:
-            itm_atm_otm = request.form.get("itm-atm-otm114")
-
+        ticker = read_field(("ticker-of-the-underlying-11", "ticker-of-the-underlying-112",
+                             "ticker-of-the-underlying-122", "ticker-of-the-underlying-132"))
+        expiration_date = read_field(("expiration-date11", "expiration-date18", "expiration-date114",
+                                      "expiration-date120"))
+        option_type = read_field(("option-type11", "option-type18", "option-type118", "option-type114"))
+        option_style = read_field(("option-style11", "option-style18", "option-style117", "option-style142"))
+        data_source = read_field(("data-source11", "data-source112", "option-style119", "data-source122"))
+        itm_atm_otm = read_field(("itm-atm-otm11", "itm-atm-otm18", "option-style120", "itm-atm-otm114"))
 
     return render_template("strategies-page.html", user=current_user)
 
@@ -65,54 +25,14 @@ def strategies():
 @login_required
 def strategies_breakdown():
     if request.method == "POST":
-
-        ticker = request.form.get("ticker-of-the-underlying-18")
-        if ticker is None:
-            ticker = request.form.get("ticker-of-the-underlying-118")
-        if ticker is None:
-            ticker = request.form.get("ticker-of-the-underlying-128")
-        if ticker is None:
-            ticker = request.form.get("ticker-of-the-underlying-138")
-
-        expiration_date = request.form.get("expiration-date16")
-        if expiration_date is None:
-            expiration_date = request.form.get("expiration-date112")
-        if expiration_date is None:
-            expiration_date = request.form.get("expiration-date118")
-        if expiration_date is None:
-            expiration_date = request.form.get("expiration-date124")
-
-        option_type = request.form.get("option-type16")
-        if option_type is None:
-            option_type = request.form.get("option-type112")
-        if option_type is None:
-            option_type = request.form.get("option-style136")
-        if option_type is None:
-            option_type = request.form.get("option-type118")
-
-        option_style = request.form.get("option-style16")
-        if option_style is None:
-            option_style = request.form.get("option-style112")
-        if option_style is None:
-            option_style = request.form.get("option-style135")
-        if option_style is None:
-            option_style = request.form.get("option-style146")
-
-        data_source = request.form.get("data-source18")
-        if data_source is None:
-            data_source = request.form.get("data-source118")
-        if data_source is None:
-            data_source = request.form.get("option-style137")
-        if data_source is None:
-            data_source = request.form.get("data-source128")
-
-        itm_atm_otm = request.form.get("itm-atm-otm16")
-        if itm_atm_otm is None:
-            itm_atm_otm = request.form.get("itm-atm-otm112")
-        if itm_atm_otm is None:
-            itm_atm_otm = request.form.get("option-style138")
-        if itm_atm_otm is None:
-            itm_atm_otm = request.form.get("itm-atm-otm118")
+        ticker = read_field(("ticker-of-the-underlying-18", "ticker-of-the-underlying-118",
+                             "ticker-of-the-underlying-128", "ticker-of-the-underlying-138"))
+        expiration_date = read_field(("expiration-date16", "expiration-date112", "expiration-date118",
+                                      "expiration-date124"))
+        option_type = read_field(("option-type16", "option-type112", "option-type136", "option-type118"))
+        option_style = read_field(("option-style16", "option-style112", "option-style135", "option-style146"))
+        data_source = read_field(("data-source18", "data-source118", "option-style137", "data-source128"))
+        itm_atm_otm = read_field(("itm-atm-otm16", "itm-atm-otm112", "option-style138", "itm-atm-otm118"))
 
     return render_template("strategies-page2.html", user=current_user)
 
@@ -121,6 +41,12 @@ def strategies_breakdown():
 @login_required
 def strategies_breakdown_asset():
     return render_template("strategies-page-addasset.html", user=current_user)
+
+
+@strategies_bp.route("/strategies/export")
+@login_required
+def strategies_export():
+    return redirect(url_for("strategies.strategies"))
 
 
 @strategies_bp.route("/strategies/breakdown/long-call")
