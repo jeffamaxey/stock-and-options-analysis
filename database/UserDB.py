@@ -1,18 +1,31 @@
 from os import path
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
-
+from flask_login import UserMixin
 
 user_db = SQLAlchemy()    # database for users
 __USER_DB_PATH = "../database/user.db"
 
+MIN_EMAIL_LEN = 6
+MAX_EMAIL_LEN = 150
+MIN_PASSWORD_LEN = 6
+MAX_PASSWORD_LEN = 150
 
-def create(app):
+
+class User(user_db.Model, UserMixin):
     """
-    Create a user database if there is no user database
+    A user account of the website
+    """
+    id = user_db.Column(user_db.Integer, primary_key=True)
+    email = user_db.Column(user_db.String(MAX_EMAIL_LEN), unique=True)
+    password = user_db.Column(user_db.String(MAX_PASSWORD_LEN))
+
+
+def init(app):
+    """
+    Initialize the user database
     :param app: The app created by create_app()
     """
-
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + __USER_DB_PATH
     user_db.init_app(app)
 
@@ -24,11 +37,8 @@ def add(email, password):
     """
     Add the user to the user database
     :param email: The email of the user
-    :param first_name: The first name of the user
     :param password: The unencrypted password of the user
     """
-    from model.User import User
-
     encrypted_password = generate_password_hash(password, method="sha256")
     new_user = User(email=email, password=encrypted_password)
     user_db.session.add(new_user)
@@ -41,7 +51,6 @@ def get(email):
     :param email: The email address of the user
     :return: The user object
     """
-    from model.User import User
     user = User.query.filter_by(email=email).first()
     if user is None:
         raise LookupError("The user is not found in the user database to get.")
@@ -55,7 +64,6 @@ def get_by_id(id):
     :param id: The id of the user
     :return: The user object
     """
-    from model.User import User
     user = User.query.get(int(id))
     if user is None:
         raise LookupError("The user is not found in the user database to get.")
@@ -69,7 +77,6 @@ def has(email):
     :param email: The email address of the user
     :return: True if the email exists, False otherwise
     """
-    from model.User import User
     user = User.query.filter_by(email=email).first()
     return user is not None
 

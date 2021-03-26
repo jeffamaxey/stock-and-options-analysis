@@ -3,6 +3,8 @@ from flask_login import current_user, login_required
 
 payment_bp = Blueprint("payment", __name__)
 
+PRODUCTS = ("BASIC", "BUNDLED", "DELUXE")
+
 
 @payment_bp.route("/payment")
 @login_required
