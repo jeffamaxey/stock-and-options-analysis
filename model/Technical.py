@@ -49,11 +49,28 @@ class Technical:
         ret_id3 = self.set_simple_moving_average_range_30_10.remote(self)
         ret_id4 = self.set_pivot_fib.remote(self)
         ret_id5 = self.set_Momentum_Breakout_Bands.remote(self)
+        ret_id6 = self.set_tradingview_Quote.remote(self)
 
         # get all values necessary for technical analysis
-        self._RSI, self._MACD, self._simple_moving_average_range_30_10,self._pivot_fib,self._Momentum_Breakout_Bands  = ray.get(
-            [ret_id1, ret_id2, ret_id3, ret_id4, ret_id5])
+        self._RSI, self._MACD, self._simple_moving_average_range_30_10, self._pivot_fib, self._Momentum_Breakout_Bands, self.trading_view_quote = ray.get(
+            [ret_id1, ret_id2, ret_id3, ret_id4, ret_id5, ret_id6])
 
+    @ray.remote
+    def set_tradingview_Quote(self):
+        """
+        Sets a quote from trading view on whether the stock is a buy or sell
+        :return quote from tradingview
+         """
+        try:
+            analysis = \
+            TA_Handler(symbol=self.ticker, screener="america", exchange=validTicker.get_exchange(self.ticker),
+                       interval=Interval.INTERVAL_1_MINUTE
+                       ).get_analysis().summary["RECOMMENDATION"]
+
+            return analysis
+
+        except Exception:
+            return "There is no recommendation"
 
     @ray.remote
     def set_rsi(self):
@@ -61,7 +78,8 @@ class Technical:
         Sets the rsi of a stock
         :return rsi of a stock as a floating point number
         """
-        return round(float(TA.RSI(self.ohlc).values[-1]), 2) # convert to float from numpy and round to 2 decimal places
+        return round(float(TA.RSI(self.ohlc).values[-1]),
+                     2)  # convert to float from numpy and round to 2 decimal places
 
     @ray.remote
     def set_macd(self):
@@ -82,7 +100,8 @@ class Technical:
         simple_moving_average_10_day = round(float(TA.SMA(self.ohlc, 10).values[-1], ),
                                              2)  # convert simple 10 day moving average to float and round to 2 decimal places
 
-        return str(simple_moving_average_30_day) + " : " + str(simple_moving_average_10_day) # set up a range of the 30 and 10 day moving average as a string
+        return str(simple_moving_average_30_day) + " : " + str(
+            simple_moving_average_10_day)  # set up a range of the 30 and 10 day moving average as a string
 
     @ray.remote
     def set_pivot_fib(self):
@@ -90,7 +109,7 @@ class Technical:
         Sets the pivot_fib of a stock
         :return pivot_fib of a stock as a string
         """
-        return str(TA.PIVOT_FIB(self.ohlc).values[-1][-4:]) # get the last 4 latest fibonacci pivot points
+        return str(TA.PIVOT_FIB(self.ohlc).values[-1][-4:])  # get the last 4 latest fibonacci pivot points
 
     @ray.remote
     def set_Momentum_Breakout_Bands(self):
@@ -98,7 +117,7 @@ class Technical:
         Sets the Momentum Breakout Bands of a stock
         :return Momentum Breakout Bands as numpy array
         """
-        return TA.MOBO(self.ohlc).values[-1] # convert to float from numpy and round to 2 decimal places
+        return TA.MOBO(self.ohlc).values[-1]  # convert to float from numpy and round to 2 decimal places
 
     def get_rsi(self):
         """
@@ -142,9 +161,9 @@ class Technical:
         """
         rsi = self.get_rsi()
         MACD = self.get_macd()
-        positive_momentum = True # assume we have positive momentum
+        positive_momentum = True  # assume we have positive momentum
 
-        String = "The current RSI of the stock is " + str(rsi) +" "
+        String = "The current RSI of the stock is " + str(rsi) + " "
         if rsi > 70:
             String += "which indicates the stock is overbought.\n\n"
         elif rsi < 30:
@@ -156,7 +175,7 @@ class Technical:
 
         # go through mac d values and see if they are both in negative range indicating negative momentum
         for i in MACD:
-            if i <0:
+            if i < 0:
                 positive_momentum = False
 
         if positive_momentum:
@@ -164,17 +183,16 @@ class Technical:
         else:
             String += " which may indicate negative momentum.\n\n"
 
-        String += "The Momentum Breakout Bands of the stock are " + str(self.get_momentum_breakout_bands()) + " when stock price \nbreaks out of these regions it can " \
-                                                                                                              "signify a trend move or price spike worth trading.\n\n"
+        String += "The Momentum Breakout Bands of the stock are " + str(
+            self.get_momentum_breakout_bands()) + " when stock price \nbreaks out of these regions it can " \
+                                                  "signify a trend move or price spike worth trading.\n\n"
         String += "The Fibonacci pivots of the stock are " + str(
             self.get_pivot_fib()) + " which are used  to \nidentify key support and resistance levels to determine the trend or to enter and exit trades.\n\n"
 
         String += "The simple moving average for 30 and 10 days is " + self.get_simple_moving_average_range_30_10() + " which can be used to  identify\ncurrent price trends and potential for a change in the trend.\n"
 
+        String += "\nThe current recommendation by analysts for the stock  is: " + str(self.trading_view_quote)
         return String
 
 
-stock = "zom"
-tech = Technical(stock)
-print(tech.to_string_summary())
 
