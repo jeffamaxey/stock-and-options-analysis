@@ -596,7 +596,7 @@ def main():
     print("Execution Time for " + s2.get_stock_ticker() + " Was: " + str(execution_time_nndm_stock) + " seconds")
     print("Execution Time for " + s3.get_stock_ticker() + " Was: " + str(execution_time_stpk_stock) + " seconds")
 
-
+# run test
 if __name__ == "__main__":
     main()
 
