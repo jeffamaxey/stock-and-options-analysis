@@ -33,53 +33,53 @@ class IncomeStatement:
             #Stock ticker
             json_data = get_jsonparsed_data(ticker)
             # revenue for the underlying stock
-            self.revenue = json_data[0]["revenue"]
+            self._revenue = json_data[0]["revenue"]
             # ebitda for the underlying stock
-            self.ebitda = json_data[0]["ebitda"]
+            self._ebitda = json_data[0]["ebitda"]
             # incomeTaxExpense for the underlying stock
-            self.incomeTaxExpense = json_data[0]["incomeTaxExpense"]
+            self._incomeTaxExpense = json_data[0]["incomeTaxExpense"]
             # netIncome for the underlying stock
-            self.netIncome = json_data[0]["netIncome"]
+            self._netIncome = json_data[0]["netIncome"]
             # grossProfit for the underlying stock
-            self.grossProfit = json_data[0]["grossProfit"]
+            self._grossProfit = json_data[0]["grossProfit"]
 
         except Exception as err:
             # if exception is thrown this is because the api cannot fetch information from this stock and we have to return empty value
-            self.revenue = None
-            self.ebitda = None
-            self.incomeTaxExpense = None
-            self.netIncome = None
-            self.grossProfit = None
+            self._revenue = None
+            self._ebitda = None
+            self._incomeTaxExpense = None
+            self._netIncome = None
+            self._grossProfit = None
 
     def getRevenue(self):
         """
         returns the revenue of the company
         """
-        return self.revenue
+        return self._revenue
 
     def getEbitda(self):
         """
         returns the EBITDA of the company
         """
-        return self.ebitda
+        return self._ebitda
 
     def getIncomeTaxExpense(self):
         """
         returns the income tax expense of the company
         """
-        return self.incomeTaxExpense
+        return self._incomeTaxExpense
 
     def getNetIncome(self):
         """
         returns the net income of the company
         """
-        return self.netIncome
+        return self._netIncome
 
     def getGrossProfit(self):
         """
         returns the gross profit of the company
         """
-        return self.grossProfit
+        return self._grossProfit
 
 # test1 = IncomeStatement("AAPL")
 # print(test1.getRevenue())

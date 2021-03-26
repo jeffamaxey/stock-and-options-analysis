@@ -33,80 +33,80 @@ class Fundamental:
             # Stock ticker
             json_data = get_jsonparsed_data(ticker)
             # priceFairValueTTM for the underlying stock
-            self.priceFairValueTTM = round(json_data[0]["priceFairValueTTM"], 2)
+            self._priceFairValueTTM = round(json_data[0]["priceFairValueTTM"], 2)
             # debtEquityRatioTTM for the underlying stock
-            self.debtEquityRatioTTM = round(json_data[0]["debtEquityRatioTTM"], 2)
+            self._debtEquityRatioTTM = round(json_data[0]["debtEquityRatioTTM"], 2)
             # priceToBookRatioTTM for the underlying stock
-            self.priceToBookRatioTTM = round(json_data[0]["priceToBookRatioTTM"], 2)
+            self._priceToBookRatioTTM = round(json_data[0]["priceToBookRatioTTM"], 2)
             # returnOnEquityTTM for the underlying stock
-            self.returnOnEquityTTM = round(json_data[0]["returnOnEquityTTM"], 2)
+            self._returnOnEquityTTM = round(json_data[0]["returnOnEquityTTM"], 2)
             # priceEarningsToGrowthRatioTTM for the underlying stock
-            self.priceEarningsToGrowthRatioTTM = round(json_data[0]["priceEarningsToGrowthRatioTTM"], 2)
+            self._priceEarningsToGrowthRatioTTM = round(json_data[0]["priceEarningsToGrowthRatioTTM"], 2)
             # returnOnAssetsTTM for the underlying stock
-            self.returnOnAssetsTTM = round(json_data[0]["returnOnAssetsTTM"], 2)
+            self._returnOnAssetsTTM = round(json_data[0]["returnOnAssetsTTM"], 2)
             # returnOnCapitalEmployedTTM for the underlying stock
-            self.returnOnCapitalEmployedTTM = round(json_data[0]["returnOnCapitalEmployedTTM"], 2)
+            self._returnOnCapitalEmployedTTM = round(json_data[0]["returnOnCapitalEmployedTTM"], 2)
             # currentRatioTTM for the underlying stock
-            self.currentRatioTTM = round(json_data[0]["currentRatioTTM"], 2)
+            self._currentRatioTTM = round(json_data[0]["currentRatioTTM"], 2)
 
         except Exception as err:
             # if exception is thrown this is because the api cannot fetch information from this stock and we have to return empty value
-            self.priceFairValueTTM = None
-            self.debtEquityRatioTTM = None
-            self.priceToBookRatioTTM = None
-            self.returnOnEquityTTM = None
-            self.priceEarningsToGrowthRatioTTM = None
-            self.returnOnAssetsTTM = None
-            self.returnOnCapitalEmployedTTM = None
-            self.currentRatioTTM = None
+            self._priceFairValueTTM = None
+            self._debtEquityRatioTTM = None
+            self._priceToBookRatioTTM = None
+            self._returnOnEquityTTM = None
+            self._priceEarningsToGrowthRatioTTM = None
+            self._returnOnAssetsTTM = None
+            self._returnOnCapitalEmployedTTM = None
+            self._currentRatioTTM = None
 
     def get_priceFairValueTTM(self):
         """
         returns the price fair value TTM of the company
         """
-        return self.priceFairValueTTM
+        return self._priceFairValueTTM
 
     def get_debtEquityRatioTTM(self):
         """
         returns the debt equity ratio TTM of the company
         """
-        return self.debtEquityRatioTTM
+        return self._debtEquityRatioTTM
 
     def get_priceToBookRatioTTM(self):
         """
         returns the price to book ratio TTM of the company
         """
-        return self.priceToBookRatioTTM
+        return self._priceToBookRatioTTM
 
     def get_returnOnEquityTTM(self):
         """
         returns the return on equity TTM of the company
         """
-        return self.returnOnEquityTTM
+        return self._returnOnEquityTTM
 
     def get_priceEarningsToGrowthRatioTTM(self):
         """
         returns the price earnings to growth ratio TTM of the company
         """
-        return self.priceEarningsToGrowthRatioTTM
+        return self._priceEarningsToGrowthRatioTTM
 
     def get_returnOnAssetsTTM(self):
         """
         returns the return on assets TTM of the company
         """
-        return self.returnOnAssetsTTM
+        return self._returnOnAssetsTTM
 
     def get_returnOnCapitalEmployedTTM(self):
         """
         returns the return on capital employed TTM of the company
         """
-        return self.returnOnCapitalEmployedTTM
+        return self._returnOnCapitalEmployedTTM
 
     def get_currentRatioTTM(self):
         """
         returns the current ratio TTM of the company
         """
-        return self.currentRatioTTM
+        return self._currentRatioTTM
 
 # test1 = Fundamental("aapl")
 # print(test1.get_priceFairValueTTM())
