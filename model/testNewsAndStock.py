@@ -590,7 +590,7 @@ def main():
         # we should expect a RuntimeError when an invalid ticker is used
         pass
 
-
+    # testing complete messege along with execution times
     print("\n**** Testing Complete with " + str(ErrorCount) + " errors ****")
     print("Execution Time for " + s1.get_stock_ticker() + " Was: " + str(execution_time_apple_stock) + " seconds")
     print("Execution Time for " + s2.get_stock_ticker() + " Was: " + str(execution_time_nndm_stock) + " seconds")
