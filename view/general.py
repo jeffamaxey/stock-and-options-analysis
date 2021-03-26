@@ -4,6 +4,14 @@ from flask_login import current_user, login_required
 general_bp = Blueprint("general", __name__)
 
 
+def input_field(the_type, second, third, fourth):  # to save code space on all views
+    the_type = request.form.get(second)
+    if the_type is None:
+        the_type = request.form.get(third)
+    if the_type is None:
+        the_type = request.form.get(fourth)
+
+
 @general_bp.route("/", methods=["GET", "POST"])
 def home():
     if request.method == "POST":

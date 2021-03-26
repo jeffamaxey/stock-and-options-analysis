@@ -44,7 +44,7 @@ def fundamental_analysis():
 @fundamental_analysis_bp.route("/fundamental-analysis/result", methods=["GET", "POST"])
 @login_required
 def fundamental_analysis_result():
-    # when the user entered tha page by pressing the analyze button
+    # when the user entered the page by pressing the analyze button
     if request.method == "POST":
 
         ticker = request.form.get("ticker-of-the-underlying-110")
@@ -76,7 +76,8 @@ def fundamental_analysis_result():
     # when the user entered the page without pressing the analyze button
     try:
         analysis = fundamental_analysis_data[0]
-    except IndexError:  # if this exception is thrown, it means the user refreshed the result page or entered by simply tying the url
+    except IndexError:  # if this exception is thrown, it means the user refreshed the result page or entered by
+        # simply tying the url
         return redirect(url_for("fundamental.fundamental_analysis"))
 
     stock_details = analysis["stock_details"]

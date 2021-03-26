@@ -1,4 +1,5 @@
 from model.Stock import Stock
+from model.Technical import Technical
 
 
 def get_fundamental_analysis(ticker, data_source):
@@ -87,6 +88,31 @@ def get_fundamental_analysis(ticker, data_source):
         },
 
         "news": stock.get_news().news_tostring()
+    }
+
+    return analysis
+
+
+def get_technical_analysis(ticker, data_source):
+    """
+    returns the technical analysis as a dictionary
+    """
+    try:
+        stock = Stock(ticker=ticker)
+    except RuntimeError:    # This exception is thrown when the ticker is invalid
+        return None
+
+    analysis = {"tech details": {
+        "RSI": Technical.get_rsi(),
+        "MACD": Technical.get_macd(),
+        "MRI": Technical.get_mass_index(),
+        "MOVING AVGS": Technical.get_simple_moving_average_range_30_10(),
+        "FIBO": Technical.get_pivot_fib()
+    },
+        "summary": {
+            # To be added
+
+        }
     }
 
     return analysis
