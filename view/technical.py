@@ -75,6 +75,6 @@ def technical_analysis_result():
                            rsi=technical_details["RSI"],
                            macd=technical_details["MACD"],
                            mri=technical_details["MRI"],
-                           moving_avgs=technical_details["MOVING_AVGS"],
-                           fibonacci_targets=technical_details["FIBONACCI_TARGETS"]
+                           moving_avgs=technical_details["MOVING AVGS (30, 10)"],
+                           fibonacci_targets=technical_details["FIBONACCI TARGETS"]
                            )
