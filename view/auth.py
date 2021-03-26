@@ -50,12 +50,11 @@ def register(email, password1, password2=None, agreed=None, product=None):
     :param password1: The password of the user
     :param password2: The confirmation of the password
     :param agreed: Result of the checkbox whether the user agreed the term of the condition or not
-    :param redirect_url: The url to redirect when the registration was successful
     :param product: The subscription plan chosen
     """
     MIN_EMAIL_LEN = 6
     MIN_PASSWORD_LEN = 6
-    products = ["BASIC", "BUNDLED", "DELUXE"]
+    products = ("BASIC", "BUNDLED", "DELUXE")
 
     if UserDB.has(email):
         flash("The email is already used. Please try another email.", category="Error")

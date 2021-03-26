@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, redirect, url_for
 from flask_login import current_user, login_required
 
 strategies_bp = Blueprint("strategies", __name__)
@@ -56,7 +56,6 @@ def strategies():
             itm_atm_otm = request.form.get("option-style120")
         if itm_atm_otm is None:
             itm_atm_otm = request.form.get("itm-atm-otm114")
-
 
     return render_template("strategies-page.html", user=current_user)
 
@@ -121,6 +120,12 @@ def strategies_breakdown():
 @login_required
 def strategies_breakdown_asset():
     return render_template("strategies-page-addasset.html", user=current_user)
+
+
+@strategies_bp.route("/strategies/export")
+@login_required
+def strategies_export():
+    return redirect(url_for("strategies.strategies"))
 
 
 @strategies_bp.route("/strategies/breakdown/long-call")

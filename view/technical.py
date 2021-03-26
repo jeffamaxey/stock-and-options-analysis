@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, redirect, url_for
 from flask_login import current_user, login_required
 
 technical_analysis_bp = Blueprint("technical", __name__)
@@ -50,3 +50,9 @@ def technical_analysis_result():
             data_source = request.form.get("data-source129")
 
     return render_template("technical-analysis-page2.html", user=current_user)
+
+
+@technical_analysis_bp.route("/technical-analysis/export")
+@login_required
+def technical_analysis_export():
+    return redirect(url_for("technical.technical_analysis"))

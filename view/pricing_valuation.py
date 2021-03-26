@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, redirect, url_for
 from flask_login import current_user, login_required
 
 pricing_valuation_bp = Blueprint("pricing_valuation", __name__)
@@ -114,3 +114,9 @@ def pricing_valuation_result():
             itm_atm_otm = request.form.get("itm-atm-otm117")
 
     return render_template("pricing-and-valuation-page2.html", user=current_user)
+
+
+@pricing_valuation_bp.route("/pricing-valuation/export")
+@login_required
+def pricing_valuation_export():
+    return redirect(url_for("pricing_valuation.pricing_valuation"))

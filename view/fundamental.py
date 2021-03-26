@@ -79,14 +79,14 @@ def fundamental_analysis_result():
     except IndexError:  # if this exception is thrown, it means the user refreshed the result page or entered by simply tying the url
         return redirect(url_for("fundamental.fundamental_analysis"))
 
+    # clear the list so it doesn't grow as the user analyzes multiple times
+    fundamental_analysis_data.clear()
+
     stock_details = analysis["stock_details"]
     metrics = analysis["metrics"]
     dividends = analysis["dividends"]
     income_statements = analysis["income_statements"]
     news = analysis["news"]
-
-    # clear the list so it doesn't grow as the user analyzes multiple times
-    fundamental_analysis_data.clear()
 
     return render_template("fundamental-analysis-page2.html", user=current_user,
                            ticker=stock_details["ticker"],
@@ -143,3 +143,9 @@ def fundamental_analysis_result():
 
                            news=news
                            )
+
+
+@fundamental_analysis_bp.route("/fundamental-analysis/export")
+@login_required
+def fundamental_analysis_export():
+    return redirect(url_for("fundamental.fundamental_analysis"))
