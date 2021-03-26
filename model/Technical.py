@@ -4,14 +4,12 @@
   :The valid ticker is used to check the validity of a stocks ticker
   :The datetime module is used to get the current date and a range of dates
   :The pandas_datareader.data is used to get history of stock data for technical analysis from yahoo fina
-  :The tradingview_ta module is used to get analys opinions from trading view
   :The ray module is used for parallel processing
   """
 from model import ValidTicker as validTicker
 from finta import TA
 import datetime
 import pandas_datareader.data as web
-from tradingview_ta import TA_Handler, Interval, Exchange
 import ray
 
 
@@ -48,10 +46,10 @@ class Technical:
         ret_id2 = self.set_macd.remote(self)
         ret_id3 = self.set_simple_moving_average_range_30_10.remote(self)
         ret_id4 = self.set_pivot_fib.remote(self)
-        ret_id5 = self.set_Momentum_Breakout_Bands.remote(self)
+        ret_id5 = self.set_mass_index.remote(self)
 
         # get all values necessary for technical analysis
-        self._RSI, self._MACD, self._simple_moving_average_range_30_10,self._pivot_fib,self._Momentum_Breakout_Bands  = ray.get(
+        self._RSI, self._MACD, self._simple_moving_average_range_30_10,self._pivot_fib,self._mass_index   = ray.get(
             [ret_id1, ret_id2, ret_id3, ret_id4, ret_id5])
 
 
@@ -67,9 +65,9 @@ class Technical:
     def set_macd(self):
         """
         Sets the MACD of a stock
-        :return MACD of a stock as a numpy array
+        :return MACD of a stock as a string
         """
-        return TA.MACD(self.ohlc).values[-1]
+        return str(TA.MACD(self.ohlc).values[-1]) # get a string representation of the MACD
 
     @ray.remote
     def set_simple_moving_average_range_30_10(self):
@@ -93,12 +91,12 @@ class Technical:
         return str(TA.PIVOT_FIB(self.ohlc).values[-1][-4:]) # get the last 4 latest fibonacci pivot points
 
     @ray.remote
-    def set_Momentum_Breakout_Bands(self):
+    def set_mass_index(self):
         """
-        Sets the Momentum Breakout Bands of a stock
-        :return Momentum Breakout Bands as numpy array
+        Sets the mass_index of a stock
+        :return mass_index of a stock as a floating point number
         """
-        return TA.MOBO(self.ohlc).values[-1] # convert to float from numpy and round to 2 decimal places
+        return round(float(TA.MI(self.ohlc).values[-1]),2) # convert to float from numpy and round to 2 decimal places
 
     def get_rsi(self):
         """
@@ -110,7 +108,7 @@ class Technical:
     def get_macd(self):
         """
         Gets the MACD of a stock
-        :return MACD of a stock as numpy array
+        :return MACD of a stock as a string
         """
         return self._MACD
 
@@ -128,12 +126,12 @@ class Technical:
         """
         return self._pivot_fib
 
-    def get_momentum_breakout_bands(self):
+    def get_mass_index(self):
         """
-        Gets the Momentum Breakout Bands of a stock
-        :return Momentum Breakout Bands of a stock as a numpy array
+        Gets the mass_index of a stock
+        :return mass_index of a stock as a floating point number
         """
-        return self._Momentum_Breakout_Bands
+        return self._mass_index
 
     def to_string_summary(self):
         """
@@ -141,40 +139,12 @@ class Technical:
         :return string containing summary of analysis
         """
         rsi = self.get_rsi()
-        MACD = self.get_macd()
-        positive_momentum = True # assume we have positive momentum
-
-        String = "The current RSI of the stock is " + str(rsi) +" "
+        String = "The current RSI of the stock is " + str(rsi)
         if rsi > 70:
-            String += "which indicates the stock is overbought.\n\n"
+            String += "which indicates the stock is overbought\n"
         elif rsi < 30:
-            String += "which indicates the stock is oversold.\n\n"
+            String += "which indicates the stock is oversold\n"
         else:
-            String += "which indicates the stock is neutral.\n\n"
+            String += "which indicates the stock is neutral\n"
 
-        String += "The current MACD of the stock is " + str(MACD)
-
-        # go through mac d values and see if they are both in negative range indicating negative momentum
-        for i in MACD:
-            if i <0:
-                positive_momentum = False
-
-        if positive_momentum:
-            String += " which may indicate positive momentum.\n\n"
-        else:
-            String += " which may indicate negative momentum.\n\n"
-
-        String += "The Momentum Breakout Bands of the stock are " + str(self.get_momentum_breakout_bands()) + " when stock price \nbreaks out of these regions it can " \
-                                                                                                              "signify a trend move or price spike worth trading.\n\n"
-        String += "The Fibonacci pivots of the stock are " + str(
-            self.get_pivot_fib()) + " which are used  to \nidentify key support and resistance levels to determine the trend or to enter and exit trades.\n\n"
-
-        String += "The simple moving average for 30 and 10 days is " + self.get_simple_moving_average_range_30_10() + " which can be used to  identify\ncurrent price trends and potential for a change in the trend.\n"
-
-        return String
-
-
-stock = "zom"
-tech = Technical(stock)
-print(tech.to_string_summary())
 
