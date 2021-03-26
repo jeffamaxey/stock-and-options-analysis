@@ -133,5 +133,28 @@ class Technical:
         """
         return self._mass_index
 
+    def to_string_summary(self):
+        """
+        Get a string representation of the technicals analysis which provides a small summary of details
+        :return string containing summary of analysis
+        """
+        rsi = self.get_rsi()
+        String = "The current RSI of the stock is " + str(rsi)
+        if rsi > 70:
+            String += "which indicates the stock is overbought\n"
+        elif rsi < 30:
+            String += "which indicates the stock is oversold\n"
+        else:
+            String += "which indicates the stock is neutral\n"
 
 
+        return String
+
+stock = "aapl"
+tech = Technical(stock)
+print(tech.get_rsi())
+print(tech.get_macd())
+print(tech.get_mass_index())
+print(tech.get_pivot_fib())
+print(tech.get_simple_moving_average_range_30_10())
+print(tech.to_string_summary())
