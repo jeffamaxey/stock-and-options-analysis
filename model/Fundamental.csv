@@ -1,0 +1,11 @@
+Fundamental Ratios,priceFairValueTTM,debtEquityRatioTTM,priceToBookRatioTTM,returnOnEquityTTM,priceEarningsToGrowthRatioTTM,returnOnAssetsTTM,returnOnCapitalEmployedTTM,currentRatioTTM
+,7.67,1.24,7.67,0.01,-14.45,0.0,0.03,1.94
+,,,,,,,,
+Balance Sheet,totalCurrentAssets,totalNonCurrentAssets,totalAssets,totalCurrentLiabilities,totalNonCurrentLiabilities,totalLiabilities,totalStockholdersEquity,totalLiabilitiesAndStockholdersEquity
+,139375.0,14742.0,186973.0,71979.0,4031.0,103484.0,83489.0,186973.0
+,,,,,,,,
+Income Statement,revenue,ebitda,incomeTaxExpense,netIncome,grossProfit
+,443884000,7952000,307,-1513000,155366000
+,,,,,
+Cash Flow,netCashProvidedByOperatingActivities,netCashUsedForInvestingActivites,netCashUsedProvidedByFinancingActivities,freeCashFlow
+,-19068000,-9758000,62361000,-28725000

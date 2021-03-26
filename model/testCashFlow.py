@@ -38,20 +38,20 @@ stock1 = Stock.get_cash_flow(Stock(ticker))
 # end timer for execution
 t2 = time.time()
 print("Time to retrieve PRTS stock data in seconds = " + str(t2 - t1))
-if stock1.getNetCashProvidedByOperatingActivities() != 478000.0:
-    print("Error: PRTS stock getNetCashProvidedByOperatingActivities() method is incorrect and does not equal 478000.0 as shown in sec.gov, "
+if stock1.getNetCashProvidedByOperatingActivities() != -19068000:
+    print("Error: PRTS stock getNetCashProvidedByOperatingActivities() method is incorrect and does not equal -19068000 as shown in sec.gov, "
           "current value is " + str(stock1.getNetCashProvidedByOperatingActivities()))
 
-if stock1.getNetCashUsedForInvestingActivites() != -3096000.0:
-    print("Error: PRTS stock getNetCashUsedForInvestingActivites() method is incorrect and does not equal -3096000.0 as shown in sec.gov, "
+if stock1.getNetCashUsedForInvestingActivites() != -9758000.0:
+    print("Error: PRTS stock getNetCashUsedForInvestingActivites() method is incorrect and does not equal -9758000.0 as shown in sec.gov, "
           "current value is " + str(stock1.getNetCashUsedForInvestingActivites()))
 
-if stock1.getNetCashUsedProvidedByFinancingActivities() != -1267000.0:
-    print("Error: PRTS stock getNetCashUsedProvidedByFinancingActivities() method is incorrect and does not equal -1267000.0 as shown in sec.gov, "
+if stock1.getNetCashUsedProvidedByFinancingActivities() != 62361000:
+    print("Error: PRTS stock getNetCashUsedProvidedByFinancingActivities() method is incorrect and does not equal 62361000 as shown in sec.gov, "
           "current value is " + str(stock1.getNetCashUsedProvidedByFinancingActivities()))
 
-if stock1.getFreeCashFlow() != -2618000.0:
-    print("Error: PRTS stock getFreeCashFlow() method is incorrect and does not equal -2618000.0 as shown in sec.gov, "
+if stock1.getFreeCashFlow() != -28725000:
+    print("Error: PRTS stock getFreeCashFlow() method is incorrect and does not equal -28725000 as shown in sec.gov, "
           "current value is " + str(stock1.getFreeCashFlow()))
 
 # testing if all the values retrieved are equivalent to the ratios in financial statements of Cabot Microelectronics

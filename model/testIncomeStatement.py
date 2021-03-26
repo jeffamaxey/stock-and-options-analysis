@@ -15,8 +15,8 @@ if stock1.getRevenue() != 111439000000:
     print("Error: AAPL stock getRevenue() method is incorrect and does not equal 111439000000 as shown in sec.gov, "
           "current value is " + str(stock1.getRevenue()))
 
-if stock1.getEbitda() != 36883000000:
-    print("Error: AAPL stock getEbitda() method is incorrect and does not equal 36883000000 as shown in sec.gov, "
+if stock1.getEbitda() != 36200000000:
+    print("Error: AAPL stock getEbitda() method is incorrect and does not equal 36200000000 as shown in sec.gov, "
           "current value is " + str(stock1.getEbitda()))
 
 if stock1.getIncomeTaxExpense() != 4824000000:
@@ -42,24 +42,24 @@ stock1 = Stock.get_income_statement(Stock(ticker))
 # end timer for execution
 t2 = time.time()
 print("Time to retrieve PRTS stock data in seconds = " + str(t2 - t1))
-if stock1.getRevenue() != 117406000:
-    print("Error: PRTS stock getRevenue() method is incorrect and does not equal 117406000 as shown in sec.gov, "
+if stock1.getRevenue() != 443884000:
+    print("Error: PRTS stock getRevenue() method is incorrect and does not equal 443884000 as shown in sec.gov, "
           "current value is " + str(stock1.getRevenue()))
 
-if stock1.getEbitda() != 3498000.0:
-    print("Error: PRTS stock getEbitda() method is incorrect and does not equal 3498000.0 as shown in sec.gov, "
+if stock1.getEbitda() != 7952000.0:
+    print("Error: PRTS stock getEbitda() method is incorrect and does not equal 7952000.0 as shown in sec.gov, "
           "current value is " + str(stock1.getEbitda()))
 
-if stock1.getIncomeTaxExpense() != 45000.0:
-    print("Error: PRTS stock getIncomeTaxExpense() method is incorrect and does not equal 45000.0 as shown in sec.gov, "
+if stock1.getIncomeTaxExpense() != 307.0:
+    print("Error: PRTS stock getIncomeTaxExpense() method is incorrect and does not equal 307.0 as shown in sec.gov, "
           "current value is " + str(stock1.getIncomeTaxExpense()))
 
-if stock1.getNetIncome() != 1385000.0:
-    print("Error: PRTS stock getNetIncome() method is incorrect and does not equal 1385000.0 as shown in sec.gov, "
+if stock1.getNetIncome() != -1513000.0:
+    print("Error: PRTS stock getNetIncome() method is incorrect and does not equal -1513000.0 as shown in sec.gov, "
           "current value is " + str(stock1.getNetIncome()))
 
-if stock1.getGrossProfit() != 43121000:
-    print("Error: PRTS stock getGrossProfit() method is incorrect and does not equal 43121000 as shown in sec.gov, "
+if stock1.getGrossProfit() != 155366000:
+    print("Error: PRTS stock getGrossProfit() method is incorrect and does not equal 155366000 as shown in sec.gov, "
           "current value is " + str(stock1.getGrossProfit()))
 
 # testing if all the values retrieved are equivalent to the ratios in financial statements of Cabot Microelectronics
@@ -77,8 +77,8 @@ if stock1.getRevenue() != 287863000:
     print("Error: CCMP stock getRevenue() method is incorrect and does not equal 287863000 as shown in sec.gov, "
           "current value is " + str(stock1.getRevenue()))
 
-if stock1.getEbitda() != 87922000:
-    print("Error: CCMP stock getEbitda() method is incorrect and does not equal 87922000 as shown in sec.gov, "
+if stock1.getEbitda() != 86447000:
+    print("Error: CCMP stock getEbitda() method is incorrect and does not equal 86447000 as shown in sec.gov, "
           "current value is " + str(stock1.getEbitda()))
 
 if stock1.getIncomeTaxExpense() != 7546000.0:

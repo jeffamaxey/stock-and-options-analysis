@@ -54,36 +54,36 @@ stock1 = Stock.get_balance_sheet(Stock(ticker))
 # end timer for execution
 t2 = time.time()
 print("Time to retrieve PRTS stock data in seconds = " + str(t2 - t1))
-if stock1.get_totalCurrentAssets() != 62373000:
-    print("Error: PRTS stock get_totalCurrentAssets() method is incorrect and does not equal 62373000 as shown in sec.gov, "
+if stock1.get_totalCurrentAssets() != 139375.0:
+    print("Error: PRTS stock get_totalCurrentAssets() method is incorrect and does not equal 139375.0 as shown in sec.gov, "
           "current value is " + str(stock1.get_totalCurrentAssets()))
 
-if stock1.get_totalNonCurrentAssets() != 25573000:
-    print("Error: PRTS stock get_totalNonCurrentAssets() method is incorrect and does not equal 25573000 as shown in sec.gov, "
+if stock1.get_totalNonCurrentAssets() != 14742.0:
+    print("Error: PRTS stock get_totalNonCurrentAssets() method is incorrect and does not equal 14742.0 as shown in sec.gov, "
           "current value is " + str(stock1.get_totalNonCurrentAssets()))
 
-if stock1.get_totalAssets() != 87946000:
-    print("Error: PRTS stock get_totalAssets() method is incorrect and does not equal 87946000 as shown in sec.gov, "
+if stock1.get_totalAssets() != 186973.0:
+    print("Error: PRTS stock get_totalAssets() method is incorrect and does not equal 186973.0 as shown in sec.gov, "
           "current value is " + str(stock1.get_totalAssets()))
 
-if stock1.get_totalCurrentLiabilities() != 59946000:
-    print("Error: PRTS stock get_totalCurrentLiabilities() method is incorrect and does not equal 59946000 as shown in sec.gov, "
+if stock1.get_totalCurrentLiabilities() != 71979.0:
+    print("Error: PRTS stock get_totalCurrentLiabilities() method is incorrect and does not equal 71979.0 as shown in sec.gov, "
           "current value is " + str(stock1.get_totalCurrentLiabilities()))
 
-if stock1.get_totalNonCurrentLiabilities() != 15620000:
-    print("Error: PRTS stock get_totalNonCurrentLiabilities() method is incorrect and does not equal 15620000 as shown in sec.gov, "
+if stock1.get_totalNonCurrentLiabilities() != 4031.0:
+    print("Error: PRTS stock get_totalNonCurrentLiabilities() method is incorrect and does not equal 4031.0 as shown in sec.gov, "
           "current value is " + str(stock1.get_totalNonCurrentLiabilities()))
 
-if stock1.get_totalLiabilities() != 75566000:
-    print("Error: PRTS stock get_totalLiabilities() method is incorrect and does not equal 75566000 as shown in sec.gov, "
+if stock1.get_totalLiabilities() != 103484.0:
+    print("Error: PRTS stock get_totalLiabilities() method is incorrect and does not equal 103484.0 as shown in sec.gov, "
           "current value is " + str(stock1.get_totalLiabilities()))
 
-if stock1.get_totalStockholdersEquity() != 12380000:
-    print("Error: PRTS stock get_totalStockholdersEquity() method is incorrect and does not equal 12380000 as shown in sec.gov, "
+if stock1.get_totalStockholdersEquity() != 83489.0:
+    print("Error: PRTS stock get_totalStockholdersEquity() method is incorrect and does not equal 83489.0 as shown in sec.gov, "
           "current value is " + str(stock1.get_totalStockholdersEquity()))
 
-if stock1.get_totalLiabilitiesAndStockholdersEquity() != 87946000:
-    print("Error: PRTS stock get_totalLiabilitiesAndStockholdersEquity() method is incorrect and does not equal 1.9 as shown in sec.gov, "
+if stock1.get_totalLiabilitiesAndStockholdersEquity() != 186973.0:
+    print("Error: PRTS stock get_totalLiabilitiesAndStockholdersEquity() method is incorrect and does not equal 186973.0 as shown in sec.gov, "
           "current value is " + str(stock1.get_totalLiabilitiesAndStockholdersEquity()))
 
 # testing if all the values retrieved are equivalent to the ratios in financial statements of Cabot Microelectronics
