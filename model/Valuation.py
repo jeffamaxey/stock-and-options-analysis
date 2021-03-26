@@ -10,13 +10,13 @@ class Valuation:
         """
         Attributes:
             self.N:          ex.10000      -the number of periods for the binomial model
-            self.ticker:     ex.AAPL      -is the ticker symbol of the underlying asset
+            self.ticker:     ex.AAPL      -is the ticker tickerSymbol of the underlying asset
             self.r:          ex.0.01       -risk-free interest rate (annual rate expressed in terms of continuous compounding)
             self.s:          ex.30.0       -(SO or C) Spot price of the underlying asset (stock price)
             self.x:          ex.40.0       -(sometimes called k) market strike price of the option (Also called the Exercise Price)
             self.T:          ex.40.0/365.0 -time until expiration out of a year 40/365 is 40 days to expiration often shown as (T-t)
-            self.sigma:      ex.0.30       -volatility of returns can also be known as the standard deviation of the underlying asset
-            self.optionType: ex."Call" or "Put"
+            self.sigma:      ex.0.30       -_volatility of returns can also be known as the standard deviation of the underlying asset
+            self._optionType: ex."Call" or "Put"
             self.iterations: ex.1000000    -how many prices to simulate for the Binomial Model & monte carlo simulation
         :thrown RuntimeError if ticker is invalid
         # NOTE Can change all norm.pdf to norm._pdf and change all norm.cdf to ndtr() for a performance boost
@@ -161,7 +161,7 @@ class Valuation:
         return _charm
 
     def vega(self):
-        # Vega is the sensitivity of the options price to the change in the underlying assets return volatility
+        # Vega is the sensitivity of the options price to the change in the underlying assets return _volatility
         d1 = (1.0/(self.sigma * np.sqrt(self.T))) * (np.log(self.s/self.x) + (self.r + 0.5 * self.sigma**2.0) * self.T)
         _vega = (self.s * norm.pdf(d1) * np.sqrt(self.T)) / 100.0
         return _vega
@@ -287,10 +287,3 @@ if __name__ == "__main__":
     print("Volatility: ", volatility_sigma)
 
 
-# Timer
-start = time.clock()
-n = 10000000
-for i in range(1, n):
-    k = i+i+2
-diff = (time.clock() - start)
-print(round(diff, 2))

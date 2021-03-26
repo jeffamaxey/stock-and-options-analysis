@@ -38,7 +38,7 @@ if __name__ == "__main":
     # call the operation
     test = val.blackScholes()
     test.add(data_in)
-    result =
+    result = 10
     if not acceptableMarginOfError(expected, result, 0.1):
         print('Error in {}: expected {} but obtained {} -- {}'.format(test_item, expected, result, reason))
 
@@ -129,6 +129,21 @@ if __name__ == "__main":
 
     volatility_sigma = sigma
     print("Volatility: ", volatility_sigma)
+
+
+    # Sees if two valuation classes are equal (can compare any attributes)
+    # If you dont override it compares memory location
+    #def __eq__(self, other):
+        #if self.ticker == other.ticker and self._dataSource == other._dataSource and self._optionType == other._optionType:
+            #return True
+        #return False
+
+
+    # Override the String Method
+    #def __str__(self):
+        #return self.ticker +" " + self._dataSource + " " + self.expiration + " " + self._optionStyle + " " + self._optionType + " " + self._ITMATMOTM + " " + self.longShort
+
+
 
 
 
