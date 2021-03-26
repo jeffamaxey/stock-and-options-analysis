@@ -8,7 +8,7 @@ __URL_PREFIX = "/"
 
 def create_app():
     """
-    Create and initialize a runnable app object
+    Create and initialize a runnable flask app object
     :return: The runnable app object
     """
     app = Flask(__name__)

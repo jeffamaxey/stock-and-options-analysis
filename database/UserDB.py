@@ -24,7 +24,7 @@ class User(_user_db.Model, UserMixin):
 def init(app):
     """
     Initialize the user database
-    :param app: The app created by create_app()
+    :param app: The flask app
     """
     app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + __USER_DB_PATH
     _user_db.init_app(app)
@@ -73,7 +73,7 @@ def get_by_id(id):
 
 def has(email):
     """
-    Check if the email already exists in the user database
+    Check if the email exists in the user database
     :param email: The email address of the user
     :return: True if the email exists, False otherwise
     """
