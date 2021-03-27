@@ -1,4 +1,5 @@
 from model.Stock import Stock
+from model.exportToCSV import exportToCSV
 
 
 def get_fundamental_analysis(ticker, data_source):
@@ -9,6 +10,9 @@ def get_fundamental_analysis(ticker, data_source):
         stock = Stock(ticker=ticker)
     except RuntimeError:    # This exception is thrown when the ticker is invalid
         return None
+
+    # export the result as a csv file
+    exportToCSV(stock)
 
     fundamental = stock.get_fundamental()
     balance_sheet = stock.get_balance_sheet()
