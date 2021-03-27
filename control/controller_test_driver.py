@@ -45,7 +45,7 @@ def main():
 
     for key in stock_details.keys():
         if stock_details[key] is None:
-            print("Test case 7 failed. key '" + key + "' in stock_detain doesn't contain a value.")
+            print("Test case 7 failed. key '" + key + "' in stock_detail doesn't contain a value.")
 
     for key in metrics.keys():
         if metrics[key] is None:
@@ -89,6 +89,17 @@ def main():
     if result is None:
         print("Test case 2 failed: get_technical_analysis() returned None with valid ticker.")
 
+    if "tech_details" not in general_keys:
+        print(
+            "Test case 14 failed: The analysis returned by get_technical_analysis() doesn't contain the key "
+            "'tech_details'.")
+
+    # check if every key in the general keys contains values
+    tech_details = result["tech_details"]
+
+    for key in tech_details.keys():
+        if tech_details[key] is None:
+            print("Test case 15 failed. key '" + key + "' in tech_detail doesn't contain a value.")
 
 
 if __name__ == "__main__":

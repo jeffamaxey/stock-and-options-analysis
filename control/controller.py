@@ -1,5 +1,4 @@
 from model.Stock import Stock
-from model.Technical import Technical
 
 
 def get_fundamental_analysis(ticker, data_source):
