@@ -400,7 +400,7 @@ class Stock:
         The Technical  has methods that can be used by the user such as
         def set_rsi(), def get_rsi(),etc
 
-        :return a Fundamental object relating to the stock
+        :return a Technical object relating to the stock
         """
         return self._technical
 
