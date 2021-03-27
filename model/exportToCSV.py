@@ -1,7 +1,6 @@
 from model import Stock
 import csv
 
-
 class exportToCSV:
     def __init__(self, object):
         self._stock = None
@@ -17,7 +16,7 @@ class exportToCSV:
         company into a csv file
         """
         # create a new csv file and enable writing
-        with open("../view/static/export/Fundamental.csv", "w", newline='') as f:
+        with open("view/static/export/Fundamental.csv", "w", newline='') as f:
             # headers for Fundamental Ratios
             headers = ['Fundamental Ratios', 'priceFairValueTTM', 'debtEquityRatioTTM', 'priceToBookRatioTTM',
                        'returnOnEquityTTM', 'priceEarningsToGrowthRatioTTM', 'returnOnAssetsTTM',
