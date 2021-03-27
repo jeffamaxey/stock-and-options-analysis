@@ -6,9 +6,10 @@ from model.Valuation import Valuation
 # INCOMPLETE, NEED TO FINISH TESTING THE VALUATION MODELS
 #
 
-#if __name__ == "__main":
-    #def acceptableMarginOfError(a, b, tolerance):
-"""
+
+def main():
+    def acceptableMarginOfError(a, b, tolerance):
+        """
         Check if 2 float values are within range to prove the financial model is doesnt have significant errors
         Pre-Conditions:
             :param a: a float value
@@ -16,121 +17,120 @@ from model.Valuation import Valuation
             :param tolerance: a reasonable range for model error as a positive float
         :return True if the difference between a and b is insignificant
         """
-        #return abs(a - b) < tolerance
+        return #abs(a - b) < tolerance
 
-r = 0.01
-s = 30.0
-x = 40.0
-T = 240.0/365.0
-sigma = 0.30
-optionType = "Call"
-iterations = 100
-N = 100
-ticker = "AAPL"
+    r = 0.01
+    s = 30.0
+    x = 40.0
+    T = 240.0/365.0
+    sigma = 0.30
+    optionType = "Call"
+    iterations = 100
+    N = 100
+    ticker = "AAPL"
 
-financialModel = Valuation(N, ticker, r, s, x, T, sigma, optionType, iterations)
+    financialModel = Valuation(N, ticker, r, s, x, T, sigma, optionType, iterations)
 
-#test_item = ''
-#data_in = 0
-#expected = 0
-#reason = ''
+    #test_item = ''
+    #data_in = 0
+    #expected = 0
+    #reason = ''
 
-# call the operation
-#test = val.blackScholes()
-#test.add(data_in)
-#result = 10
-#if not acceptableMarginOfError(expected, result, 0.1):
-#print('Error in {}: expected {} but obtained {} -- {}'.format(test_item, expected, result, reason))
+    # call the operation
+    #test = val.blackScholes()
+    #test.add(data_in)
+    #result = 10
+    #if not acceptableMarginOfError(expected, result, 0.1):
+    #print('Error in {}: expected {} but obtained {} -- {}'.format(test_item, expected, result, reason))
 
-# Testing Black Scholes execution time
-# Begin timer for execution
-#t1 = time.time()
-#financialModel = val(N, ticker, r, s, x, T, sigma, optionType, iterations)
-# End timer for execution
-#t2 = time.time()
-#print("Time to calculate black scholes in seconds = " + str(t2 - t1))
-#expected = 10.0 # UPDATE THIS TO FIND OTHER MODEL PRICES ONLINE, FOR OTHER TESTS HAVE marginOfError function
-# Determine if the calculated value is within a margin of error of the black scholes price from another source
-#if financialModel.blackScholes() != expected:
-#print("Error: blackScholes() method is incorrect and does not equal ", expected, " as shown by secondary resource "
-#"current value is " + str(financialModel.blackScholes()))
+    # Testing Black Scholes execution time
+    # Begin timer for execution
+    #t1 = time.time()
+    #financialModel = val(N, ticker, r, s, x, T, sigma, optionType, iterations)
+    # End timer for execution
+    #t2 = time.time()
+    #print("Time to calculate black scholes in seconds = " + str(t2 - t1))
+    #expected = 10.0 # UPDATE THIS TO FIND OTHER MODEL PRICES ONLINE, FOR OTHER TESTS HAVE marginOfError function
+    # Determine if the calculated value is within a margin of error of the black scholes price from another source
+    #if financialModel.blackScholes() != expected:
+    #print("Error: blackScholes() method is incorrect and does not equal ", expected, " as shown by secondary resource "
+    #"current value is " + str(financialModel.blackScholes()))
 
+    # Testing Binomial Model execution time & correctness
 
-# Testing Binomial Model execution time & correctness
+    # Testing Monte Carlo Simulation execution time & correctness
 
-# Testing Monte Carlo Simulation execution time & correctness
+    # Testing Implied Volatility execution time & correctness
 
-# Testing Implied Volatility execution time & correctness
+    # Round to 2 decimal places and print
+    black_scholes_price = financialModel.blackScholes()
+    round(black_scholes_price, 2)
+    print("Black Scholes Price: ", black_scholes_price)
 
+    #binomial_price = financialModel.binomialModel()
+    #round(binomial_price), 2
+    #print("Binomial Price: ", binomial_price)
 
-# Round to 2 decimal places and print
-black_scholes_price = financialModel.blackScholes()
-round(black_scholes_price, 2)
-print("Black Scholes Price: ", black_scholes_price)
+    monte_carlo_price = financialModel.monteCarloSimulation()
+    round(monte_carlo_price), 2
+    print("Monte-Carlo Simulation Price: ", monte_carlo_price)
 
-#binomial_price = financialModel.binomialModel()
-#round(binomial_price), 2
-#print("Binomial Price: ", binomial_price)
+    intrinsic_value = financialModel.intrinsicValue()
+    round(intrinsic_value), 2
+    print("Intrinsic Value: ", intrinsic_value)
 
-monte_carlo_price = financialModel.monteCarloSimulation()
-round(monte_carlo_price), 2
-print("Monte-Carlo Simulation Price: ", monte_carlo_price)
+    speculative_premium = financialModel.speculativePremium()
+    round(speculative_premium), 2
+    print("Speculative Premium: ", speculative_premium)
 
-intrinsic_value = financialModel.intrinsicValue()
-round(intrinsic_value), 2
-print("Intrinsic Value: ", intrinsic_value)
+    delta = financialModel.delta()
+    round(delta), 2
+    print("Delta: ", delta)
 
-speculative_premium = financialModel.speculativePremium()
-round(speculative_premium), 2
-print("Speculative Premium: ", speculative_premium)
+    gamma = financialModel.gamma()
+    round(gamma), 2
+    print("Gamma: ", gamma)
 
-delta = financialModel.delta()
-round(delta), 2
-print("Delta: ", delta)
+    charm = financialModel.charm()
+    round(charm), 2
+    print("Charm: ", charm)
 
-gamma = financialModel.gamma()
-round(gamma), 2
-print("Gamma: ", gamma)
+    vega = financialModel.vega()
+    round(vega), 2
+    print("Vega: ", vega)
 
-charm = financialModel.charm()
-round(charm), 2
-print("Charm: ", charm)
+    theta = financialModel.theta()
+    round(theta), 2
+    print("Theta: ", theta)
 
-vega = financialModel.vega()
-round(vega), 2
-print("Vega: ", vega)
+    rho = financialModel.rho()
+    round(rho), 2
+    print("Rho: ", rho)
 
-theta = financialModel.theta()
-round(theta), 2
-print("Theta: ", theta)
+    #implied_volatility = financialModel.impliedVolatility()
+    #round(implied_volatility), 2
+    #print("Implied Volatility: ", implied_volatility)
 
-rho = financialModel.rho()
-round(rho), 2
-print("Rho: ", rho)
+    risk_free_rate = r
+    print("Risk Free Rate: ", risk_free_rate)
 
-#implied_volatility = financialModel.impliedVolatility()
-#round(implied_volatility), 2
-#print("Implied Volatility: ", implied_volatility)
+    current_stock_price = s
+    print("Current Stock Price: ", current_stock_price)
 
-risk_free_rate = r
-print("Risk Free Rate: ", risk_free_rate)
+    current_strike_price = x
+    print("Option Strike Price: ", current_strike_price)
 
-current_stock_price = s
-print("Current Stock Price: ", current_stock_price)
+    time_to_maturity = T
+    print("Time to Maturity: ", time_to_maturity)
 
-current_strike_price = x
-print("Option Strike Price: ", current_strike_price)
-
-time_to_maturity = T
-print("Time to Maturity: ", time_to_maturity)
-
-#volatility_sigma = sigma
-#print("Volatility: ", volatility_sigma)
+    #volatility_sigma = sigma
+    #print("Volatility: ", volatility_sigma)
 
 
 
-
-
+# run test
+if __name__ == "__main__":
+    main()
 
 
 

@@ -24,9 +24,11 @@ def get_ticker_symbol(tickerSymbol):
     return ticker
 
 
-def get_expiration_date_list(tickerSymbol):
-    option = Option(tickerSymbol)
-    return option.get_expirations()
+# Adjust in the future as needed
+def get_expiration_date_list():
+    return ['2021-04-01', '2021-04-09', '2021-04-16', '2021-04-23', '2021-04-30',
+            '2021-05-21', '2021-06-18', '2021-07-16', '2021-09-17', '2021-12-17',
+            '2022-01-21', '2022-03-18', '2022-06-17', '2022-09-16', '2023-01-20', '2023-03-17']
 
 
 def get_option_type_list():
