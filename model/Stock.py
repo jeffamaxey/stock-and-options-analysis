@@ -48,16 +48,13 @@ class Stock:
         ret_id5 = self.set_balancesheet.remote(self)
         ret_id6 = self.set_income_statement.remote(self)
         ret_id7 = self.set_cash_flow.remote(self)
-
-        # Technical page addition
-        ret_id8 = Technical.set_simple_moving_average_range_30_10.remote(self)
-        ret_id9 = Technical.set_pivot_fib.remote(self)
-        ret_id10 = Technical.set_mass_index.remote(self)
+        ret_id8 = self.set_technical(self)
 
         # the quote variables will hold all information from api call
         # Automatically  gets news, fundamental, balance sheet, income statement, cash flow related to the stock
-        self._stock_quote, self.stock_enhanced_quote, self._news, self._fundamental, self._balance_sheet, self._income_statement, self._cash_flow = ray.get(
-            [ret_id1, ret_id2, ret_id3, ret_id4, ret_id5, ret_id6, ret_id7])
+        self._stock_quote, self.stock_enhanced_quote, self._news, self._fundamental, self._technical, \
+            self._balance_sheet, self._income_statement, self._cash_flow = ray.get(
+                [ret_id1, ret_id2, ret_id3, ret_id4, ret_id5, ret_id6, ret_id7, ret_id8])
 
         """
         Variables to store the stock information as provided below
@@ -158,6 +155,14 @@ class Stock:
         :return a fundamental object relating to the stock
         """
         return Fundamental(self.ticker)
+
+    @ray.remote
+    def set_technical(self):
+        """
+        Sets technical object relating to the stock
+        :return a technical object relating to the stock
+        """
+        return Technical(self.ticker)
 
     @ray.remote
     def set_balancesheet(self):
@@ -387,6 +392,16 @@ class Stock:
         :return a Fundamental object relating to the stock
         """
         return self._fundamental
+
+    def get_technical(self):
+        """
+        Get a Technical class object relating to the stock
+        The Technical  has methods that can be used by the user such as
+        def set_rsi(), def get_rsi(),etc
+
+        :return a Fundamental object relating to the stock
+        """
+        return self._technical
 
     def get_balance_sheet(self):
         """
