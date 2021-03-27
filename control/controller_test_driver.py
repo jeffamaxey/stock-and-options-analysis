@@ -11,7 +11,7 @@ def main():
     """
     A test driver for the controller
     """
-    import controller as c
+    from control import controller as c
 
     # ------------------ test fundamental analysis with valid ticker ----------------------------------------
     result = None
@@ -70,6 +70,25 @@ def main():
 
     if result is not None:
         print("Test case 13 failed: get_fundamental_analysis() didn't return None with invalid ticker.")
+
+    """
+    Author: Adam Bouthillette
+
+    Description:
+    Run the main() function for testing.
+    If the test is successful, no message will be printed to the console.
+    """
+
+    # ------------------ test technical analysis with valid ticker ----------------------------------------
+    result = None
+    try:
+        result = c.get_technical_analysis("AAPL", "Yahoo")
+    except Exception:
+        print("Test case 1 failed: get_technical_analysis() threw an unexpected exception with valid ticker.")
+
+    if result is None:
+        print("Test case 2 failed: get_technical_analysis() returned None with valid ticker.")
+
 
 
 if __name__ == "__main__":
