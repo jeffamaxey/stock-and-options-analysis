@@ -3,6 +3,7 @@
   :The ValidTicker
   :The News module is a class used to fetch news relating to a stock
   :The Fundamental module is a class used to fetch stock fundamentals
+  :The Technical module is a class used to fetch stock technical data
   :The BalanceSheet module is a class used to fetch BalanceSheet information of the stock
   :The CashFlow module is a class used to fetch CashFlow information of the stock
   :The yahoo_fin module is used to fetch stock metrics
@@ -89,7 +90,7 @@ class Stock:
             self._balance_sheet is the BalanceSheet  object containing methods to obtain a stocks balanceSheet information
             self._income_statement is the IncomeStatement object containing methods to obtain a stocks income statement information
             self._cash_flow is the CashFlow object containing methods to obtain a stocks cashFlow information
-            
+            self.technical is the Technical object containing methods to obtain a stocks technical information
          """
 
         # declare all stock variables and get associated values from api call to yahoo finance
