@@ -34,7 +34,7 @@ def get_options_chain(tickerSymbol):
 
     today = datetime.datetime.today().isoformat()
     # First ten characters are the actual date
-    tickerDataFrame = tickerData.history(period='1d', start='2021-1-1', end=today[:10])
+    tickerDataFrame = tickerData.history(period='5d', start='2021-1-1', end=today[:10])
     currentPriceOfUnderlyingAsset = tickerDataFrame['Close'].iloc[-1]
 
     # orient: String value, (‘dict’, ‘list’, ‘series’, ‘split’, ‘records’, ‘index’) Defines which dtype to convert Columns(series into).
@@ -69,7 +69,7 @@ def get_options_chain(tickerSymbol):
         for i, dic in enumerate(options_record):
             if dic[key] == value and dic['CALL'] == True:
                 return i
-    ATM = find_atm_call(options_record, "strike", int(currentPriceOfUnderlyingAsset))
+    ATM = 40 #find_atm_call(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     atm_call = options_record[ATM]
 
     #Search for the dictionary of the strike price closest to the market price index + 1
@@ -77,7 +77,7 @@ def get_options_chain(tickerSymbol):
         for i, dic in enumerate(options_record):
             if dic[key] == value and dic['CALL'] == True:
                 return i
-    ATM = find_otm_call(options_record, "strike", int(currentPriceOfUnderlyingAsset))
+    ATM = 41 #find_otm_call(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     otm_call = options_record[ATM+1]
 
     #Search for the dictionary of the strike price closest to the market price index + 2
@@ -85,7 +85,7 @@ def get_options_chain(tickerSymbol):
         for i, dic in enumerate(options_record):
             if dic[key] == value and dic['CALL'] == True:
                 return i
-    ATM = find_otm_call_plus(options_record, "strike", int(currentPriceOfUnderlyingAsset))
+    ATM = 42 #find_otm_call_plus(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     otm_call_plus = options_record[ATM+2]
 
     #Search for the dictionary of the strike price closest to the market price index - 1
@@ -93,7 +93,7 @@ def get_options_chain(tickerSymbol):
         for i, dic in enumerate(options_record):
             if dic[key] == value and dic['CALL'] == True:
                 return i
-    ATM = find_itm_call(options_record, "strike", int(currentPriceOfUnderlyingAsset))
+    ATM = 43 #find_itm_call(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     itm_call = options_record[ATM-1]
 
     #Search for the dictionary of the strike price closest to the market price index - 2
@@ -101,7 +101,7 @@ def get_options_chain(tickerSymbol):
         for i, dic in enumerate(options_record):
             if dic[key] == value and dic['CALL'] == True:
                 return i
-    ATM = find_itm_call_minus(options_record, "strike", int(currentPriceOfUnderlyingAsset))
+    ATM = 44 #find_itm_call_minus(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     itm_call_minus = options_record[ATM-2]
 
     #Search for target Puts
@@ -109,7 +109,7 @@ def get_options_chain(tickerSymbol):
         for i, dic in enumerate(options_record):
             if dic[key] == value and dic['CALL'] == False:
                 return i
-    ATM = find_atm_put(options_record, "strike", int(currentPriceOfUnderlyingAsset))
+    ATM = 45 #find_atm_put(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     atm_put = options_record[ATM]
 
     #Search for the dictionary of the strike price closest to the market price index + 1
@@ -117,7 +117,7 @@ def get_options_chain(tickerSymbol):
         for i, dic in enumerate(options_record):
             if dic[key] == value and dic['CALL'] == False:
                 return i
-    ATM = find_itm_put(options_record, "strike", int(currentPriceOfUnderlyingAsset))
+    ATM = 46 #find_itm_put(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     itm_put = options_record[ATM+1]
 
     #Search for the dictionary of the strike price closest to the market price index + 2
@@ -125,7 +125,7 @@ def get_options_chain(tickerSymbol):
         for i, dic in enumerate(options_record):
             if dic[key] == value and dic['CALL'] == False:
                 return i
-    ATM = find_itm_put_plus(options_record, "strike", int(currentPriceOfUnderlyingAsset))
+    ATM = 47 #find_itm_put_plus(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     itm_put_plus = options_record[ATM+2]
 
     #Search for the dictionary of the strike price closest to the market price index - 1
@@ -133,7 +133,7 @@ def get_options_chain(tickerSymbol):
         for i, dic in enumerate(options_record):
             if dic[key] == value and dic['CALL'] == False:
                 return i
-    ATM = find_otm_put(options_record, "strike", int(currentPriceOfUnderlyingAsset))
+    ATM = 48 #find_otm_put(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     otm_put = options_record[ATM-1]
 
     #Search for the dictionary of the strike price closest to the market price index - 2
@@ -141,7 +141,7 @@ def get_options_chain(tickerSymbol):
         for i, dic in enumerate(options_record):
             if dic[key] == value and dic['CALL'] == False:
                 return i
-    ATM = find_otm_put_minus(options_record, "strike", int(currentPriceOfUnderlyingAsset))
+    ATM = 49 #find_otm_put_minus(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     otm_put_minus = options_record[ATM-2]
 
     Calls = [itm_call_minus, itm_call, atm_call, otm_call, otm_call_plus]

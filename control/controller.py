@@ -24,7 +24,6 @@ def get_ticker_symbol(tickerSymbol):
     return ticker
 
 
-# Adjust in the future as needed
 def get_expiration_date_list():
     return ['2021-04-01', '2021-04-09', '2021-04-16', '2021-04-23', '2021-04-30',
             '2021-05-21', '2021-06-18', '2021-07-16', '2021-09-17', '2021-12-17',
@@ -272,16 +271,17 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
 
 
     #print(finalDict)
-    #chosenExpiration = expirationDate
-    #strikeMatchChosenExpiration = chosenExpiration
+    chosenExpiration = '2021-04-16',
+    strikeMatchChosenExpiration = 635.0 #
     #TmatchChosen = chosenExpiration
     #sigmaMatchedChosen = chosenExpiration
+
 
     analysis = {
         "variables": {"risk_free_rate_r": riskFreeRate,
                       "underlying_s": currentUnderlyingPrice,
-                      #"chosen_expiration": chosenExpiration,
-                      #"strike_x": strikeMatchChosenExpiration,
+                      "chosen_expiration": chosenExpiration,
+                      "strike_x": strikeMatchChosenExpiration,
                       #"time_to_maturity_T": TmatchChosen,
                       #"return_volatility": sigmaMatchedChosen,
                       "intrinsic_value": valuation.intrinsicValue(),
