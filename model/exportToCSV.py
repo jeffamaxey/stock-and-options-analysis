@@ -17,7 +17,7 @@ class exportToCSV:
         company into a csv file
         """
         # create a new csv file and enable writing
-        with open("Fundamental.csv", "w", newline='') as f:
+        with open("../view/static/export/Fundamental.csv", "w", newline='') as f:
             # headers for Fundamental Ratios
             headers = ['Fundamental Ratios', 'priceFairValueTTM', 'debtEquityRatioTTM', 'priceToBookRatioTTM',
                        'returnOnEquityTTM', 'priceEarningsToGrowthRatioTTM', 'returnOnAssetsTTM',
@@ -78,4 +78,5 @@ class exportToCSV:
                              'freeCashFlow': str(self._stock.get_cash_flow().getFreeCashFlow())})
 
 # for testing purposes
-# exportToCSV(Stock.Stock("PRTS"))
+# e = exportToCSV(Stock.Stock("PRTS"))
+# e.exportFundamental()
