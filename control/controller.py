@@ -7,7 +7,7 @@ def get_fundamental_analysis(ticker, data_source):
     """
     try:
         stock = Stock(ticker=ticker)
-    except RuntimeError:    # This exception is thrown when the ticker is invalid
+    except RuntimeError:  # This exception is thrown when the ticker is invalid
         return None
 
     fundamental = stock.get_fundamental()
@@ -98,12 +98,13 @@ def get_technical_analysis(ticker, data_source):
     """
     try:
         stock = Stock(ticker=ticker)
-    except RuntimeError:    # This exception is thrown when the ticker is invalid
+    except RuntimeError:  # This exception is thrown when the ticker is invalid
         return None
 
     technical = stock.get_technical()
 
     analysis = {"tech_details": {
+        "ticker": stock.get_stock_ticker(),
         "RSI": technical.get_rsi(),
         "MACD": technical.get_macd(),
         "MRI": technical.get_momentum_breakout_bands(),

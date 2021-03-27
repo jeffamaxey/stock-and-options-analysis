@@ -62,6 +62,7 @@ def technical_analysis_result():
     summary = analysis["summary"]
 
     return render_template("technical-analysis-page2.html", user=current_user,
+                           ticker=technical_analysis_data["ticker"],
                            rsi=technical_analysis_data["RSI"],
                            macd=technical_analysis_data["MACD"],
                            mri=technical_analysis_data["MRI"],
