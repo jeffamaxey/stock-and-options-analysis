@@ -49,12 +49,12 @@ class Stock:
         ret_id5 = self.set_balancesheet.remote(self)
         ret_id6 = self.set_income_statement.remote(self)
         ret_id7 = self.set_cash_flow.remote(self)
-        ret_id8 = self.set_technical(self)
+        ret_id8 = self.set_technical.remote(self)
 
         # the quote variables will hold all information from api call
         # Automatically  gets news, fundamental, balance sheet, income statement, cash flow related to the stock
-        self._stock_quote, self.stock_enhanced_quote, self._news, self._fundamental, self._technical, \
-            self._balance_sheet, self._income_statement, self._cash_flow = ray.get(
+        self._stock_quote, self.stock_enhanced_quote, self._news, self._fundamental, \
+            self._balance_sheet, self._income_statement, self._cash_flow, self._technical = ray.get(
                 [ret_id1, ret_id2, ret_id3, ret_id4, ret_id5, ret_id6, ret_id7, ret_id8])
 
         """
