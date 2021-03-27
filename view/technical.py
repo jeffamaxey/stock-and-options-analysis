@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request, redirect, url_for, flash
 from flask_login import current_user, login_required
+from view.general import read_field
 
 technical_analysis_bp = Blueprint("technical", __name__)
 
@@ -11,21 +12,9 @@ __technical_analysis_data = []  # using a list instead of variable since it is m
 def technical_analysis():
     if request.method == "POST":
 
-        ticker = request.form.get("ticker-of-the-underlying-15")
-        if ticker is None:
-            ticker = request.form.get("ticker-of-the-underlying-115")
-        if ticker is None:
-            ticker = request.form.get("ticker-of-the-underlying-125")
-        if ticker is None:
-            ticker = request.form.get("ticker-of-the-underlying-135")
-
-        data_source = request.form.get("data-source15")
-        if data_source is None:
-            data_source = request.form.get("data-source115")
-        if data_source is None:
-            data_source = request.form.get("option-style129")
-        if data_source is None:
-            data_source = request.form.get("data-source125")
+        ticker = read_field(("ticker-of-the-underlying-15", "ticker-of-the-underlying-115",
+                             "ticker-of-the-underlying-125", "ticker-of-the-underlying-135"))
+        data_source = read_field(("data-source15", "data-source115", "option-style129", "data-source125"))
 
         from control.controller import get_technical_analysis
         analysis = get_technical_analysis(ticker=ticker, data_source=data_source)
@@ -45,21 +34,9 @@ def technical_analysis():
 def technical_analysis_result():
     if request.method == "POST":
 
-        ticker = request.form.get("ticker-of-the-underlying-19")
-        if ticker is None:
-            ticker = request.form.get("ticker-of-the-underlying-119")
-        if ticker is None:
-            ticker = request.form.get("ticker-of-the-underlying-129")
-        if ticker is None:
-            ticker = request.form.get("ticker-of-the-underlying-139")
-
-        data_source = request.form.get("data-source19")
-        if data_source is None:
-            data_source = request.form.get("data-source119")
-        if data_source is None:
-            data_source = request.form.get("option-style139")
-        if data_source is None:
-            data_source = request.form.get("data-source129")
+        ticker = read_field(("ticker-of-the-underlying-19", "ticker-of-the-underlying-119",
+                             "ticker-of-the-underlying-129", "ticker-of-the-underlying-139"))
+        data_source = read_field(("data-source19", "data-source119", "option-style139", "data-source129"))
 
         from control.controller import get_technical_analysis
         analysis = get_technical_analysis(ticker=ticker, data_source=data_source)
@@ -76,7 +53,7 @@ def technical_analysis_result():
         analysis = __technical_analysis_data[0]
     except IndexError:  # if this exception is thrown, it means the user refreshed the result page or entered by
         # simply typing the url
-        return redirect(url_for("fundamental.fundamental_analysis"))
+        return redirect(url_for("technical.technical_analysis"))
 
     # clear the list so it doesn't grow as the user analyzes multiple times
     __technical_analysis_data.clear()
