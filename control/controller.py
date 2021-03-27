@@ -102,17 +102,17 @@ def get_technical_analysis(ticker, data_source):
     except RuntimeError:    # This exception is thrown when the ticker is invalid
         return None
 
-    analysis = {"tech details": {
-        "RSI": Technical.get_rsi(),
-        "MACD": Technical.get_macd(),
-        "MRI": Technical.get_mass_index(),
-        "MOVING AVGS": Technical.get_simple_moving_average_range_30_10(),
-        "FIBO": Technical.get_pivot_fib()
-    },
-        "summary": {
-            # To be added
+    technical = stock.get_technical()
 
-        }
+    analysis = {"tech_details": {
+        "RSI": technical.get_rsi(),
+        "MACD": technical.get_macd(),
+        "MRI": technical.get_momentum_breakout_bands(),
+        "MOVING AVGS (30, 10)": technical.get_simple_moving_average_range_30_10(),
+        "FIBONACCI TARGETS": technical.get_pivot_fib()
+    },
+        "summary": technical.to_string_summary()
+
     }
 
     return analysis

@@ -58,7 +58,7 @@ def technical_analysis_result():
     # clear the list so it doesn't grow as the user analyzes multiple times
     __technical_analysis_data.clear()
 
-    technical_analysis_data = analysis["technical_analysis_data"]
+    technical_analysis_data = analysis["tech_details"]
     summary = analysis["summary"]
 
     return render_template("technical-analysis-page2.html", user=current_user,
