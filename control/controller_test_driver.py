@@ -11,7 +11,7 @@ def main():
     """
     A test driver for the controller
     """
-    import controller as c
+    from control import controller as c
 
     # ------------------ test fundamental analysis with valid ticker ----------------------------------------
     result = None
@@ -45,7 +45,7 @@ def main():
 
     for key in stock_details.keys():
         if stock_details[key] is None:
-            print("Test case 7 failed. key '" + key + "' in stock_detain doesn't contain a value.")
+            print("Test case 7 failed. key '" + key + "' in stock_detail doesn't contain a value.")
 
     for key in metrics.keys():
         if metrics[key] is None:
@@ -70,6 +70,40 @@ def main():
 
     if result is not None:
         print("Test case 13 failed: get_fundamental_analysis() didn't return None with invalid ticker.")
+
+    """
+    Author: Adam Bouthillette
+
+    Description:
+    Run the main() function for testing.
+    If the test is successful, no message will be printed to the console.
+    """
+
+    # ------------------ test technical analysis with valid ticker ----------------------------------------
+    result = None
+    try:
+        result = c.get_technical_analysis("AAPL", "Yahoo")
+    except Exception:
+        print("Test case 14 failed: get_technical_analysis() threw an unexpected exception with valid ticker.")
+
+    if result is None:
+        print("Test case 15 failed: get_technical_analysis() returned None with valid ticker.")
+
+    if "tech_details" not in general_keys:
+        print(
+            "Test case 16 failed: The analysis returned by get_technical_analysis() doesn't contain the key "
+            "'tech_details'.")
+
+    # check if every key in the general keys contains values
+    tech_details = result["tech_details"]
+    summary = result["summary"]
+
+    for key in tech_details.keys():
+        if tech_details[key] is None:
+            print("Test case 17 failed. key '" + key + "' in tech_detail doesn't contain a value.")
+
+    if summary is None:
+        print("Test case 18 failed. key 'summary' doesn't contain a value.")
 
 
 if __name__ == "__main__":

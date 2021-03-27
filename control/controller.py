@@ -8,7 +8,7 @@ def get_fundamental_analysis(ticker, data_source):
     """
     try:
         stock = Stock(ticker=ticker)
-    except RuntimeError:    # This exception is thrown when the ticker is invalid
+    except RuntimeError:  # This exception is thrown when the ticker is invalid
         return None
 
     # export the result as a csv file
@@ -91,6 +91,32 @@ def get_fundamental_analysis(ticker, data_source):
         },
 
         "news": stock.get_news().news_tostring()
+    }
+
+    return analysis
+
+
+def get_technical_analysis(ticker, data_source):
+    """
+    returns the technical analysis as a dictionary
+    """
+    try:
+        stock = Stock(ticker=ticker)
+    except RuntimeError:  # This exception is thrown when the ticker is invalid
+        return None
+
+    technical = stock.get_technical()
+
+    analysis = {"tech_details": {
+        "ticker": stock.get_stock_ticker(),
+        "RSI": technical.get_rsi(),
+        "MACD": technical.get_macd(),
+        "MRI": technical.get_momentum_breakout_bands(),
+        "MOVING AVGS (30, 10)": technical.get_simple_moving_average_range_30_10(),
+        "FIBONACCI TARGETS": technical.get_pivot_fib()
+    },
+        "summary": technical.to_string_summary()
+
     }
 
     return analysis

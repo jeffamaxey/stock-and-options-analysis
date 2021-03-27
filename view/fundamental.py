@@ -31,7 +31,7 @@ def fundamental_analysis():
 @fundamental_analysis_bp.route("/fundamental-analysis/result", methods=["GET", "POST"])
 @login_required
 def fundamental_analysis_result():
-    # when the user entered tha page by pressing the analyze button
+    # when the user entered the page by pressing the analyze button
     if request.method == "POST":
         ticker = read_field(("ticker-of-the-underlying-110", "ticker-of-the-underlying-120",
                              "ticker-of-the-underlying-130", "ticker-of-the-underlying-140"))
