@@ -276,12 +276,12 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
     #sigmaMatchedChosen = chosenExpiration
 
     analysis = {
-        "variables": {"(r)risk_free_rate": riskFreeRate,
-                      "(s)current_underlying_price": currentUnderlyingPrice,
+        "variables": {"risk_free_rate_r": riskFreeRate,
+                      "underlying_s": currentUnderlyingPrice,
                       #"chosen_expiration": chosenExpiration,
-                      #"(x)strike_market_price_match_chosen_expiration": strikeMatchChosenExpiration,
-                      #"(T)Time_to_expiration_match_chosen": TmatchChosen,
-                      #"(sigma)implied_volatility_match_chosen": sigmaMatchedChosen,
+                      #"strike_x": strikeMatchChosenExpiration,
+                      #"time_to_maturity_T": TmatchChosen,
+                      #"return_volatility": sigmaMatchedChosen,
                       "intrinsic_value": valuation.intrinsicValue(),
                       "speculative_premium": valuation.speculativePremium()},
         "valuations": {"black_scholes": valuation.blackScholes(),
