@@ -99,32 +99,25 @@ def main():
     # check if every key in the tech general keys contains values
     tech_details = result["tech_details"]
     summary = result["summary"]
-    general_keys_tech = result.keys()
-
-    if "tech_details" not in general_keys_tech:
-        print(
-            "Test case 16 failed: The analysis returned by get_technical_analysis() doesn't contain the key "
-            "'tech_details'.")
-        num_error += 1
 
     for key in tech_details.keys():
         if tech_details[key] is None:
-            print("Test case 17 failed. key '" + key + "' in tech_detail doesn't contain a value.")
+            print("Test case 16 failed. key '" + key + "' in tech_detail doesn't contain a value.")
             num_error += 1
 
     if summary is None:
-        print("Test case 18 failed. key 'summary' doesn't contain a value.")
+        print("Test case 17 failed. key 'summary' doesn't contain a value.")
         num_error += 1
 
         # ------------------ test technical analysis with invalid ticker ----------------------------------------
     try:
         result = c.get_technical_analysis("This is an invalid ticker", "Yahoo")
     except Exception:
-        print("Test case 19 failed: get_technical_analysis() threw an unexpected exception with invalid ticker.")
+        print("Test case 18 failed: get_technical_analysis() threw an unexpected exception with invalid ticker.")
         num_error += 1
 
     if result is not None:
-        print("Test case 20 failed: get_technical_analysis() didn't return None with invalid ticker.")
+        print("Test case 19 failed: get_technical_analysis() didn't return None with invalid ticker.")
         num_error += 1
 
     # print the final message
