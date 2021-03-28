@@ -11,8 +11,9 @@ import ray
 
 
 def main():
-    # initialize multiprocessing
-    ray.init(ignore_reinit_error=True)
+    # initialize ray if it wasn't previously initialized
+    if not ray.is_initialized():
+        ray.init()
 
     # testing with a big cap stock from nasdaq exchange
 
