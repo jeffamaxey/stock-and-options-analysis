@@ -2,7 +2,7 @@
 Author: Sahngwoo Kim
 """
 
-from flask import Blueprint, render_template, request, redirect, url_for, flash
+from flask import Blueprint, render_template, request, redirect, url_for, flash, send_file
 from flask_login import current_user, login_required
 from view.general import read_field
 
@@ -189,4 +189,5 @@ def pricing_valuation_result():
 @pricing_valuation_bp.route("/pricing-valuation/export")
 @login_required
 def pricing_valuation_export():
-    return redirect(url_for("pricing_valuation.pricing_valuation"))
+    file_path = "static/export/Valuation.csv"
+    return send_file(file_path, as_attachment=True)

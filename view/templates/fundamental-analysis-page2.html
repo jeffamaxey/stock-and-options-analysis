@@ -449,7 +449,11 @@
             <div class="x52-week-high-Ko7iEJ montserrat-semi-bold-black-19px">DAILY RANGE</div>
           </div>
           <div class="x52-low-number-RheoVh border-1px-dove-gray">
-            <div class="x23434-JgTTyD montserrat-semi-bold-white-19px">{{ earnings_date }}</div>
+            <div class="x23434-JgTTyD montserrat-semi-bold-white-19px">
+              {% autoescape false %}
+                {{ earnings_date | replace('\n', '<br>')}}
+              {% endautoescape %}
+            </div>
           </div>
           <div class="x52-week-low-RheoVh border-1px-dove-gray">
             <div class="x52-week-low-OeazNa montserrat-semi-bold-black-19px">EARNINGS DATE</div>
@@ -646,7 +650,11 @@
           <div class="x24-hour-low-CUtepa montserrat-semi-bold-black-12px">PREVIOUS CLOSE</div>
         </div>
         <div class="earnings-date-number-C61RwL border-1px-dove-gray">
-          <div class="x05-07-2021-uAYzno montserrat-semi-bold-white-12px">{{ earnings_date }}</div>
+          <div class="x05-07-2021-uAYzno montserrat-semi-bold-white-12px">
+              {% autoescape false %}
+                {{ earnings_date | replace('\n', '<br>')}}
+              {% endautoescape %}
+          </div>
         </div>
         <img class="earnings-date-text-C61RwL border-1px-dove-gray" src="../static/img/earningsdatetext-1@1x.png" />
         <div class="ask-price-number-C61RwL border-1px-dove-gray">
@@ -1245,7 +1253,11 @@
             </div>
             <div class="x72-CUl0FW">
               <div class="generic-number-Nivnnr border-1px-dove-gray">
-                <div class="x000-aSXR6H montserrat-semi-bold-white-12px">{{ earnings_date }}</div>
+                <div class="x000-aSXR6H montserrat-semi-bold-white-12px">
+                  {% autoescape false %}
+                    {{ earnings_date | replace('\n', '<br>')}}
+                  {% endautoescape %}
+                </div>
               </div>
               <div class="generic-text-Nivnnr border-1px-dove-gray">
                 <div class="text-mxcJmr montserrat-semi-bold-black-12px">EARNINGS<br>DATE</div>
