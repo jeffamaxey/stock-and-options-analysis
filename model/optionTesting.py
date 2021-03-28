@@ -1,6 +1,8 @@
 from model.Option import Option
 
-
+#
+#SPLIT UP OPTION CLASS INTO ORGANIZEOPTIONDATA, NEED TO REDO THIS TESTING
+#
 
 tickerSymbol = "TSLA"
 # Print the sorted options chain

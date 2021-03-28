@@ -1,7 +1,7 @@
 import numpy as np
 from scipy.stats import norm
-import model.ValidTicker as validTicker
 import yfinance as yf
+import model.ValidTicker as validTicker
 import time
 
 
@@ -94,7 +94,8 @@ class Valuation:
         for i in range(self._N - 1, -1, -1):
             for y in range(0, i+1):
                 binomialOption[y, i] = (1 / (1 + self._r) * (p * binomialOption[y, i + 1] + q * binomialOption[y + 1, i + 1]))
-        return binomialOption
+        #Need to adjust to return proper number
+        return binomialOption[0][0]
 
     def monteCarloSimulation(self):
         # Find the theoretical price of a call or put option using a monte carlo simulation
@@ -210,6 +211,3 @@ class Valuation:
                 return self._sigma
             _sigma = self._sigma + difference / self.vega
         return _sigma
-
-
-
