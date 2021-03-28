@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, url_for, flash
+from flask import Blueprint, render_template, request, redirect, url_for, flash, send_file
 from flask_login import current_user, login_required
 from view.general import read_field
 
@@ -76,4 +76,5 @@ def technical_analysis_result():
 @technical_analysis_bp.route("/technical-analysis/export")
 @login_required
 def technical_analysis_export():
-    return redirect(url_for("technical.technical_analysis"))
+    file_path = "static/export/Technical.csv"
+    return send_file(file_path, as_attachment=True)

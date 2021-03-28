@@ -1,3 +1,5 @@
+# Code completed by Bathiya Ranasinghe
+
 """
   The modules used in the file are shown below
   :The finta module is used to compute technical analysis indicators

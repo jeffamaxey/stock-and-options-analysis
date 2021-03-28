@@ -1,6 +1,7 @@
 from model import Stock, Technical
 import csv
 
+from main import ROOT_DIR
 
 class exportToCSV:
     def __init__(self, stock):
@@ -12,7 +13,7 @@ class exportToCSV:
         company into a csv file
         """
         # create a new csv file and enable writing
-        with open("view/static/export/Fundamental.csv", "w", newline='') as f:
+        with open(ROOT_DIR + "/view/static/export/Fundamental.csv", "w", newline='') as f:
             # headers for Fundamental Ratios
             headers = ['Fundamental Ratios', 'priceFairValueTTM', 'debtEquityRatioTTM', 'priceToBookRatioTTM',
                        'returnOnEquityTTM', 'priceEarningsToGrowthRatioTTM', 'returnOnAssetsTTM',
@@ -78,7 +79,7 @@ class exportToCSV:
         company into a csv file
         """
         # create a new csv file and enable writing
-        with open("view/static/export/Technical.csv", "w", newline='') as f:
+        with open(ROOT_DIR + "/view/static/export/Technical.csv", "w", newline='') as f:
             # headers for Technicals
             headers = ['Technical Analysis', 'RSI', 'MACD', 'simple_moving_average_range_30_10',
                        'pivot_fibonacci', 'momentum_breakout_bands']
