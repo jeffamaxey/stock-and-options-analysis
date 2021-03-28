@@ -166,7 +166,7 @@ class Option:
             raise RuntimeError("This is not a valid ticker symbol")
 
         # update ticker symbol within the class
-        self.tickerSymbol = yf.Ticker(tickerSymbol)
+        self.tickerSymbol = tickerSymbol
 
         # update _ticker symbol within the class
         # if the ticker is not valid an exception is thrown
