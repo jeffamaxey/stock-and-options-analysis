@@ -1852,7 +1852,8 @@ box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
 }
 .x1280-fundamental-analysis-page2 .valuation-component-Z6zpbm:hover {
 
-transform: translate(0, -5px);box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
+transform: translate(0, -5px);
+box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
 }
 .x1280-fundamental-analysis-page2 .x0-mrdmCX {
   background-color: transparent;
@@ -4123,7 +4124,8 @@ box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
 }
 .x375-fundamental-analysis-page2 .technical-component-Z6zpbm:hover {
 
-transform: translate(0, -5px);box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
+transform: translate(0, -5px);
+box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
 }
 .x375-fundamental-analysis-page2 .technical-lY8Sqq {
   background-color: transparent;
@@ -8846,7 +8848,8 @@ box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
 }
 .fundamental-analysis-page2 .fundamental-component-Z6zpbm:hover {
 
-transform: translate(0, -5px);box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
+transform: translate(0, -5px);
+box-shadow: 0px 12px 5px -8px rgba(0,0,0,0.2);
 }
 .fundamental-analysis-page2 .gross-revenue-WA66Pn {
   background-color: var(--white);
@@ -9463,6 +9466,7 @@ transform: scale(1.1);
   top: 429px;
   width: 1364px;
 }
+
 .fundamental-analysis-page2 .strategies-component-Z6zpbm {
   background-color: var(--pumice);
   height: calc(100.00% - 1px);
