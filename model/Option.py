@@ -17,8 +17,8 @@ class Option:
             self.data_source:      ex.'Yahoo'       -Yahoo or other
             self.itm_atm_otm:      ex.'atm'         -itm+1, itm, atm, otm, otm+1
         """
-        #if not validTicker.valid_ticker(tickerSymbol):
-        #raise RuntimeError("This is not a valid ticker symbol")
+        if not validTicker.valid_ticker(tickerSymbol):
+            raise RuntimeError("This is not a valid ticker symbol")
 
         # update ticker symbol within the class
         self.tickerSymbol = tickerSymbol
