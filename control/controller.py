@@ -1,24 +1,7 @@
 from model.Option import Option
 from model.Valuation import Valuation
-from model.organizeOptionData import get_finalDict
 from model.Stock import Stock
 from model.exportToCSV import exportToCSV
-
-########################################################################
-#user clicks expiration than the ITMATMOTM shows (5 market prices) the 2 closest ITM and 2 closest OTM Strike Prices as well as ATM price
-#Each expiration will be the ID, each expiration will have 2-ITM 1-ATM 2-OTM associated with it giving results for (strike, _T, & _sigma)
-########################################################################
-#strike impliedVolatility expirationDate    _T   optionType
-# (ITM Call) if the currentPriceOfTheUnderlyingAsset > Strike Price of the call option
-# (ATM Call) if the currentPriceOfTheUnderlyingAsset = Strike Price of the option
-# (OTM Call) if the Call strike price is > the the current price of the underlying asset
-# (OTM Put) if the Put strike price is < the current price of the underlying asset
-# (ATM Put) if the currentPriceOfTheUnderlyingAsset = Strike Price of the option
-# (ITM Put) if the currentPriceOfTheUnderlyingAsset < Strike Price of the put option
-
-##### IN Option.py
-##### NEED TO UPDATE LINES IN OPTION.PY SO-> if dic[key]==value and dic['CALL'] == True and dic['expirationDate'] == self.chosenExpiration
-##### NEED TO UPDATE LINES IN OPTION.PY So user selects the restraint of an expiration date
 
 
 def get_expiration_date_list():
@@ -47,6 +30,7 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
     """
     returns the quantitative analysis 'outputs' as a dictionary
     """
+    from model.organizeOptionData import get_finalDict
     # Call Option Class
     option = Option(tickerSymbol, expiration_date, option_style, option_type, data_source, itm_atm_otm)
     riskFreeRate = option.get_riskFreeRate()
@@ -84,9 +68,6 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
                        "charm": valuation.charm()}, }
 
     return analysis
-
-
-print(get_quantitative_analysis("TSLA", '2022-06-17', 'American', 'Call', 'Yahoo', 'atm'))
 
 
 def get_fundamental_analysis(ticker, data_source):

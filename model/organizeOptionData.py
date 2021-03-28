@@ -119,6 +119,3 @@ def get_finalDict(ticker_symbol, option_type, itm_atm_otm, expiration_date):
     strike = finalDict['Strike']
 
     return finalDict
-
-
-print(get_finalDict('TSLA', 'Call', 'atm', '2022-06-17'))
