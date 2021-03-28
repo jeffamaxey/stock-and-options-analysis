@@ -52,7 +52,6 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
     except RuntimeError:    # This exception is thrown when Option class parameters is invalid
         return None
 
-    finalDict = {}
     riskFreeRate = option.get_riskFreeRate()
     currentUnderlyingPrice = option.get_currentPriceOfTheUnderlyingAsset()
     available_expirations = get_expiration_date_list()
