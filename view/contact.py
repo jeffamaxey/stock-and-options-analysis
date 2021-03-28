@@ -1,11 +1,27 @@
-from flask import Flask, Blueprint, render_template, request, flash, redirect, url_for
+from flask import Blueprint, render_template, request, flash
 from flask_mail import Mail, Message
 from flask_login import current_user
 from view.general import read_field
 
 contact_bp = Blueprint("contact", __name__)
 
-mail = Mail()
+__mail = Mail()
+
+
+def init(app):
+    """
+    Initializes the flask mail
+    :param app: flask app
+    """
+    # Use Message and Mail with Flask-Mail imports to config SMTP settings
+    app.config["MAIL_SERVER"] = 'smtp.gmail.com'
+    app.config["MAIL_PORT"] = 465
+    app.config["MAIL_USE_SSL"] = True
+    app.config['MAIL_USE_TLS'] = False
+    app.config["MAIL_USERNAME"] = 'thefintechorgtest@gmail.com'
+    app.config["MAIL_PASSWORD"] = 'FTO12345'
+    app.config['MAIL_DEFAULT_SENDER'] = 'thefintechorgtest@gmail.com'
+    __mail.init_app(app)
 
 
 @contact_bp.route('/contact', methods=["GET", "POST"])
@@ -22,7 +38,7 @@ def contact():
         # for message format
         msg.body = """ From: %s 
         %s """ % (email, message)
-        mail.send(msg)
+        __mail.send(msg)
 
         flash("An email has been sent. Thank you for contacting us, we will respond shortly.", category="Success")
         return render_template('contact-page.html', user=current_user)

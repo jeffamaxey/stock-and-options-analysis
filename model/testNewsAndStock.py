@@ -11,7 +11,7 @@ Disclaimer: Do to varying market conditions there may be situations where the sc
             it is the testers responsibility to manually check to see if expected values on the test script should be updated or not when an error is announced.
 """
 import datetime
-import Stock as Stock
+import model.Stock as Stock
 import ray
 
 
