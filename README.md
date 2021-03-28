@@ -19,7 +19,7 @@ The same procedure will be used to run Technical Analysis. Simply click the Tech
 
 Similarly for the Valuation page simply provide the stock ticker, expiration date, option type, style, default data source,and the ITM/ATM/OTM values. Then when analize is clicked various financial models compute fair values for the specified option and the metrics are displayed to the user to be interepereted
 
-The profile icon at the top right of the page can be used to access the users account and make any modifications. Currently the change password button is implemented to change the user's current password.The hyperlink at the top stating “delete Account Log Out” on the top left can be used to delete the users account. The payment system and subscription services are not currently implemented.
+The profile icon at the top right of the page can be used to access the users account and make any modifications. The hyperlink at the top stating “delete Account Log Out” on the top left can be used to delete the users account. The payment system and subscription services are not currently implemented.
 If a user forgets their password the forgot password option on the login page can be used to reset the user's password when a valid email is inputted.
 
 The contact page can be used if there are any questions regarding the software. To use simply enter your email along with the subject and message and we will get back to you as soon as possible.
