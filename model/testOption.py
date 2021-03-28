@@ -1,5 +1,5 @@
 from control import controller
-from model import organizeOptionData
+from model import OptionData
 from model.Option import Option
 
 
@@ -8,7 +8,7 @@ def main(self=None):
     print("Expirations: ", Option.get_expirations(tickerSymbol))
     #print("Price of the Underlying Asset: ", Option.get_currentPriceOfTheUnderlyingAsset(tickerSymbol))
     print("Risk-Free Rate: ", Option.get_riskFreeRate(tickerSymbol))
-    print(organizeOptionData.get_finalDict('TSLA', 'Call', 'atm', '2021-07-16'))
+    print(OptionData.get_finalDict('TSLA', 'Call', 'atm', '2021-07-16'))
     print(controller.get_quantitative_analysis('TSLA', '2021-07-16', 'American', 'Call', 'Yahoo', 'atm'))
 
 

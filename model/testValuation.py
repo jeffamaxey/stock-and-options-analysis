@@ -1,6 +1,6 @@
 # This is a testing file for testing the Valuation Class
 from control import controller
-from model import organizeOptionData
+from model import OptionData
 from model.OptionValuation import Valuation
 #import time
 

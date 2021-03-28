@@ -48,10 +48,10 @@ class Valuation:
             if self._optionType == "Call":
                 # Cumulative distribution function centered around 0 standard deviation of 1, (d1, 0, 1) required by formula
                 # Part of the equation _x*np.exp(-_r*_T) is the discounted strike price
-                blackScholesPrice = round(self._s * (norm.cdf(d1, 0, 1)) - self._x * np.exp(-self._r * self._T) * (norm.cdf(d2, 0, 1)), 2)
+                blackScholesPrice = self._s * (norm.cdf(d1, 0, 1)) - self._x * np.exp(-self._r * self._T) * (norm.cdf(d2, 0, 1))
             elif self._optionType == "Put":
                 # The negative of a Call
-                blackScholesPrice = round(self._x * np.exp(-self._r * self._T) * (norm.cdf(-d2, 0, 1)) - self._s * (norm.cdf(-d1, 0, 1)), 2)
+                blackScholesPrice = self._x * np.exp(-self._r * self._T) * (norm.cdf(-d2, 0, 1)) - self._s * (norm.cdf(-d1, 0, 1))
             return blackScholesPrice
         except:
             print("Review incorrect Black Scholes parameters")
@@ -61,17 +61,17 @@ class Valuation:
         try:
             if self._optionType == "Call":
                 # The intrinsic value of the call
-                intrinsic = round(max(self._s - self._x, 0), 2)
+                intrinsic = max(self._s - self._x, 0)
             elif self._optionType == "Put":
                 # The intrinsic value of the put
-                intrinsic = round(max(self._x - self._s, 0), 2)
+                intrinsic = max(self._x - self._s, 0)
             return intrinsic
         except:
             print("Review incorrect intrinsic value parameters")
 
     def speculativePremium(self):
         # Find the speculative value of a call or put
-        specPremium = round(self.blackScholes()-self.intrinsicValue(), 2)
+        specPremium = self.blackScholes()-self.intrinsicValue()
         return specPremium
 
     def binomialModel(self):
@@ -95,7 +95,7 @@ class Valuation:
             for y in range(0, i+1):
                 binomialOption[y, i] = (1 / (1 + self._r) * (p * binomialOption[y, i + 1] + q * binomialOption[y + 1, i + 1]))
         #Need to adjust to return proper number
-        binomialOption = round(binomialOption[0][0], 2)
+        binomialOption = binomialOption[0][0]
         return binomialOption
 
     def monteCarloSimulation(self):
@@ -125,7 +125,7 @@ class Valuation:
             # Using the exponential (continuously compounded) discount rate exp(-rT)
             # For the present value of the future cash flow
             simulation = np.exp(-1.0 * self._r * self._T) * avg
-            simulation = round(simulation, 2)
+            simulation = simulation
             return simulation
         except:
             print("Review incorrect monte carlo simulation parameters")
@@ -146,10 +146,10 @@ class Valuation:
         try:
             if self._optionType == "Call":
                 # The delta of a call
-                _delta = round(norm.cdf(d1, 0, 1), 2)
+                _delta = norm.cdf(d1, 0, 1)
             elif self._optionType == "Put":
                 # The delta of a put
-                _delta = round(norm.cdf(d1, 0, 1) - 1.0, 2)
+                _delta = norm.cdf(d1, 0, 1) - 1.0
             return _delta
         except:
             print("Review incorrect Delta parameters")
@@ -157,20 +157,20 @@ class Valuation:
     def gamma(self):
         # Gamma is the rate of change for an options delta based on a single point move in the deltas price (highest when ATM)
         d1 = (1.0 / (self._sigma * np.sqrt(self._T))) * (np.log(self._s / self._x) + (self._r + 0.5 * self._sigma ** 2.0) * self._T)
-        _gamma = round((norm.pdf(d1)) / (self._s * self._sigma * np.sqrt(self._T)), 2)
+        _gamma = (norm.pdf(d1)) / (self._s * self._sigma * np.sqrt(self._T))
         return _gamma
 
     def charm(self):
         # Charm is the 'delta decay' the rate at which the delta of an option changes with respect to the passage of time
         d1 = (1.0 / (self._sigma * np.sqrt(self._T))) * (np.log(self._s / self._x) + (self._r + 0.5 * self._sigma ** 2.0) * self._T)
         d2 = d1 - self._sigma * np.sqrt(self._T)
-        _charm = round(-norm.pdf(d1, 0, 1) * (2 * self._r * self._T - d2 * self._sigma * np.sqrt(self._T)) / (2 * self._T * self._sigma * np.sqrt(self._T)), 2)
+        _charm = -norm.pdf(d1, 0, 1) * (2 * self._r * self._T - d2 * self._sigma * np.sqrt(self._T)) / (2 * self._T * self._sigma * np.sqrt(self._T))
         return _charm
 
     def vega(self):
         # Vega is the sensitivity of the options price to the change in the underlying assets return _volatility
         d1 = (1.0 / (self._sigma * np.sqrt(self._T))) * (np.log(self._s / self._x) + (self._r + 0.5 * self._sigma ** 2.0) * self._T)
-        _vega = round((self._s * norm.pdf(d1) * np.sqrt(self._T)) / 100.0, 2)
+        _vega = (self._s * norm.pdf(d1) * np.sqrt(self._T)) / 100.0
         return _vega
 
     def theta(self):
@@ -180,10 +180,10 @@ class Valuation:
         try:
             if self._optionType == "Call":
                 # The theta of a call
-                _theta = round((-((self._s * norm.pdf(d1) * self._sigma) / (2.0 * np.sqrt(self._T))) - (self._r * self._x * np.exp(-self._r * self._T) * norm.cdf(d2, 0, 1))) / 365.0, 2)
+                _theta = (-((self._s * norm.pdf(d1) * self._sigma) / (2.0 * np.sqrt(self._T))) - (self._r * self._x * np.exp(-self._r * self._T) * norm.cdf(d2, 0, 1))) / 365.0
             elif self._optionType == "Put":
                 # The theta of a put
-                _theta = round((-((self._s * norm.pdf(d1) * self._sigma) / (2.0 * np.sqrt(self._T))) + (self._r * self._x * np.exp(-self._r * self._T) * norm.cdf(-d2, 0, 1))) / 365.0, 2)
+                _theta = (-((self._s * norm.pdf(d1) * self._sigma) / (2.0 * np.sqrt(self._T))) + (self._r * self._x * np.exp(-self._r * self._T) * norm.cdf(-d2, 0, 1))) / 365.0
             return _theta
         except:
             print("Review incorrect Theta parameters")
@@ -195,10 +195,10 @@ class Valuation:
         try:
             if self._optionType == "Call":
                 # The rho of a call
-                _rho = round((self._x * self._T * np.exp(-self._r * self._T) * norm.cdf(d2, 0, 1)) / 100.0, 2)
+                _rho = (self._x * self._T * np.exp(-self._r * self._T) * norm.cdf(d2, 0, 1)) / 100.0
             elif self._optionType == "Put":
                 # The rho of a put
-                _rho = round((-self._x * self._T * np.exp(-self._r * self._T) * norm.cdf(-d2, 0, 1)) / 100.0, 2)
+                _rho = (-self._x * self._T * np.exp(-self._r * self._T) * norm.cdf(-d2, 0, 1)) / 100.0
             return _rho
         except:
             print("Review incorrect Rho parameters")
@@ -211,5 +211,5 @@ class Valuation:
             difference = self._x - self.blackScholes()
             if abs(difference) < precise:
                 return self._sigma
-            _sigma = round(self._sigma + difference / self.vega, 2)
+            _sigma = self._sigma + difference / self.vega
         return _sigma
