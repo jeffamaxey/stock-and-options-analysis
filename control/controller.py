@@ -228,4 +228,4 @@ def get_technical_analysis(ticker, data_source):
 
     return analysis
 
-print(get_quantitative_analysis("TSLA", '2021-07-16', 'American', 'Call', 'Yahoo', 'atm'))
+#print(get_quantitative_analysis("TSLA", '2021-07-16', 'American', 'Call', 'Yahoo', 'atm'))
