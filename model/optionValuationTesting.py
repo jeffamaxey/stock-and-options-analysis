@@ -46,7 +46,7 @@ def main():
     # Testing Black Scholes execution time
     # Begin timer for execution
     #t1 = time.time()
-    #financialModel = val(N, ticker, r, s, x, T, sigma, optionType, iterations)
+    #financialModel = val(_N, _ticker, _r, _s, _x, _T, _sigma, optionType, iterations)
     # End timer for execution
     #t2 = time.time()
     #print("Time to calculate black scholes in seconds = " + str(t2 - t1))
@@ -123,7 +123,7 @@ def main():
     time_to_maturity = T
     print("Time to Maturity: ", time_to_maturity)
 
-    #volatility_sigma = sigma
+    #volatility_sigma = _sigma
     #print("Volatility: ", volatility_sigma)
 
 
@@ -152,11 +152,11 @@ if __name__ == "__main__":
 # Sees if two valuation classes are equal (can compare any attributes)
 # If you dont override it compares memory location
 #def __eq__(self, other):
-    #if self.ticker == other.ticker and self._dataSource == other._dataSource and self._optionType == other._optionType:
+    #if self._ticker == other._ticker and self._dataSource == other._dataSource and self._optionType == other._optionType:
         #return True
     #return False
 
 
 # Override the String Method
 #def __str__(self):
-    #return self.ticker +" " + self._dataSource + " " + self.expiration + " " + self._optionStyle + " " + self._optionType + " " + self._ITMATMOTM + " " + self.longShort
+    #return self._ticker +" " + self._dataSource + " " + self.expiration + " " + self._optionStyle + " " + self._optionType + " " + self._ITMATMOTM + " " + self.longShort

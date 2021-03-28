@@ -4,9 +4,9 @@ import yfinance as yf
 
 ########################################################################
 #user clicks expiration than the ITMATMOTM shows (5 market prices) the 2 closest ITM and 2 closest OTM Strike Prices as well as ATM price
-#Each expiration will be the ID, each expiration will have 2-ITM 1-ATM 2-OTM associated with it giving results for (strike, T, & sigma)
+#Each expiration will be the ID, each expiration will have 2-ITM 1-ATM 2-OTM associated with it giving results for (strike, _T, & _sigma)
 ########################################################################
-#strike impliedVolatility expirationDate    T   optionType
+#strike impliedVolatility expirationDate    _T   optionType
 # (ITM Call) if the currentPriceOfTheUnderlyingAsset > Strike Price of the call option
 # (ATM Call) if the currentPriceOfTheUnderlyingAsset = Strike Price of the option
 # (OTM Call) if the Call strike price is > the the current price of the underlying asset
@@ -17,11 +17,6 @@ import yfinance as yf
 ##### IN Option.py
 ##### NEED TO UPDATE LINES IN OPTION.PY SO-> if dic[key]==value and dic['CALL'] == True and dic['expirationDate'] == self.chosenExpiration
 ##### NEED TO UPDATE LINES IN OPTION.PY So user selects the restraint of an expiration date
-
-
-def get_ticker_symbol(tickerSymbol):
-    ticker = yf.Ticker(tickerSymbol)
-    return ticker
 
 
 def get_expiration_date_list():
@@ -52,7 +47,7 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
     """
     try:
         ticker = tickerSymbol
-    except RuntimeError:    # This exception is thrown when ticker is invalid
+    except RuntimeError:    # This exception is thrown when _ticker is invalid
         return None
 
     finalDict = {}
@@ -75,11 +70,17 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
     #option_chain = option.get_entire_sorted_options_chain()
 
     # FIRST TICKER PARAMETER MIGHT BE WRONG
-    # N, ticker, r, s, x, T, sigma, optionType, iterations
+    # _N, _ticker, _r, _s, _x, _T, _sigma, optionType, iterations
     valuation = Valuation(40, tickerSymbol, riskFreeRate, currentUnderlyingPrice, strike, timeToExpiration, volatility, optionType, 50)
+
+
+
+
 
     # USER SELECTS PUT or CALL, USER SELECTS EXPIRATION, USER SELECTS ITMATMOTM
     # Once user selects expiration it narrows down the potential fields to five different itmAtmOtm = ['itm+1', 'itm', 'atm', 'otm', 'otm+1']
+
+
     DictCalls = {expirationDate[0]: {'ITM_Call': {'Strike': option.get_itm_call_strike(), "Time-to-expiration": option.get_itm_call_T, "Sigma": option.get_itm_call_sigma, 'OptionType': 'Call'},
                                      'OTM_Call': {'Strike': option.get_otm_call_strike(), "Time-to-expiration": option.get_otm_call_T, "Sigma": option.get_otm_call_sigma, 'OptionType': 'Call'},
                                      'ATM_Call': {'Strike': option.get_atm_call_strike(), "Time-to-expiration": option.get_atm_call_T, "Sigma": option.get_atm_call_sigma, 'OptionType': 'Call'},
@@ -165,6 +166,7 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
                                       'ATM_Call': {'Strike': option.get_atm_call_strike(), "Time-to-expiration": option.get_atm_call_T, "Sigma": option.get_atm_call_sigma, 'OptionType': 'Call'},
                                       'ITM_Call+1': {'Strike': option.get_itm_call_minus_strike(), "Time-to-expiration": option.get_itm_call_minus_T, "Sigma": option.get_itm_call_minus_sigma, 'OptionType': 'Call'},
                                       'OTM_Call+1': {'Strike': option.get_otm_call_plus_strike(), "Time-to-expiration": option.get_otm_call_plus_T, "Sigma": option.get_otm_call_plus_sigma, 'OptionType': 'Call'}}}
+
 
     DictPuts = {expirationDate[0]: {'ITM_Put': {'Strike': option.get_itm_put_strike(), "Time-to-expiration": option.get_itm_put_T, "Sigma": option.get_itm_put_sigma, 'OptionType': 'Put'},
                                     'OTM_Put': {'Strike': option.get_otm_put_strike(), "Time-to-expiration": option.get_otm_put_T, "Sigma": option.get_otm_put_sigma, 'OptionType': 'Put'},
@@ -252,16 +254,27 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
                                      'ITM_Put+1': {'Strike': option.get_itm_put_minus_strike(), "Time-to-expiration": option.get_itm_put_minus_T, "Sigma": option.get_itm_put_minus_sigma, 'OptionType': 'Put'},
                                      'OTM_Put+1': {'Strike': option.get_otm_put_plus_strike(), "Time-to-expiration": option.get_otm_put_plus_T, "Sigma": option.get_otm_put_plus_sigma, 'OptionType': 'Put'}}}
 
+
+    #if optionType == "Call":
+        #finalDict.append(DictCalls[0][expirationDate]['{}']['Strike'])
+        #finalDict.append(DictCalls[0][expirationDate]['{}']['Time-to-expiration']
+        #finalDict.append(DictCalls[0][expirationDate]['{}']['Sigma']
+    #else:
+        #finalDict.append(DictPuts[1][expirationDate]['{}']['Strike']
+        #finalDict.append(DictPuts[1][expirationDate]['{}']['Time-to-expiration']
+        #finalDict.append(DictPuts[1][expirationDate]['{}']['Sigma']
+
+
     # Not sure how well this works
     #if optionType == "Call":
         #step = DictCalls
     #elif optionType == "Put":
         #step = DictPuts
-    #for x in step:
-        #ITMATMOTM = step[x][0]+step[x][1]+step[x][2]+step[x][3]+step[x][4]
-        #if step[x] == expirationDate[x]:
-            #return expirationDate[x]
-        #x += 1
+    #for _x in step:
+        #ITMATMOTM = step[_x][0]+step[_x][1]+step[_x][2]+step[_x][3]+step[_x][4]
+        #if step[_x] == expirationDate[_x]:
+            #return expirationDate[_x]
+        #_x += 1
 
     # NOT SURE IF THIS WORKS
     #ITMATMOTM = {}
@@ -271,8 +284,8 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
 
 
     #print(finalDict)
-    chosenExpiration = '2021-04-16',
-    strikeMatchChosenExpiration = 635.0 #
+    #chosenExpiration = '2021-04-16',
+    #strikeMatchChosenExpiration = 635.0 #
     #TmatchChosen = chosenExpiration
     #sigmaMatchedChosen = chosenExpiration
 
@@ -280,8 +293,8 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
     analysis = {
         "variables": {"risk_free_rate_r": riskFreeRate,
                       "underlying_s": currentUnderlyingPrice,
-                      "chosen_expiration": chosenExpiration,
-                      "strike_x": strikeMatchChosenExpiration,
+                      #"chosen_expiration": chosenExpiration,
+                      #"strike_x": strikeMatchChosenExpiration,
                       #"time_to_maturity_T": TmatchChosen,
                       #"return_volatility": sigmaMatchedChosen,
                       "intrinsic_value": valuation.intrinsicValue(),
@@ -301,7 +314,7 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
 
 
 #tickerSymbol, expirationDate, optionStyle, optionType, data_source, itmAtmOtm
-#print(get_quantitative_analysis(get_ticker_symbol("TSLA"), get_expiration_date_list(get_ticker_symbol("TSLA")), get_option_style_list(), get_option_type_list(), get_data_source_list(), get_itm_atm_otm_list()))
+print(get_ticker_symbol("TSLA"), get_quantitative_analysis(get_expiration_date_list(), get_option_style_list(), get_option_type_list(), get_data_source_list(), get_itm_atm_otm_list()))
 
 
 

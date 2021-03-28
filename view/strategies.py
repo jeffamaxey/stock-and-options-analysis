@@ -172,13 +172,13 @@ def l_christmas_tree_put():
     return render_template("HelloWorld.html", user=current_user)
 
 
-@strategies_bp.route("strategies/breakdown/s-christmas-tree-call")
+@strategies_bp.route("strategies/breakdown/_s-christmas-tree-call")
 @login_required
 def s_christmas_tree_call():
     return render_template("HelloWorld.html", user=current_user)
 
 
-@strategies_bp.route("strategies/breakdown/s-christmas-tree-put")
+@strategies_bp.route("strategies/breakdown/_s-christmas-tree-put")
 @login_required
 def s_christmas_tree_put():
     return render_template("HelloWorld.html", user=current_user)

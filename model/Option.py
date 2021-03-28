@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import yfinance as yf
 import datetime
+from model import ValidTicker as validTicker
 
 
 def get_options_chain(tickerSymbol):
@@ -17,11 +18,11 @@ def get_options_chain(tickerSymbol):
         opt['expirationDate'] = e
         options = options.append(opt, ignore_index=True)
 
-    # Use expiration date and current date to calculate T time to maturity
+    # Use expiration date and current date to calculate _T time to maturity
     # Can adjust data source after hours to get the correct expiration date using + datetime.timedelta(days = 1)
     options['expirationDate'] = pd.to_datetime(options['expirationDate'])
-    # Multiplied by np.abs because I was getting a negative result for all of my T values (Parentheses were needed to work properly)
-    options['T'] = np.abs(((options['expirationDate'] - datetime.datetime.today()).dt.days) / (365))
+    # Multiplied by np.abs because I was getting a negative result for all of my _T values (Parentheses were needed to work properly)
+    options['_T'] = np.abs(((options['expirationDate'] - datetime.datetime.today()).dt.days) / (365))
 
     # Boolean column if the option is a CALL
     options['CALL'] = options['contractSymbol'].str[4:].apply(lambda x: "C" in x)
@@ -50,7 +51,7 @@ def get_options_chain(tickerSymbol):
     #we need to find the record first based on the expiration and second based on the closest Strike prices to the current asset price
     #Each expiration will be the ID, each expiration will have 2-ITM 1-ATM 2-OTM strike prices associated with it
     ########################################################################
-    #strike impliedVolatility expirationDate    T   optionType
+    #strike impliedVolatility expirationDate    _T   optionType
 
     # TRYING TO ADJUST YFINANCE INTERPRETATION OF (ITM ATM OTM)
     # (ITM Call) if the currentPriceOfTheUnderlyingAsset > Strike Price of the call option
@@ -77,7 +78,7 @@ def get_options_chain(tickerSymbol):
         for i, dic in enumerate(options_record):
             if dic[key] == value and dic['CALL'] == True:
                 return i
-    ATM = 41 #find_otm_call(options_record, "strike", int(currentPriceOfUnderlyingAsset))
+    ATM = 40 #find_otm_call(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     otm_call = options_record[ATM+1]
 
     #Search for the dictionary of the strike price closest to the market price index + 2
@@ -85,7 +86,7 @@ def get_options_chain(tickerSymbol):
         for i, dic in enumerate(options_record):
             if dic[key] == value and dic['CALL'] == True:
                 return i
-    ATM = 42 #find_otm_call_plus(options_record, "strike", int(currentPriceOfUnderlyingAsset))
+    ATM = 40 #find_otm_call_plus(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     otm_call_plus = options_record[ATM+2]
 
     #Search for the dictionary of the strike price closest to the market price index - 1
@@ -93,7 +94,7 @@ def get_options_chain(tickerSymbol):
         for i, dic in enumerate(options_record):
             if dic[key] == value and dic['CALL'] == True:
                 return i
-    ATM = 43 #find_itm_call(options_record, "strike", int(currentPriceOfUnderlyingAsset))
+    ATM = 40 #find_itm_call(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     itm_call = options_record[ATM-1]
 
     #Search for the dictionary of the strike price closest to the market price index - 2
@@ -101,7 +102,7 @@ def get_options_chain(tickerSymbol):
         for i, dic in enumerate(options_record):
             if dic[key] == value and dic['CALL'] == True:
                 return i
-    ATM = 44 #find_itm_call_minus(options_record, "strike", int(currentPriceOfUnderlyingAsset))
+    ATM = 40 #find_itm_call_minus(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     itm_call_minus = options_record[ATM-2]
 
     #Search for target Puts
@@ -109,7 +110,7 @@ def get_options_chain(tickerSymbol):
         for i, dic in enumerate(options_record):
             if dic[key] == value and dic['CALL'] == False:
                 return i
-    ATM = 45 #find_atm_put(options_record, "strike", int(currentPriceOfUnderlyingAsset))
+    ATM = 42 #find_atm_put(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     atm_put = options_record[ATM]
 
     #Search for the dictionary of the strike price closest to the market price index + 1
@@ -117,7 +118,7 @@ def get_options_chain(tickerSymbol):
         for i, dic in enumerate(options_record):
             if dic[key] == value and dic['CALL'] == False:
                 return i
-    ATM = 46 #find_itm_put(options_record, "strike", int(currentPriceOfUnderlyingAsset))
+    ATM = 42 #find_itm_put(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     itm_put = options_record[ATM+1]
 
     #Search for the dictionary of the strike price closest to the market price index + 2
@@ -125,7 +126,7 @@ def get_options_chain(tickerSymbol):
         for i, dic in enumerate(options_record):
             if dic[key] == value and dic['CALL'] == False:
                 return i
-    ATM = 47 #find_itm_put_plus(options_record, "strike", int(currentPriceOfUnderlyingAsset))
+    ATM = 42 #find_itm_put_plus(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     itm_put_plus = options_record[ATM+2]
 
     #Search for the dictionary of the strike price closest to the market price index - 1
@@ -133,7 +134,7 @@ def get_options_chain(tickerSymbol):
         for i, dic in enumerate(options_record):
             if dic[key] == value and dic['CALL'] == False:
                 return i
-    ATM = 48 #find_otm_put(options_record, "strike", int(currentPriceOfUnderlyingAsset))
+    ATM = 42 #find_otm_put(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     otm_put = options_record[ATM-1]
 
     #Search for the dictionary of the strike price closest to the market price index - 2
@@ -141,7 +142,7 @@ def get_options_chain(tickerSymbol):
         for i, dic in enumerate(options_record):
             if dic[key] == value and dic['CALL'] == False:
                 return i
-    ATM = 49 #find_otm_put_minus(options_record, "strike", int(currentPriceOfUnderlyingAsset))
+    ATM = 42 #find_otm_put_minus(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     otm_put_minus = options_record[ATM-2]
 
     Calls = [itm_call_minus, itm_call, atm_call, otm_call, otm_call_plus]
@@ -150,31 +151,51 @@ def get_options_chain(tickerSymbol):
 
 
 class Option:
-    def __init__(self, tickerSymbol):
+    def __init__(self, tickerSymbol, expiration_date, option_style, option_type, data_source, itm_atm_otm):
         """
         Attributes:
-        self.tickerSymbol:   ex.TSLA      -is the ticker tickerSymbol of the underlying asset
-            self.r:          ex.0.01       -risk-free interest rate (annual rate expressed in terms of continuous compounding)
-            self.s:          ex.30.0       -(SO or C) Spot price of the underlying asset (stock price)
-            self.x:          ex.40.0       -(sometimes called k) market strike price of the option (Also called the Exercise Price)
-            self.T:          ex.40.0/365.0 -time until expiration out of a year 40/365 is 40 days to expiration often shown as (T-t)
-            self.sigma:      ex.0.30       -_volatility of returns can also be known as the standard deviation of the underlying asset (or market implied volatility??)
+        self.tickerSymbol:   ex.TSLA      -is the _ticker tickerSymbol of the underlying asset
+            self._r:          ex.0.01       -risk-free interest rate (annual rate expressed in terms of continuous compounding)
+            self._s:          ex.30.0       -(SO or C) Spot price of the underlying asset (stock price)
+            self._x:          ex.40.0       -(sometimes called k) market strike price of the option (Also called the Exercise Price)
+            self._T:          ex.40.0/365.0 -time until expiration out of a year 40/365 is 40 days to expiration often shown as (_T-t)
+            self._sigma:      ex.0.30       -_volatility of returns can also be known as the standard deviation of the underlying asset (or market implied volatility??)
             self._optionType: ex."Call" or "Put"
         """
 
-        self.tickerSymbol = tickerSymbol
-        self.tickerSymbol = yf.Ticker(self)
+        # convert passed in ticker to all upper case
+        ticker = tickerSymbol.upper()
+        # update ticker symbol within the class
+        self.tickerSymbol = yf.Ticker(tickerSymbol)
+
+        # update _ticker symbol within the class
+        # if the ticker is not valid an exception is thrown
+        if not validTicker.valid_ticker(ticker):
+            raise RuntimeError("This is not a valid ticker symbol")
+
+        get_options_chain(self.tickerSymbol)
+        self.expiration_date = expiration_date
+        self.option_style = option_style
+        self.option_type = option_type
+        self.data_source = data_source
+        self.itm_atm_otm = itm_atm_otm
+
+        # convert passed in _ticker to all upper case
+
+        #if not validTicker.valid_ticker(tickerSymbol):
+            #raise RuntimeError("This is not a valid _ticker symbol")
+
         #get_options_chain(tickerSymbol)
 
-        #self.r = riskFreeRate
-        #self.s = get_currentPriceOfTheUnderlyingAsset()
+        #self._r = riskFreeRate
+        #self._s = get_currentPriceOfTheUnderlyingAsset()
 
         #####
         ##### NEED TO UPDATE THESE AND LINES 90-100 comments So user selects the restraint of an expiration date
         ##### UI IS AFFECTING THE DATA RETRIEVAL FOR THIS PART
         #####
         #self.optionExpirations = yf.Ticker(self).options
-        #self.chosenExpiration = '2023-01-20' # User Must select an expiration date immediately after selecting a ticker
+        #self.chosenExpiration = '2023-01-20' # User Must select an expiration date immediately after selecting a _ticker
 
     def get_currentPriceOfTheUnderlyingAsset(self):
         tickerData = yf.Ticker(self)
@@ -184,24 +205,18 @@ class Option:
         currentPriceOfUnderlyingAsset = tickerDataFrame['Close'].iloc[-1]
         return currentPriceOfUnderlyingAsset
 
-    def get_expirations(self):
-        tickerData = yf.Ticker(self)
-        # Expiration dates
-        optionExpirations = tickerData.options
-        return optionExpirations
-
     def get_riskFreeRate(self):
         # Can use the what most finance research papers use, i.e. the risk-free rate from the Kenneth French data library.
         # http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html
         # The rates are annual. So if you want log returns just take the log of 1+rft and divide by 365
         #
         # You should use the return of the less risky government bond of the area you're studying,
-        # as the US T-Bill for North America option market
+        # as the US _T-Bill for North America option market
         # the rate depends on the time to expiration
         #
         # Hull himself suggests using a fixed risk-free rate equal to 3%
         # Often times we use less than that like 1%, sometimes 5% or 7%
-        # should redo this method to calculate the risk free rate based on T(timeToExpiration) and the T-Bills
+        # should redo this method to calculate the risk free rate based on _T(timeToExpiration) and the _T-Bills
         return 0.01
 
     def get_entire_sorted_options_chain(self):
@@ -211,13 +226,13 @@ class Option:
 # CALLS
     # Calls = [itm_call_minus, itm_call, atm_call, otm_call, otm_call_plus]
     # Puts = [otm_put_minus, otm_put, atm_put, itm_put, itm_put_plus]
-    # strike impliedVolatility expirationDate    T   optionType
+    # strike impliedVolatility expirationDate    _T   optionType
 
     def get_atm_call_strike(self):
         return get_options_chain(self)[0][2]['strike']
 
     def get_atm_call_T(self):
-        return get_options_chain(self)[0][2]['T']
+        return get_options_chain(self)[0][2]['_T']
 
     def get_atm_call_sigma(self):
         return get_options_chain(self)[0][2]['impliedVolatility']
@@ -226,7 +241,7 @@ class Option:
         return get_options_chain(self)[0][1]['strike']
 
     def get_itm_call_T(self):
-        return get_options_chain(self)[0][1]['T']
+        return get_options_chain(self)[0][1]['_T']
 
     def get_itm_call_sigma(self):
         return get_options_chain(self)[0][1]['impliedVolatility']
@@ -235,7 +250,7 @@ class Option:
         return get_options_chain(self)[0][0]['strike']
 
     def get_itm_call_minus_T(self):
-        return get_options_chain(self)[0][0]['T']
+        return get_options_chain(self)[0][0]['_T']
 
     def get_itm_call_minus_sigma(self):
         return get_options_chain(self)[0][0]['impliedVolatility']
@@ -244,7 +259,7 @@ class Option:
         return get_options_chain(self)[0][3]['strike']
 
     def get_otm_call_T(self):
-        return get_options_chain(self)[0][3]['T']
+        return get_options_chain(self)[0][3]['_T']
 
     def get_otm_call_sigma(self):
         return get_options_chain(self)[0][3]['impliedVolatility']
@@ -253,7 +268,7 @@ class Option:
         return get_options_chain(self)[0][4]['strike']
 
     def get_otm_call_plus_T(self):
-        return get_options_chain(self)[0][4]['T']
+        return get_options_chain(self)[0][4]['_T']
 
     def get_otm_call_plus_sigma(self):
         return get_options_chain(self)[0][4]['impliedVolatility']
@@ -264,7 +279,7 @@ class Option:
         return get_options_chain(self)[1][2]['strike']
 
     def get_atm_put_T(self):
-        return get_options_chain(self)[1][2]['T']
+        return get_options_chain(self)[1][2]['_T']
 
     def get_atm_put_sigma(self):
         return get_options_chain(self)[1][2]['impliedVolatility']
@@ -273,7 +288,7 @@ class Option:
         return get_options_chain(self)[1][1]['strike']
 
     def get_otm_put_T(self):
-        return get_options_chain(self)[1][1]['T']
+        return get_options_chain(self)[1][1]['_T']
 
     def get_otm_put_sigma(self):
         return get_options_chain(self)[1][1]['impliedVolatility']
@@ -282,7 +297,7 @@ class Option:
         return get_options_chain(self)[1][0]['strike']
 
     def get_otm_put_plus_T(self):
-        return get_options_chain(self)[1][0]['T']
+        return get_options_chain(self)[1][0]['_T']
 
     def get_otm_put_plus_sigma(self):
         return get_options_chain(self)[1][0]['impliedVolatility']
@@ -291,7 +306,7 @@ class Option:
         return get_options_chain(self)[1][3]['strike']
 
     def get_itm_put_T(self):
-        return get_options_chain(self)[1][3]['T']
+        return get_options_chain(self)[1][3]['_T']
 
     def get_itm_put_sigma(self):
         return get_options_chain(self)[1][3]['impliedVolatility']
@@ -300,10 +315,12 @@ class Option:
         return get_options_chain(self)[1][4]['strike']
 
     def get_itm_put_minus_T(self):
-        return get_options_chain(self)[1][4]['T']
+        return get_options_chain(self)[1][4]['_T']
 
     def get_itm_put_minus_sigma(self):
         return get_options_chain(self)[1][4]['impliedVolatility']
+
+
 
 
 
