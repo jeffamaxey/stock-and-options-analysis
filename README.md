@@ -17,7 +17,7 @@ To run fundamental analysis simply click on the Fundamental tab on the navigatio
 
 The same procedure will be used to run Technical Analysis. Simply click the Technical tab and input the stock ticker along and select the data source to the default yahoo finance. Once analysis is clicked the technical metrics will be displayed along with a summary and interpretation of the results. A live interactive chart from Tradingview will also be displayed on the page allowing the user to select various technical indicators as well. Similar to the fundamental page the export button will download a csv file containing the technical analysis metrics.
 
-Similarly for the Valuation page simply provide the stock ticker, expiration date, option type, style, default data source,and the ITM/ATM/OTM values. Then when analize is clicked the metrics along with the calculations are displayed to the user to be interpreted.
+Similarly for the Valuation page simply provide the stock ticker, expiration date, option type, style, default data source,and the ITM/ATM/OTM values. Then when analize is clicked various financial models compute fair values for the specified option and the metrics are displayed to the user to be interepereted
 
 The profile icon at the top right of the page can be used to access the users account and make any modifications. Currently the change password button is implemented to change the user's current password.The hyperlink at the top stating “delete Account Log Out” on the top left can be used to delete the users account. The payment system and subscription services are not currently implemented.
 If a user forgets their password the forgot password option on the login page can be used to reset the user's password when a valid email is inputted.
