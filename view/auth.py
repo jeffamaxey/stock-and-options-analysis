@@ -14,6 +14,7 @@ def register(email, password1, password2=None, agreed=None, product=None):
     :param password2: The confirmation of the password
     :param agreed: Result of the checkbox whether the user agreed the term of the condition or not
     :param product: The subscription plan chosen
+    :return: True if the registration was successful, False otherwise
     """
     from view.payment import PRODUCTS
 
@@ -22,13 +23,13 @@ def register(email, password1, password2=None, agreed=None, product=None):
     elif len(email) < UserDB.MIN_EMAIL_LEN:
         flash("Email must be at least " + str(UserDB.MIN_EMAIL_LEN) + " characters.", category="Error")
     elif len(email) > UserDB.MAX_EMAIL_LEN:
-        flash("Email must be no longer than" + str(UserDB.MAX_EMAIL_LEN) + "characters.", category="Error")
+        flash("Email must be no longer than " + str(UserDB.MAX_EMAIL_LEN) + " characters.", category="Error")
     elif password2 is not None and password1 != password2:
         flash("Two passwords don't match", category="Error")
     elif len(password1) < UserDB.MIN_PASSWORD_LEN:
         flash("Password must be at least " + str(UserDB.MIN_PASSWORD_LEN) + " characters.", category="Error")
     elif len(password1) > UserDB.MAX_PASSWORD_LEN:
-        flash("Password must be no longer than" + str(UserDB.MAX_PASSWORD_LEN) + "characters.", category="Error")
+        flash("Password must be no longer than " + str(UserDB.MAX_PASSWORD_LEN) + " characters.", category="Error")
     elif agreed is not None and agreed != "on":
         flash("You must agree to the terms and conditions", category="Error")
     elif product is not None and product not in PRODUCTS:
@@ -42,6 +43,9 @@ def register(email, password1, password2=None, agreed=None, product=None):
         login_user(user, remember=True)
 
         flash("Account has been successfully created!", category="Success")
+        return True
+
+    return False
 
 
 @auth_bp.route("/login", methods=["GET", "POST"])
@@ -75,9 +79,10 @@ def sign_up():
         password2 = read_field(("repeat-password1", "repeat-password11", "repeat-password12", "repeat-password13"))
         agreed = read_field(("checkbox1", "checkbox2", "checkbox3", "checkbox4"))
 
-        register(email=email, password1=password1, password2=password2, agreed=agreed)
+        successful = register(email=email, password1=password1, password2=password2, agreed=agreed)
 
-        return redirect(url_for("payment.payment"))
+        if successful:
+            return redirect(url_for("payment.payment"))
 
     return render_template("signup-page.html", user=current_user)
 

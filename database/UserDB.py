@@ -4,9 +4,9 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 
 MIN_EMAIL_LEN = 6
-MAX_EMAIL_LEN = 150
+MAX_EMAIL_LEN = 60
 MIN_PASSWORD_LEN = 6
-MAX_PASSWORD_LEN = 150
+MAX_PASSWORD_LEN = 60
 
 _user_db = SQLAlchemy()    # database for users
 __USER_DB_PATH = "../database/user.db"
