@@ -1,3 +1,6 @@
+"""
+Author: Ramtin Mahdavifar
+"""
 from model.Stock import Stock
 import time
 

@@ -1,3 +1,6 @@
+"""
+Author: Ramtin Mahdavifar
+"""
 import json
 from urllib.request import urlopen
 from model import ValidTicker

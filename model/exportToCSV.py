@@ -1,3 +1,6 @@
+"""
+Author: Ramtin Mahdavifar
+"""
 from model import Stock, Technical
 import csv
 
