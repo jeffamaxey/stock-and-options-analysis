@@ -276,11 +276,6 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
     return analysis
 
 
-#tickerSymbol, expirationDate, optionStyle, optionType, data_source, itmAtmOtm
-#print(tickerSymbol, get_quantitative_analysis(get_expiration_date_list(), get_option_style_list(), get_option_type_list(), get_data_source_list(), get_itm_atm_otm_list()))
-
-
-
 def get_fundamental_analysis(ticker, data_source):
     """
     returns the fundamental analysis as a dictionary
@@ -399,4 +394,3 @@ def get_technical_analysis(ticker, data_source):
     }
 
     return analysis
->>>>>>> control/controller.py

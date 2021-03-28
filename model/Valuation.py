@@ -1,6 +1,6 @@
 import numpy as np
 from scipy.stats import norm
-import ValidTicker as validTicker
+import model.ValidTicker as validTicker
 import yfinance as yf
 import time
 
