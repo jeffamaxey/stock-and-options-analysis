@@ -203,7 +203,7 @@ class Valuation:
             print("Review incorrect Rho parameters")
 
     def impliedVolatility(self):
-        maxIter = 100          # computationally expensive keep maxIter low
+        maxIter = 1          # computationally expensive keep maxIter low
         precise = 1.0e-5
         for m in range(0, maxIter):
             # Root objective function

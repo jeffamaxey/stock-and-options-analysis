@@ -245,7 +245,7 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
     strike = finalDict['Strike']
 
     try:
-        valuation = Valuation(40, tickerSymbol, riskFreeRate, currentUnderlyingPrice, strike, timeToExpiration, volatility, option_type, 50)
+        valuation = Valuation(1, tickerSymbol, riskFreeRate, currentUnderlyingPrice, strike, timeToExpiration, volatility, option_type, 1)
     except RuntimeError:    # This exception is thrown when Option class parameters is invalid
         return None
 
