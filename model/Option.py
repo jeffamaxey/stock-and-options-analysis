@@ -22,7 +22,7 @@ def get_options_chain(tickerSymbol):
     # Can adjust data source after hours to get the correct expiration date using + datetime.timedelta(days = 1)
     options['expirationDate'] = pd.to_datetime(options['expirationDate'])
     # Multiplied by np.abs because I was getting a negative result for all of my _T values (Parentheses were needed to work properly)
-    options['_T'] = np.abs(((options['expirationDate'] - datetime.datetime.today()).dt.days) / (365))
+    options['T'] = np.abs(((options['expirationDate'] - datetime.datetime.today()).dt.days) / (365))
 
     # Boolean column if the option is a CALL
     options['CALL'] = options['contractSymbol'].str[4:].apply(lambda x: "C" in x)
@@ -158,19 +158,17 @@ class Option:
             self._r:          ex.0.01       -risk-free interest rate (annual rate expressed in terms of continuous compounding)
             self._s:          ex.30.0       -(SO or C) Spot price of the underlying asset (stock price)
             self._x:          ex.40.0       -(sometimes called k) market strike price of the option (Also called the Exercise Price)
-            self._T:          ex.40.0/365.0 -time until expiration out of a year 40/365 is 40 days to expiration often shown as (_T-t)
+            self.T:          ex.40.0/365.0 -time until expiration out of a year 40/365 is 40 days to expiration often shown as (_T-t)
             self._sigma:      ex.0.30       -_volatility of returns can also be known as the standard deviation of the underlying asset (or market implied volatility??)
             self._optionType: ex."Call" or "Put"
         """
 
-        # convert passed in ticker to all upper case
-        ticker = tickerSymbol.upper()
         # update ticker symbol within the class
         self.tickerSymbol = yf.Ticker(tickerSymbol)
 
         # update _ticker symbol within the class
         # if the ticker is not valid an exception is thrown
-        if not validTicker.valid_ticker(ticker):
+        if not validTicker.valid_ticker(self.tickerSymbol):
             raise RuntimeError("This is not a valid ticker symbol")
 
         #get_options_chain(self.tickerSymbol)
@@ -221,18 +219,18 @@ class Option:
 
     def get_entire_sorted_options_chain(self):
         #print(get_options_chain(self))
-        return get_options_chain(self.tickerSymbol)
+        return get_options_chain(self)
 
 # CALLS
     # Calls = [itm_call_minus, itm_call, atm_call, otm_call, otm_call_plus]
     # Puts = [otm_put_minus, otm_put, atm_put, itm_put, itm_put_plus]
-    # strike impliedVolatility expirationDate    _T   optionType
+    # strike impliedVolatility expirationDate    T   optionType
 
     def get_atm_call_strike(self):
         return get_options_chain(self)[0][2]['strike']
 
     def get_atm_call_T(self):
-        return get_options_chain(self)[0][2]['_T']
+        return get_options_chain(self)[0][2]['T']
 
     def get_atm_call_sigma(self):
         return get_options_chain(self)[0][2]['impliedVolatility']
@@ -241,7 +239,7 @@ class Option:
         return get_options_chain(self)[0][1]['strike']
 
     def get_itm_call_T(self):
-        return get_options_chain(self)[0][1]['_T']
+        return get_options_chain(self)[0][1]['T']
 
     def get_itm_call_sigma(self):
         return get_options_chain(self)[0][1]['impliedVolatility']
@@ -250,7 +248,7 @@ class Option:
         return get_options_chain(self)[0][0]['strike']
 
     def get_itm_call_minus_T(self):
-        return get_options_chain(self)[0][0]['_T']
+        return get_options_chain(self)[0][0]['T']
 
     def get_itm_call_minus_sigma(self):
         return get_options_chain(self)[0][0]['impliedVolatility']
@@ -259,7 +257,7 @@ class Option:
         return get_options_chain(self)[0][3]['strike']
 
     def get_otm_call_T(self):
-        return get_options_chain(self)[0][3]['_T']
+        return get_options_chain(self)[0][3]['T']
 
     def get_otm_call_sigma(self):
         return get_options_chain(self)[0][3]['impliedVolatility']
@@ -268,7 +266,7 @@ class Option:
         return get_options_chain(self)[0][4]['strike']
 
     def get_otm_call_plus_T(self):
-        return get_options_chain(self)[0][4]['_T']
+        return get_options_chain(self)[0][4]['T']
 
     def get_otm_call_plus_sigma(self):
         return get_options_chain(self)[0][4]['impliedVolatility']
@@ -279,7 +277,7 @@ class Option:
         return get_options_chain(self)[1][2]['strike']
 
     def get_atm_put_T(self):
-        return get_options_chain(self)[1][2]['_T']
+        return get_options_chain(self)[1][2]['T']
 
     def get_atm_put_sigma(self):
         return get_options_chain(self)[1][2]['impliedVolatility']
@@ -288,7 +286,7 @@ class Option:
         return get_options_chain(self)[1][1]['strike']
 
     def get_otm_put_T(self):
-        return get_options_chain(self)[1][1]['_T']
+        return get_options_chain(self)[1][1]['T']
 
     def get_otm_put_sigma(self):
         return get_options_chain(self)[1][1]['impliedVolatility']
@@ -297,7 +295,7 @@ class Option:
         return get_options_chain(self)[1][0]['strike']
 
     def get_otm_put_plus_T(self):
-        return get_options_chain(self)[1][0]['_T']
+        return get_options_chain(self)[1][0]['T']
 
     def get_otm_put_plus_sigma(self):
         return get_options_chain(self)[1][0]['impliedVolatility']
@@ -306,7 +304,7 @@ class Option:
         return get_options_chain(self)[1][3]['strike']
 
     def get_itm_put_T(self):
-        return get_options_chain(self)[1][3]['_T']
+        return get_options_chain(self)[1][3]['T']
 
     def get_itm_put_sigma(self):
         return get_options_chain(self)[1][3]['impliedVolatility']
@@ -315,7 +313,7 @@ class Option:
         return get_options_chain(self)[1][4]['strike']
 
     def get_itm_put_minus_T(self):
-        return get_options_chain(self)[1][4]['_T']
+        return get_options_chain(self)[1][4]['T']
 
     def get_itm_put_minus_sigma(self):
         return get_options_chain(self)[1][4]['impliedVolatility']
