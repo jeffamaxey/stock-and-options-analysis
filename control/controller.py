@@ -32,19 +32,28 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
     """
     from model.organizeOptionData import get_finalDict
     # Call Option Class
-    option = Option(tickerSymbol, expiration_date, option_style, option_type, data_source, itm_atm_otm)
+    try:
+        option = Option(tickerSymbol, expiration_date, option_style, option_type, data_source, itm_atm_otm)
+    except RuntimeError:  # This exception is thrown when the option is invalid
+        return None
+
     riskFreeRate = option.get_riskFreeRate()
-    currentUnderlyingPrice = option.get_currentPriceOfTheUnderlyingAsset()
+    currentUnderlyingPrice = round(option.get_currentPriceOfTheUnderlyingAsset(), 2)
     finalDict = get_finalDict(tickerSymbol, option_type, itm_atm_otm, expiration_date)
     timeToExpiration = finalDict['Time-to-expiration']
     volatility = finalDict['Sigma']
     strike = finalDict['Strike']
     # Call Valuation Class
-    valuation = Valuation(1, tickerSymbol, riskFreeRate, currentUnderlyingPrice, strike, timeToExpiration, volatility, option_type, 1)
+    try:
+        valuation = Valuation(1, tickerSymbol, riskFreeRate, currentUnderlyingPrice, strike, timeToExpiration, volatility, option_type, 1)
+    except RuntimeError:  # This exception is thrown when the valuation is invalid
+        return None
+
     chosenExpiration = expiration_date
-    strike = finalDict["Strike"]
-    time_to_expiration = finalDict["Time-to-expiration"]
-    sigma = finalDict["Sigma"]
+    strike = round(finalDict["Strike"], 2)
+    time_to_expiration = round(finalDict["Time-to-expiration"], 4)
+    sigma = round(finalDict["Sigma"], 2)
+
 
     analysis = {
         "variables": {"risk_free_rate_r": riskFreeRate,
