@@ -196,7 +196,7 @@ class Option:
         #self.chosenExpiration = '2023-01-20' # User Must select an expiration date immediately after selecting a _ticker
 
     def get_currentPriceOfTheUnderlyingAsset(self):
-        tickerData = yf.Ticker(self)
+        tickerData = self.tickerSymbol
         today = datetime.datetime.today().isoformat()
         # First ten characters are the actual date
         tickerDataFrame = tickerData.history(period='1d', start='2021-1-1', end=today[:10])
