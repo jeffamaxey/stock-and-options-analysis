@@ -1,3 +1,7 @@
+"""
+Author: Sahngwoo Kim
+"""
+
 from flask import Blueprint, render_template, request, redirect, url_for, flash
 from flask_login import current_user, login_required
 from view.general import read_field
@@ -31,7 +35,9 @@ def pricing_valuation():
             return redirect((url_for("pricing_valuation.pricing_valuation_result")))
 
     # values for the input fields
-    from control.controller import get_expiration_date_list, get_option_type_list, get_option_style_list, get_data_source_list, get_itm_atm_otm_list
+    from control.controller import get_expiration_date_list, get_option_type_list, get_option_style_list,\
+        get_data_source_list, get_itm_atm_otm_list
+
     expiration_date_list = get_expiration_date_list()
     option_type_list = get_option_type_list()
     option_style_list = get_option_style_list()
@@ -101,7 +107,8 @@ def pricing_valuation_result():
     # when the user entered the page without pressing the analyze button
     try:
         analysis = __pricing_valuation_data[0]
-    except IndexError: # if this exception is thrown, it means the user refreshed the result page or entered by simply typing the url
+    except IndexError: # if this exception is thrown, it means the user refreshed the result page or entered by simply
+        # typing the url
         return redirect((url_for("pricing_valuation.pricing_valuation")))
 
     # clear the list so it doesn't grow as the user analyzes multiple times
@@ -161,7 +168,7 @@ def pricing_valuation_result():
                            strike_x=variables["strike_x"],
                            time_to_maturity_T=variables["time_to_maturity_T"],
                            return_volatility=variables["return_volatility"],
-                           intrinsic_value=valuations["intrinsic_value"],
+                           intrinsic_value=variables["intrinsic_value"],
                            speculative_premium=variables["speculative_premium"],
 
                            black_scholes=valuations["black_scholes"],
