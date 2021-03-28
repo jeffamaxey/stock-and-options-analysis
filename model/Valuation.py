@@ -21,8 +21,6 @@ class Valuation:
         :thrown RuntimeError if _ticker is invalid
         # NOTE Can change all norm.pdf to norm._pdf and change all norm.cdf to ndtr() for a performance boost
         """
-        # convert passed in ticker to all upper case
-        #ticker = ticker.upper()
         # update ticker symbol within the class
         self.tickerSymbol = yf.Ticker(ticker)
 

@@ -106,10 +106,6 @@ class Option:
         self.data_source = data_source
         self.itm_atm_otm = itm_atm_otm
 
-        # convert passed in _ticker to all upper case
-        #if not validTicker.valid_ticker(tickerSymbol):
-            #raise RuntimeError("This is not a valid _ticker symbol")
-
     def get_currentPriceOfTheUnderlyingAsset(self):
         tickerData = yf.Ticker(self.tickerSymbol)
         today = datetime.datetime.today().isoformat()
@@ -141,7 +137,6 @@ class Option:
         # Expiration dates
         optionExpirations = tickerData.options
         return optionExpirations
-
 
 # CALLS
     # Calls = [itm_call_minus, itm_call, atm_call, otm_call, otm_call_plus]
