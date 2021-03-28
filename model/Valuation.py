@@ -1,5 +1,7 @@
 import numpy as np
 from scipy.stats import norm
+import ValidTicker as validTicker
+import yfinance as yf
 import time
 
 
@@ -19,6 +21,16 @@ class Valuation:
         :thrown RuntimeError if _ticker is invalid
         # NOTE Can change all norm.pdf to norm._pdf and change all norm.cdf to ndtr() for a performance boost
         """
+        # convert passed in ticker to all upper case
+        ticker = ticker.upper()
+        # update ticker symbol within the class
+        self.tickerSymbol = yf.Ticker(ticker)
+
+        # update _ticker symbol within the class
+        # if the ticker is not valid an exception is thrown
+        if not validTicker.valid_ticker(ticker):
+            raise RuntimeError("This is not a valid ticker symbol")
+
         self._N = N
         self._ticker = ticker
         self._r = r

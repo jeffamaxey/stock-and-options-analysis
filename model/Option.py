@@ -173,7 +173,7 @@ class Option:
         if not validTicker.valid_ticker(ticker):
             raise RuntimeError("This is not a valid ticker symbol")
 
-        get_options_chain(self.tickerSymbol)
+        #get_options_chain(self.tickerSymbol)
         self.expiration_date = expiration_date
         self.option_style = option_style
         self.option_type = option_type
@@ -221,7 +221,7 @@ class Option:
 
     def get_entire_sorted_options_chain(self):
         #print(get_options_chain(self))
-        return get_options_chain(self)
+        return get_options_chain(self.tickerSymbol)
 
 # CALLS
     # Calls = [itm_call_minus, itm_call, atm_call, otm_call, otm_call_plus]
