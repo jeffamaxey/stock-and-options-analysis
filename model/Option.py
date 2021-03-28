@@ -219,7 +219,7 @@ class Option:
 
     def get_entire_sorted_options_chain(self):
         #print(get_options_chain(self))
-        return get_options_chain(self)
+        return get_options_chain(self.tickerSymbol)
 
 # CALLS
     # Calls = [itm_call_minus, itm_call, atm_call, otm_call, otm_call_plus]
