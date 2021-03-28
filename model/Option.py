@@ -162,14 +162,14 @@ class Option:
             self._sigma:      ex.0.30       -_volatility of returns can also be known as the standard deviation of the underlying asset (or market implied volatility??)
             self._optionType: ex."Call" or "Put"
         """
+        if not validTicker.valid_ticker(tickerSymbol):
+            raise RuntimeError("This is not a valid ticker symbol")
 
         # update ticker symbol within the class
         self.tickerSymbol = yf.Ticker(tickerSymbol)
 
         # update _ticker symbol within the class
         # if the ticker is not valid an exception is thrown
-        if not validTicker.valid_ticker(self.tickerSymbol):
-            raise RuntimeError("This is not a valid ticker symbol")
 
         #get_options_chain(self.tickerSymbol)
         self.expiration_date = expiration_date
