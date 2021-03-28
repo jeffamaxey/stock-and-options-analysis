@@ -55,15 +55,8 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
     finalDict = {}
     riskFreeRate = option.get_riskFreeRate()
     currentUnderlyingPrice = option.get_currentPriceOfTheUnderlyingAsset()
-    timeToExpiration = finalDict['Time-to-expiration']
-    volatility = finalDict['Sigma']
-    strike = finalDict['Strike']
     available_expirations = get_expiration_date_list()
 
-    try:
-        valuation = Valuation(40, tickerSymbol, riskFreeRate, currentUnderlyingPrice, strike, timeToExpiration, volatility, option_type, 50)
-    except RuntimeError:    # This exception is thrown when Option class parameters is invalid
-        return None
 
     # USER SELECTS PUT or CALL, USER SELECTS EXPIRATION, USER SELECTS ITMATMOTM
     # Once user selects expiration it narrows down the potential fields to five different itm_atm_otm = ['itm+1', 'itm', 'atm', 'otm', 'otm+1']
@@ -247,6 +240,15 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
 
     elif option_type == "Put":
         finalDict = DictPuts[expiration_date][itm_atm_otm]
+
+    timeToExpiration = finalDict['Time-to-expiration']
+    volatility = finalDict['Sigma']
+    strike = finalDict['Strike']
+
+    try:
+        valuation = Valuation(40, tickerSymbol, riskFreeRate, currentUnderlyingPrice, strike, timeToExpiration, volatility, option_type, 50)
+    except RuntimeError:    # This exception is thrown when Option class parameters is invalid
+        return None
 
     chosenExpiration = expiration_date
     strikeMatchChosenExpiration = finalDict["Strike"]
