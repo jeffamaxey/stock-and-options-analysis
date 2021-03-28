@@ -191,7 +191,9 @@
         <div class="analysis-output-summary-C61RwL">
           <div class="summary-box-xGbJnA border-1px-dove-gray">
             <div class="automatically-s-e-60-and-adx-25-UWluB0 montserrat-semi-bold-black-19px">
-              {{ summary }}
+              {% autoescape false %}
+                {{ summary | replace('\n', '<br>')}}
+              {% endautoescape %}
             </div>
           </div>
         </div>
@@ -427,7 +429,9 @@
         <div class="analysis-output-summary-C61RwL">
           <div class="summary-box-xGbJnA border-1px-dove-gray">
             <div class="automatically-s-e-60-and-adx-25-UWluB0 montserrat-semi-bold-black-12px">
-              {{ summary }}
+              {% autoescape false %}
+                {{ summary | replace('\n', '<br>')}}
+              {% endautoescape %}
             </div>
           </div>
         </div>
@@ -578,7 +582,9 @@
         <div class="analysis-output-summary-C61RwL">
           <div class="summary-box-xGbJnA border-1px-dove-gray">
             <div class="automatically-s-e-60-and-adx-25-UWluB0 montserrat-semi-bold-black-10px">
-              {{ summary }}
+              {% autoescape false %}
+                {{ summary | replace('\n', '<br>')}}
+              {% endautoescape %}
             </div>
           </div>
         </div>
@@ -680,7 +686,9 @@
         <div class="analysis-output-summary-C61RwL">
           <div class="summary-box-xGbJnA border-1px-dove-gray">
             <div class="automatically-s-e-60-and-adx-25-UWluB0">
-              {{ summary }}
+              {% autoescape false %}
+                {{ summary | replace('\n', '<br>')}}
+              {% endautoescape %}
             </div>
           </div>
         </div>
