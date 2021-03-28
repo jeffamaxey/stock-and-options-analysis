@@ -157,6 +157,13 @@ class Technical:
         """
         return self._Momentum_Breakout_Bands
 
+    def get_exchange(self):
+        """
+        Gets the exchange of a stock
+        :return exchange of a stock as a string
+        """
+        return validTicker.get_exchange(self.ticker)
+
     def to_string_summary(self):
         """
         Get a string representation of the technicals analysis which provides a small summary of details

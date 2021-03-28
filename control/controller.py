@@ -191,6 +191,7 @@ def get_technical_analysis(ticker, data_source):
 
     analysis = {"tech_details": {
         "ticker": stock.get_stock_ticker(),
+        "exchange": technical.get_exchange(),
         "RSI": technical.get_rsi(),
         "MACD": technical.get_macd(),
         "MRI": technical.get_momentum_breakout_bands(),
