@@ -13,24 +13,24 @@ def main():
     print("Time to retrieve AAPL stock data in seconds = " + str(t2 - t1))
     # testing if all the values retrieved are equivalent to the ratios in financial statements of apple
     # all these numbers are gotten from sec.gov where one can view the papers of public financial statements
-    if stock1.get_priceFairValueTTM() != 30.84:
-        print("Error: AAPL stock get_priceFairValueTTM() method is incorrect and does not equal 30.84 as shown in sec.gov, "
+    if stock1.get_priceFairValueTTM() != 31.0:
+        print("Error: AAPL stock get_priceFairValueTTM() method is incorrect and does not equal 31.0 as shown in sec.gov, "
               "current value is " + str(stock1.get_priceFairValueTTM()))
 
     if stock1.get_debtEquityRatioTTM() != 4.35:
         print("Error: AAPL stock get_debtEquityRatioTTM() method is incorrect and does not equal 4.35 as shown in sec.gov, "
               "current value is " + str(stock1.get_debtEquityRatioTTM()))
 
-    if stock1.get_priceToBookRatioTTM() != 30.84:
-        print("Error: AAPL stock get_priceToBookRatioTTM() method is incorrect and does not equal 30.84 as shown in sec.gov, "
+    if stock1.get_priceToBookRatioTTM() != 31.0:
+        print("Error: AAPL stock get_priceToBookRatioTTM() method is incorrect and does not equal 31.0 as shown in sec.gov, "
               "current value is " + str(stock1.get_priceToBookRatioTTM()))
 
     if stock1.get_returnOnEquityTTM() != 0.91:
         print("Error: AAPL stock get_returnOnEquityTTM() method is incorrect and does not equal 0.91 as shown in sec.gov, "
               "current value is " + str(stock1.get_returnOnEquityTTM()))
 
-    if stock1.get_priceEarningsToGrowthRatioTTM() != 3.01:
-        print("Error: AAPL stock get_priceEarningsToGrowthRatioTTM() method is incorrect and does not equal 3.01 as shown in sec.gov, "
+    if stock1.get_priceEarningsToGrowthRatioTTM() != 3.03:
+        print("Error: AAPL stock get_priceEarningsToGrowthRatioTTM() method is incorrect and does not equal 3.03 as shown in sec.gov, "
               "current value is " + str(stock1.get_priceEarningsToGrowthRatioTTM()))
 
     if stock1.get_returnOnAssetsTTM() != 0.18:
@@ -56,24 +56,24 @@ def main():
     # end timer for execution
     t2 = time.time()
     print("Time to retrieve PRTS stock data in seconds = " + str(t2 - t1))
-    if stock1.get_priceFairValueTTM() != 7.67:
-        print("Error: PRTS stock get_priceFairValueTTM() method is incorrect and does not equal 7.67 as shown in sec.gov, "
+    if stock1.get_priceFairValueTTM() != 7.55:
+        print("Error: PRTS stock get_priceFairValueTTM() method is incorrect and does not equal 7.55 as shown in sec.gov, "
               "current value is " + str(stock1.get_priceFairValueTTM()))
 
     if stock1.get_debtEquityRatioTTM() != 1.24:
         print("Error: PRTS stock get_debtEquityRatioTTM() method is incorrect and does not equal 1.24 as shown in sec.gov, "
               "current value is " + str(stock1.get_debtEquityRatioTTM()))
 
-    if stock1.get_priceToBookRatioTTM() != 7.67:
-        print("Error: PRTS stock get_priceToBookRatioTTM() method is incorrect and does not equal 7.67 as shown in sec.gov, "
+    if stock1.get_priceToBookRatioTTM() != 7.55:
+        print("Error: PRTS stock get_priceToBookRatioTTM() method is incorrect and does not equal 7.55 as shown in sec.gov, "
               "current value is " + str(stock1.get_priceToBookRatioTTM()))
 
     if stock1.get_returnOnEquityTTM() != 0.01:
         print("Error: PRTS stock get_returnOnEquityTTM() method is incorrect and does not equal 0.01 as shown in sec.gov, "
               "current value is " + str(stock1.get_returnOnEquityTTM()))
 
-    if stock1.get_priceEarningsToGrowthRatioTTM() != -14.45:
-        print("Error: PRTS stock get_priceEarningsToGrowthRatioTTM() method is incorrect and does not equal -14.45 as shown in sec.gov, "
+    if stock1.get_priceEarningsToGrowthRatioTTM() != 14.22:
+        print("Error: PRTS stock get_priceEarningsToGrowthRatioTTM() method is incorrect and does not equal 14.22 as shown in sec.gov, "
               "current value is " + str(stock1.get_priceEarningsToGrowthRatioTTM()))
 
     if stock1.get_returnOnAssetsTTM() != 0.0:
@@ -99,26 +99,26 @@ def main():
     # end timer for execution
     t2 = time.time()
     print("Time to retrieve CCMP stock data in seconds = " + str(t2 - t1))
-    if stock1.get_priceFairValueTTM() != 4.41:
-        print("Error: CCMP stock get_priceFairValueTTM() method is incorrect and does not equal 4.41 as shown in sec.gov, "
+    if stock1.get_priceFairValueTTM() != 4.66:
+        print("Error: CCMP stock get_priceFairValueTTM() method is incorrect and does not equal 4.66 as shown in sec.gov, "
               "current value is " + str(stock1.get_priceFairValueTTM()))
 
     if stock1.get_debtEquityRatioTTM() != 1.16:
         print("Error: CCMP stock get_debtEquityRatioTTM() method is incorrect and does not equal 1.16 as shown in sec.gov, "
               "current value is " + str(stock1.get_debtEquityRatioTTM()))
 
-    if stock1.get_priceToBookRatioTTM() != 4.41:
+    if stock1.get_priceToBookRatioTTM() != 4.66:
         print(
-            "Error: CCMP stock get_priceToBookRatioTTM() method is incorrect and does not equal 4.41 as shown in sec.gov, "
+            "Error: CCMP stock get_priceToBookRatioTTM() method is incorrect and does not equal 4.66 as shown in sec.gov, "
             "current value is " + str(stock1.get_priceToBookRatioTTM()))
 
     if stock1.get_returnOnEquityTTM() != 0.13:
         print("Error: CCMP stock get_returnOnEquityTTM() method is incorrect and does not equal 0.13 as shown in sec.gov, "
               "current value is " + str(stock1.get_returnOnEquityTTM()))
 
-    if stock1.get_priceEarningsToGrowthRatioTTM() != 0.14:
+    if stock1.get_priceEarningsToGrowthRatioTTM() != 0.15:
         print(
-            "Error: CCMP stock get_priceEarningsToGrowthRatioTTM() method is incorrect and does not equal 0.14 as shown in sec.gov, "
+            "Error: CCMP stock get_priceEarningsToGrowthRatioTTM() method is incorrect and does not equal 0.15 as shown in sec.gov, "
             "current value is " + str(stock1.get_priceEarningsToGrowthRatioTTM()))
 
     if stock1.get_returnOnAssetsTTM() != 0.06:
