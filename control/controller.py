@@ -38,7 +38,7 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
         return None
 
     riskFreeRate = option.get_riskFreeRate()
-    currentUnderlyingPrice = option.get_currentPriceOfTheUnderlyingAsset()
+    currentUnderlyingPrice = round(option.get_currentPriceOfTheUnderlyingAsset(), 2)
     finalDict = get_finalDict(tickerSymbol, option_type, itm_atm_otm, expiration_date)
     timeToExpiration = finalDict['Time-to-expiration']
     volatility = finalDict['Sigma']
@@ -50,9 +50,10 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
         return None
 
     chosenExpiration = expiration_date
-    strike = finalDict["Strike"]
-    time_to_expiration = finalDict["Time-to-expiration"]
-    sigma = finalDict["Sigma"]
+    strike = round(finalDict["Strike"], 2)
+    time_to_expiration = round(finalDict["Time-to-expiration"], 4)
+    sigma = round(finalDict["Sigma"], 2)
+
 
     analysis = {
         "variables": {"risk_free_rate_r": riskFreeRate,

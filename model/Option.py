@@ -1,7 +1,7 @@
 import yfinance as yf
 import datetime
 from model import ValidTicker as validTicker
-from model.organizeOptionData import get_finalDict
+#from model.organizeOptionData import get_finalDict
 #import pandas as pd
 #import numpy as np
 
@@ -31,7 +31,7 @@ class Option:
         self.itm_atm_otm = itm_atm_otm
 
         #Call the organized final dictionary of the data
-        get_finalDict(self.tickerSymbol, self.option_type, self.itm_atm_otm, self.expiration_date)
+        #get_finalDict(self.tickerSymbol, self.option_type, self.itm_atm_otm, self.expiration_date)
 
     def get_currentPriceOfTheUnderlyingAsset(self):
         tickerData = yf.Ticker(self.tickerSymbol)
@@ -50,14 +50,10 @@ class Option:
         # as the US _T-Bill for North America option market
         # the rate depends on the time to expiration
         #
-        # Hull himself suggests using a fixed risk-free rate equal to 3%
+        # Hull suggests using a fixed risk-free rate equal to 3%
         # Often times we use less than that like 1%, sometimes 5% or 7%
         # should redo this method to calculate the risk free rate based on _T(timeToExpiration) and the _T-Bills
         return 0.01
-
-    #def get_entire_sorted_options_chain(self):
-    #print(get_options_chain(self))
-    #return organizeOptionData.get_options_chain(self)
 
     def get_expirations(self):
         tickerData = yf.Ticker(self)
