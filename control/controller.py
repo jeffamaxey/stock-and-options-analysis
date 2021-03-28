@@ -51,7 +51,7 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
     option = Option(tickerSymbol, expiration_date, option_style, option_type, data_source, itm_atm_otm)
     riskFreeRate = option.get_riskFreeRate()
     currentUnderlyingPrice = option.get_currentPriceOfTheUnderlyingAsset()
-    finalDict = get_finalDict(tickerSymbol, option_type, itm_atm_otm)
+    finalDict = get_finalDict(tickerSymbol, option_type, itm_atm_otm, expiration_date)
     timeToExpiration = finalDict['Time-to-expiration']
     volatility = finalDict['Sigma']
     strike = finalDict['Strike']
@@ -206,5 +206,3 @@ def get_technical_analysis(ticker, data_source):
     }
 
     return analysis
-
-#print(get_quantitative_analysis('TSLA', '2021-07-16', 'American', 'Call', 'Yahoo', 'atm'))

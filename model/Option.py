@@ -18,7 +18,7 @@ class Option:
             self.itm_atm_otm:      ex.'atm'         -itm+1, itm, atm, otm, otm+1
         """
         #if not validTicker.valid_ticker(tickerSymbol):
-            #raise RuntimeError("This is not a valid ticker symbol")
+        #raise RuntimeError("This is not a valid ticker symbol")
 
         # update ticker symbol within the class
         self.tickerSymbol = tickerSymbol
@@ -31,7 +31,7 @@ class Option:
         self.itm_atm_otm = itm_atm_otm
 
         #Call the organized final dictionary of the data
-        get_finalDict(self.tickerSymbol, self.option_type, self.itm_atm_otm)
+        get_finalDict(self.tickerSymbol, self.option_type, self.itm_atm_otm, self.expiration_date)
 
     def get_currentPriceOfTheUnderlyingAsset(self):
         tickerData = yf.Ticker(self.tickerSymbol)
@@ -56,8 +56,8 @@ class Option:
         return 0.01
 
     #def get_entire_sorted_options_chain(self):
-        #print(get_options_chain(self))
-        #return organizeOptionData.get_options_chain(self)
+    #print(get_options_chain(self))
+    #return organizeOptionData.get_options_chain(self)
 
     def get_expirations(self):
         tickerData = yf.Ticker(self)

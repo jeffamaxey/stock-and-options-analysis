@@ -4,7 +4,7 @@ import yfinance as yf
 import datetime
 
 
-def get_options_chain(tickerSymbol):
+def get_options_chain(tickerSymbol, expiration_date):
     tickerData = yf.Ticker(tickerSymbol)
     # Expiration dates
     optionExpirations = tickerData.options
@@ -55,7 +55,7 @@ def get_options_chain(tickerSymbol):
     #Search for the dictionary of the strike price closest to the market price
     def find_atm_call(options_record, key, value):
         for i, dic in enumerate(options_record):
-            if dic[key] == value and dic['CALL'] is True: # and dic['expirationDate'] == controller.get_chosen_expiration_date
+            if dic[key] == value and dic['CALL'] is True and dic['expirationDate'] == expiration_date:
                 return i
     ATM = 40 #find_atm_call(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     atm_call = options_record[ATM]
@@ -67,7 +67,7 @@ def get_options_chain(tickerSymbol):
     #Search for target Puts
     def find_atm_put(options_record, key, value):
         for i, dic in enumerate(options_record):
-            if dic[key] == value and dic['CALL'] is False: # and dic['expirationDate'] == controller.get_chosen_expiration_date
+            if dic[key] == value and dic['CALL'] is False and dic['expirationDate'] == expiration_date:
                 return i
     ATM_put = 42 #find_atm_put(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     atm_put = options_record[ATM_put]
@@ -81,7 +81,7 @@ def get_options_chain(tickerSymbol):
     return Calls, Puts
 
 
-def get_finalDict(ticker_symbol, option_type, itm_atm_otm):
+def get_finalDict(ticker_symbol, option_type, itm_atm_otm, expiration_date):
     # instead of ticker_symbol it was working with (self) before
     # USER SELECTS PUT or CALL, USER SELECTS EXPIRATION, USER SELECTS ITMATMOTM
     # Once user selects expiration it narrows down the potential fields to five different itm_atm_otm = ['itm+1', 'itm', 'atm', 'otm', 'otm+1']
@@ -92,27 +92,27 @@ def get_finalDict(ticker_symbol, option_type, itm_atm_otm):
     finalDict = {}
     if option_type == 'Call':
         if itm_atm_otm == 'itm+1':
-            finalDict = {'Strike': get_options_chain(ticker_symbol)[0][0]['strike'], "Time-to-expiration": get_options_chain(ticker_symbol)[0][0]['T'], "Sigma": get_options_chain(ticker_symbol)[0][0]['impliedVolatility'], 'OptionType': 'Call'}
+            finalDict = {'Strike': get_options_chain(ticker_symbol, expiration_date)[0][0]['strike'], "Time-to-expiration": get_options_chain(ticker_symbol, expiration_date)[0][0]['T'], "Sigma": get_options_chain(ticker_symbol, expiration_date)[0][0]['impliedVolatility'], 'OptionType': 'Call'}
         elif itm_atm_otm == 'itm':
-            finalDict = {'Strike': get_options_chain(ticker_symbol)[0][1]['strike'], "Time-to-expiration": get_options_chain(ticker_symbol)[0][1]['T'], "Sigma": get_options_chain(ticker_symbol)[0][1]['impliedVolatility'], 'OptionType': 'Call'}
+            finalDict = {'Strike': get_options_chain(ticker_symbol, expiration_date)[0][1]['strike'], "Time-to-expiration": get_options_chain(ticker_symbol, expiration_date)[0][1]['T'], "Sigma": get_options_chain(ticker_symbol, expiration_date)[0][1]['impliedVolatility'], 'OptionType': 'Call'}
         elif itm_atm_otm == 'atm':
-            finalDict = {'Strike': get_options_chain(ticker_symbol)[0][2]['strike'], "Time-to-expiration": get_options_chain(ticker_symbol)[0][2]['T'], "Sigma": get_options_chain(ticker_symbol)[0][2]['impliedVolatility'], 'OptionType': 'Call'}
+            finalDict = {'Strike': get_options_chain(ticker_symbol, expiration_date)[0][2]['strike'], "Time-to-expiration": get_options_chain(ticker_symbol, expiration_date)[0][2]['T'], "Sigma": get_options_chain(ticker_symbol, expiration_date)[0][2]['impliedVolatility'], 'OptionType': 'Call'}
         elif itm_atm_otm == 'otm':
-            finalDict = {'Strike': get_options_chain(ticker_symbol)[0][3]['strike'], "Time-to-expiration": get_options_chain(ticker_symbol)[0][3]['T'], "Sigma": get_options_chain(ticker_symbol)[0][3]['impliedVolatility'], 'OptionType': 'Call'}
+            finalDict = {'Strike': get_options_chain(ticker_symbol, expiration_date)[0][3]['strike'], "Time-to-expiration": get_options_chain(ticker_symbol, expiration_date)[0][3]['T'], "Sigma": get_options_chain(ticker_symbol, expiration_date)[0][3]['impliedVolatility'], 'OptionType': 'Call'}
         elif itm_atm_otm == 'otm+1':
-            finalDict = {'Strike': get_options_chain(ticker_symbol)[0][4]['strike'], "Time-to-expiration": get_options_chain(ticker_symbol)[0][4]['T'], "Sigma": get_options_chain(ticker_symbol)[0][4]['impliedVolatility'], 'OptionType': 'Call'}
+            finalDict = {'Strike': get_options_chain(ticker_symbol, expiration_date)[0][4]['strike'], "Time-to-expiration": get_options_chain(ticker_symbol, expiration_date)[0][4]['T'], "Sigma": get_options_chain(ticker_symbol, expiration_date)[0][4]['impliedVolatility'], 'OptionType': 'Call'}
 
     elif ticker_symbol.option_type == "Put":
         if itm_atm_otm == 'itm+1':
-            finalDict = {'Strike': get_options_chain(ticker_symbol)[1][4]['strike'], "Time-to-expiration": get_options_chain(ticker_symbol)[1][4]['T'], "Sigma": get_options_chain(ticker_symbol)[1][4]['impliedVolatility'], 'OptionType': 'Put'}
+            finalDict = {'Strike': get_options_chain(ticker_symbol, expiration_date)[1][4]['strike'], "Time-to-expiration": get_options_chain(ticker_symbol, expiration_date)[1][4]['T'], "Sigma": get_options_chain(ticker_symbol, expiration_date)[1][4]['impliedVolatility'], 'OptionType': 'Put'}
         elif itm_atm_otm == 'itm':
-            finalDict = {'Strike': get_options_chain(ticker_symbol)[1][3]['strike'], "Time-to-expiration": get_options_chain(ticker_symbol)[1][3]['T'], "Sigma": get_options_chain(ticker_symbol)[1][3]['impliedVolatility'], 'OptionType': 'Put'}
+            finalDict = {'Strike': get_options_chain(ticker_symbol, expiration_date)[1][3]['strike'], "Time-to-expiration": get_options_chain(ticker_symbol, expiration_date)[1][3]['T'], "Sigma": get_options_chain(ticker_symbol, expiration_date)[1][3]['impliedVolatility'], 'OptionType': 'Put'}
         elif itm_atm_otm == 'atm':
-            finalDict = {'Strike': get_options_chain(ticker_symbol)[1][2]['strike'], "Time-to-expiration": get_options_chain(ticker_symbol)[1][2]['T'], "Sigma": get_options_chain(ticker_symbol)[1][2]['impliedVolatility'], 'OptionType': 'Put'}
+            finalDict = {'Strike': get_options_chain(ticker_symbol, expiration_date)[1][2]['strike'], "Time-to-expiration": get_options_chain(ticker_symbol, expiration_date)[1][2]['T'], "Sigma": get_options_chain(ticker_symbol, expiration_date)[1][2]['impliedVolatility'], 'OptionType': 'Put'}
         elif itm_atm_otm == 'otm':
-            finalDict = {'Strike': get_options_chain(ticker_symbol)[1][1]['strike'], "Time-to-expiration": get_options_chain(ticker_symbol)[1][1]['T'], "Sigma": get_options_chain(ticker_symbol)[1][1]['impliedVolatility'], 'OptionType': 'Put'}
+            finalDict = {'Strike': get_options_chain(ticker_symbol, expiration_date)[1][1]['strike'], "Time-to-expiration": get_options_chain(ticker_symbol, expiration_date)[1][1]['T'], "Sigma": get_options_chain(ticker_symbol, expiration_date)[1][1]['impliedVolatility'], 'OptionType': 'Put'}
         elif itm_atm_otm == 'otm+1':
-            finalDict = {'Strike': get_options_chain(ticker_symbol)[1][0]['strike'], "Time-to-expiration": get_options_chain(ticker_symbol)[1][0]['T'], "Sigma": get_options_chain(ticker_symbol)[1][0]['impliedVolatility'], 'OptionType': 'Put'}
+            finalDict = {'Strike': get_options_chain(ticker_symbol, expiration_date)[1][0]['strike'], "Time-to-expiration": get_options_chain(ticker_symbol, expiration_date)[1][0]['T'], "Sigma": get_options_chain(ticker_symbol, expiration_date)[1][0]['impliedVolatility'], 'OptionType': 'Put'}
 
     timeToExpiration = finalDict['Time-to-expiration']
     volatility = finalDict['Sigma']
@@ -120,4 +120,5 @@ def get_finalDict(ticker_symbol, option_type, itm_atm_otm):
 
     return finalDict
 
-print(get_finalDict('TSLA', 'Call', 'atm'))
+
+print(get_finalDict('TSLA', 'Call', 'atm', '2022-06-17'))
