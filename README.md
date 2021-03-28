@@ -7,6 +7,6 @@
 - Just visit the following address: http://172.105.111.35:8080
 
 **For developers:**
-- It is also possible to run the website in your local machine for development purpose.
+- It is also possible to run the website privately in your local machine for development purpose.
 - To install the required libraries for the program, just simply use the following BASH command: pip install -r requirements.txt
 - Then, run main.py and click the printed local address in the console to use the website
