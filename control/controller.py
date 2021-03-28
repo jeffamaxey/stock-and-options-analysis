@@ -30,7 +30,7 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
     """
     returns the quantitative analysis 'outputs' as a dictionary
     """
-    from model.organizeOptionData import get_finalDict
+    from model.OptionData import get_finalDict
     # Call Option Class
     try:
         option = Option(tickerSymbol, expiration_date, option_style, option_type, data_source, itm_atm_otm)
@@ -51,30 +51,29 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
 
     chosenExpiration = expiration_date
     strike = round(finalDict["Strike"], 2)
-    time_to_expiration = round(finalDict["Time-to-expiration"], 4)
-    sigma = round(finalDict["Sigma"], 2)
-
+    time_to_expiration = round(finalDict["Time-to-expiration"], 5)
+    sigma = round(finalDict["Sigma"], 5)
 
     analysis = {
-        "variables": {"risk_free_rate_r": riskFreeRate,
+        "variables": {"risk_free_rate_r": round(riskFreeRate, 2),
                       "underlying_s": currentUnderlyingPrice,
                       "chosen_expiration": chosenExpiration,
                       "strike_x": strike,
                       "time_to_maturity_T": time_to_expiration,
                       "return_volatility": sigma,
-                      "intrinsic_value": valuation.intrinsicValue(),
-                      "speculative_premium": valuation.speculativePremium()},
-        "valuations": {"black_scholes": valuation.blackScholes(),
-                       "binomial": valuation.binomialModel(),
-                       "average_price": valuation.monteCarloSimulation(),
+                      "intrinsic_value": round(valuation.intrinsicValue(), 2),
+                      "speculative_premium": round(valuation.speculativePremium(), 2)},
+        "valuations": {"black_scholes": round(valuation.blackScholes(), 2),
+                       "binomial": round(valuation.binomialModel(), 2),
+                       "average_price": round(valuation.monteCarloSimulation(), 2),
                        "market_price": strike,
                        "implied_volatility": sigma},  #valuation.impliedVolatility()},
-        "the_greeks": {"delta": valuation.delta(),
-                       "gamma": valuation.gamma(),
-                       "theta": valuation.theta(),
-                       "vega": valuation.vega(),
-                       "rho": valuation.rho(),
-                       "charm": valuation.charm()}, }
+        "the_greeks": {"delta": round(valuation.delta(), 5),
+                       "gamma": round(valuation.gamma(), 5),
+                       "theta": round(valuation.theta(), 5),
+                       "vega": round(valuation.vega(), 5),
+                       "rho": round(valuation.rho(), 5),
+                       "charm": round(valuation.charm(), 5)}, }
 
     return analysis
 
