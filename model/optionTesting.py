@@ -6,8 +6,8 @@ tickerSymbol = "TSLA"
 # Print the sorted options chain
 # Print calls in ascending order of strike price
 # Print puts in ascending order of strike price
-#print("Expirations: \n", Option.get_expirations(tickerSymbol))
-#print(Option.get_entire_sorted_options_chain(tickerSymbol))
+print("Expirations: \n", Option.get_expirations(tickerSymbol))
+print(Option.get_entire_sorted_options_chain(tickerSymbol))
 print("Price of the Underlying Asset: ", Option.get_currentPriceOfTheUnderlyingAsset(tickerSymbol))
 print("Risk-Free Rate: ", Option.get_riskFreeRate(tickerSymbol))
 

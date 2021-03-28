@@ -38,20 +38,9 @@ def get_options_chain(tickerSymbol):
     tickerDataFrame = tickerData.history(period='5d', start='2021-1-1', end=today[:10])
     currentPriceOfUnderlyingAsset = tickerDataFrame['Close'].iloc[-1]
 
-    # orient: String value, (‘dict’, ‘list’, ‘series’, ‘split’, ‘records’, ‘index’) Defines which dtype to convert Columns(series into).
-    # For example, ‘list’ would return a dictionary of lists with Key=Column name and Value=List (Converted series).
-    # into: class, can pass an actual class or instance. For example in case of defaultdict instance of class can be passed.
-    # Default value of this parameter is dict.
-    # dropping null value columns to avoid errors
+    # dropping null value columns to avoid errors, converting data frame to dictionary record
     options.dropna(inplace=True)
     options_record = options.to_dict(orient='records')
-
-    ########################################################################
-    #user clicks expiration than the ITMATMOTM shows (5 market prices) the 2 closest ITM and 2 closest OTM Strike Prices as well as ATM price
-    #we need to find the record first based on the expiration and second based on the closest Strike prices to the current asset price
-    #Each expiration will be the ID, each expiration will have 2-ITM 1-ATM 2-OTM strike prices associated with it
-    ########################################################################
-    #strike impliedVolatility expirationDate    _T   optionType
 
     # TRYING TO ADJUST YFINANCE INTERPRETATION OF (ITM ATM OTM)
     # (ITM Call) if the currentPriceOfTheUnderlyingAsset > Strike Price of the call option
@@ -60,7 +49,6 @@ def get_options_chain(tickerSymbol):
     # (OTM Put) if the Put strike price is < the current price of the underlying asset
     # (ATM Put) if the currentPriceOfTheUnderlyingAsset = Strike Price of the option
     # (ITM Put) if the currentPriceOfTheUnderlyingAsset < Strike Price of the put option
-    # ALLOW THEM TO SELECT A STRIKE PRICE
 
     #####
     #####NEED TO UPDATE THESE SO if dic[key]==value and dic['CALL'] == True and dic['expirationDate'] == self.chosenExpiration
@@ -68,82 +56,26 @@ def get_options_chain(tickerSymbol):
     #Search for the dictionary of the strike price closest to the market price
     def find_atm_call(options_record, key, value):
         for i, dic in enumerate(options_record):
-            if dic[key] == value and dic['CALL'] == True: # and dic['expirationDate'] == controller.expiration_date:
+            if dic[key] == value and dic['CALL'] is True: # and dic['expirationDate'] == controller.expiration_date:
                 return i
     ATM = 40 #find_atm_call(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     atm_call = options_record[ATM]
-
-    #Search for the dictionary of the strike price closest to the market price index + 1
-    def find_otm_call(options_record, key, value):
-        for i, dic in enumerate(options_record):
-            if dic[key] == value and dic['CALL'] == True:
-                return i
-    ATM = 40 #find_otm_call(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     otm_call = options_record[ATM+1]
-
-    #Search for the dictionary of the strike price closest to the market price index + 2
-    def find_otm_call_plus(options_record, key, value):
-        for i, dic in enumerate(options_record):
-            if dic[key] == value and dic['CALL'] == True:
-                return i
-    ATM = 40 #find_otm_call_plus(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     otm_call_plus = options_record[ATM+2]
-
-    #Search for the dictionary of the strike price closest to the market price index - 1
-    def find_itm_call(options_record, key, value):
-        for i, dic in enumerate(options_record):
-            if dic[key] == value and dic['CALL'] == True:
-                return i
-    ATM = 40 #find_itm_call(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     itm_call = options_record[ATM-1]
-
-    #Search for the dictionary of the strike price closest to the market price index - 2
-    def find_itm_call_minus(options_record, key, value):
-        for i, dic in enumerate(options_record):
-            if dic[key] == value and dic['CALL'] == True:
-                return i
-    ATM = 40 #find_itm_call_minus(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     itm_call_minus = options_record[ATM-2]
 
     #Search for target Puts
     def find_atm_put(options_record, key, value):
         for i, dic in enumerate(options_record):
-            if dic[key] == value and dic['CALL'] == False:
+            if dic[key] == value and dic['CALL'] is False:
                 return i
-    ATM = 42 #find_atm_put(options_record, "strike", int(currentPriceOfUnderlyingAsset))
-    atm_put = options_record[ATM]
-
-    #Search for the dictionary of the strike price closest to the market price index + 1
-    def find_itm_put(options_record, key, value):
-        for i, dic in enumerate(options_record):
-            if dic[key] == value and dic['CALL'] == False:
-                return i
-    ATM = 42 #find_itm_put(options_record, "strike", int(currentPriceOfUnderlyingAsset))
-    itm_put = options_record[ATM+1]
-
-    #Search for the dictionary of the strike price closest to the market price index + 2
-    def find_itm_put_plus(options_record, key, value):
-        for i, dic in enumerate(options_record):
-            if dic[key] == value and dic['CALL'] == False:
-                return i
-    ATM = 42 #find_itm_put_plus(options_record, "strike", int(currentPriceOfUnderlyingAsset))
-    itm_put_plus = options_record[ATM+2]
-
-    #Search for the dictionary of the strike price closest to the market price index - 1
-    def find_otm_put(options_record, key, value):
-        for i, dic in enumerate(options_record):
-            if dic[key] == value and dic['CALL'] == False:
-                return i
-    ATM = 42 #find_otm_put(options_record, "strike", int(currentPriceOfUnderlyingAsset))
-    otm_put = options_record[ATM-1]
-
-    #Search for the dictionary of the strike price closest to the market price index - 2
-    def find_otm_put_minus(options_record, key, value):
-        for i, dic in enumerate(options_record):
-            if dic[key] == value and dic['CALL'] == False:
-                return i
-    ATM = 42 #find_otm_put_minus(options_record, "strike", int(currentPriceOfUnderlyingAsset))
-    otm_put_minus = options_record[ATM-2]
+    ATM_put = 42 #find_atm_put(options_record, "strike", int(currentPriceOfUnderlyingAsset))
+    atm_put = options_record[ATM_put]
+    itm_put = options_record[ATM_put+1]
+    itm_put_plus = options_record[ATM_put+2]
+    otm_put = options_record[ATM_put-1]
+    otm_put_minus = options_record[ATM_put-2]
 
     Calls = [itm_call_minus, itm_call, atm_call, otm_call, otm_call_plus]
     Puts = [otm_put_minus, otm_put, atm_put, itm_put, itm_put_plus]
@@ -154,22 +86,18 @@ class Option:
     def __init__(self, tickerSymbol, expiration_date, option_style, option_type, data_source, itm_atm_otm):
         """
         Attributes:
-        self.tickerSymbol:   ex.TSLA      -is the _ticker tickerSymbol of the underlying asset
-            self._r:          ex.0.01       -risk-free interest rate (annual rate expressed in terms of continuous compounding)
-            self._s:          ex.30.0       -(SO or C) Spot price of the underlying asset (stock price)
-            self._x:          ex.40.0       -(sometimes called k) market strike price of the option (Also called the Exercise Price)
-            self.T:          ex.40.0/365.0 -time until expiration out of a year 40/365 is 40 days to expiration often shown as (_T-t)
-            self._sigma:      ex.0.30       -_volatility of returns can also be known as the standard deviation of the underlying asset (or market implied volatility??)
-            self._optionType: ex."Call" or "Put"
+        self.tickerSymbol:         ex.'TSLA'        -is the _ticker tickerSymbol of the underlying asset
+            self.expiration_date:  ex.'2023-03-17'  -expiration date (year/month/day)
+            self.option_style:     ex.'American'    -American or European
+            self.option_type:      ex.'Call'        -Call or Put
+            self.data_source:      ex.'Yahoo'       -Yahoo or other
+            self.itm_atm_otm:      ex.'atm'         -itm+1, itm, atm, otm, otm+1
         """
-        if not validTicker.valid_ticker(tickerSymbol):
-            raise RuntimeError("This is not a valid ticker symbol")
+        #if not validTicker.valid_ticker(tickerSymbol):
+            #raise RuntimeError("This is not a valid ticker symbol")
 
         # update ticker symbol within the class
         self.tickerSymbol = tickerSymbol
-
-        # update _ticker symbol within the class
-        # if the ticker is not valid an exception is thrown
 
         #get_options_chain(self.tickerSymbol)
         self.expiration_date = expiration_date
@@ -179,24 +107,11 @@ class Option:
         self.itm_atm_otm = itm_atm_otm
 
         # convert passed in _ticker to all upper case
-
         #if not validTicker.valid_ticker(tickerSymbol):
             #raise RuntimeError("This is not a valid _ticker symbol")
 
-        #get_options_chain(tickerSymbol)
-
-        #self._r = riskFreeRate
-        #self._s = get_currentPriceOfTheUnderlyingAsset()
-
-        #####
-        ##### NEED TO UPDATE THESE AND LINES 90-100 comments So user selects the restraint of an expiration date
-        ##### UI IS AFFECTING THE DATA RETRIEVAL FOR THIS PART
-        #####
-        #self.optionExpirations = yf.Ticker(self).options
-        #self.chosenExpiration = '2023-01-20' # User Must select an expiration date immediately after selecting a _ticker
-
     def get_currentPriceOfTheUnderlyingAsset(self):
-        tickerData = yf.Ticker(self)
+        tickerData = yf.Ticker(self.tickerSymbol)
         today = datetime.datetime.today().isoformat()
         # First ten characters are the actual date
         tickerDataFrame = tickerData.history(period='1d', start='2021-1-1', end=today[:10])
@@ -220,6 +135,13 @@ class Option:
     def get_entire_sorted_options_chain(self):
         #print(get_options_chain(self))
         return get_options_chain(self)
+
+    def get_expirations(self):
+        tickerData = yf.Ticker(self)
+        # Expiration dates
+        optionExpirations = tickerData.options
+        return optionExpirations
+
 
 # CALLS
     # Calls = [itm_call_minus, itm_call, atm_call, otm_call, otm_call_plus]
@@ -317,8 +239,6 @@ class Option:
 
     def get_itm_put_minus_sigma(self):
         return get_options_chain(self)[1][4]['impliedVolatility']
-
-
 
 
 
