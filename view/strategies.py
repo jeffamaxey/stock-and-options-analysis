@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect, url_for
+from flask import Blueprint, render_template, request, redirect, url_for, flash
 from flask_login import current_user, login_required
 from view.general import read_field
 
@@ -8,6 +8,10 @@ strategies_bp = Blueprint("strategies", __name__)
 @strategies_bp.route("/strategies", methods=["GET", "POST"])
 @login_required
 def strategies():
+    if request.method == "GET":
+        flash("Strategy will be available soon. Please look forward!", category="Info")
+        return redirect(url_for("general.home"))    # redirect the user to the homepage
+
     if request.method == "POST":
         ticker = read_field(("ticker-of-the-underlying-11", "ticker-of-the-underlying-112",
                              "ticker-of-the-underlying-122", "ticker-of-the-underlying-132"))
@@ -34,7 +38,7 @@ def strategies_breakdown():
         data_source = read_field(("data-source18", "data-source118", "option-style137", "data-source128"))
         itm_atm_otm = read_field(("itm-atm-otm16", "itm-atm-otm112", "option-style138", "itm-atm-otm118"))
 
-    return render_template("strategies-page2.html", user=current_user)
+    return redirect(url_for("general.home"))    # redirect the user to the homepage
 
 
 @strategies_bp.route("/strategies/breakdown/asset", methods=["GET", "POST"])

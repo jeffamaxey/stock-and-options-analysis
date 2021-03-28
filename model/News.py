@@ -1,5 +1,6 @@
-# importing required modules
+# Code completed by Bathiya Ranasinghe
 
+# importing required modules
 import requests
 from model import ValidTicker as validTicker
 from datetime import date, timedelta, datetime
@@ -159,8 +160,3 @@ class News:
 
         return news_string
 
-# # testing
-# n1 = News("AAPL")
-# j = n1.get_news()
-#
-# print(n1.news_tostring())

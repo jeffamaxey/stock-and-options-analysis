@@ -1,12 +1,16 @@
+"""
+Author: Sahngwoo Kim
+"""
+
 from os import path
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 
 MIN_EMAIL_LEN = 6
-MAX_EMAIL_LEN = 150
+MAX_EMAIL_LEN = 60
 MIN_PASSWORD_LEN = 6
-MAX_PASSWORD_LEN = 150
+MAX_PASSWORD_LEN = 60
 
 _user_db = SQLAlchemy()    # database for users
 __USER_DB_PATH = "../database/user.db"
@@ -15,6 +19,7 @@ __USER_DB_PATH = "../database/user.db"
 class User(_user_db.Model, UserMixin):
     """
     A user account of the website
+    Modifying its attributes doesn't affect to the database at all. Hence using public attributes for convenience.
     """
     id = _user_db.Column(_user_db.Integer, primary_key=True)
     email = _user_db.Column(_user_db.String(MAX_EMAIL_LEN), unique=True)

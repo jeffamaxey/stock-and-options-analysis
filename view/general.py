@@ -1,3 +1,6 @@
+"""
+Author: Sahngwoo Kim
+"""
 from flask import Blueprint, render_template, request, redirect, url_for
 from flask_login import current_user, login_required
 
@@ -27,9 +30,10 @@ def home():
         product = read_field(("product21", "product23", "product25", "product27"))
 
         from view.auth import register
-        register(email=email, password1=password, product=product)
+        successful = register(email=email, password1=password, product=product)
 
-        return redirect(url_for("payment.payment"))
+        if successful:
+            return redirect(url_for("payment.payment"))
 
     return render_template("landing-page.html", user=current_user)
 

@@ -1,3 +1,5 @@
+# Code completed by Bathiya Ranasinghe
+
 """
   The modules used in the file are shown below
   :The ValidTicker
@@ -38,8 +40,9 @@ class Stock:
         if not validTicker.valid_ticker(ticker):
             raise RuntimeError("This is not a valid ticker symbol")
 
-        # initialize multiprocessing
-        ray.init(ignore_reinit_error=True)
+        # initialize multiprocessing if it has not previously been initialized
+        if not ray.is_initialized():
+            ray.init()
 
         # using parallel processing to get quotes of stock
         ret_id1 = self.set_stock_quote.remote(self)

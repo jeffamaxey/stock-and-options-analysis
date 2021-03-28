@@ -99,7 +99,8 @@ def get_fundamental_analysis(ticker, data_source):
         return None
 
     # export the result as a csv file
-    exportToCSV(stock)
+    exporter = exportToCSV(stock)
+    exporter.exportFundamental()
 
     fundamental = stock.get_fundamental()
     balance_sheet = stock.get_balance_sheet()
@@ -191,6 +192,10 @@ def get_technical_analysis(ticker, data_source):
         stock = Stock(ticker=ticker)
     except RuntimeError:  # This exception is thrown when the ticker is invalid
         return None
+
+    # export the result as a csv file
+    exporter = exportToCSV(stock)
+    exporter.export_technical()
 
     technical = stock.get_technical()
 

@@ -1,20 +1,17 @@
-
 """
-    Test Script written by Bathiya Ranasinghe for the stock and news class
-    Errors within the methods will be printed out to console
-    The only other console output will be from the news class printing the news articles for a manual check by the tester
-    A test complete messege will be printed at the end along with the time to execute creating the stock classes
+Test Script written by Bathiya Ranasinghe for the stock and news class
+Errors within the methods will be printed out to console
+The only other console output will be from the news class printing the news articles for a manual check by the tester
+A test complete messege will be printed at the end along with the time to execute creating the stock classes
 
-    This script does not test any of the methods from the  Fundamental, Cashflow, Income, Statement, BalanceSheet classes
-    Those classes were to be tested by Ramtin's test script
+This script does not test any of the methods from the  Fundamental, Cashflow, Income, Statement, BalanceSheet classes
+Those classes were to be tested by Ramtin's test script
 
-    Disclaimer: Do to varying market conditions there may be situations where the script reports an error on the values expected to bve returned by functions.
-                it is the testers responsibility to manually check to see if expected values on the test script should be updated or not when an error is announced.
-    """
-
+Disclaimer: Do to varying market conditions there may be situations where the script reports an error on the values expected to bve returned by functions.
+            it is the testers responsibility to manually check to see if expected values on the test script should be updated or not when an error is announced.
+"""
 import datetime
-
-import Stock as Stock
+import model.Stock as Stock
 import ray
 
 
@@ -24,8 +21,10 @@ def main():
     This tests all available getter methods to make sure they are returning the appropriate data types
     The Test also displays the execution time in seconds to store and get all attributes to create the stock class
     """
-    # initialize ray
-    ray.init(ignore_reinit_error=True)
+
+    # initialize ray if it wasn't previously initialized
+    if not ray.is_initialized():
+        ray.init()
 
     # set the number of errors in code to 0
     ErrorCount = 0
