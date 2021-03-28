@@ -89,7 +89,7 @@ class News:
         # attributes of news class
         self._ticker = ticker
         self._articles = []
-        self._max_articles = 10  # maximum number of news articles we will store
+        self._max_articles = 2  # maximum number of news articles we will store
 
         # call method to automatically get all news articles and store them in self._articles list
         self.set_news()

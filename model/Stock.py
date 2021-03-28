@@ -317,7 +317,7 @@ class Stock:
         Gets the earnings dates of the stock
         :return the earnings dates of the stock as a string
         """
-        return self._EarningsDate
+        return self._EarningsDate.replace("-", "to \n")
 
     def get_one_year_estimate(self):
         """
