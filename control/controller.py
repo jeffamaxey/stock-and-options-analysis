@@ -1,5 +1,5 @@
 from model.Option import Option
-from model.Valuation import Valuation
+from model.OptionValuation import Valuation
 from model.Stock import Stock
 from model.exportToCSV import exportToCSV
 
