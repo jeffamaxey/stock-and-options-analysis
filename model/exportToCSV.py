@@ -3,6 +3,7 @@ import csv
 
 from main import ROOT_DIR
 
+
 class exportToCSV:
     def __init__(self, stock):
         self._stock = stock
