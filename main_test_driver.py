@@ -10,25 +10,25 @@ from control import controller_test_driver
 
 
 def main():
-    print("test result for testBalanceSheet:")
+    print("-------------------------------test result for testBalanceSheet:------------------------------------------")
     testBalanceSheet.main()
 
-    print("test result for testCashFlow:")
+    print("-------------------------------test result for testCashFlow:----------------------------------------------")
     testCashFlow.main()
 
-    print("test result for testFundamental:")
+    print("-------------------------------test result for testFundamental:-------------------------------------------")
     testFundamental.main()
 
-    print("test result for testIncomeStatement:")
+    print("-------------------------------test result for testIncomeStatement:---------------------------------------")
     testIncomeStatement.main()
 
-    print("test result for testNewsAndStock:")
+    print("-------------------------------test result for testNewsAndStock:------------------------------------------")
     testNewsAndStock.main()
 
-    print("test result for testTechnical:")
+    print("-------------------------------test result for testTechnical:---------------------------------------------")
     testTechnical.main()
 
-    print("test result for controller_test_driver:")
+    print("-------------------------------test result for controller_test_driver:------------------------------------")
     controller_test_driver.main()
 
 
