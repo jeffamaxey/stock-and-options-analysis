@@ -42,8 +42,9 @@ class Technical:
         # save a ohlc DataFrame which is returned from yahoo finance
         self.ohlc = web.get_data_yahoo(self.ticker, start=start_time, end=end_time)
 
-        # initialize multiprocessing
-        ray.init(ignore_reinit_error=True)
+        # initialize multiprocessing if it hasn't previously been initialized
+        if not ray.is_initialized():
+            ray.init()
 
         # using parallel processing to get quotes of stock
         ret_id1 = self.set_rsi.remote(self)
