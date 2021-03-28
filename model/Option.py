@@ -68,7 +68,7 @@ def get_options_chain(tickerSymbol):
     #Search for the dictionary of the strike price closest to the market price
     def find_atm_call(options_record, key, value):
         for i, dic in enumerate(options_record):
-            if dic[key] == value and dic['CALL'] == True:
+            if dic[key] == value and dic['CALL'] == True: # and dic['expirationDate'] == controller.expiration_date:
                 return i
     ATM = 40 #find_atm_call(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     atm_call = options_record[ATM]
@@ -196,7 +196,7 @@ class Option:
         #self.chosenExpiration = '2023-01-20' # User Must select an expiration date immediately after selecting a _ticker
 
     def get_currentPriceOfTheUnderlyingAsset(self):
-        tickerData = yf.Ticker(self.tickerSymbol)
+        tickerData = yf.Ticker(self)
         today = datetime.datetime.today().isoformat()
         # First ten characters are the actual date
         tickerDataFrame = tickerData.history(period='1d', start='2021-1-1', end=today[:10])
@@ -219,7 +219,7 @@ class Option:
 
     def get_entire_sorted_options_chain(self):
         #print(get_options_chain(self))
-        return get_options_chain(self.tickerSymbol)
+        return get_options_chain(self)
 
 # CALLS
     # Calls = [itm_call_minus, itm_call, atm_call, otm_call, otm_call_plus]
@@ -227,96 +227,96 @@ class Option:
     # strike impliedVolatility expirationDate    T   optionType
 
     def get_atm_call_strike(self):
-        return get_options_chain(self.tickerSymbol)[0][2]['strike']
+        return get_options_chain(self)[0][2]['strike']
 
     def get_atm_call_T(self):
-        return get_options_chain(self.tickerSymbol)[0][2]['T']
+        return get_options_chain(self)[0][2]['T']
 
     def get_atm_call_sigma(self):
-        return get_options_chain(self.tickerSymbol)[0][2]['impliedVolatility']
+        return get_options_chain(self)[0][2]['impliedVolatility']
 
     def get_itm_call_strike(self):
-        return get_options_chain(self.tickerSymbol)[0][1]['strike']
+        return get_options_chain(self)[0][1]['strike']
 
     def get_itm_call_T(self):
-        return get_options_chain(self.tickerSymbol)[0][1]['T']
+        return get_options_chain(self)[0][1]['T']
 
     def get_itm_call_sigma(self):
-        return get_options_chain(self.tickerSymbol)[0][1]['impliedVolatility']
+        return get_options_chain(self)[0][1]['impliedVolatility']
 
     def get_itm_call_minus_strike(self):
-        return get_options_chain(self.tickerSymbol)[0][0]['strike']
+        return get_options_chain(self)[0][0]['strike']
 
     def get_itm_call_minus_T(self):
-        return get_options_chain(self.tickerSymbol)[0][0]['T']
+        return get_options_chain(self)[0][0]['T']
 
     def get_itm_call_minus_sigma(self):
-        return get_options_chain(self.tickerSymbol)[0][0]['impliedVolatility']
+        return get_options_chain(self)[0][0]['impliedVolatility']
 
     def get_otm_call_strike(self):
-        return get_options_chain(self.tickerSymbol)[0][3]['strike']
+        return get_options_chain(self)[0][3]['strike']
 
     def get_otm_call_T(self):
-        return get_options_chain(self.tickerSymbol)[0][3]['T']
+        return get_options_chain(self)[0][3]['T']
 
     def get_otm_call_sigma(self):
-        return get_options_chain(self.tickerSymbol)[0][3]['impliedVolatility']
+        return get_options_chain(self)[0][3]['impliedVolatility']
 
     def get_otm_call_plus_strike(self):
-        return get_options_chain(self.tickerSymbol)[0][4]['strike']
+        return get_options_chain(self)[0][4]['strike']
 
     def get_otm_call_plus_T(self):
-        return get_options_chain(self.tickerSymbol)[0][4]['T']
+        return get_options_chain(self)[0][4]['T']
 
     def get_otm_call_plus_sigma(self):
-        return get_options_chain(self.tickerSymbol)[0][4]['impliedVolatility']
+        return get_options_chain(self)[0][4]['impliedVolatility']
 
 #PUTS###############################################################
 
     def get_atm_put_strike(self):
-        return get_options_chain(self.tickerSymbol)[1][2]['strike']
+        return get_options_chain(self)[1][2]['strike']
 
     def get_atm_put_T(self):
-        return get_options_chain(self.tickerSymbol)[1][2]['T']
+        return get_options_chain(self)[1][2]['T']
 
     def get_atm_put_sigma(self):
-        return get_options_chain(self.tickerSymbol)[1][2]['impliedVolatility']
+        return get_options_chain(self)[1][2]['impliedVolatility']
 
     def get_otm_put_strike(self):
-        return get_options_chain(self.tickerSymbol)[1][1]['strike']
+        return get_options_chain(self)[1][1]['strike']
 
     def get_otm_put_T(self):
-        return get_options_chain(self.tickerSymbol)[1][1]['T']
+        return get_options_chain(self)[1][1]['T']
 
     def get_otm_put_sigma(self):
-        return get_options_chain(self.tickerSymbol)[1][1]['impliedVolatility']
+        return get_options_chain(self)[1][1]['impliedVolatility']
 
     def get_otm_put_plus_strike(self):
-        return get_options_chain(self.tickerSymbol)[1][0]['strike']
+        return get_options_chain(self)[1][0]['strike']
 
     def get_otm_put_plus_T(self):
-        return get_options_chain(self.tickerSymbol)[1][0]['T']
+        return get_options_chain(self)[1][0]['T']
 
     def get_otm_put_plus_sigma(self):
-        return get_options_chain(self.tickerSymbol)[1][0]['impliedVolatility']
+        return get_options_chain(self)[1][0]['impliedVolatility']
 
     def get_itm_put_strike(self):
-        return get_options_chain(self.tickerSymbol)[1][3]['strike']
+        return get_options_chain(self)[1][3]['strike']
 
     def get_itm_put_T(self):
-        return get_options_chain(self.tickerSymbol)[1][3]['T']
+        return get_options_chain(self)[1][3]['T']
 
     def get_itm_put_sigma(self):
-        return get_options_chain(self.tickerSymbol)[1][3]['impliedVolatility']
+        return get_options_chain(self)[1][3]['impliedVolatility']
 
     def get_itm_put_minus_strike(self):
-        return get_options_chain(self.tickerSymbol)[1][4]['strike']
+        return get_options_chain(self)[1][4]['strike']
 
     def get_itm_put_minus_T(self):
-        return get_options_chain(self.tickerSymbol)[1][4]['T']
+        return get_options_chain(self)[1][4]['T']
 
     def get_itm_put_minus_sigma(self):
-        return get_options_chain(self.tickerSymbol)[1][4]['impliedVolatility']
+        return get_options_chain(self)[1][4]['impliedVolatility']
 
 
 

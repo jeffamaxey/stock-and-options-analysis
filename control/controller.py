@@ -47,25 +47,20 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
     """
     returns the quantitative analysis 'outputs' as a dictionary
     """
-    try:
-        option = Option(tickerSymbol, expiration_date, option_style, option_type, data_source, itm_atm_otm)
-    except RuntimeError:    # This exception is thrown when Option class parameters is invalid
-        return None
+
+    # Call Option Class
+    option = Option(tickerSymbol, expiration_date, option_style, option_type, data_source, itm_atm_otm)
 
     riskFreeRate = option.get_riskFreeRate()
     currentUnderlyingPrice = option.get_currentPriceOfTheUnderlyingAsset()
-    available_expirations = get_expiration_date_list()
 
     # USER SELECTS PUT or CALL, USER SELECTS EXPIRATION, USER SELECTS ITMATMOTM
     # Once user selects expiration it narrows down the potential fields to five different itm_atm_otm = ['itm+1', 'itm', 'atm', 'otm', 'otm+1']
-
-
     DictCalls = {expiration_date: {'ITM_Call': {'Strike': option.get_itm_call_strike(), "Time-to-expiration": option.get_itm_call_T, "Sigma": option.get_itm_call_sigma, 'OptionType': 'Call'},
                                      'OTM_Call': {'Strike': option.get_otm_call_strike(), "Time-to-expiration": option.get_otm_call_T, "Sigma": option.get_otm_call_sigma, 'OptionType': 'Call'},
                                      'ATM_Call': {'Strike': option.get_atm_call_strike(), "Time-to-expiration": option.get_atm_call_T, "Sigma": option.get_atm_call_sigma, 'OptionType': 'Call'},
                                      'ITM_Call+1': {'Strike': option.get_itm_call_minus_strike(), "Time-to-expiration": option.get_itm_call_minus_T, "Sigma": option.get_itm_call_minus_sigma, 'OptionType': 'Call'},
                                      'OTM_Call+1': {'Strike': option.get_otm_call_plus_strike(), "Time-to-expiration": option.get_otm_call_plus_T, "Sigma": option.get_otm_call_plus_sigma, 'OptionType': 'Call'}}}
-
 
     DictPuts = {expiration_date: {'ITM_Put': {'Strike': option.get_itm_put_strike(), "Time-to-expiration": option.get_itm_put_T, "Sigma": option.get_itm_put_sigma, 'OptionType': 'Put'},
                                     'OTM_Put': {'Strike': option.get_otm_put_strike(), "Time-to-expiration": option.get_otm_put_T, "Sigma": option.get_otm_put_sigma, 'OptionType': 'Put'},
@@ -83,10 +78,8 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
     volatility = finalDict['Sigma']
     strike = finalDict['Strike']
 
-    try:
-        valuation = Valuation(1, tickerSymbol, riskFreeRate, currentUnderlyingPrice, strike, timeToExpiration, volatility, option_type, 1)
-    except RuntimeError:    # This exception is thrown when Option class parameters is invalid
-        return None
+    # Call Valuation Class
+    valuation = Valuation(1, tickerSymbol, riskFreeRate, currentUnderlyingPrice, strike, timeToExpiration, volatility, option_type, 1)
 
     chosenExpiration = expiration_date
     strikeMatchChosenExpiration = finalDict["Strike"]
@@ -94,8 +87,8 @@ def get_quantitative_analysis(tickerSymbol, expiration_date, option_style, optio
     sigmaMatchedChosen = finalDict["Sigma"]
 
     analysis = {
-        "variables": {"risk_free_rate_r": riskFreeRate,
-                      "underlying_s": currentUnderlyingPrice,
+        "variables": {"risk_free_rate_r": Option.get_riskFreeRate(tickerSymbol),
+                      "underlying_s": Option.get_currentPriceOfTheUnderlyingAsset(tickerSymbol),
                       "chosen_expiration": chosenExpiration,
                       "strike_x": strikeMatchChosenExpiration,
                       "time_to_maturity_T": TmatchChosen,
@@ -234,3 +227,6 @@ def get_technical_analysis(ticker, data_source):
     }
 
     return analysis
+
+
+
