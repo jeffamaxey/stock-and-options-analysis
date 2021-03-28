@@ -1,3 +1,7 @@
+"""
+Author: Sahngwoo Kim
+"""
+
 from flask import Flask
 from database import UserDB
 from flask_login import LoginManager
@@ -48,15 +52,8 @@ def create_app():
     # initialize the multithreading module
     ray.init(ignore_reinit_error=True)
 
-    # Use Message and Mail with Flask-Mail imports to config SMTP settings
-    from view.contact import mail
-    app.config["MAIL_SERVER"] = 'smtp.gmail.com'
-    app.config["MAIL_PORT"] = 465
-    app.config["MAIL_USE_SSL"] = True
-    app.config['MAIL_USE_TLS'] = False
-    app.config["MAIL_USERNAME"] = 'thefintechorgtest@gmail.com'
-    app.config["MAIL_PASSWORD"] = 'FTO12345'
-    app.config['MAIL_DEFAULT_SENDER'] = 'thefintechorgtest@gmail.com'
-    mail.init_app(app)
+    # initializes the flask mail
+    from view import contact
+    contact.init(app)
 
     return app

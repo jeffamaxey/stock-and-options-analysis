@@ -1,3 +1,7 @@
+"""
+Author: Sahngwoo Kim
+"""
+
 from flask import Blueprint, render_template, request, redirect, url_for
 from flask_login import current_user, login_required
 
@@ -29,7 +33,7 @@ def home():
         from view.auth import register
         register(email=email, password1=password, product=product)
 
-        return redirect(url_for("payment.payment"))
+        return redirect(url_for("payment.payment"))  # redirect the user to the payment page
 
     return render_template("landing-page.html", user=current_user)
 
