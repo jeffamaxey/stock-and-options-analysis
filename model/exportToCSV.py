@@ -1,14 +1,10 @@
-from model import Stock
+from model import Stock, Technical
 import csv
 
+
 class exportToCSV:
-    def __init__(self, object):
-        self._stock = None
-        self._valuation = None
-        # checking if the passed in object is actually equivalent to a Stock.Stock type
-        if type(object) == Stock.Stock:
-            self._stock = object
-            exportToCSV.exportFundamental(self)
+    def __init__(self, stock):
+        self._stock = stock
 
     def exportFundamental(self):
         """
@@ -76,6 +72,30 @@ class exportToCSV:
                              'netCashUsedProvidedByFinancingActivities': str(self._stock.get_cash_flow().getNetCashUsedProvidedByFinancingActivities()),
                              'freeCashFlow': str(self._stock.get_cash_flow().getFreeCashFlow())})
 
+    def export_technical(self):
+        """
+        This class exports the Technicals (Technical.py) of a
+        company into a csv file
+        """
+        # create a new csv file and enable writing
+        with open("view/static/export/Technical.csv", "w", newline='') as f:
+            # headers for Technicals
+            headers = ['Technical Analysis', 'RSI', 'MACD', 'simple_moving_average_range_30_10',
+                       'pivot_fibonacci', 'momentum_breakout_bands']
+            writer = csv.DictWriter(f, fieldnames=headers)
+            writer.writeheader()
+            # writing the data to a csv for Technical Analysis
+            writer.writerow({"Technical Analysis": '',
+                             'RSI': str(self._stock.get_technical().get_rsi()),
+                             'MACD': str(self._stock.get_technical().get_macd()),
+                             'simple_moving_average_range_30_10': str(self._stock.get_technical().get_simple_moving_average_range_30_10()),
+                             'pivot_fibonacci': str(self._stock.get_technical().get_pivot_fib()),
+                             'momentum_breakout_bands': str(
+                                 self._stock.get_technical().get_momentum_breakout_bands())})
+            # writing a newline for formatting purposes
+            writer.writerow({})
 # for testing purposes
 # e = exportToCSV(Stock.Stock("PRTS"))
 # e.exportFundamental()
+# e = exportToCSV(Stock.Stock("AAPL"))
+# e.export_technical()
