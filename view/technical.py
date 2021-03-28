@@ -1,3 +1,6 @@
+"""
+Author: Adam Bouthillette
+"""
 from flask import Blueprint, render_template, request, redirect, url_for, flash, send_file
 from flask_login import current_user, login_required
 from view.general import read_field
@@ -10,6 +13,9 @@ __technical_analysis_data = []  # using a list instead of variable since it is m
 @technical_analysis_bp.route("/technical-analysis", methods=["GET", "POST"])
 @login_required
 def technical_analysis():
+    """
+    Reads input fields and relays to back end and retrieves data to present on screen
+    """
     if request.method == "POST":
 
         ticker = read_field(("ticker-of-the-underlying-15", "ticker-of-the-underlying-115",
@@ -32,6 +38,9 @@ def technical_analysis():
 @technical_analysis_bp.route("/technical-analysis/result", methods=["GET", "POST"])
 @login_required
 def technical_analysis_result():
+    """
+    Reads input fields and relays to back end and retrieves data to present on screen
+    """
     if request.method == "POST":
 
         ticker = read_field(("ticker-of-the-underlying-19", "ticker-of-the-underlying-119",
@@ -61,6 +70,7 @@ def technical_analysis_result():
     technical_analysis_data = analysis["tech_details"]
     summary = analysis["summary"]
 
+    # render technical-analysis-page2.html to show chart and all data
     return render_template("technical-analysis-page2.html", user=current_user,
                            ticker=technical_analysis_data["ticker"],
                            exchange=technical_analysis_data["exchange"],

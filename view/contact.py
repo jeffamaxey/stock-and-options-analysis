@@ -1,3 +1,6 @@
+"""
+Author: Adam Bouthillette
+"""
 from flask import Blueprint, render_template, request, flash
 from flask_mail import Mail, Message
 from flask_login import current_user
@@ -10,7 +13,7 @@ __mail = Mail()
 
 def init(app):
     """
-    Initializes the flask mail
+    Initializes the flask mail package
     :param app: flask app
     """
     # Use Message and Mail with Flask-Mail imports to config SMTP settings
@@ -26,6 +29,9 @@ def init(app):
 
 @contact_bp.route('/contact', methods=["GET", "POST"])
 def contact():
+    """
+    Takes data from contact-page.html input fields and formats for email sending.
+    """
     if request.method == 'POST':
         email = read_field(("email11", "email18", "email113", "email118"))
         subject = read_field(("subject1", "subject11", "subject12", "subject13"))

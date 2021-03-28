@@ -1,3 +1,7 @@
+"""
+Authors: Sahngwoo Kim, Adam Bouthillette, Dan Richmond-Martina
+"""
+
 from model.Option import Option
 from model.OptionValuation import Valuation
 from model.Stock import Stock

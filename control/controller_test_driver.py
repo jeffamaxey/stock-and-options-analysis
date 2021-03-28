@@ -1,5 +1,5 @@
 """
-Author: Sahngwoo Kim, Adam Bouthillette
+Authors: Sahngwoo Kim, Adam Bouthillette
 
 Description:
 Run the main() function for testing.
