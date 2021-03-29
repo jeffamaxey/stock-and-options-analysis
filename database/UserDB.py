@@ -19,7 +19,7 @@ __USER_DB_PATH = "../database/user.db"
 class User(_user_db.Model, UserMixin):
     """
     A user account of the website
-    Modifying its attributes doesn't affect to the database at all. Hence using public attributes for convenience.
+    Modifying its attribute values doesn't affect to the database at all. Hence using public attributes for convenience.
     """
     id = _user_db.Column(_user_db.Integer, primary_key=True)
     email = _user_db.Column(_user_db.String(MAX_EMAIL_LEN), unique=True)
