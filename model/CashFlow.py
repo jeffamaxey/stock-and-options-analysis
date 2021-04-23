@@ -17,7 +17,7 @@ def get_jsonparsed_data(ticker):
     dict
     """
     # api key obtained from https://financialmodelingprep.com/developer/docs/
-    api_key = "ef50942d7567387062ceb4e67b4da6cb"
+    api_key = ""
     ticker = ticker.upper()
     url = ("https://financialmodelingprep.com/api/v3/cash-flow-statement/" + ticker +
            "?period=quarter&limit=400&apikey=" + api_key)
