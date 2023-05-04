@@ -16,16 +16,16 @@ def convertStringToInteger(stringVal):
         multiplier = 0
         if stringVal.endswith('K'):
             multiplier = 10 ** 3
-            stringVal = stringVal[0:len(stringVal) - 1]  # strip multiplier character
+            stringVal = stringVal[:-1]
         elif stringVal.endswith('M'):
             multiplier = 10 ** 6
-            stringVal = stringVal[0:len(stringVal) - 1]  # strip multiplier character
+            stringVal = stringVal[:-1]
         elif stringVal.endswith('B'):
             multiplier = 10 ** 9
-            stringVal = stringVal[0:len(stringVal) - 1]  # strip multiplier character
+            stringVal = stringVal[:-1]
         elif stringVal.endswith('T'):
             multiplier = 10 ** 12
-            stringVal = stringVal[0:len(stringVal) - 1]  # strip multiplier character
+            stringVal = stringVal[:-1]
 
         # convert value to float, multiply, then convert the result to int
         return int(double(stringVal) * multiplier)

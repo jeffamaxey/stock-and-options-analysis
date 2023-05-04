@@ -51,22 +51,26 @@ def main():
 
     for key in stock_details.keys():
         if stock_details[key] is None:
-            print("Test case 7 failed. key '" + key + "' in stock_detail doesn't contain a value.")
+            print(
+                f"Test case 7 failed. key '{key}' in stock_detail doesn't contain a value."
+            )
             num_error += 1
 
     for key in metrics.keys():
         if metrics[key] is None:
-            print("Test case 8 failed. key '" + key + "' in metrics doesn't contain a value.")
+            print(f"Test case 8 failed. key '{key}' in metrics doesn't contain a value.")
             num_error += 1
 
     for key in dividends.keys():
         if dividends[key] is None:
-            print("Test case 9 failed. key '" + key + "' in dividends doesn't contain a value.")
+            print(f"Test case 9 failed. key '{key}' in dividends doesn't contain a value.")
             num_error += 1
 
     for key in income_statements.keys():
         if income_statements[key] is None:
-            print("Test case 10 failed. key '" + key + "' in income_statements doesn't contain a value.")
+            print(
+                f"Test case 10 failed. key '{key}' in income_statements doesn't contain a value."
+            )
             num_error += 1
 
     if news is None:
@@ -102,7 +106,9 @@ def main():
 
     for key in tech_details.keys():
         if tech_details[key] is None:
-            print("Test case 16 failed. key '" + key + "' in tech_detail doesn't contain a value.")
+            print(
+                f"Test case 16 failed. key '{key}' in tech_detail doesn't contain a value."
+            )
             num_error += 1
 
     if summary is None:
@@ -124,7 +130,7 @@ def main():
     if num_error == 0:
         print("controller_test_driver: test successful!")
     else:
-        print("controller_test_driver: number of test failed: " + str(num_error))
+        print(f"controller_test_driver: number of test failed: {num_error}")
 
 
 if __name__ == "__main__":

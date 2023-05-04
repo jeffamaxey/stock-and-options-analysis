@@ -31,7 +31,7 @@ def init(app):
     Initialize the user database
     :param app: The flask app
     """
-    app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + __USER_DB_PATH
+    app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{__USER_DB_PATH}"
     _user_db.init_app(app)
 
     if not path.exists(__USER_DB_PATH):  # Check if the user database doesn't exist

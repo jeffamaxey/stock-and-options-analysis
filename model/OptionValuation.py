@@ -70,9 +70,7 @@ class Valuation:
             print("Review incorrect intrinsic value parameters")
 
     def speculativePremium(self):
-        # Find the speculative value of a call or put
-        specPremium = self.blackScholes()-self.intrinsicValue()
-        return specPremium
+        return self.blackScholes()-self.intrinsicValue()
 
     def binomialModel(self):
         # Find the theoretical price of a call or put option using the binomial model
@@ -131,14 +129,10 @@ class Valuation:
             print("Review incorrect monte carlo simulation parameters")
 
     def n(self, d1):
-        # Normal cumulative density function (can just use norm.cdf())
-        n_cdf = norm.ndtr(d1)
-        return n_cdf
+        return norm.ndtr(d1)
 
     def phi(self, d1):
-        # Phi helper function (can just use norm.pdf())
-        phi = np.exp(-0.5 * d1 * d1) / (np.sqrt(2.0 * np.pi))
-        return phi
+        return np.exp(-0.5 * d1 * d1) / (np.sqrt(2.0 * np.pi))
 
     def delta(self):
         # Delta is the change in the option price with respect to a change in an underlying assets price
@@ -157,21 +151,22 @@ class Valuation:
     def gamma(self):
         # Gamma is the rate of change for an options delta based on a single point move in the deltas price (highest when ATM)
         d1 = (1.0 / (self._sigma * np.sqrt(self._T))) * (np.log(self._s / self._x) + (self._r + 0.5 * self._sigma ** 2.0) * self._T)
-        _gamma = (norm.pdf(d1)) / (self._s * self._sigma * np.sqrt(self._T))
-        return _gamma
+        return (norm.pdf(d1)) / (self._s * self._sigma * np.sqrt(self._T))
 
     def charm(self):
         # Charm is the 'delta decay' the rate at which the delta of an option changes with respect to the passage of time
         d1 = (1.0 / (self._sigma * np.sqrt(self._T))) * (np.log(self._s / self._x) + (self._r + 0.5 * self._sigma ** 2.0) * self._T)
         d2 = d1 - self._sigma * np.sqrt(self._T)
-        _charm = -norm.pdf(d1, 0, 1) * (2 * self._r * self._T - d2 * self._sigma * np.sqrt(self._T)) / (2 * self._T * self._sigma * np.sqrt(self._T))
-        return _charm
+        return (
+            -norm.pdf(d1, 0, 1)
+            * (2 * self._r * self._T - d2 * self._sigma * np.sqrt(self._T))
+            / (2 * self._T * self._sigma * np.sqrt(self._T))
+        )
 
     def vega(self):
         # Vega is the sensitivity of the options price to the change in the underlying assets return _volatility
         d1 = (1.0 / (self._sigma * np.sqrt(self._T))) * (np.log(self._s / self._x) + (self._r + 0.5 * self._sigma ** 2.0) * self._T)
-        _vega = (self._s * norm.pdf(d1) * np.sqrt(self._T)) / 100.0
-        return _vega
+        return (self._s * norm.pdf(d1) * np.sqrt(self._T)) / 100.0
 
     def theta(self):
         # Theta is the change in the options price with respect to the passage of time as maturity becomes shorter
@@ -206,7 +201,7 @@ class Valuation:
     def impliedVolatility(self):
         maxIter = 1          # computationally expensive keep maxIter low
         precise = 1.0e-5
-        for m in range(0, maxIter):
+        for _ in range(0, maxIter):
             # Root objective function
             difference = self._x - self.blackScholes()
             if abs(difference) < precise:

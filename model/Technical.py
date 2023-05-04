@@ -65,13 +65,16 @@ class Technical:
         :return quote from tradingview
          """
         try:
-            analysis = \
-            TA_Handler(symbol=self.ticker, screener="america", exchange=validTicker.get_exchange(self.ticker),
-                       interval=Interval.INTERVAL_1_MINUTE
-                       ).get_analysis().summary["RECOMMENDATION"]
-
-            return analysis
-
+            return (
+                TA_Handler(
+                    symbol=self.ticker,
+                    screener="america",
+                    exchange=validTicker.get_exchange(self.ticker),
+                    interval=Interval.INTERVAL_1_MINUTE,
+                )
+                .get_analysis()
+                .summary["RECOMMENDATION"]
+            )
         except Exception:
             return "There is no recommendation"
 
@@ -103,8 +106,7 @@ class Technical:
         simple_moving_average_10_day = round(float(TA.SMA(self.ohlc, 10).values[-1], ),
                                              2)  # convert simple 10 day moving average to float and round to 2 decimal places
 
-        return str(simple_moving_average_30_day) + " : " + str(
-            simple_moving_average_10_day)  # set up a range of the 30 and 10 day moving average as a string
+        return f"{str(simple_moving_average_30_day)} : {str(simple_moving_average_10_day)}"
 
     @ray.remote
     def set_pivot_fib(self):
@@ -171,9 +173,7 @@ class Technical:
         """
         rsi = self.get_rsi()
         MACD = self.get_macd()
-        positive_momentum = True  # assume we have positive momentum
-
-        String = "The current RSI of the stock is " + str(rsi) + " "
+        String = f"The current RSI of the stock is {str(rsi)} "
         if rsi > 70:
             String += "which indicates the stock is overbought.\n\n"
         elif rsi < 30:
@@ -181,25 +181,28 @@ class Technical:
         else:
             String += "which indicates the stock is neutral.\n\n"
 
-        String += "The current MACD of the stock is " + str(MACD)
+        String += f"The current MACD of the stock is {str(MACD)}"
 
-        # go through mac d values and see if they are both in negative range indicating negative momentum
-        for i in MACD:
-            if i < 0:
-                positive_momentum = False
-
+        positive_momentum = all(i >= 0 for i in MACD)
         if positive_momentum:
             String += " which may indicate positive momentum.\n\n"
         else:
             String += " which may indicate negative momentum.\n\n"
 
-        String += "The Momentum Breakout Bands of the stock are " + str(
-            self.get_momentum_breakout_bands()) + " when stock price \nbreaks out of these regions it can " \
-                                                  "signify a trend move or price spike worth trading.\n\n"
-        String += "The Fibonacci pivots of the stock are " + str(
-            self.get_pivot_fib()) + " which are used  to \nidentify key support and resistance levels to determine the trend or to enter and exit trades.\n\n"
+        String += (
+            f"The Momentum Breakout Bands of the stock are {str(self.get_momentum_breakout_bands())}"
+            + " when stock price \nbreaks out of these regions it can "
+            "signify a trend move or price spike worth trading.\n\n"
+        )
+        String += (
+            f"The Fibonacci pivots of the stock are {str(self.get_pivot_fib())}"
+            + " which are used  to \nidentify key support and resistance levels to determine the trend or to enter and exit trades.\n\n"
+        )
 
-        String += "The simple moving average for 30 and 10 days is " + self.get_simple_moving_average_range_30_10() + " which can be used to  identify\ncurrent price trends and potential for a change in the trend.\n"
+        String += (
+            f"The simple moving average for 30 and 10 days is {self.get_simple_moving_average_range_30_10()}"
+            + " which can be used to  identify\ncurrent price trends and potential for a change in the trend.\n"
+        )
 
         String += "\nThe current recommendation by analysts for the stock  is: " + str(self.trading_view_quote)
         return String

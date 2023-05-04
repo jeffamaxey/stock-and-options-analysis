@@ -108,7 +108,8 @@ class News:
 
         # use a request call from Finhub to obtain a list of dictionaries containing company news of a stock
         news = requests.get(
-            'https://finnhub.io/api/v1/company-news?symbol=' + self._ticker + '&from=' + start_date + '&to=' + end_date + '&token=' + api_key).json()
+            f'https://finnhub.io/api/v1/company-news?symbol={self._ticker}&from={start_date}&to={end_date}&token={api_key}'
+        ).json()
 
         try:
             # try to add each article to list
@@ -149,14 +150,12 @@ class News:
         Gets a string representation of all articles related to the stock ticker within the news list
         :return a string representation of all news articles within the articles list
         """
-        news_string = "News for " + self._ticker + ' Stock\n'
-        i = 0
-        for article in self._articles:
-            i += 1
+        news_string = f"News for {self._ticker}" + ' Stock\n'
+        for i, article in enumerate(self._articles, start=1):
             news_string = news_string + "\nArticle " + str(
                 i) + ":\n" + " Headline: " + article.get_headline() + "\n Date: " + article.get_datetime() + \
-                          "\n Category: " + article.get_category() + "\n Source: " + article.get_source() + "\n URL: " + article.get_url() \
-                          + "\n Image: " + article.get_image() + "\n Summary: " + article.get_summary()
+                              "\n Category: " + article.get_category() + "\n Source: " + article.get_source() + "\n URL: " + article.get_url() \
+                              + "\n Image: " + article.get_image() + "\n Summary: " + article.get_summary()
 
         return news_string
 

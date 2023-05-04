@@ -13,12 +13,8 @@ def get_ticker_company(ticker):
     # call the yahoo finance api and store the stock information as json into result list
     # some of the code for get_ticker_company is borrowed from https://stackoverflow.com/questions/38967533/retrieve-company-name-with-ticker-symbol-input-yahoo-or-google-api
     ticker = ticker.upper()
-    url = "http://d.yimg.com/autoc.finance.yahoo.com/autoc?query={}&region=1&lang=en".format(ticker)
+    url = f"http://d.yimg.com/autoc.finance.yahoo.com/autoc?query={ticker}&region=1&lang=en"
     result = requests.get(url).json()
-
-    # go through the list and see if the _ticker tickerSymbol is found and if so return the name of the company
-    #for x in result['ResultSet']['Result']:
-        #if x['tickerSymbol'] == ticker:
 
     # go through the list and see if the ticker symbol is found and if so return the name of the company
     for x in result['ResultSet']['Result']:
@@ -70,20 +66,14 @@ def get_exchange(ticker):
     # call the yahoo finance api and store the stock information as json into result list
     # some of the code for get_exchange is borrowed from https://stackoverflow.com/questions/38967533/retrieve-company-name-with-ticker-symbol-input-yahoo-or-google-api
     ticker = ticker.upper()
-    url = "http://d.yimg.com/autoc.finance.yahoo.com/autoc?query={}&region=1&lang=en".format(ticker)
+    url = f"http://d.yimg.com/autoc.finance.yahoo.com/autoc?query={ticker}&region=1&lang=en"
     result = requests.get(url).json()
 
     # go through the list and return stock exchange of stock
     for x in result['ResultSet']['Result']:
         if x['symbol'] == ticker:
             exchange = x["exch"]
-            if exchange == "NYS":
-                return "NYSE"
-            if exchange == "NMS" or "NAS":
-                return "NASDAQ"
-
-            return exchange
-
+            return "NYSE" if exchange == "NYS" else "NASDAQ"
     # if the exchange name is not found then a ProcessLookupError exception is thrown
     raise ProcessLookupError('exchange of stock not found')
 

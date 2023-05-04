@@ -30,9 +30,9 @@ def home():
         product = read_field(("product21", "product23", "product25", "product27"))
 
         from view.auth import register
-        successful = register(email=email, password1=password, product=product)
-
-        if successful:
+        if successful := register(
+            email=email, password1=password, product=product
+        ):
             return redirect(url_for("payment.payment"))
 
     return render_template("landing-page.html", user=current_user)

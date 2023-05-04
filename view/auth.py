@@ -25,19 +25,34 @@ def register(email, password1, password2=None, agreed=None, product=None):
     if UserDB.has(email):
         flash("The email is already used. Please try another email.", category="Error")
     elif len(email) < UserDB.MIN_EMAIL_LEN:
-        flash("Email must be at least " + str(UserDB.MIN_EMAIL_LEN) + " characters.", category="Error")
+        flash(
+            f"Email must be at least {str(UserDB.MIN_EMAIL_LEN)} characters.",
+            category="Error",
+        )
     elif len(email) > UserDB.MAX_EMAIL_LEN:
-        flash("Email must be no longer than " + str(UserDB.MAX_EMAIL_LEN) + " characters.", category="Error")
+        flash(
+            f"Email must be no longer than {str(UserDB.MAX_EMAIL_LEN)} characters.",
+            category="Error",
+        )
     elif password2 is not None and password1 != password2:
         flash("Two passwords don't match", category="Error")
     elif len(password1) < UserDB.MIN_PASSWORD_LEN:
-        flash("Password must be at least " + str(UserDB.MIN_PASSWORD_LEN) + " characters.", category="Error")
+        flash(
+            f"Password must be at least {str(UserDB.MIN_PASSWORD_LEN)} characters.",
+            category="Error",
+        )
     elif len(password1) > UserDB.MAX_PASSWORD_LEN:
-        flash("Password must be no longer than " + str(UserDB.MAX_PASSWORD_LEN) + " characters.", category="Error")
+        flash(
+            f"Password must be no longer than {str(UserDB.MAX_PASSWORD_LEN)} characters.",
+            category="Error",
+        )
     elif agreed is not None and agreed != "on":
         flash("You must agree to the terms and conditions", category="Error")
     elif product is not None and product not in PRODUCTS:
-        flash("The product " + product + " is not valid. Please choose one of these: " + str(PRODUCTS), category="Error")
+        flash(
+            f"The product {product} is not valid. Please choose one of these: {str(PRODUCTS)}",
+            category="Error",
+        )
     else:
         # Add the new user account to the database
         UserDB.add(email, password1)
@@ -83,9 +98,12 @@ def sign_up():
         password2 = read_field(("repeat-password1", "repeat-password11", "repeat-password12", "repeat-password13"))
         agreed = read_field(("checkbox1", "checkbox2", "checkbox3", "checkbox4"))
 
-        successful = register(email=email, password1=password1, password2=password2, agreed=agreed)
-
-        if successful:
+        if successful := register(
+            email=email,
+            password1=password1,
+            password2=password2,
+            agreed=agreed,
+        ):
             return redirect(url_for("payment.payment"))
 
     return render_template("signup-page.html", user=current_user)

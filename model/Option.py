@@ -35,11 +35,10 @@ class Option:
 
     def get_currentPriceOfTheUnderlyingAsset(self):
         tickerData = yf.Ticker(self.tickerSymbol)
-        today = datetime.datetime.today().isoformat()
+        today = datetime.datetime.now().isoformat()
         # First ten characters are the actual date
         tickerDataFrame = tickerData.history(period='1d', start='2021-1-1', end=today[:10])
-        currentPriceOfUnderlyingAsset = tickerDataFrame['Close'].iloc[-1]
-        return currentPriceOfUnderlyingAsset
+        return tickerDataFrame['Close'].iloc[-1]
 
     def get_riskFreeRate(self):
         # Can use the what most finance research papers use, i.e. the risk-free rate from the Kenneth French data library.
@@ -57,6 +56,4 @@ class Option:
 
     def get_expirations(self):
         tickerData = yf.Ticker(self)
-        # Expiration dates
-        optionExpirations = tickerData.options
-        return optionExpirations
+        return tickerData.options

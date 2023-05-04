@@ -21,7 +21,9 @@ def get_options_chain(tickerSymbol, expiration_date):
     # Can adjust data source after hours to get the correct expiration date using + datetime.timedelta(days = 1)
     options['expirationDate'] = pd.to_datetime(options['expirationDate'])
     # Multiplied by np.abs because I was getting a negative result for all of my _T values (Parentheses were needed to work properly)
-    options['T'] = np.abs(((options['expirationDate'] - datetime.datetime.today()).dt.days) / (365))
+    options['T'] = np.abs(
+        (options['expirationDate'] - datetime.datetime.now()).dt.days / 365
+    )
 
     # Boolean column if the option is a CALL
     options['CALL'] = options['contractSymbol'].str[4:].apply(lambda x: "C" in x)
@@ -32,7 +34,7 @@ def get_options_chain(tickerSymbol, expiration_date):
     # Drop columns that are not needed
     options = options.drop(columns=['contractSymbol', 'contractSize', 'currency', 'change', 'percentChange', 'lastTradeDate', 'lastPrice', 'inTheMoney', 'bid', 'ask', 'volume', 'mid', 'openInterest'])
 
-    today = datetime.datetime.today().isoformat()
+    today = datetime.datetime.now().isoformat()
     # First ten characters are the actual date
     tickerDataFrame = tickerData.history(period='5d', start='2021-1-1', end=today[:10])
     currentPriceOfUnderlyingAsset = tickerDataFrame['Close'].iloc[-1]
@@ -57,6 +59,7 @@ def get_options_chain(tickerSymbol, expiration_date):
         for i, dic in enumerate(options_record):
             if dic[key] == value and dic['CALL'] is True and dic['expirationDate'] == expiration_date:
                 return i
+
     ATM = 40 #find_atm_call(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     atm_call = options_record[ATM]
     otm_call = options_record[ATM+1]
@@ -69,6 +72,7 @@ def get_options_chain(tickerSymbol, expiration_date):
         for i, dic in enumerate(options_record):
             if dic[key] == value and dic['CALL'] is False and dic['expirationDate'] == expiration_date:
                 return i
+
     ATM_put = 42 #find_atm_put(options_record, "strike", int(currentPriceOfUnderlyingAsset))
     atm_put = options_record[ATM_put]
     itm_put = options_record[ATM_put+1]

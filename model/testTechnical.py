@@ -23,12 +23,12 @@ def main():
     execution_time_tech1 = (
             datetime.datetime.now() - begin_time).total_seconds()  # begin timer for execution time
 
-    print('Testing ticker ' + ticker1)
+    print(f'Testing ticker {ticker1}')
     print(tech1.to_string_summary())
 
     # testing with a big cap stock from nyse exchange
     ticker2 = "baba"
-    print('Testing ticker ' + ticker2)
+    print(f'Testing ticker {ticker2}')
     begin_time = datetime.datetime.now()
     tech2 = Technical(ticker1)
     execution_time_tech2 = (
@@ -41,12 +41,12 @@ def main():
     tech3 = Technical(ticker1)
     execution_time_tech3 = (
             datetime.datetime.now() - begin_time).total_seconds()  # begin timer for execution time
-    print('Testing ticker ' + ticker3)
+    print(f'Testing ticker {ticker3}')
     print(tech3.to_string_summary())
 
     # testing with a small cap stock from nyse exchange
     ticker4 = "avlr"
-    print('Testing ticker ' + ticker4)
+    print(f'Testing ticker {ticker4}')
     begin_time = datetime.datetime.now()
     tech4 = Technical(ticker4)
     execution_time_tech4 = (
@@ -55,7 +55,7 @@ def main():
 
     # testing with a spac stock
     ticker5 = "stpk"
-    print('Testing ticker ' + ticker5)
+    print(f'Testing ticker {ticker5}')
     begin_time = datetime.datetime.now()
     tech5 = Technical(ticker5)
     execution_time_tech5 = (
@@ -64,11 +64,11 @@ def main():
 
     # testing complete messege along with execution times
     print("\n**** Testing Complete ****")
-    print('Execution time for ' + ticker1 + " " + str(execution_time_tech1) + " seconds")
-    print('Execution time for ' + ticker2 + " " + str(execution_time_tech2) + " seconds")
-    print('Execution time for ' + ticker3 + " " + str(execution_time_tech3) + " seconds")
-    print('Execution time for ' + ticker4 + " " + str(execution_time_tech4) + " seconds")
-    print('Execution time for ' + ticker5 + " " + str(execution_time_tech5) + " seconds")
+    print(f'Execution time for {ticker1} {str(execution_time_tech1)} seconds')
+    print(f'Execution time for {ticker2} {str(execution_time_tech2)} seconds')
+    print(f'Execution time for {ticker3} {str(execution_time_tech3)} seconds')
+    print(f'Execution time for {ticker4} {str(execution_time_tech4)} seconds')
+    print(f'Execution time for {ticker5} {str(execution_time_tech5)} seconds')
 
 # run test
 if __name__ == "__main__":
